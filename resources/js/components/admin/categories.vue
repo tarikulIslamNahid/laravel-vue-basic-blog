@@ -28,13 +28,9 @@
                         <table class="datatable-init nk-tb-list nk-tb-ulist" data-auto-responsive="false">
                             <thead>
                                 <tr class="nk-tb-item nk-tb-head">
-                                    <th class="nk-tb-col nk-tb-col-check">
-                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                            <input type="checkbox" class="custom-control-input" id="uid">
-                                            <label class="custom-control-label" for="uid"></label>
-                                        </div>
-                                    </th>
+
                                     <th class="nk-tb-col"><span class="sub-text">SL</span></th>
+                                    <th class="nk-tb-col tb-col-mb"><span class="sub-text">Photo</span></th>
                                     <th class="nk-tb-col tb-col-mb"><span class="sub-text">Name</span></th>
                                     <th class="nk-tb-col tb-col-md"><span class="sub-text">Slug</span></th>
                                     <th class="nk-tb-col tb-col-lg"><span class="sub-text">Status</span></th>
@@ -45,23 +41,21 @@
                             </thead>
                             <tbody>
 
-                                <tr class="nk-tb-item">
-                                    <td class="nk-tb-col nk-tb-col-check">
-                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                            <input type="checkbox" class="custom-control-input" id="uid13">
-                                            <label class="custom-control-label" for="uid13"></label>
-                                        </div>
-                                    </td>
+                                <tr class="nk-tb-item" v-for='(category,index) in categories' :key='index'>
+
                                     <td class="nk-tb-col">
-                                        <span>1</span>
+                                        <span>{{index+1}}</span>
 
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
-                                        <span>Fashion</span>
+                                        <img :src="category.photo" width="50px" height="50px" alt="">
+                                    </td>
+                                    <td class="nk-tb-col tb-col-mb">
+                                        <span>{{category.name}}</span>
 
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
-                                        <span>fashion</span>
+                                        <span>{{category.slug}}</span>
 
                                     </td>
 
@@ -114,12 +108,13 @@
                         </a>
                     </div>
                     <div class="modal-body">
-                        <form @submit.prevent='CategoryCreate' enctype="multipart/form-data" class="form-validate is-alter">
+                        <form @submit.prevent='CategoryCreate' enctype="multipart/form-data"
+                            class="form-validate is-alter">
                             <div class="form-group">
                                 <label class="form-label" for="full-name">Category Name</label>
                                 <div class="form-control-wrap">
- <input type="text" class="form-control" name="name" v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }"
-                                >
+                                    <input type="text" class="form-control" name="name" v-model="form.name"
+                                        :class="{ 'is-invalid': form.errors.has('name') }">
 
                                 </div>
                             </div>
@@ -129,10 +124,12 @@
                                     <div class="form-row">
                                         <div class="col">
 
-                    <input type="file" @change='onFileSelect' class="form-control" :class="{ 'is-invalid': form.errors.has('photo') }" id="customFile">
+                                            <input type="file" @change='onFileSelect' class="form-control"
+                                                :class="{ 'is-invalid': form.errors.has('photo') }" id="customFile">
                                         </div>
                                         <div class="col">
-<img :src="form.photo" width="40px" v-if='form.photo != "" ' height="40px" alt="">
+                                            <img :src="form.photo" width="40px" v-if='form.photo != "" ' height="40px"
+                                                alt="">
 
                                         </div>
                                     </div>
@@ -156,43 +153,86 @@
     import "datatables.net-dt/css/jquery.dataTables.min.css"
     import "datatables.net-dt/js/dataTables.dataTables"
     export default {
-           data() {
+        data() {
             return {
-           form: new Form({
+                categories: {},
+                form: new Form({
                     name: '',
                     photo: '',
                 })
             }
         },
         methods: {
-            onFileSelect(event){
-                let file=event.target.files[0];
 
-                if(file.size> 1048770){
-notification.Image_size()
-                }else{
-          let reader=new FileReader();
-          reader.onload=event=>{
-              this.form.photo=event.target.result
-              console.log(event.target.result);
+            // fatch all category
 
-          };
-          reader.readAsDataURL(file);
+            CategoryGet() {
+                axios.get('/api/auth/site_categories_for_see')
+                    .then((result) => {
+                        this.categories = result.data.categories
+                        $('.datatable-init').DataTable();
+
+                    })
+            },
+
+            onFileSelect(event) {
+                let file = event.target.files[0];
+
+                if (file.size > 1048770) {
+                    Toast.fire({
+                        icon: 'success',
+                        title: Image_size()
+                    })
+
+                } else {
+                    let reader = new FileReader();
+                    reader.onload = event => {
+                        this.form.photo = event.target.result
+
+                    };
+                    reader.readAsDataURL(file);
                 }
             },
-            CategoryCreate(){
-
-this.$Progress.start()
-                this.form.post('/api/auth/login')
+            CategoryCreate() {
+                this.$Progress.start()
+                this.form.post('/api/auth/site_categories_for_create')
                     .then((result) => {
-
                         this.$Progress.finish()
+                        this.CategoryGet();
+                        $('.datatable-init').DataTable();
+                        $('#modalTabs').modal('hide')
+                        $(".modal-backdrop.fade.show").remove()
+                        this.form.name = null;
+                        this.form.photo = null;
                         if (result.data.error) {
                             this.$Progress.finish()
                             Toast.fire({
                                 icon: 'error',
                                 title: result.data.error
                             })
+                        }
+                        if (result.data.success) {
+                            this.$Progress.finish()
+                            Toast.fire({
+                                icon: 'success',
+                                title: result.data.success
+                            })
+                        }
+                        if (result.data.error) {
+                            this.$Progress.finish()
+                            if (result.data.error.photo) {
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: result.data.error.photo
+                                })
+                            }
+                            if (result.data.error.name) {
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: result.data.error.name
+                                })
+                            }
+
                         }
 
 
@@ -204,8 +244,11 @@ this.$Progress.start()
             }
         },
         mounted() {
+            this.CategoryGet();
             $('.datatable-init').DataTable();
+
         },
+
 
     }
 

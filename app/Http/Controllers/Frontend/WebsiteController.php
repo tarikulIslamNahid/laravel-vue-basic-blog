@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
 {
-   public function index(){
-    try {
+    public function index()
+    {
+        try {
 
 
-        return view('frontend.website.layout.master');
-    } catch (\Exception $e) {
-        return response()->json(['error' => trans("lang.Oops, Something Went Wrong")]);
-
+            return view('frontend.website.layout.master');
+        } catch (\Exception $e) {
+            return response()->json(['error' => trans("lang.Oops, Something Went Wrong")]);
+        }
     }
-   }
 }

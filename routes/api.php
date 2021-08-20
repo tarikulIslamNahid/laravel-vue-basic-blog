@@ -16,4 +16,6 @@ Route::group([
     Route::post('register', 'AuthController@register');
     Route::post('me', 'AuthController@me');
 
+    Route::get('site_categories_for_see', 'Admin\CategoriesController@index');
+    Route::post('site_categories_for_create', 'Admin\CategoriesController@store');
 });
