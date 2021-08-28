@@ -32,6 +32,7 @@
         "datatables.net-dt": "^1.1.0",
         "jshint": "^2.13.1",
         "laravel-vue-pagination": "^2.3.1",
+        "secure-ls": "^1.2.6",
         "swiper": "^6.8.1",
         "vform": "^1.0.1",
         "vue-async-computed": "^3.9.0",
@@ -51,6 +52,7 @@
         "vue-sweetalert2": "^5.0.2",
         "vue2-editor": "^2.10.2",
         "vuejs-datepicker": "^1.6.2",
-        "vuex": "^3.6.2"
+        "vuex": "^3.6.2",
+        "vuex-persistedstate": "^4.0.0"
     }
 }

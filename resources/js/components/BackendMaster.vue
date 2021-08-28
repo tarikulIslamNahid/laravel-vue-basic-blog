@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <loading :active.sync="isLoading" :is-full-page="fullPage"></loading>
 
         <div :class="
@@ -44,7 +44,7 @@
                                                 <li class="nk-menu-item active current-page">
                                                     <router-link :to="{ name: 'dashboard'}" class="nk-menu-link"
                                                         data-original-title="" title="">
-                                                      <span class="nk-menu-icon"><em
+                                                        <span class="nk-menu-icon"><em
                                                                 class="icon ni ni-tile-thumb-fill"></em></span>
                                                         <span class="nk-menu-text">Dashboard</span>
                                                     </router-link>
@@ -70,9 +70,10 @@
                                                     </a>
                                                     <ul class="nk-menu-sub">
                                                         <li class="nk-menu-item">
-                                                            <router-link :to="{ name: 'categories'}" class="nk-menu-link"
-                                                                data-original-title="" title=""><span
-                                                                    class="nk-menu-text">Categories</span></router-link>
+                                                            <router-link :to="{ name: 'categories'}"
+                                                                class="nk-menu-link" data-original-title="" title="">
+                                                                <span class="nk-menu-text">Categories</span>
+                                                            </router-link>
                                                         </li>
                                                         <li class="nk-menu-item">
                                                             <a href="html/project-list.html" class="nk-menu-link"
@@ -978,7 +979,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="dropdown user-dropdown" >
+                                <li class="dropdown user-dropdown">
                                     <router-link to="#" class="dropdown-toggle mr-n1" data-toggle="dropdown">
                                         <div class="user-toggle">
                                             <div class="user-avatar sm">
@@ -994,8 +995,8 @@
                                             </div>
                                         </div>
                                     </router-link>
- <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
- <!-- <div :class="rightMenu == true ? 'show dropdown-menu dropdown-menu-md dropdown-menu-right' : 'dropdown-menu dropdown-menu-md dropdown-menu-right'"> -->
+                                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                                        <!-- <div :class="rightMenu == true ? 'show dropdown-menu dropdown-menu-md dropdown-menu-right' : 'dropdown-menu dropdown-menu-md dropdown-menu-right'"> -->
                                         <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                             <div class="user-card">
                                                 <div class="user-avatar">
@@ -1062,36 +1063,40 @@
 </template>
 
 <script>
-
     import Loading from "vue-loading-overlay";
     import "vue-loading-overlay/dist/vue-loading.css";
     export default {
         name: "BackendMaster",
+
         components: {
             Loading
         },
         data() {
             return {
+                USER: {},
                 menu: false,
                 submenu: false,
-
                 isLoading: false,
-                fullPage: true
+                fullPage: true,
             };
         },
+        created() {
+            this.doLoading();
+            this.USER = this.$store.getters.getUser;
 
-        computed: {
+            this.Loggedin();
         },
 
+
         methods: {
-            logout(){
-      localStorage.removeItem('token');
-        localStorage.removeItem('user');
-Toast.fire({
-            icon: 'success',
-            title: 'Logout successfully'
-            })
-       window.location.href = "/"
+            logout() {
+                this.$store.commit('SET_USER', null);
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Logout successfully'
+                })
+                window.location.href = "/"
 
             },
             menuTrue() {
@@ -1102,29 +1107,43 @@ Toast.fire({
                 setTimeout(() => {
                     this.isLoading = false;
                 }, 2000);
+            },
+            Loggedin() {
+                if (this.USER != null) {
+                    if (User.loggedIn(this.USER.access_token)) {
+                        this.loggedInAdmin = true;
+
+
+                    } else {
+                        this.loggedInAdmin = false;
+                    window.location.href = "/";
+
+                    }
+                } else {
+                    window.location.href = "/";
+
+                }
             }
         },
-        created() {
-            this.doLoading();
 
-
-        }
     };
 
 </script>
 
 <style>
+    li.nk-menu-item.has-sub:hover .nk-menu-sub {
+        display: block !important;
+    }
 
-li.nk-menu-item.has-sub:hover .nk-menu-sub {
-    display: block !important;
-}
-.dropdown.user-dropdown:hover .dropdown-menu.dropdown-menu-md.dropdown-menu-right{
-    display:  block !important;
-margin-top:0px !important;
+    .dropdown.user-dropdown:hover .dropdown-menu.dropdown-menu-md.dropdown-menu-right {
+        display: block !important;
+        margin-top: 0px !important;
 
-}
-.dropdown-menu.dropdown-menu-md.dropdown-menu-right:hover{
-    display:  block !important;
-margin-top:0px !important;
-}
+    }
+
+    .dropdown-menu.dropdown-menu-md.dropdown-menu-right:hover {
+        display: block !important;
+        margin-top: 0px !important;
+    }
+
 </style>

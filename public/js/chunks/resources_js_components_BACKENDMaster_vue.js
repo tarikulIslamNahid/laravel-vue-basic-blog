@@ -1077,26 +1077,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "BackendMaster",
+  props: ["profile"],
   components: {
     Loading: (vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0___default())
   },
   data: function data() {
     return {
+      USER: {},
       menu: false,
       submenu: false,
       isLoading: false,
       fullPage: true
     };
   },
-  computed: {},
+  beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    if (USER != null) {//             if( User.loggedIn(this.USER.access_token)){
+      //                 if ((this.USER.user.user_type == 1)) {
+      //                     next();
+      //                  } else {
+      //                    window.location.href = "/";
+      //                  }
+      //   }else{
+      //      window.location.href = "/";
+      //   }
+    } else {
+      window.location.href = "/";
+    }
+  },
   methods: {
     logout: function logout() {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
+      this.$store.commit('SET_USER', null);
       Toast.fire({
         icon: 'success',
         title: 'Logout successfully'
@@ -1113,10 +1128,24 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(function () {
         _this.isLoading = false;
       }, 2000);
+    },
+    Loggedin: function Loggedin() {
+      if (this.USER != null) {
+        if (User.loggedIn(this.USER.access_token)) {
+          this.loggedInAdmin = true;
+        } else {
+          this.loggedInAdmin = false;
+        }
+      } else {
+        window.location.href = "/";
+      }
     }
   },
+  computed: {},
   created: function created() {
     this.doLoading();
+    this.USER = this.$store.getters.getUser;
+    this.Loggedin();
   }
 });
 
@@ -1163,7 +1192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nli.nk-menu-item.has-sub:hover .nk-menu-sub {\n    display: block !important;\n}\n.dropdown.user-dropdown:hover .dropdown-menu.dropdown-menu-md.dropdown-menu-right{\n    display:  block !important;\nmargin-top:0px !important;\n}\n.dropdown-menu.dropdown-menu-md.dropdown-menu-right:hover{\n    display:  block !important;\nmargin-top:0px !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nli.nk-menu-item.has-sub:hover .nk-menu-sub {\n    display: block !important;\n}\n.dropdown.user-dropdown:hover .dropdown-menu.dropdown-menu-md.dropdown-menu-right {\n    display: block !important;\n    margin-top: 0px !important;\n}\n.dropdown-menu.dropdown-menu-md.dropdown-menu-right:hover {\n    display: block !important;\n    margin-top: 0px !important;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1657,7 +1686,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                                   Unverified\n                                               "
+                                      "\n                                                    Unverified\n                                                "
                                     )
                                   ]
                                 ),
@@ -1669,7 +1698,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                                   Abu Bin Ishityak\n                                               "
+                                      "\n                                                    Abu Bin Ishityak\n                                                "
                                     )
                                   ]
                                 )
@@ -1699,7 +1728,7 @@ var render = function() {
                                   }),
                                   _c("span", [
                                     _vm._v(
-                                      "Sign\n                                                           out"
+                                      "Sign\n                                                            out"
                                     )
                                   ])
                                 ])
@@ -1718,7 +1747,9 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "nk-content" }, [_c("router-view")], 1)
-      ])
+      ]),
+      _vm._v(" "),
+      _vm._v("\n" + _vm._s(_vm.profile) + "\n        ")
     ],
     1
   )
@@ -1887,7 +1918,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "User List -\n                                                                   Default"
+                  "User List -\n                                                                    Default"
                 )
               ])
             ]
@@ -1908,7 +1939,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "User List -\n                                                                   Regular"
+                  "User List -\n                                                                    Regular"
                 )
               ])
             ]
@@ -1929,7 +1960,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "User List -\n                                                                   Compact"
+                  "User List -\n                                                                    Compact"
                 )
               ])
             ]
@@ -1950,7 +1981,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "User\n                                                                   Details -\n                                                                   Regular"
+                  "User\n                                                                    Details -\n                                                                    Regular"
                 )
               ])
             ]
@@ -1971,7 +2002,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "User\n                                                                   Profile -\n                                                                   Regular"
+                  "User\n                                                                    Profile -\n                                                                    Regular"
                 )
               ])
             ]
@@ -1992,7 +2023,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "User\n                                                                   Contact -\n                                                                   Card"
+                  "User\n                                                                    Contact -\n                                                                    Card"
                 )
               ]),
               _vm._v(" "),
@@ -2040,7 +2071,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Order List\n                                                                   -\n                                                                   Default"
+                  "Order List\n                                                                    -\n                                                                    Default"
                 )
               ])
             ]
@@ -2061,7 +2092,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Order List\n                                                                   -\n                                                                   Regular"
+                  "Order List\n                                                                    -\n                                                                    Regular"
                 )
               ])
             ]
@@ -2082,7 +2113,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Order List\n                                                                   -\n                                                                   Sales"
+                  "Order List\n                                                                    -\n                                                                    Sales"
                 )
               ])
             ]
@@ -2141,7 +2172,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Inbox /\n                                                                   Mail"
+                  "Inbox /\n                                                                    Mail"
                 )
               ])
             ]
@@ -2162,7 +2193,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "File\n                                                                   Manager"
+                  "File\n                                                                    Manager"
                 )
               ])
             ]
@@ -2183,7 +2214,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Chats /\n                                                                   Messenger"
+                  "Chats /\n                                                                    Messenger"
                 )
               ])
             ]
@@ -2224,7 +2255,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Kanban\n                                                                   Board"
+                  "Kanban\n                                                                    Board"
                 )
               ]),
               _c("span", { staticClass: "nk-menu-badge badge-warning" }, [
@@ -2243,7 +2274,7 @@ var staticRenderFns = [
     return _c("li", { staticClass: "nk-menu-heading" }, [
       _c("h6", { staticClass: "overline-title text-primary-alt" }, [
         _vm._v(
-          "\n                                                       Misc Pages\n                                                   "
+          "\n                                                        Misc Pages\n                                                    "
         )
       ])
     ])
@@ -2284,7 +2315,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Login /\n                                                                   Signin"
+                  "Login /\n                                                                    Signin"
                 )
               ])
             ]
@@ -2306,7 +2337,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Register /\n                                                                   Signup"
+                  "Register /\n                                                                    Signup"
                 )
               ])
             ]
@@ -2328,7 +2359,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Forgot\n                                                                   Password"
+                  "Forgot\n                                                                    Password"
                 )
               ])
             ]
@@ -2350,7 +2381,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Success /\n                                                                   Confirm"
+                  "Success /\n                                                                    Confirm"
                 )
               ])
             ]
@@ -2367,7 +2398,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Classic\n                                                                   Version -\n                                                                   v2"
+                  "Classic\n                                                                    Version -\n                                                                    v2"
                 )
               ])
             ]
@@ -2389,7 +2420,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Login\n                                                                           /\n                                                                           Signin"
+                      "Login\n                                                                            /\n                                                                            Signin"
                     )
                   ])
                 ]
@@ -2411,7 +2442,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Register\n                                                                           /\n                                                                           Signup"
+                      "Register\n                                                                            /\n                                                                            Signup"
                     )
                   ])
                 ]
@@ -2433,7 +2464,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Forgot\n                                                                           Password"
+                      "Forgot\n                                                                            Password"
                     )
                   ])
                 ]
@@ -2455,7 +2486,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Success\n                                                                           /\n                                                                           Confirm"
+                      "Success\n                                                                            /\n                                                                            Confirm"
                     )
                   ])
                 ]
@@ -2474,7 +2505,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "No Slider\n                                                                   Version -\n                                                                   v3"
+                  "No Slider\n                                                                    Version -\n                                                                    v3"
                 )
               ])
             ]
@@ -2496,7 +2527,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Login\n                                                                           /\n                                                                           Signin"
+                      "Login\n                                                                            /\n                                                                            Signin"
                     )
                   ])
                 ]
@@ -2518,7 +2549,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Register\n                                                                           /\n                                                                           Signup"
+                      "Register\n                                                                            /\n                                                                            Signup"
                     )
                   ])
                 ]
@@ -2540,7 +2571,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Forgot\n                                                                           Password"
+                      "Forgot\n                                                                            Password"
                     )
                   ])
                 ]
@@ -2562,7 +2593,7 @@ var staticRenderFns = [
                 [
                   _c("span", { staticClass: "nk-menu-text" }, [
                     _vm._v(
-                      "Success\n                                                                           /\n                                                                           Confirm"
+                      "Success\n                                                                            /\n                                                                            Confirm"
                     )
                   ])
                 ]
@@ -2609,7 +2640,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "404\n                                                                   Classic"
+                  "404\n                                                                    Classic"
                 )
               ])
             ]
@@ -2631,7 +2662,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "504\n                                                                   Classic"
+                  "504\n                                                                    Classic"
                 )
               ])
             ]
@@ -2653,7 +2684,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "404\n                                                                   Modern"
+                  "404\n                                                                    Modern"
                 )
               ])
             ]
@@ -2675,7 +2706,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "504\n                                                                   Modern"
+                  "504\n                                                                    Modern"
                 )
               ])
             ]
@@ -2719,7 +2750,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Blank /\n                                                                   Startup"
+                  "Blank /\n                                                                    Startup"
                 )
               ])
             ]
@@ -2740,7 +2771,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Faqs /\n                                                                   Help"
+                  "Faqs /\n                                                                    Help"
                 )
               ])
             ]
@@ -2761,7 +2792,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Terms /\n                                                                   Policy"
+                  "Terms /\n                                                                    Policy"
                 )
               ])
             ]
@@ -2782,7 +2813,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Regular\n                                                                   Page -\n                                                                   v1"
+                  "Regular\n                                                                    Page -\n                                                                    v1"
                 )
               ])
             ]
@@ -2803,7 +2834,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Regular\n                                                                   Page -\n                                                                   v2"
+                  "Regular\n                                                                    Page -\n                                                                    v2"
                 )
               ])
             ]
@@ -2819,7 +2850,7 @@ var staticRenderFns = [
     return _c("li", { staticClass: "nk-menu-heading" }, [
       _c("h6", { staticClass: "overline-title text-primary-alt" }, [
         _vm._v(
-          "\n                                                       Components\n                                                   "
+          "\n                                                        Components\n                                                    "
         )
       ])
     ])
@@ -2859,7 +2890,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "SVG Icon -\n                                                                   Exclusive"
+                  "SVG Icon -\n                                                                    Exclusive"
                 )
               ])
             ]
@@ -2880,7 +2911,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Nioicon -\n                                                                   HandCrafted"
+                  "Nioicon -\n                                                                    HandCrafted"
                 )
               ])
             ]
@@ -2927,7 +2958,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Basic\n                                                                   Tables"
+                "Basic\n                                                                    Tables"
               )
             ])
           ]
@@ -2948,7 +2979,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Special\n                                                                   Tables"
+                "Special\n                                                                    Tables"
               )
             ])
           ]
@@ -3009,7 +3040,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Form\n                                                                   Elements"
+                "Form\n                                                                    Elements"
               )
             ])
           ]
@@ -3030,7 +3061,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Form\n                                                                   Layouts"
+                "Form\n                                                                    Layouts"
               )
             ])
           ]
@@ -3051,7 +3082,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Form\n                                                                   Validation"
+                "Form\n                                                                    Validation"
               )
             ])
           ]
@@ -3072,7 +3103,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Wizard\n                                                                   Basic"
+                "Wizard\n                                                                    Basic"
               )
             ])
           ]
@@ -3089,7 +3120,7 @@ var staticRenderFns = [
           [
             _c("span", { staticClass: "nk-menu-text" }, [
               _vm._v(
-                "Rich\n                                                                   Editor"
+                "Rich\n                                                                    Editor"
               )
             ])
           ]
@@ -3183,7 +3214,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Chart\n                                                                   JS"
+                  "Chart\n                                                                    JS"
                 )
               ])
             ]
@@ -3204,7 +3235,7 @@ var staticRenderFns = [
             [
               _c("span", { staticClass: "nk-menu-text" }, [
                 _vm._v(
-                  "Knob\n                                                                   JS"
+                  "Knob\n                                                                    JS"
                 )
               ])
             ]
@@ -3285,7 +3316,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("span", { staticClass: "nk-menu-text" }, [
             _vm._v(
-              "Email\n                                                           Template"
+              "Email\n                                                            Template"
             )
           ])
         ]
@@ -3438,7 +3469,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-from" }, [
                         _c("div", { staticClass: "name" }, [
                           _vm._v(
-                            "\n                                                                   Iliash\n                                                                   Hossain\n                                                               "
+                            "\n                                                                    Iliash\n                                                                    Hossain\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3448,7 +3479,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-context" }, [
                         _c("div", { staticClass: "text" }, [
                           _vm._v(
-                            "\n                                                                   You: Please\n                                                                   confrim if\n                                                                   you got my\n                                                                   last\n                                                                   messages.\n                                                               "
+                            "\n                                                                    You: Please\n                                                                    confrim if\n                                                                    you got my\n                                                                    last\n                                                                    messages.\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3487,13 +3518,13 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-from" }, [
                         _c("div", { staticClass: "name" }, [
                           _vm._v(
-                            "\n                                                                   Abu Bin\n                                                                   Ishtiyak\n                                                               "
+                            "\n                                                                    Abu Bin\n                                                                    Ishtiyak\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
                         _c("span", { staticClass: "time" }, [
                           _vm._v(
-                            "4:49\n                                                                   AM"
+                            "4:49\n                                                                    AM"
                           )
                         ])
                       ]),
@@ -3501,7 +3532,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-context" }, [
                         _c("div", { staticClass: "text" }, [
                           _vm._v(
-                            "\n                                                                   Hi, I am\n                                                                   Ishtiyak,\n                                                                   can you help\n                                                                   me with this\n                                                                   problem ?\n                                                               "
+                            "\n                                                                    Hi, I am\n                                                                    Ishtiyak,\n                                                                    can you help\n                                                                    me with this\n                                                                    problem ?\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3535,7 +3566,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-from" }, [
                         _c("div", { staticClass: "name" }, [
                           _vm._v(
-                            "\n                                                                   George\n                                                                   Philips\n                                                               "
+                            "\n                                                                    George\n                                                                    Philips\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3545,7 +3576,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-context" }, [
                         _c("div", { staticClass: "text" }, [
                           _vm._v(
-                            "\n                                                                   Have you\n                                                                   seens the\n                                                                   claim from\n                                                                   Rose?\n                                                               "
+                            "\n                                                                    Have you\n                                                                    seens the\n                                                                    claim from\n                                                                    Rose?\n                                                                "
                           )
                         ])
                       ])
@@ -3588,13 +3619,13 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-from" }, [
                         _c("div", { staticClass: "name" }, [
                           _vm._v(
-                            "\n                                                                   Softnio\n                                                                   Group\n                                                               "
+                            "\n                                                                    Softnio\n                                                                    Group\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
                         _c("span", { staticClass: "time" }, [
                           _vm._v(
-                            "27\n                                                                   Mar"
+                            "27\n                                                                    Mar"
                           )
                         ])
                       ]),
@@ -3602,7 +3633,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-context" }, [
                         _c("div", { staticClass: "text" }, [
                           _vm._v(
-                            "\n                                                                   You: I just\n                                                                   bought a new\n                                                                   computer but\n                                                                   i am having\n                                                                   some problem\n                                                               "
+                            "\n                                                                    You: I just\n                                                                    bought a new\n                                                                    computer but\n                                                                    i am having\n                                                                    some problem\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3640,7 +3671,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-from" }, [
                         _c("div", { staticClass: "name" }, [
                           _vm._v(
-                            "\n                                                                   Larry Hughes\n                                                               "
+                            "\n                                                                    Larry Hughes\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3650,7 +3681,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-context" }, [
                         _c("div", { staticClass: "text" }, [
                           _vm._v(
-                            "\n                                                                   Hi Frank!\n                                                                   How is you\n                                                                   doing?\n                                                               "
+                            "\n                                                                    Hi Frank!\n                                                                    How is you\n                                                                    doing?\n                                                                "
                           )
                         ])
                       ])
@@ -3677,13 +3708,13 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-from" }, [
                         _c("div", { staticClass: "name" }, [
                           _vm._v(
-                            "\n                                                                   Tammy Wilson\n                                                               "
+                            "\n                                                                    Tammy Wilson\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
                         _c("span", { staticClass: "time" }, [
                           _vm._v(
-                            "27\n                                                                   Mar"
+                            "27\n                                                                    Mar"
                           )
                         ])
                       ]),
@@ -3691,7 +3722,7 @@ var staticRenderFns = [
                       _c("div", { staticClass: "chat-context" }, [
                         _c("div", { staticClass: "text" }, [
                           _vm._v(
-                            "\n                                                                   You: I just\n                                                                   bought a new\n                                                                   computer but\n                                                                   i am having\n                                                                   some problem\n                                                               "
+                            "\n                                                                    You: I just\n                                                                    bought a new\n                                                                    computer but\n                                                                    i am having\n                                                                    some problem\n                                                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -3761,14 +3792,14 @@ var staticRenderFns = [
                   _c("div", { staticClass: "nk-notification-content" }, [
                     _c("div", { staticClass: "nk-notification-text" }, [
                       _vm._v(
-                        "\n                                                           You have requested\n                                                           to\n                                                           "
+                        "\n                                                            You have requested\n                                                            to\n                                                            "
                       ),
                       _c("span", [_vm._v("Widthdrawl")])
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "nk-notification-time" }, [
                       _vm._v(
-                        "\n                                                           2 hrs ago\n                                                       "
+                        "\n                                                            2 hrs ago\n                                                        "
                       )
                     ])
                   ])
@@ -3789,21 +3820,21 @@ var staticRenderFns = [
                   _c("div", { staticClass: "nk-notification-content" }, [
                     _c("div", { staticClass: "nk-notification-text" }, [
                       _vm._v(
-                        "\n                                                           Your\n                                                           "
+                        "\n                                                            Your\n                                                            "
                       ),
                       _c("span", [
                         _vm._v(
-                          "Deposit\n                                                               Order"
+                          "Deposit\n                                                                Order"
                         )
                       ]),
                       _vm._v(
-                        "\n                                                           is placed\n                                                       "
+                        "\n                                                            is placed\n                                                        "
                       )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "nk-notification-time" }, [
                       _vm._v(
-                        "\n                                                           2 hrs ago\n                                                       "
+                        "\n                                                            2 hrs ago\n                                                        "
                       )
                     ])
                   ])
@@ -3824,14 +3855,14 @@ var staticRenderFns = [
                   _c("div", { staticClass: "nk-notification-content" }, [
                     _c("div", { staticClass: "nk-notification-text" }, [
                       _vm._v(
-                        "\n                                                           You have requested\n                                                           to\n                                                           "
+                        "\n                                                            You have requested\n                                                            to\n                                                            "
                       ),
                       _c("span", [_vm._v("Widthdrawl")])
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "nk-notification-time" }, [
                       _vm._v(
-                        "\n                                                           2 hrs ago\n                                                       "
+                        "\n                                                            2 hrs ago\n                                                        "
                       )
                     ])
                   ])
@@ -3852,21 +3883,21 @@ var staticRenderFns = [
                   _c("div", { staticClass: "nk-notification-content" }, [
                     _c("div", { staticClass: "nk-notification-text" }, [
                       _vm._v(
-                        "\n                                                           Your\n                                                           "
+                        "\n                                                            Your\n                                                            "
                       ),
                       _c("span", [
                         _vm._v(
-                          "Deposit\n                                                               Order"
+                          "Deposit\n                                                                Order"
                         )
                       ]),
                       _vm._v(
-                        "\n                                                           is placed\n                                                       "
+                        "\n                                                            is placed\n                                                        "
                       )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "nk-notification-time" }, [
                       _vm._v(
-                        "\n                                                           2 hrs ago\n                                                       "
+                        "\n                                                            2 hrs ago\n                                                        "
                       )
                     ])
                   ])
@@ -3887,14 +3918,14 @@ var staticRenderFns = [
                   _c("div", { staticClass: "nk-notification-content" }, [
                     _c("div", { staticClass: "nk-notification-text" }, [
                       _vm._v(
-                        "\n                                                           You have requested\n                                                           to\n                                                           "
+                        "\n                                                            You have requested\n                                                            to\n                                                            "
                       ),
                       _c("span", [_vm._v("Widthdrawl")])
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "nk-notification-time" }, [
                       _vm._v(
-                        "\n                                                           2 hrs ago\n                                                       "
+                        "\n                                                            2 hrs ago\n                                                        "
                       )
                     ])
                   ])
@@ -3915,21 +3946,21 @@ var staticRenderFns = [
                   _c("div", { staticClass: "nk-notification-content" }, [
                     _c("div", { staticClass: "nk-notification-text" }, [
                       _vm._v(
-                        "\n                                                           Your\n                                                           "
+                        "\n                                                            Your\n                                                            "
                       ),
                       _c("span", [
                         _vm._v(
-                          "Deposit\n                                                               Order"
+                          "Deposit\n                                                                Order"
                         )
                       ]),
                       _vm._v(
-                        "\n                                                           is placed\n                                                       "
+                        "\n                                                            is placed\n                                                        "
                       )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "nk-notification-time" }, [
                       _vm._v(
-                        "\n                                                           2 hrs ago\n                                                       "
+                        "\n                                                            2 hrs ago\n                                                        "
                       )
                     ])
                   ])
@@ -3985,7 +4016,7 @@ var staticRenderFns = [
             _c("em", { staticClass: "icon ni ni-user-alt" }),
             _c("span", [
               _vm._v(
-                "View\n                                                           Profile"
+                "View\n                                                            Profile"
               )
             ])
           ])
@@ -3996,7 +4027,7 @@ var staticRenderFns = [
             _c("em", { staticClass: "icon ni ni-setting-alt" }),
             _c("span", [
               _vm._v(
-                "Account\n                                                           Setting"
+                "Account\n                                                            Setting"
               )
             ])
           ])
@@ -4007,7 +4038,7 @@ var staticRenderFns = [
             _c("em", { staticClass: "icon ni ni-activity-alt" }),
             _c("span", [
               _vm._v(
-                "Login\n                                                           Activity"
+                "Login\n                                                            Activity"
               )
             ])
           ])

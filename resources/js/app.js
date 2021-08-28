@@ -13,6 +13,9 @@ import { routes } from "./routes/frontend";
 import Vuex from "vuex";
 Vue.use(Vuex);
 
+
+
+
 import storeData from "./store/index";
 const store = new Vuex.Store(storeData);
 

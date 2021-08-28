@@ -1,29 +1,35 @@
-
-let dashboard = require('../components/admin/dashboard.vue').default;
+ let dashboard = require('../components/admin/dashboard.vue').default;
 let categories = require('../components/admin/categories.vue').default;
+let BackendMaster = require('../components/BackendMaster').default;
+import Vue from "vue";
+window.Vue = require("vue");
+
+import Vuex from "vuex";
+Vue.use(Vuex);
+
+import storeData from "../store/index";
+const store = new Vuex.Store(storeData);
 
 export const routes = [
 
 
     {
         path: '/admin',
-         component: () => import('../components/BackendMaster'),
-         beforeEnter: (to, from, next) => {
-            if (User.hasToken()) {
-                if (User.name().split(',')[1] == 1) {
-                   next();
+        name:'BackendMaster',
+         component:BackendMaster,
+         meta: { requiresAuth: true },
+beforeEnter: (to, from, next) => {
+    if( User.loggedIn(store.getters.getUser.access_token)){
+        if(store.getters.getUser.user.user_type==1){
 
-                } else {
+            next();
+        }
+    }else{
+        // this.loggedInAdmin=false;
+         window.location.href = "/";
 
-                    window.location.href = "/";
-
-                }
-
-            } else {
-                    window.location.href = "/";
-
-            }
-          },
+    }
+},
          children: [
             {
                 path: '/admin/dashboard',

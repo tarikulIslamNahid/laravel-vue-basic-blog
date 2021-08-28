@@ -12,6 +12,11 @@ use Illuminate\Support\Str;
 
 class CategoriesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,6 +24,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
+
         $categories = categories::all();
 
         return response()->json([

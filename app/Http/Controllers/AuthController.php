@@ -8,7 +8,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
-
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
 {
@@ -19,7 +19,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('JWT', ['except' => ['login','register']]);
+        $this->middleware('auth:api', ['except' => ['login', 'register']]);
     }
 
     /**
@@ -31,23 +31,28 @@ class AuthController extends Controller
     {
         $credentials = request(['username', 'password']);
 
-        if(auth()->attempt($credentials)) {
+        if (JWTAuth::attempt($credentials)) {
 
-            if (! $token = auth()->attempt(['username' => $request->username, 'password' => $request->password, 'email_verify' => 1])) {
+            if (!$token = JWTAuth::attempt(['username' => $request->username, 'password' => $request->password, 'email_verify' => 1])) {
 
                 return response()->json([
                     'error' => 'Email verification needed please Check you Email'
                 ]);
             }
-        }else{
+        } else {
 
             return response()->json(['error' => 'Credentials do not match our database']);
-
         }
 
         return $this->respondWithToken($token);
     }
 
+
+    public function checkToken()
+    {
+
+        return response()->json(['success' => true], 200);
+    }
     /**
      * Get the authenticated User.
      *
@@ -55,6 +60,7 @@ class AuthController extends Controller
      */
     public function me()
     {
+
         return response()->json(auth()->user());
     }
 
@@ -65,9 +71,9 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        auth()->logout();
+        $logout = auth()->logout();
 
-        return response()->json(['message' => 'Successfully logged out']);
+        return response()->json(['message' => 'Successfully logged out'], 200);
     }
 
     /**
@@ -80,18 +86,19 @@ class AuthController extends Controller
         return $this->respondWithToken(auth()->refresh());
     }
 
-    public function register(Request $request){
+    public function register(Request $request)
+    {
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'username' => 'required|unique:users,username',
             'password' => 'min:6|confirmed',
         ]);
-        try{
+        try {
             $success = 'Account was Created successfully, please Check you Email';
 
             $user = new User;
-            $user->name = $request->name ;
+            $user->name = $request->name;
             $user->email = $request->email;
             $user->username = $request->username;
             $user->email_verify = 1;
@@ -110,13 +117,11 @@ class AuthController extends Controller
             ];
 
 
-return $this->login($request);
+            return $this->login($request);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()]);
+            return response()->json(['error' => "Operation Failed"]);
         }
-         catch(\Exception $e){
-             return response()->json(['error' => $e->getMessage()]);
-             return response()->json(['error' => "Operation Failed"]);
-         }
-
     }
 
     /**
@@ -133,15 +138,7 @@ return $this->login($request);
             'token_type' => 'bearer',
             'success' => 'Login Successfully',
             'expires_in' => auth()->factory()->getTTL() * 60,
-            // 'user_id' => Auth()->user()->id,
-            'user_id' => Crypt::encrypt(Auth()->user()->id),
-            'username' => Auth()->user()->username,
-            'name' => Auth()->user()->name,
-            'user_type' => Auth()->user()->user_type,
-            'email' => Auth()->user()->email,
-            'phone' => Auth()->user()->phone,
-            'email_verify' => Auth()->user()->email_verify,
-            // 'user' => encrypt(Auth()->user()),
+            'user' => Auth()->user(),
 
         ]);
     }

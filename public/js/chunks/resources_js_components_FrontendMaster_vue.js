@@ -713,11 +713,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       loggedIn: false,
+      USER: {},
       verify: 1,
       form: new Form({
         name: '',
@@ -734,7 +734,8 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$Progress.start();
       this.form.post('/api/auth/login').then(function (result) {
-        User.responseAfterLogin(result);
+        _this.$store.commit('SET_USER', result.data);
+
         _this.loggedIn = true;
 
         _this.$Progress.finish();
@@ -748,16 +749,17 @@ __webpack_require__.r(__webpack_exports__);
           });
         }
 
-        if (result.data.user_type == 1) {
+        if (result.data.user.user_type == 1) {
           Toast.fire({
             icon: 'success',
             title: result.data.success
-          });
+          }); // console.log(result.data)
+
           window.location.href = "/admin/dashboard";
         }
 
-        if (result.data.user_type == 4) {
-          if (result.data.email_verify == 1) {
+        if (result.data.user.user_type == 4) {
+          if (result.data.user.email_verify == 1) {
             if (_this.$route.path == '/') {
               Toast.fire({
                 icon: 'success',
@@ -774,12 +776,19 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (result) {});
     },
     Loggedin: function Loggedin() {
-      if (User.hasToken()) {
-        this.loggedIn = true;
+      if (this.USER != null) {
+        if (User.loggedIn(this.USER.access_token)) {
+          this.loggedInAdmin = true;
+          this.loggedIn = true;
+        } else {
+          this.loggedIn = false;
+          this.loggedInAdmin = false;
+        }
       }
     }
   },
   created: function created() {
+    this.USER = this.$store.getters.getUser;
     this.Loggedin();
   }
 });

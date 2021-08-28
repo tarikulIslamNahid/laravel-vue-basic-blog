@@ -11,6 +11,8 @@ Route::group([
 ], function ($router) {
 
     Route::post('login', 'AuthController@login');
+    Route::post('checkToken', 'AuthController@checkToken');
+    // Route::get('user', 'AuthController@user');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('register', 'AuthController@register');

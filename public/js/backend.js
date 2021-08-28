@@ -1834,6 +1834,1142 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-loading-overlay */ "./node_modules/vue-loading-overlay/dist/vue-loading.min.js");
+/* harmony import */ var vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_loading_overlay_dist_vue_loading_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-loading-overlay/dist/vue-loading.css */ "./node_modules/vue-loading-overlay/dist/vue-loading.css");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "BackendMaster",
+  components: {
+    Loading: (vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0___default())
+  },
+  data: function data() {
+    return {
+      USER: {},
+      menu: false,
+      submenu: false,
+      isLoading: false,
+      fullPage: true
+    };
+  },
+  created: function created() {
+    this.doLoading();
+    this.USER = this.$store.getters.getUser;
+    this.Loggedin();
+  },
+  methods: {
+    logout: function logout() {
+      this.$store.commit('SET_USER', null);
+      Toast.fire({
+        icon: 'success',
+        title: 'Logout successfully'
+      });
+      window.location.href = "/";
+    },
+    menuTrue: function menuTrue() {
+      this.menu = true;
+    },
+    doLoading: function doLoading() {
+      var _this = this;
+
+      this.isLoading = true;
+      setTimeout(function () {
+        _this.isLoading = false;
+      }, 2000);
+    },
+    Loggedin: function Loggedin() {
+      if (this.USER != null) {
+        if (User.loggedIn(this.USER.access_token)) {
+          this.loggedInAdmin = true;
+        } else {
+          this.loggedInAdmin = false;
+          window.location.href = "/";
+        }
+      } else {
+        window.location.href = "/";
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=script&lang=js& ***!
@@ -1851,18 +2987,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "adminMaster",
   data: function data() {
     return {
+      USER: {},
       loggedInAdmin: false
     };
   },
-  methods: {},
-  created: function created() {// this.AdminLoggedin();
+  methods: {
+    Loggedin: function Loggedin() {
+      if (this.USER != null) {
+        if (User.loggedIn(this.USER.access_token)) {
+          this.loggedInAdmin = true;
+        } else {
+          this.loggedInAdmin = false;
+          window.location.href = "/";
+        }
+      } else {
+        window.location.href = "/";
+      }
+    }
+  },
+  created: function created() {
+    this.USER = this.$store.getters.getUser;
+    this.Loggedin();
   }
 });
 
@@ -2050,7 +3199,14 @@ __webpack_require__.r(__webpack_exports__);
     CategoryGet: function CategoryGet() {
       var _this = this;
 
-      axios.get('/api/auth/site_categories_for_see').then(function (result) {
+      var url = '/api/auth/site_categories_for_see';
+      var bearer = 'bearer' + this.$store.getters.getUser.access_token; // axios.get('/api/auth/site_categories_for_see?token='+StoreToken+'')
+
+      axios.get(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
         _this.categories = result.data.categories;
         $('.datatable-init').DataTable();
       });
@@ -2079,7 +3235,13 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       this.$Progress.start();
-      this.form.post('/api/auth/site_categories_for_create').then(function (result) {
+      var url = '/api/auth/site_categories_for_create';
+      var bearer = 'bearer ' + this.$store.getters.getUser.access_token;
+      this.form.post(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
         _this3.$Progress.finish();
 
         _this3.CategoryGet();
@@ -2305,16 +3467,16 @@ var User = /*#__PURE__*/function () {
       var access_token = res.data.access_token;
       var username = res.data.username;
       var user_type = res.data.user_type;
+      var user_data = res.data.user;
 
       if (_Token__WEBPACK_IMPORTED_MODULE_0__.default.isValid(access_token)) {
-        _AppStorage__WEBPACK_IMPORTED_MODULE_1__.default.store(access_token, username + ',' + user_type);
+        _AppStorage__WEBPACK_IMPORTED_MODULE_1__.default.store(access_token, username + ',' + user_type); //   this.$store.commit('SET_USER',user_data);
       }
     }
   }, {
     key: "hasToken",
-    value: function hasToken() {
-      var StoreToken = localStorage.getItem('token');
-
+    value: function hasToken(StoreToken) {
+      // const StoreToken= localStorage.getItem('token');
       if (StoreToken) {
         return _Token__WEBPACK_IMPORTED_MODULE_0__.default.isValid(StoreToken) ? true : false;
       }
@@ -2323,8 +3485,8 @@ var User = /*#__PURE__*/function () {
     }
   }, {
     key: "loggedIn",
-    value: function loggedIn() {
-      return this.hasToken();
+    value: function loggedIn(StoreToken) {
+      return this.hasToken(StoreToken);
     }
   }, {
     key: "name",
@@ -2399,23 +3561,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/index */ "./resources/js/store/index.js");
 var dashboard = __webpack_require__(/*! ../components/admin/dashboard.vue */ "./resources/js/components/admin/dashboard.vue").default;
 
 var categories = __webpack_require__(/*! ../components/admin/categories.vue */ "./resources/js/components/admin/categories.vue").default;
 
+var BackendMaster = __webpack_require__(/*! ../components/BackendMaster */ "./resources/js/components/BackendMaster.vue").default;
+
+
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+
+vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.default);
+
+var store = new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store(_store_index__WEBPACK_IMPORTED_MODULE_2__.default);
 var routes = [{
   path: '/admin',
-  component: function component() {
-    return __webpack_require__.e(/*! import() */ "resources_js_components_BackendMaster_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/BackendMaster */ "./resources/js/components/BackendMaster.vue"));
+  name: 'BackendMaster',
+  component: BackendMaster,
+  meta: {
+    requiresAuth: true
   },
   beforeEnter: function beforeEnter(to, from, next) {
-    if (User.hasToken()) {
-      if (User.name().split(',')[1] == 1) {
+    if (User.loggedIn(store.getters.getUser.access_token)) {
+      if (store.getters.getUser.user.user_type == 1) {
         next();
-      } else {
-        window.location.href = "/";
       }
     } else {
+      // this.loggedInAdmin=false;
       window.location.href = "/";
     }
   },
@@ -2443,7 +3617,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony import */ var vuex_persistedstate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-persistedstate */ "./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js");
+/* harmony import */ var secure_ls__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! secure-ls */ "./node_modules/secure-ls/dist/secure-ls.js");
+/* harmony import */ var secure_ls__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(secure_ls__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var ls = new (secure_ls__WEBPACK_IMPORTED_MODULE_1___default())({
+  isCompression: false
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  state: {
+    CurrentUser: {}
+  },
+  plugins: [(0,vuex_persistedstate__WEBPACK_IMPORTED_MODULE_0__.default)({
+    storage: {
+      getItem: function getItem(key) {
+        return ls.get(key);
+      },
+      setItem: function setItem(key, value) {
+        return ls.set(key, value);
+      },
+      removeItem: function removeItem(key) {
+        return ls.remove(key);
+      }
+    }
+  })],
+  getters: {
+    getUser: function getUser(state) {
+      return state.CurrentUser;
+    }
+  },
+  mutations: {
+    SET_USER: function SET_USER(state, data) {
+      state.CurrentUser = data;
+    }
+  }
+});
 
 /***/ }),
 
@@ -6948,6 +8157,54 @@ var ___CSS_LOADER_URL_REPLACEMENT_3___ = _css_loader_dist_runtime_getUrl_js__WEB
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_images_sort_desc_disabled_png__WEBPACK_IMPORTED_MODULE_6__.default);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;border-spacing:0}table.dataTable thead th,table.dataTable tfoot th{font-weight:bold}table.dataTable thead th,table.dataTable thead td{padding:10px 18px;border-bottom:1px solid #111}table.dataTable thead th:active,table.dataTable thead td:active{outline:none}table.dataTable tfoot th,table.dataTable tfoot td{padding:10px 18px 6px 18px;border-top:1px solid #111}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;*cursor:hand;background-repeat:no-repeat;background-position:center right}table.dataTable thead .sorting{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}table.dataTable thead .sorting_asc{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") !important}table.dataTable thead .sorting_desc{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") !important}table.dataTable thead .sorting_asc_disabled{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ")}table.dataTable thead .sorting_desc_disabled{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ")}table.dataTable tbody tr{background-color:#fff}table.dataTable tbody tr.selected{background-color:#b0bed9}table.dataTable tbody th,table.dataTable tbody td{padding:8px 10px}table.dataTable.row-border tbody th,table.dataTable.row-border tbody td,table.dataTable.display tbody th,table.dataTable.display tbody td{border-top:1px solid #ddd}table.dataTable.row-border tbody tr:first-child th,table.dataTable.row-border tbody tr:first-child td,table.dataTable.display tbody tr:first-child th,table.dataTable.display tbody tr:first-child td{border-top:none}table.dataTable.cell-border tbody th,table.dataTable.cell-border tbody td{border-top:1px solid #ddd;border-right:1px solid #ddd}table.dataTable.cell-border tbody tr th:first-child,table.dataTable.cell-border tbody tr td:first-child{border-left:1px solid #ddd}table.dataTable.cell-border tbody tr:first-child th,table.dataTable.cell-border tbody tr:first-child td{border-top:none}table.dataTable.stripe tbody tr.odd,table.dataTable.display tbody tr.odd{background-color:#f9f9f9}table.dataTable.stripe tbody tr.odd.selected,table.dataTable.display tbody tr.odd.selected{background-color:#acbad4}table.dataTable.hover tbody tr:hover,table.dataTable.display tbody tr:hover{background-color:#f6f6f6}table.dataTable.hover tbody tr:hover.selected,table.dataTable.display tbody tr:hover.selected{background-color:#aab7d1}table.dataTable.order-column tbody tr>.sorting_1,table.dataTable.order-column tbody tr>.sorting_2,table.dataTable.order-column tbody tr>.sorting_3,table.dataTable.display tbody tr>.sorting_1,table.dataTable.display tbody tr>.sorting_2,table.dataTable.display tbody tr>.sorting_3{background-color:#fafafa}table.dataTable.order-column tbody tr.selected>.sorting_1,table.dataTable.order-column tbody tr.selected>.sorting_2,table.dataTable.order-column tbody tr.selected>.sorting_3,table.dataTable.display tbody tr.selected>.sorting_1,table.dataTable.display tbody tr.selected>.sorting_2,table.dataTable.display tbody tr.selected>.sorting_3{background-color:#acbad5}table.dataTable.display tbody tr.odd>.sorting_1,table.dataTable.order-column.stripe tbody tr.odd>.sorting_1{background-color:#f1f1f1}table.dataTable.display tbody tr.odd>.sorting_2,table.dataTable.order-column.stripe tbody tr.odd>.sorting_2{background-color:#f3f3f3}table.dataTable.display tbody tr.odd>.sorting_3,table.dataTable.order-column.stripe tbody tr.odd>.sorting_3{background-color:whitesmoke}table.dataTable.display tbody tr.odd.selected>.sorting_1,table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_1{background-color:#a6b4cd}table.dataTable.display tbody tr.odd.selected>.sorting_2,table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_2{background-color:#a8b5cf}table.dataTable.display tbody tr.odd.selected>.sorting_3,table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_3{background-color:#a9b7d1}table.dataTable.display tbody tr.even>.sorting_1,table.dataTable.order-column.stripe tbody tr.even>.sorting_1{background-color:#fafafa}table.dataTable.display tbody tr.even>.sorting_2,table.dataTable.order-column.stripe tbody tr.even>.sorting_2{background-color:#fcfcfc}table.dataTable.display tbody tr.even>.sorting_3,table.dataTable.order-column.stripe tbody tr.even>.sorting_3{background-color:#fefefe}table.dataTable.display tbody tr.even.selected>.sorting_1,table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_1{background-color:#acbad5}table.dataTable.display tbody tr.even.selected>.sorting_2,table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_2{background-color:#aebcd6}table.dataTable.display tbody tr.even.selected>.sorting_3,table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_3{background-color:#afbdd8}table.dataTable.display tbody tr:hover>.sorting_1,table.dataTable.order-column.hover tbody tr:hover>.sorting_1{background-color:#eaeaea}table.dataTable.display tbody tr:hover>.sorting_2,table.dataTable.order-column.hover tbody tr:hover>.sorting_2{background-color:#ececec}table.dataTable.display tbody tr:hover>.sorting_3,table.dataTable.order-column.hover tbody tr:hover>.sorting_3{background-color:#efefef}table.dataTable.display tbody tr:hover.selected>.sorting_1,table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_1{background-color:#a2aec7}table.dataTable.display tbody tr:hover.selected>.sorting_2,table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_2{background-color:#a3b0c9}table.dataTable.display tbody tr:hover.selected>.sorting_3,table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_3{background-color:#a5b2cb}table.dataTable.no-footer{border-bottom:1px solid #111}table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}table.dataTable.compact thead th,table.dataTable.compact thead td{padding:4px 17px}table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px}table.dataTable.compact tbody th,table.dataTable.compact tbody td{padding:4px}table.dataTable th.dt-left,table.dataTable td.dt-left{text-align:left}table.dataTable th.dt-center,table.dataTable td.dt-center,table.dataTable td.dataTables_empty{text-align:center}table.dataTable th.dt-right,table.dataTable td.dt-right{text-align:right}table.dataTable th.dt-justify,table.dataTable td.dt-justify{text-align:justify}table.dataTable th.dt-nowrap,table.dataTable td.dt-nowrap{white-space:nowrap}table.dataTable thead th.dt-head-left,table.dataTable thead td.dt-head-left,table.dataTable tfoot th.dt-head-left,table.dataTable tfoot td.dt-head-left{text-align:left}table.dataTable thead th.dt-head-center,table.dataTable thead td.dt-head-center,table.dataTable tfoot th.dt-head-center,table.dataTable tfoot td.dt-head-center{text-align:center}table.dataTable thead th.dt-head-right,table.dataTable thead td.dt-head-right,table.dataTable tfoot th.dt-head-right,table.dataTable tfoot td.dt-head-right{text-align:right}table.dataTable thead th.dt-head-justify,table.dataTable thead td.dt-head-justify,table.dataTable tfoot th.dt-head-justify,table.dataTable tfoot td.dt-head-justify{text-align:justify}table.dataTable thead th.dt-head-nowrap,table.dataTable thead td.dt-head-nowrap,table.dataTable tfoot th.dt-head-nowrap,table.dataTable tfoot td.dt-head-nowrap{white-space:nowrap}table.dataTable tbody th.dt-body-left,table.dataTable tbody td.dt-body-left{text-align:left}table.dataTable tbody th.dt-body-center,table.dataTable tbody td.dt-body-center{text-align:center}table.dataTable tbody th.dt-body-right,table.dataTable tbody td.dt-body-right{text-align:right}table.dataTable tbody th.dt-body-justify,table.dataTable tbody td.dt-body-justify{text-align:justify}table.dataTable tbody th.dt-body-nowrap,table.dataTable tbody td.dt-body-nowrap{white-space:nowrap}table.dataTable,table.dataTable th,table.dataTable td{box-sizing:content-box}.dataTables_wrapper{position:relative;clear:both;*zoom:1;zoom:1}.dataTables_wrapper .dataTables_length{float:left}.dataTables_wrapper .dataTables_length select{border:1px solid #aaa;border-radius:3px;padding:5px;background-color:transparent;padding:4px}.dataTables_wrapper .dataTables_filter{float:right;text-align:right}.dataTables_wrapper .dataTables_filter input{border:1px solid #aaa;border-radius:3px;padding:5px;background-color:transparent;margin-left:3px}.dataTables_wrapper .dataTables_info{clear:both;float:left;padding-top:.755em}.dataTables_wrapper .dataTables_paginate{float:right;text-align:right;padding-top:.25em}.dataTables_wrapper .dataTables_paginate .paginate_button{box-sizing:border-box;display:inline-block;min-width:1.5em;padding:.5em 1em;margin-left:2px;text-align:center;text-decoration:none !important;cursor:pointer;*cursor:hand;color:#333 !important;border:1px solid transparent;border-radius:2px}.dataTables_wrapper .dataTables_paginate .paginate_button.current,.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{color:#333 !important;border:1px solid #979797;background-color:white;background:linear-gradient(to bottom, white 0%, #dcdcdc 100%)}.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{cursor:default;color:#666 !important;border:1px solid transparent;background:transparent;box-shadow:none}.dataTables_wrapper .dataTables_paginate .paginate_button:hover{color:white !important;border:1px solid #111;background-color:#585858;background:linear-gradient(to bottom, #585858 0%, #111 100%)}.dataTables_wrapper .dataTables_paginate .paginate_button:active{outline:none;background-color:#2b2b2b;background:linear-gradient(to bottom, #2b2b2b 0%, #0c0c0c 100%);box-shadow:inset 0 0 3px #111}.dataTables_wrapper .dataTables_paginate .ellipsis{padding:0 1em}.dataTables_wrapper .dataTables_processing{position:absolute;top:50%;left:50%;width:100%;height:40px;margin-left:-50%;margin-top:-25px;padding-top:20px;text-align:center;font-size:1.2em;background-color:white;background:linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%)}.dataTables_wrapper .dataTables_length,.dataTables_wrapper .dataTables_filter,.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_processing,.dataTables_wrapper .dataTables_paginate{color:#333}.dataTables_wrapper .dataTables_scroll{clear:both}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody{*margin-top:-1px;-webkit-overflow-scrolling:touch}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>th,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>td,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>th,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>td{vertical-align:middle}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>th>div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>td>div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>th>div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>td>div.dataTables_sizing{height:0;overflow:hidden;margin:0 !important;padding:0 !important}.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:1px solid #111}.dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable,.dataTables_wrapper.no-footer div.dataTables_scrollBody>table{border-bottom:none}.dataTables_wrapper:after{visibility:hidden;display:block;content:\"\";clear:both;height:0}@media screen and (max-width: 767px){.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_paginate{float:none;text-align:center}.dataTables_wrapper .dataTables_paginate{margin-top:.5em}}@media screen and (max-width: 640px){.dataTables_wrapper .dataTables_length,.dataTables_wrapper .dataTables_filter{float:none;text-align:center}.dataTables_wrapper .dataTables_filter{margin-top:.5em}}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loading-overlay/dist/vue-loading.css":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loading-overlay/dist/vue-loading.css ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".vld-shown {\n  overflow: hidden;\n}\n\n.vld-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  align-items: center;\n  display: none;\n  justify-content: center;\n  overflow: hidden;\n  z-index: 9999;\n}\n\n.vld-overlay.is-active {\n  display: flex;\n}\n\n.vld-overlay.is-full-page {\n  z-index: 9999;\n  position: fixed;\n}\n\n.vld-overlay .vld-background {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background: #fff;\n  opacity: 0.5;\n}\n\n.vld-overlay .vld-icon, .vld-parent {\n  position: relative;\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\nli.nk-menu-item.has-sub:hover .nk-menu-sub {\n    display: block !important;\n}\n.dropdown.user-dropdown:hover .dropdown-menu.dropdown-menu-md.dropdown-menu-right {\n    display: block !important;\n    margin-top: 0px !important;\n}\n.dropdown-menu.dropdown-menu-md.dropdown-menu-right:hover {\n    display: block !important;\n    margin-top: 0px !important;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37685,6 +38942,5212 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/secure-ls/dist/secure-ls.js":
+/*!**************************************************!*\
+  !*** ./node_modules/secure-ls/dist/secure-ls.js ***!
+  \**************************************************/
+/***/ (function(module) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __nested_webpack_require_551__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_551__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__nested_webpack_require_551__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__nested_webpack_require_551__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__nested_webpack_require_551__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __nested_webpack_require_551__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __nested_webpack_require_1831__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _utils = __nested_webpack_require_1831__(1);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	var _constants = __nested_webpack_require_1831__(2);
+	
+	var _constants2 = _interopRequireDefault(_constants);
+	
+	var _encUtf = __nested_webpack_require_1831__(8);
+	
+	var _encUtf2 = _interopRequireDefault(_encUtf);
+	
+	var _Base = __nested_webpack_require_1831__(9);
+	
+	var _Base2 = _interopRequireDefault(_Base);
+	
+	var _lzString = __nested_webpack_require_1831__(10);
+	
+	var _lzString2 = _interopRequireDefault(_lzString);
+	
+	var _aes = __nested_webpack_require_1831__(11);
+	
+	var _aes2 = _interopRequireDefault(_aes);
+	
+	var _tripledes = __nested_webpack_require_1831__(16);
+	
+	var _tripledes2 = _interopRequireDefault(_tripledes);
+	
+	var _rabbit = __nested_webpack_require_1831__(17);
+	
+	var _rabbit2 = _interopRequireDefault(_rabbit);
+	
+	var _rc = __nested_webpack_require_1831__(18);
+	
+	var _rc2 = _interopRequireDefault(_rc);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var SecureLS = function () {
+	  function SecureLS(config) {
+	    _classCallCheck(this, SecureLS);
+	
+	    config = config || {};
+	    this._name = 'secure-ls';
+	    this.utils = _utils2.default;
+	    this.constants = _constants2.default;
+	    this.Base64 = _Base2.default;
+	    this.LZString = _lzString2.default;
+	    this.AES = _aes2.default;
+	    this.DES = _tripledes2.default;
+	    this.RABBIT = _rabbit2.default;
+	    this.RC4 = _rc2.default;
+	    this.enc = _encUtf2.default;
+	
+	    this.config = {
+	      isCompression: true,
+	      encodingType: _constants2.default.EncrytionTypes.BASE64,
+	      encryptionSecret: config.encryptionSecret,
+	      encryptionNamespace: config.encryptionNamespace
+	    };
+	    this.config.isCompression = typeof config.isCompression !== 'undefined' ? config.isCompression : true;
+	    this.config.encodingType = typeof config.encodingType !== 'undefined' || config.encodingType === '' ? config.encodingType.toLowerCase() : _constants2.default.EncrytionTypes.BASE64;
+	
+	    this.ls = localStorage;
+	    this.init();
+	  }
+	
+	  _createClass(SecureLS, [{
+	    key: 'init',
+	    value: function init() {
+	      var metaData = this.getMetaData();
+	
+	      this.WarningEnum = this.constants.WarningEnum;
+	      this.WarningTypes = this.constants.WarningTypes;
+	      this.EncrytionTypes = this.constants.EncrytionTypes;
+	
+	      this._isBase64 = this._isBase64EncryptionType();
+	      this._isAES = this._isAESEncryptionType();
+	      this._isDES = this._isDESEncryptionType();
+	      this._isRabbit = this._isRabbitEncryptionType();
+	      this._isRC4 = this._isRC4EncryptionType();
+	      this._isCompression = this._isDataCompressionEnabled();
+	
+	      // fill the already present keys to the list of keys being used by secure-ls
+	      this.utils.allKeys = metaData.keys || this.resetAllKeys();
+	    }
+	  }, {
+	    key: '_isBase64EncryptionType',
+	    value: function _isBase64EncryptionType() {
+	      return _Base2.default && (typeof this.config.encodingType === 'undefined' || this.config.encodingType === this.constants.EncrytionTypes.BASE64);
+	    }
+	  }, {
+	    key: '_isAESEncryptionType',
+	    value: function _isAESEncryptionType() {
+	      return _aes2.default && this.config.encodingType === this.constants.EncrytionTypes.AES;
+	    }
+	  }, {
+	    key: '_isDESEncryptionType',
+	    value: function _isDESEncryptionType() {
+	      return _tripledes2.default && this.config.encodingType === this.constants.EncrytionTypes.DES;
+	    }
+	  }, {
+	    key: '_isRabbitEncryptionType',
+	    value: function _isRabbitEncryptionType() {
+	      return _rabbit2.default && this.config.encodingType === this.constants.EncrytionTypes.RABBIT;
+	    }
+	  }, {
+	    key: '_isRC4EncryptionType',
+	    value: function _isRC4EncryptionType() {
+	      return _rc2.default && this.config.encodingType === this.constants.EncrytionTypes.RC4;
+	    }
+	  }, {
+	    key: '_isDataCompressionEnabled',
+	    value: function _isDataCompressionEnabled() {
+	      return this.config.isCompression;
+	    }
+	  }, {
+	    key: 'getEncryptionSecret',
+	    value: function getEncryptionSecret(key) {
+	      var metaData = this.getMetaData();
+	      var obj = this.utils.getObjectFromKey(metaData.keys, key);
+	
+	      if (!obj) {
+	        return;
+	      }
+	
+	      if (this._isAES || this._isDES || this._isRabbit || this._isRC4) {
+	        if (typeof this.config.encryptionSecret === 'undefined') {
+	          this.utils.encryptionSecret = obj.s;
+	
+	          if (!this.utils.encryptionSecret) {
+	            this.utils.encryptionSecret = this.utils.generateSecretKey();
+	            this.setMetaData();
+	          }
+	        } else {
+	          this.utils.encryptionSecret = this.config.encryptionSecret || obj.s || '';
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'get',
+	    value: function get(key, isAllKeysData) {
+	      var decodedData = '',
+	          jsonData = '',
+	          deCompressedData = void 0,
+	          bytes = void 0,
+	          data = void 0;
+	
+	      if (!this.utils.is(key)) {
+	        this.utils.warn(this.WarningEnum.KEY_NOT_PROVIDED);
+	        return jsonData;
+	      }
+	
+	      data = this.getDataFromLocalStorage(key);
+	
+	      if (!data) {
+	        return jsonData;
+	      }
+	
+	      deCompressedData = data; // saves else
+	      if (this._isCompression || isAllKeysData) {
+	        // meta data always compressed
+	        deCompressedData = _lzString2.default.decompressFromUTF16(data);
+	      }
+	
+	      decodedData = deCompressedData; // saves else
+	      if (this._isBase64 || isAllKeysData) {
+	        // meta data always Base64
+	        decodedData = _Base2.default.decode(deCompressedData);
+	      } else {
+	        this.getEncryptionSecret(key);
+	        if (this._isAES) {
+	          bytes = _aes2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        } else if (this._isDES) {
+	          bytes = _tripledes2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        } else if (this._isRabbit) {
+	          bytes = _rabbit2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        } else if (this._isRC4) {
+	          bytes = _rc2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        }
+	
+	        if (bytes) {
+	          decodedData = bytes.toString(_encUtf2.default._Utf8);
+	        }
+	      }
+	
+	      try {
+	        jsonData = JSON.parse(decodedData);
+	      } catch (e) {
+	        throw new Error('Could not parse JSON');
+	      }
+	
+	      return jsonData;
+	    }
+	  }, {
+	    key: 'getDataFromLocalStorage',
+	    value: function getDataFromLocalStorage(key) {
+	      return this.ls.getItem(key, true);
+	    }
+	  }, {
+	    key: 'getAllKeys',
+	    value: function getAllKeys() {
+	      var data = this.getMetaData();
+	
+	      return this.utils.extractKeyNames(data) || [];
+	    }
+	  }, {
+	    key: 'set',
+	    value: function set(key, data) {
+	      var dataToStore = '';
+	
+	      if (!this.utils.is(key)) {
+	        this.utils.warn(this.WarningEnum.KEY_NOT_PROVIDED);
+	        return;
+	      }
+	
+	      this.getEncryptionSecret(key);
+	
+	      // add key(s) to Array if not already added, only for keys other than meta key
+	      if (!(String(key) === String(this.utils.metaKey))) {
+	        if (!this.utils.isKeyPresent(key)) {
+	          this.utils.addToKeysList(key);
+	          this.setMetaData();
+	        }
+	      }
+	
+	      dataToStore = this.processData(data);
+	      // Store the data to localStorage
+	      this.setDataToLocalStorage(key, dataToStore);
+	    }
+	  }, {
+	    key: 'setDataToLocalStorage',
+	    value: function setDataToLocalStorage(key, data) {
+	      this.ls.setItem(key, data);
+	    }
+	  }, {
+	    key: 'remove',
+	    value: function remove(key) {
+	      if (!this.utils.is(key)) {
+	        this.utils.warn(this.WarningEnum.KEY_NOT_PROVIDED);
+	        return;
+	      }
+	
+	      if (key === this.utils.metaKey && this.getAllKeys().length) {
+	        this.utils.warn(this.WarningEnum.META_KEY_REMOVE);
+	        return;
+	      }
+	
+	      if (this.utils.isKeyPresent(key)) {
+	        this.utils.removeFromKeysList(key);
+	        this.setMetaData();
+	      }
+	      this.ls.removeItem(key);
+	    }
+	  }, {
+	    key: 'removeAll',
+	    value: function removeAll() {
+	      var keys = void 0,
+	          i = void 0;
+	
+	      keys = this.getAllKeys();
+	      for (i = 0; i < keys.length; i++) {
+	        this.ls.removeItem(keys[i]);
+	      }
+	      this.ls.removeItem(this.utils.metaKey);
+	
+	      this.resetAllKeys();
+	    }
+	  }, {
+	    key: 'clear',
+	    value: function clear() {
+	      this.ls.clear();
+	      this.resetAllKeys();
+	    }
+	  }, {
+	    key: 'resetAllKeys',
+	    value: function resetAllKeys() {
+	      this.utils.allKeys = [];
+	      return [];
+	    }
+	  }, {
+	    key: 'processData',
+	    value: function processData(data, isAllKeysData) {
+	      if (data === null || data === undefined || data === '') {
+	        return '';
+	      }
+	
+	      var jsonData = void 0,
+	          encodedData = void 0,
+	          compressedData = void 0;
+	
+	      try {
+	        jsonData = JSON.stringify(data);
+	      } catch (e) {
+	        throw new Error('Could not stringify data.');
+	      }
+	
+	      // Encode Based on encoding type
+	      // If not set, default to Base64 for securing data
+	      encodedData = jsonData;
+	      if (this._isBase64 || isAllKeysData) {
+	        encodedData = _Base2.default.encode(jsonData);
+	      } else {
+	        if (this._isAES) {
+	          encodedData = _aes2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        } else if (this._isDES) {
+	          encodedData = _tripledes2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        } else if (this._isRabbit) {
+	          encodedData = _rabbit2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        } else if (this._isRC4) {
+	          encodedData = _rc2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        }
+	
+	        encodedData = encodedData && encodedData.toString();
+	      }
+	
+	      // Compress data if set to true
+	      compressedData = encodedData;
+	      if (this._isCompression || isAllKeysData) {
+	        compressedData = _lzString2.default.compressToUTF16(encodedData);
+	      }
+	
+	      return compressedData;
+	    }
+	  }, {
+	    key: 'setMetaData',
+	    value: function setMetaData() {
+	      var dataToStore = this.processData({
+	        keys: this.utils.allKeys
+	      }, true);
+	
+	      // Store the data to localStorage
+	      this.setDataToLocalStorage(this.getMetaKey(), dataToStore);
+	    }
+	  }, {
+	    key: 'getMetaData',
+	    value: function getMetaData() {
+	      return this.get(this.getMetaKey(), true) || {};
+	    }
+	  }, {
+	    key: 'getMetaKey',
+	    value: function getMetaKey() {
+	      return this.utils.metaKey + (this.config.encryptionNamespace ? '__' + this.config.encryptionNamespace : '');
+	    }
+	  }]);
+	
+	  return SecureLS;
+	}();
+	
+	exports.default = SecureLS;
+	;
+	module.exports = exports['default'];
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __nested_webpack_require_13608__) {
+
+	'use strict';
+	
+	var _constants = __nested_webpack_require_13608__(2);
+	
+	var _constants2 = _interopRequireDefault(_constants);
+	
+	var _WordArray = __nested_webpack_require_13608__(3);
+	
+	var _WordArray2 = _interopRequireDefault(_WordArray);
+	
+	var _pbkdf = __nested_webpack_require_13608__(4);
+	
+	var _pbkdf2 = _interopRequireDefault(_pbkdf);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var utils = {
+	  metaKey: '_secure__ls__metadata',
+	  encryptionSecret: '',
+	  secretPhrase: 's3cr3t$#@135^&*246',
+	  allKeys: [],
+	  is: function is(key) {
+	    if (key) {
+	      return true;
+	    }
+	    return false;
+	  },
+	  warn: function warn(reason) {
+	    reason = reason ? reason : _constants2.default.WarningEnum.DEFAULT_TEXT;
+	    console.warn(_constants2.default.WarningTypes[reason]);
+	  },
+	  generateSecretKey: function generateSecretKey() {
+	    var salt = _WordArray2.default.random(128 / 8);
+	    var key128Bits = (0, _pbkdf2.default)(this.secretPhrase, salt, { keySize: 128 / 32 });
+	
+	    return key128Bits && key128Bits.toString();
+	  },
+	  getObjectFromKey: function getObjectFromKey(data, key) {
+	    if (!data || !data.length) {
+	      return {};
+	    }
+	
+	    var i = void 0,
+	        obj = {};
+	
+	    for (i = 0; i < data.length; i++) {
+	      if (data[i].k === key) {
+	        obj = data[i];
+	        break;
+	      }
+	    }
+	
+	    return obj;
+	  },
+	  extractKeyNames: function extractKeyNames(data) {
+	    if (!data || !data.keys || !data.keys.length) {
+	      return [];
+	    }
+	
+	    return data.keys.map(function (keyData) {
+	      return keyData.k;
+	    });
+	  },
+	  getAllKeys: function getAllKeys() {
+	    return this.allKeys;
+	  },
+	  isKeyPresent: function isKeyPresent(key) {
+	    var isKeyAlreadyPresent = false;
+	
+	    for (var i = 0; i < this.allKeys.length; i++) {
+	      if (String(this.allKeys[i].k) === String(key)) {
+	        isKeyAlreadyPresent = true; // found
+	        break;
+	      }
+	    }
+	
+	    return isKeyAlreadyPresent;
+	  },
+	  addToKeysList: function addToKeysList(key) {
+	    this.allKeys.push({
+	      k: key,
+	      s: this.encryptionSecret
+	    });
+	  },
+	  removeFromKeysList: function removeFromKeysList(key) {
+	    var i = void 0,
+	        index = -1;
+	
+	    for (i = 0; i < this.allKeys.length; i++) {
+	      if (this.allKeys[i].k === key) {
+	        index = i;
+	        break;
+	      }
+	    }
+	    if (index !== -1) {
+	      this.allKeys.splice(index, 1);
+	    }
+	    return index;
+	  }
+	};
+	
+	module.exports = utils;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var WarningEnum = {
+	  KEY_NOT_PROVIDED: 'keyNotProvided',
+	  META_KEY_REMOVE: 'metaKeyRemove',
+	  DEFAULT_TEXT: 'defaultText'
+	};
+	
+	var WarningTypes = {};
+	
+	WarningTypes[WarningEnum.KEY_NOT_PROVIDED] = 'Secure LS: Key not provided. Aborting operation!';
+	WarningTypes[WarningEnum.META_KEY_REMOVE] = 'Secure LS: Meta key can not be removed\nunless all keys created by Secure LS are removed!';
+	WarningTypes[WarningEnum.DEFAULT_TEXT] = 'Unexpected output';
+	
+	var constants = {
+	  WarningEnum: WarningEnum,
+	  WarningTypes: WarningTypes,
+	  EncrytionTypes: {
+	    BASE64: 'base64',
+	    AES: 'aes',
+	    DES: 'des',
+	    RABBIT: 'rabbit',
+	    RC4: 'rc4'
+	  }
+	};
+	
+	module.exports = constants;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	/*
+	 ES6 compatible port of CryptoJS - WordArray for PBKDF2 password key generation
+	
+	 Source: https://github.com/brix/crypto-js
+	 LICENSE: MIT
+	 */
+	
+	var CryptoJSWordArray = {};
+	
+	CryptoJSWordArray.random = function (nBytes) {
+	  var words = [];
+	  var r = function r(mw) {
+	    var mz = 0x3ade68b1;
+	    var mask = 0xffffffff;
+	
+	    return function () {
+	      mz = 0x9069 * (mz & 0xFFFF) + (mz >> 0x10) & mask;
+	      mw = 0x4650 * (mw & 0xFFFF) + (mw >> 0x10) & mask;
+	      var result = (mz << 0x10) + mw & mask;
+	
+	      result /= 0x100000000;
+	      result += 0.5;
+	      return result * (Math.random() > 0.5 ? 1 : -1);
+	    };
+	  };
+	
+	  for (var i = 0, rcache; i < nBytes; i += 4) {
+	    var _r = r((rcache || Math.random()) * 0x100000000);
+	
+	    rcache = _r() * 0x3ade67b7;
+	    words.push(_r() * 0x100000000 | 0);
+	  }
+	
+	  return new this.Set(words, nBytes);
+	};
+	
+	CryptoJSWordArray.Set = function (words, sigBytes) {
+	  words = this.words = words || [];
+	
+	  if (sigBytes !== undefined) {
+	    this.sigBytes = sigBytes;
+	  } else {
+	    this.sigBytes = words.length * 8;
+	  }
+	};
+	
+	module.exports = CryptoJSWordArray;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __nested_webpack_require_18149__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_18149__(5), __nested_webpack_require_18149__(6), __nested_webpack_require_18149__(7));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var WordArray = C_lib.WordArray;
+		    var C_algo = C.algo;
+		    var SHA1 = C_algo.SHA1;
+		    var HMAC = C_algo.HMAC;
+	
+		    /**
+		     * Password-Based Key Derivation Function 2 algorithm.
+		     */
+		    var PBKDF2 = C_algo.PBKDF2 = Base.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {number} keySize The key size in words to generate. Default: 4 (128 bits)
+		         * @property {Hasher} hasher The hasher to use. Default: SHA1
+		         * @property {number} iterations The number of iterations to perform. Default: 1
+		         */
+		        cfg: Base.extend({
+		            keySize: 128/32,
+		            hasher: SHA1,
+		            iterations: 1
+		        }),
+	
+		        /**
+		         * Initializes a newly created key derivation function.
+		         *
+		         * @param {Object} cfg (Optional) The configuration options to use for the derivation.
+		         *
+		         * @example
+		         *
+		         *     var kdf = CryptoJS.algo.PBKDF2.create();
+		         *     var kdf = CryptoJS.algo.PBKDF2.create({ keySize: 8 });
+		         *     var kdf = CryptoJS.algo.PBKDF2.create({ keySize: 8, iterations: 1000 });
+		         */
+		        init: function (cfg) {
+		            this.cfg = this.cfg.extend(cfg);
+		        },
+	
+		        /**
+		         * Computes the Password-Based Key Derivation Function 2.
+		         *
+		         * @param {WordArray|string} password The password.
+		         * @param {WordArray|string} salt A salt.
+		         *
+		         * @return {WordArray} The derived key.
+		         *
+		         * @example
+		         *
+		         *     var key = kdf.compute(password, salt);
+		         */
+		        compute: function (password, salt) {
+		            // Shortcut
+		            var cfg = this.cfg;
+	
+		            // Init HMAC
+		            var hmac = HMAC.create(cfg.hasher, password);
+	
+		            // Initial values
+		            var derivedKey = WordArray.create();
+		            var blockIndex = WordArray.create([0x00000001]);
+	
+		            // Shortcuts
+		            var derivedKeyWords = derivedKey.words;
+		            var blockIndexWords = blockIndex.words;
+		            var keySize = cfg.keySize;
+		            var iterations = cfg.iterations;
+	
+		            // Generate key
+		            while (derivedKeyWords.length < keySize) {
+		                var block = hmac.update(salt).finalize(blockIndex);
+		                hmac.reset();
+	
+		                // Shortcuts
+		                var blockWords = block.words;
+		                var blockWordsLength = blockWords.length;
+	
+		                // Iterations
+		                var intermediate = block;
+		                for (var i = 1; i < iterations; i++) {
+		                    intermediate = hmac.finalize(intermediate);
+		                    hmac.reset();
+	
+		                    // Shortcut
+		                    var intermediateWords = intermediate.words;
+	
+		                    // XOR intermediate with block
+		                    for (var j = 0; j < blockWordsLength; j++) {
+		                        blockWords[j] ^= intermediateWords[j];
+		                    }
+		                }
+	
+		                derivedKey.concat(block);
+		                blockIndexWords[0]++;
+		            }
+		            derivedKey.sigBytes = keySize * 4;
+	
+		            return derivedKey;
+		        }
+		    });
+	
+		    /**
+		     * Computes the Password-Based Key Derivation Function 2.
+		     *
+		     * @param {WordArray|string} password The password.
+		     * @param {WordArray|string} salt A salt.
+		     * @param {Object} cfg (Optional) The configuration options to use for this computation.
+		     *
+		     * @return {WordArray} The derived key.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var key = CryptoJS.PBKDF2(password, salt);
+		     *     var key = CryptoJS.PBKDF2(password, salt, { keySize: 8 });
+		     *     var key = CryptoJS.PBKDF2(password, salt, { keySize: 8, iterations: 1000 });
+		     */
+		    C.PBKDF2 = function (password, salt, cfg) {
+		        return PBKDF2.create(cfg).compute(password, salt);
+		    };
+		}());
+	
+	
+		return CryptoJS.PBKDF2;
+	
+	}));
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory();
+		}
+		else {}
+	}(this, function () {
+	
+		/**
+		 * CryptoJS core components.
+		 */
+		var CryptoJS = CryptoJS || (function (Math, undefined) {
+		    /*
+		     * Local polyfil of Object.create
+		     */
+		    var create = Object.create || (function () {
+		        function F() {};
+	
+		        return function (obj) {
+		            var subtype;
+	
+		            F.prototype = obj;
+	
+		            subtype = new F();
+	
+		            F.prototype = null;
+	
+		            return subtype;
+		        };
+		    }())
+	
+		    /**
+		     * CryptoJS namespace.
+		     */
+		    var C = {};
+	
+		    /**
+		     * Library namespace.
+		     */
+		    var C_lib = C.lib = {};
+	
+		    /**
+		     * Base object for prototypal inheritance.
+		     */
+		    var Base = C_lib.Base = (function () {
+	
+	
+		        return {
+		            /**
+		             * Creates a new object that inherits from this object.
+		             *
+		             * @param {Object} overrides Properties to copy into the new object.
+		             *
+		             * @return {Object} The new object.
+		             *
+		             * @static
+		             *
+		             * @example
+		             *
+		             *     var MyType = CryptoJS.lib.Base.extend({
+		             *         field: 'value',
+		             *
+		             *         method: function () {
+		             *         }
+		             *     });
+		             */
+		            extend: function (overrides) {
+		                // Spawn
+		                var subtype = create(this);
+	
+		                // Augment
+		                if (overrides) {
+		                    subtype.mixIn(overrides);
+		                }
+	
+		                // Create default initializer
+		                if (!subtype.hasOwnProperty('init') || this.init === subtype.init) {
+		                    subtype.init = function () {
+		                        subtype.$super.init.apply(this, arguments);
+		                    };
+		                }
+	
+		                // Initializer's prototype is the subtype object
+		                subtype.init.prototype = subtype;
+	
+		                // Reference supertype
+		                subtype.$super = this;
+	
+		                return subtype;
+		            },
+	
+		            /**
+		             * Extends this object and runs the init method.
+		             * Arguments to create() will be passed to init().
+		             *
+		             * @return {Object} The new object.
+		             *
+		             * @static
+		             *
+		             * @example
+		             *
+		             *     var instance = MyType.create();
+		             */
+		            create: function () {
+		                var instance = this.extend();
+		                instance.init.apply(instance, arguments);
+	
+		                return instance;
+		            },
+	
+		            /**
+		             * Initializes a newly created object.
+		             * Override this method to add some logic when your objects are created.
+		             *
+		             * @example
+		             *
+		             *     var MyType = CryptoJS.lib.Base.extend({
+		             *         init: function () {
+		             *             // ...
+		             *         }
+		             *     });
+		             */
+		            init: function () {
+		            },
+	
+		            /**
+		             * Copies properties into this object.
+		             *
+		             * @param {Object} properties The properties to mix in.
+		             *
+		             * @example
+		             *
+		             *     MyType.mixIn({
+		             *         field: 'value'
+		             *     });
+		             */
+		            mixIn: function (properties) {
+		                for (var propertyName in properties) {
+		                    if (properties.hasOwnProperty(propertyName)) {
+		                        this[propertyName] = properties[propertyName];
+		                    }
+		                }
+	
+		                // IE won't copy toString using the loop above
+		                if (properties.hasOwnProperty('toString')) {
+		                    this.toString = properties.toString;
+		                }
+		            },
+	
+		            /**
+		             * Creates a copy of this object.
+		             *
+		             * @return {Object} The clone.
+		             *
+		             * @example
+		             *
+		             *     var clone = instance.clone();
+		             */
+		            clone: function () {
+		                return this.init.prototype.extend(this);
+		            }
+		        };
+		    }());
+	
+		    /**
+		     * An array of 32-bit words.
+		     *
+		     * @property {Array} words The array of 32-bit words.
+		     * @property {number} sigBytes The number of significant bytes in this word array.
+		     */
+		    var WordArray = C_lib.WordArray = Base.extend({
+		        /**
+		         * Initializes a newly created word array.
+		         *
+		         * @param {Array} words (Optional) An array of 32-bit words.
+		         * @param {number} sigBytes (Optional) The number of significant bytes in the words.
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.lib.WordArray.create();
+		         *     var wordArray = CryptoJS.lib.WordArray.create([0x00010203, 0x04050607]);
+		         *     var wordArray = CryptoJS.lib.WordArray.create([0x00010203, 0x04050607], 6);
+		         */
+		        init: function (words, sigBytes) {
+		            words = this.words = words || [];
+	
+		            if (sigBytes != undefined) {
+		                this.sigBytes = sigBytes;
+		            } else {
+		                this.sigBytes = words.length * 4;
+		            }
+		        },
+	
+		        /**
+		         * Converts this word array to a string.
+		         *
+		         * @param {Encoder} encoder (Optional) The encoding strategy to use. Default: CryptoJS.enc.Hex
+		         *
+		         * @return {string} The stringified word array.
+		         *
+		         * @example
+		         *
+		         *     var string = wordArray + '';
+		         *     var string = wordArray.toString();
+		         *     var string = wordArray.toString(CryptoJS.enc.Utf8);
+		         */
+		        toString: function (encoder) {
+		            return (encoder || Hex).stringify(this);
+		        },
+	
+		        /**
+		         * Concatenates a word array to this word array.
+		         *
+		         * @param {WordArray} wordArray The word array to append.
+		         *
+		         * @return {WordArray} This word array.
+		         *
+		         * @example
+		         *
+		         *     wordArray1.concat(wordArray2);
+		         */
+		        concat: function (wordArray) {
+		            // Shortcuts
+		            var thisWords = this.words;
+		            var thatWords = wordArray.words;
+		            var thisSigBytes = this.sigBytes;
+		            var thatSigBytes = wordArray.sigBytes;
+	
+		            // Clamp excess bits
+		            this.clamp();
+	
+		            // Concat
+		            if (thisSigBytes % 4) {
+		                // Copy one byte at a time
+		                for (var i = 0; i < thatSigBytes; i++) {
+		                    var thatByte = (thatWords[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+		                    thisWords[(thisSigBytes + i) >>> 2] |= thatByte << (24 - ((thisSigBytes + i) % 4) * 8);
+		                }
+		            } else {
+		                // Copy one word at a time
+		                for (var i = 0; i < thatSigBytes; i += 4) {
+		                    thisWords[(thisSigBytes + i) >>> 2] = thatWords[i >>> 2];
+		                }
+		            }
+		            this.sigBytes += thatSigBytes;
+	
+		            // Chainable
+		            return this;
+		        },
+	
+		        /**
+		         * Removes insignificant bits.
+		         *
+		         * @example
+		         *
+		         *     wordArray.clamp();
+		         */
+		        clamp: function () {
+		            // Shortcuts
+		            var words = this.words;
+		            var sigBytes = this.sigBytes;
+	
+		            // Clamp
+		            words[sigBytes >>> 2] &= 0xffffffff << (32 - (sigBytes % 4) * 8);
+		            words.length = Math.ceil(sigBytes / 4);
+		        },
+	
+		        /**
+		         * Creates a copy of this word array.
+		         *
+		         * @return {WordArray} The clone.
+		         *
+		         * @example
+		         *
+		         *     var clone = wordArray.clone();
+		         */
+		        clone: function () {
+		            var clone = Base.clone.call(this);
+		            clone.words = this.words.slice(0);
+	
+		            return clone;
+		        },
+	
+		        /**
+		         * Creates a word array filled with random bytes.
+		         *
+		         * @param {number} nBytes The number of random bytes to generate.
+		         *
+		         * @return {WordArray} The random word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.lib.WordArray.random(16);
+		         */
+		        random: function (nBytes) {
+		            var words = [];
+	
+		            var r = (function (m_w) {
+		                var m_w = m_w;
+		                var m_z = 0x3ade68b1;
+		                var mask = 0xffffffff;
+	
+		                return function () {
+		                    m_z = (0x9069 * (m_z & 0xFFFF) + (m_z >> 0x10)) & mask;
+		                    m_w = (0x4650 * (m_w & 0xFFFF) + (m_w >> 0x10)) & mask;
+		                    var result = ((m_z << 0x10) + m_w) & mask;
+		                    result /= 0x100000000;
+		                    result += 0.5;
+		                    return result * (Math.random() > .5 ? 1 : -1);
+		                }
+		            });
+	
+		            for (var i = 0, rcache; i < nBytes; i += 4) {
+		                var _r = r((rcache || Math.random()) * 0x100000000);
+	
+		                rcache = _r() * 0x3ade67b7;
+		                words.push((_r() * 0x100000000) | 0);
+		            }
+	
+		            return new WordArray.init(words, nBytes);
+		        }
+		    });
+	
+		    /**
+		     * Encoder namespace.
+		     */
+		    var C_enc = C.enc = {};
+	
+		    /**
+		     * Hex encoding strategy.
+		     */
+		    var Hex = C_enc.Hex = {
+		        /**
+		         * Converts a word array to a hex string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The hex string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var hexString = CryptoJS.enc.Hex.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            // Shortcuts
+		            var words = wordArray.words;
+		            var sigBytes = wordArray.sigBytes;
+	
+		            // Convert
+		            var hexChars = [];
+		            for (var i = 0; i < sigBytes; i++) {
+		                var bite = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+		                hexChars.push((bite >>> 4).toString(16));
+		                hexChars.push((bite & 0x0f).toString(16));
+		            }
+	
+		            return hexChars.join('');
+		        },
+	
+		        /**
+		         * Converts a hex string to a word array.
+		         *
+		         * @param {string} hexStr The hex string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Hex.parse(hexString);
+		         */
+		        parse: function (hexStr) {
+		            // Shortcut
+		            var hexStrLength = hexStr.length;
+	
+		            // Convert
+		            var words = [];
+		            for (var i = 0; i < hexStrLength; i += 2) {
+		                words[i >>> 3] |= parseInt(hexStr.substr(i, 2), 16) << (24 - (i % 8) * 4);
+		            }
+	
+		            return new WordArray.init(words, hexStrLength / 2);
+		        }
+		    };
+	
+		    /**
+		     * Latin1 encoding strategy.
+		     */
+		    var Latin1 = C_enc.Latin1 = {
+		        /**
+		         * Converts a word array to a Latin1 string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The Latin1 string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var latin1String = CryptoJS.enc.Latin1.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            // Shortcuts
+		            var words = wordArray.words;
+		            var sigBytes = wordArray.sigBytes;
+	
+		            // Convert
+		            var latin1Chars = [];
+		            for (var i = 0; i < sigBytes; i++) {
+		                var bite = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+		                latin1Chars.push(String.fromCharCode(bite));
+		            }
+	
+		            return latin1Chars.join('');
+		        },
+	
+		        /**
+		         * Converts a Latin1 string to a word array.
+		         *
+		         * @param {string} latin1Str The Latin1 string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Latin1.parse(latin1String);
+		         */
+		        parse: function (latin1Str) {
+		            // Shortcut
+		            var latin1StrLength = latin1Str.length;
+	
+		            // Convert
+		            var words = [];
+		            for (var i = 0; i < latin1StrLength; i++) {
+		                words[i >>> 2] |= (latin1Str.charCodeAt(i) & 0xff) << (24 - (i % 4) * 8);
+		            }
+	
+		            return new WordArray.init(words, latin1StrLength);
+		        }
+		    };
+	
+		    /**
+		     * UTF-8 encoding strategy.
+		     */
+		    var Utf8 = C_enc.Utf8 = {
+		        /**
+		         * Converts a word array to a UTF-8 string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The UTF-8 string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var utf8String = CryptoJS.enc.Utf8.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            try {
+		                return decodeURIComponent(escape(Latin1.stringify(wordArray)));
+		            } catch (e) {
+		                throw new Error('Malformed UTF-8 data');
+		            }
+		        },
+	
+		        /**
+		         * Converts a UTF-8 string to a word array.
+		         *
+		         * @param {string} utf8Str The UTF-8 string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Utf8.parse(utf8String);
+		         */
+		        parse: function (utf8Str) {
+		            return Latin1.parse(unescape(encodeURIComponent(utf8Str)));
+		        }
+		    };
+	
+		    /**
+		     * Abstract buffered block algorithm template.
+		     *
+		     * The property blockSize must be implemented in a concrete subtype.
+		     *
+		     * @property {number} _minBufferSize The number of blocks that should be kept unprocessed in the buffer. Default: 0
+		     */
+		    var BufferedBlockAlgorithm = C_lib.BufferedBlockAlgorithm = Base.extend({
+		        /**
+		         * Resets this block algorithm's data buffer to its initial state.
+		         *
+		         * @example
+		         *
+		         *     bufferedBlockAlgorithm.reset();
+		         */
+		        reset: function () {
+		            // Initial values
+		            this._data = new WordArray.init();
+		            this._nDataBytes = 0;
+		        },
+	
+		        /**
+		         * Adds new data to this block algorithm's buffer.
+		         *
+		         * @param {WordArray|string} data The data to append. Strings are converted to a WordArray using UTF-8.
+		         *
+		         * @example
+		         *
+		         *     bufferedBlockAlgorithm._append('data');
+		         *     bufferedBlockAlgorithm._append(wordArray);
+		         */
+		        _append: function (data) {
+		            // Convert string to WordArray, else assume WordArray already
+		            if (typeof data == 'string') {
+		                data = Utf8.parse(data);
+		            }
+	
+		            // Append
+		            this._data.concat(data);
+		            this._nDataBytes += data.sigBytes;
+		        },
+	
+		        /**
+		         * Processes available data blocks.
+		         *
+		         * This method invokes _doProcessBlock(offset), which must be implemented by a concrete subtype.
+		         *
+		         * @param {boolean} doFlush Whether all blocks and partial blocks should be processed.
+		         *
+		         * @return {WordArray} The processed data.
+		         *
+		         * @example
+		         *
+		         *     var processedData = bufferedBlockAlgorithm._process();
+		         *     var processedData = bufferedBlockAlgorithm._process(!!'flush');
+		         */
+		        _process: function (doFlush) {
+		            // Shortcuts
+		            var data = this._data;
+		            var dataWords = data.words;
+		            var dataSigBytes = data.sigBytes;
+		            var blockSize = this.blockSize;
+		            var blockSizeBytes = blockSize * 4;
+	
+		            // Count blocks ready
+		            var nBlocksReady = dataSigBytes / blockSizeBytes;
+		            if (doFlush) {
+		                // Round up to include partial blocks
+		                nBlocksReady = Math.ceil(nBlocksReady);
+		            } else {
+		                // Round down to include only full blocks,
+		                // less the number of blocks that must remain in the buffer
+		                nBlocksReady = Math.max((nBlocksReady | 0) - this._minBufferSize, 0);
+		            }
+	
+		            // Count words ready
+		            var nWordsReady = nBlocksReady * blockSize;
+	
+		            // Count bytes ready
+		            var nBytesReady = Math.min(nWordsReady * 4, dataSigBytes);
+	
+		            // Process blocks
+		            if (nWordsReady) {
+		                for (var offset = 0; offset < nWordsReady; offset += blockSize) {
+		                    // Perform concrete-algorithm logic
+		                    this._doProcessBlock(dataWords, offset);
+		                }
+	
+		                // Remove processed words
+		                var processedWords = dataWords.splice(0, nWordsReady);
+		                data.sigBytes -= nBytesReady;
+		            }
+	
+		            // Return processed words
+		            return new WordArray.init(processedWords, nBytesReady);
+		        },
+	
+		        /**
+		         * Creates a copy of this object.
+		         *
+		         * @return {Object} The clone.
+		         *
+		         * @example
+		         *
+		         *     var clone = bufferedBlockAlgorithm.clone();
+		         */
+		        clone: function () {
+		            var clone = Base.clone.call(this);
+		            clone._data = this._data.clone();
+	
+		            return clone;
+		        },
+	
+		        _minBufferSize: 0
+		    });
+	
+		    /**
+		     * Abstract hasher template.
+		     *
+		     * @property {number} blockSize The number of 32-bit words this hasher operates on. Default: 16 (512 bits)
+		     */
+		    var Hasher = C_lib.Hasher = BufferedBlockAlgorithm.extend({
+		        /**
+		         * Configuration options.
+		         */
+		        cfg: Base.extend(),
+	
+		        /**
+		         * Initializes a newly created hasher.
+		         *
+		         * @param {Object} cfg (Optional) The configuration options to use for this hash computation.
+		         *
+		         * @example
+		         *
+		         *     var hasher = CryptoJS.algo.SHA256.create();
+		         */
+		        init: function (cfg) {
+		            // Apply config defaults
+		            this.cfg = this.cfg.extend(cfg);
+	
+		            // Set initial values
+		            this.reset();
+		        },
+	
+		        /**
+		         * Resets this hasher to its initial state.
+		         *
+		         * @example
+		         *
+		         *     hasher.reset();
+		         */
+		        reset: function () {
+		            // Reset data buffer
+		            BufferedBlockAlgorithm.reset.call(this);
+	
+		            // Perform concrete-hasher logic
+		            this._doReset();
+		        },
+	
+		        /**
+		         * Updates this hasher with a message.
+		         *
+		         * @param {WordArray|string} messageUpdate The message to append.
+		         *
+		         * @return {Hasher} This hasher.
+		         *
+		         * @example
+		         *
+		         *     hasher.update('message');
+		         *     hasher.update(wordArray);
+		         */
+		        update: function (messageUpdate) {
+		            // Append
+		            this._append(messageUpdate);
+	
+		            // Update the hash
+		            this._process();
+	
+		            // Chainable
+		            return this;
+		        },
+	
+		        /**
+		         * Finalizes the hash computation.
+		         * Note that the finalize operation is effectively a destructive, read-once operation.
+		         *
+		         * @param {WordArray|string} messageUpdate (Optional) A final message update.
+		         *
+		         * @return {WordArray} The hash.
+		         *
+		         * @example
+		         *
+		         *     var hash = hasher.finalize();
+		         *     var hash = hasher.finalize('message');
+		         *     var hash = hasher.finalize(wordArray);
+		         */
+		        finalize: function (messageUpdate) {
+		            // Final message update
+		            if (messageUpdate) {
+		                this._append(messageUpdate);
+		            }
+	
+		            // Perform concrete-hasher logic
+		            var hash = this._doFinalize();
+	
+		            return hash;
+		        },
+	
+		        blockSize: 512/32,
+	
+		        /**
+		         * Creates a shortcut function to a hasher's object interface.
+		         *
+		         * @param {Hasher} hasher The hasher to create a helper for.
+		         *
+		         * @return {Function} The shortcut function.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var SHA256 = CryptoJS.lib.Hasher._createHelper(CryptoJS.algo.SHA256);
+		         */
+		        _createHelper: function (hasher) {
+		            return function (message, cfg) {
+		                return new hasher.init(cfg).finalize(message);
+		            };
+		        },
+	
+		        /**
+		         * Creates a shortcut function to the HMAC's object interface.
+		         *
+		         * @param {Hasher} hasher The hasher to use in this HMAC helper.
+		         *
+		         * @return {Function} The shortcut function.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var HmacSHA256 = CryptoJS.lib.Hasher._createHmacHelper(CryptoJS.algo.SHA256);
+		         */
+		        _createHmacHelper: function (hasher) {
+		            return function (message, key) {
+		                return new C_algo.HMAC.init(hasher, key).finalize(message);
+		            };
+		        }
+		    });
+	
+		    /**
+		     * Algorithm namespace.
+		     */
+		    var C_algo = C.algo = {};
+	
+		    return C;
+		}(Math));
+	
+	
+		return CryptoJS;
+	
+	}));
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __nested_webpack_require_46159__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_46159__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var Hasher = C_lib.Hasher;
+		    var C_algo = C.algo;
+	
+		    // Reusable object
+		    var W = [];
+	
+		    /**
+		     * SHA-1 hash algorithm.
+		     */
+		    var SHA1 = C_algo.SHA1 = Hasher.extend({
+		        _doReset: function () {
+		            this._hash = new WordArray.init([
+		                0x67452301, 0xefcdab89,
+		                0x98badcfe, 0x10325476,
+		                0xc3d2e1f0
+		            ]);
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            // Shortcut
+		            var H = this._hash.words;
+	
+		            // Working variables
+		            var a = H[0];
+		            var b = H[1];
+		            var c = H[2];
+		            var d = H[3];
+		            var e = H[4];
+	
+		            // Computation
+		            for (var i = 0; i < 80; i++) {
+		                if (i < 16) {
+		                    W[i] = M[offset + i] | 0;
+		                } else {
+		                    var n = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];
+		                    W[i] = (n << 1) | (n >>> 31);
+		                }
+	
+		                var t = ((a << 5) | (a >>> 27)) + e + W[i];
+		                if (i < 20) {
+		                    t += ((b & c) | (~b & d)) + 0x5a827999;
+		                } else if (i < 40) {
+		                    t += (b ^ c ^ d) + 0x6ed9eba1;
+		                } else if (i < 60) {
+		                    t += ((b & c) | (b & d) | (c & d)) - 0x70e44324;
+		                } else /* if (i < 80) */ {
+		                    t += (b ^ c ^ d) - 0x359d3e2a;
+		                }
+	
+		                e = d;
+		                d = c;
+		                c = (b << 30) | (b >>> 2);
+		                b = a;
+		                a = t;
+		            }
+	
+		            // Intermediate hash value
+		            H[0] = (H[0] + a) | 0;
+		            H[1] = (H[1] + b) | 0;
+		            H[2] = (H[2] + c) | 0;
+		            H[3] = (H[3] + d) | 0;
+		            H[4] = (H[4] + e) | 0;
+		        },
+	
+		        _doFinalize: function () {
+		            // Shortcuts
+		            var data = this._data;
+		            var dataWords = data.words;
+	
+		            var nBitsTotal = this._nDataBytes * 8;
+		            var nBitsLeft = data.sigBytes * 8;
+	
+		            // Add padding
+		            dataWords[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32);
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 14] = Math.floor(nBitsTotal / 0x100000000);
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 15] = nBitsTotal;
+		            data.sigBytes = dataWords.length * 4;
+	
+		            // Hash final blocks
+		            this._process();
+	
+		            // Return final computed hash
+		            return this._hash;
+		        },
+	
+		        clone: function () {
+		            var clone = Hasher.clone.call(this);
+		            clone._hash = this._hash.clone();
+	
+		            return clone;
+		        }
+		    });
+	
+		    /**
+		     * Shortcut function to the hasher's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     *
+		     * @return {WordArray} The hash.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hash = CryptoJS.SHA1('message');
+		     *     var hash = CryptoJS.SHA1(wordArray);
+		     */
+		    C.SHA1 = Hasher._createHelper(SHA1);
+	
+		    /**
+		     * Shortcut function to the HMAC's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     * @param {WordArray|string} key The secret key.
+		     *
+		     * @return {WordArray} The HMAC.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hmac = CryptoJS.HmacSHA1(message, key);
+		     */
+		    C.HmacSHA1 = Hasher._createHmacHelper(SHA1);
+		}());
+	
+	
+		return CryptoJS.SHA1;
+	
+	}));
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __nested_webpack_require_50429__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_50429__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var C_enc = C.enc;
+		    var Utf8 = C_enc.Utf8;
+		    var C_algo = C.algo;
+	
+		    /**
+		     * HMAC algorithm.
+		     */
+		    var HMAC = C_algo.HMAC = Base.extend({
+		        /**
+		         * Initializes a newly created HMAC.
+		         *
+		         * @param {Hasher} hasher The hash algorithm to use.
+		         * @param {WordArray|string} key The secret key.
+		         *
+		         * @example
+		         *
+		         *     var hmacHasher = CryptoJS.algo.HMAC.create(CryptoJS.algo.SHA256, key);
+		         */
+		        init: function (hasher, key) {
+		            // Init hasher
+		            hasher = this._hasher = new hasher.init();
+	
+		            // Convert string to WordArray, else assume WordArray already
+		            if (typeof key == 'string') {
+		                key = Utf8.parse(key);
+		            }
+	
+		            // Shortcuts
+		            var hasherBlockSize = hasher.blockSize;
+		            var hasherBlockSizeBytes = hasherBlockSize * 4;
+	
+		            // Allow arbitrary length keys
+		            if (key.sigBytes > hasherBlockSizeBytes) {
+		                key = hasher.finalize(key);
+		            }
+	
+		            // Clamp excess bits
+		            key.clamp();
+	
+		            // Clone key for inner and outer pads
+		            var oKey = this._oKey = key.clone();
+		            var iKey = this._iKey = key.clone();
+	
+		            // Shortcuts
+		            var oKeyWords = oKey.words;
+		            var iKeyWords = iKey.words;
+	
+		            // XOR keys with pad constants
+		            for (var i = 0; i < hasherBlockSize; i++) {
+		                oKeyWords[i] ^= 0x5c5c5c5c;
+		                iKeyWords[i] ^= 0x36363636;
+		            }
+		            oKey.sigBytes = iKey.sigBytes = hasherBlockSizeBytes;
+	
+		            // Set initial values
+		            this.reset();
+		        },
+	
+		        /**
+		         * Resets this HMAC to its initial state.
+		         *
+		         * @example
+		         *
+		         *     hmacHasher.reset();
+		         */
+		        reset: function () {
+		            // Shortcut
+		            var hasher = this._hasher;
+	
+		            // Reset
+		            hasher.reset();
+		            hasher.update(this._iKey);
+		        },
+	
+		        /**
+		         * Updates this HMAC with a message.
+		         *
+		         * @param {WordArray|string} messageUpdate The message to append.
+		         *
+		         * @return {HMAC} This HMAC instance.
+		         *
+		         * @example
+		         *
+		         *     hmacHasher.update('message');
+		         *     hmacHasher.update(wordArray);
+		         */
+		        update: function (messageUpdate) {
+		            this._hasher.update(messageUpdate);
+	
+		            // Chainable
+		            return this;
+		        },
+	
+		        /**
+		         * Finalizes the HMAC computation.
+		         * Note that the finalize operation is effectively a destructive, read-once operation.
+		         *
+		         * @param {WordArray|string} messageUpdate (Optional) A final message update.
+		         *
+		         * @return {WordArray} The HMAC.
+		         *
+		         * @example
+		         *
+		         *     var hmac = hmacHasher.finalize();
+		         *     var hmac = hmacHasher.finalize('message');
+		         *     var hmac = hmacHasher.finalize(wordArray);
+		         */
+		        finalize: function (messageUpdate) {
+		            // Shortcut
+		            var hasher = this._hasher;
+	
+		            // Compute HMAC
+		            var innerHash = hasher.finalize(messageUpdate);
+		            hasher.reset();
+		            var hmac = hasher.finalize(this._oKey.clone().concat(innerHash));
+	
+		            return hmac;
+		        }
+		    });
+		}());
+	
+	
+	}));
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	/*
+	 ES6 compatible port of CryptoJS - encoding
+	
+	 Source: https://github.com/brix/crypto-js
+	 LICENSE: MIT
+	 */
+	var enc = {};
+	
+	enc.Latin1 = {
+	  stringify: function stringify(wordArray) {
+	    // Shortcuts
+	    var words = wordArray.words;
+	    var sigBytes = wordArray.sigBytes;
+	    var latin1Chars = [],
+	        i = void 0,
+	        bite = void 0;
+	
+	    // Convert
+	    for (i = 0; i < sigBytes; i++) {
+	      bite = words[i >>> 2] >>> 24 - i % 4 * 8 & 0xff;
+	      latin1Chars.push(String.fromCharCode(bite));
+	    }
+	
+	    return latin1Chars.join('');
+	  }
+	};
+	
+	enc._Utf8 = {
+	  stringify: function stringify(wordArray) {
+	    try {
+	      return decodeURIComponent(escape(enc.Latin1.stringify(wordArray)));
+	    } catch (e) {
+	      throw new Error('Malformed UTF-8 data');
+	    }
+	  }
+	};
+	
+	module.exports = enc;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var Base64 = {
+	  _keyStr: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
+	  encode: function encode(e) {
+	    var t = '';
+	    var n = void 0,
+	        r = void 0,
+	        i = void 0,
+	        s = void 0,
+	        o = void 0,
+	        u = void 0,
+	        a = void 0;
+	    var f = 0;
+	
+	    e = Base64._utf8Encode(e);
+	    while (f < e.length) {
+	      n = e.charCodeAt(f++);
+	      r = e.charCodeAt(f++);
+	      i = e.charCodeAt(f++);
+	      s = n >> 2;
+	      o = (n & 3) << 4 | r >> 4;
+	      u = (r & 15) << 2 | i >> 6;
+	      a = i & 63;
+	      if (isNaN(r)) {
+	        u = a = 64;
+	      } else if (isNaN(i)) {
+	        a = 64;
+	      }
+	      t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a);
+	    }
+	    return t;
+	  },
+	  decode: function decode(e) {
+	    var t = '';
+	    var n = void 0,
+	        r = void 0,
+	        i = void 0;
+	    var s = void 0,
+	        o = void 0,
+	        u = void 0,
+	        a = void 0;
+	    var f = 0;
+	
+	    e = e.replace(/[^A-Za-z0-9\+\/\=]/g, '');
+	    while (f < e.length) {
+	      s = this._keyStr.indexOf(e.charAt(f++));
+	      o = this._keyStr.indexOf(e.charAt(f++));
+	      u = this._keyStr.indexOf(e.charAt(f++));
+	      a = this._keyStr.indexOf(e.charAt(f++));
+	      n = s << 2 | o >> 4;
+	      r = (o & 15) << 4 | u >> 2;
+	      i = (u & 3) << 6 | a;
+	      t = t + String.fromCharCode(n);
+	      if (u !== 64) {
+	        t = t + String.fromCharCode(r);
+	      }
+	      if (a !== 64) {
+	        t = t + String.fromCharCode(i);
+	      }
+	    }
+	    t = Base64._utf8Decode(t);
+	    return t;
+	  },
+	  _utf8Encode: function _utf8Encode(e) {
+	    e = e.replace(/\r\n/g, '\n');
+	    var t = '';
+	
+	    for (var n = 0; n < e.length; n++) {
+	      var r = e.charCodeAt(n);
+	
+	      if (r < 128) {
+	        t += String.fromCharCode(r);
+	      } else if (r > 127 && r < 2048) {
+	        t += String.fromCharCode(r >> 6 | 192);
+	        t += String.fromCharCode(r & 63 | 128);
+	      } else {
+	        t += String.fromCharCode(r >> 12 | 224);
+	        t += String.fromCharCode(r >> 6 & 63 | 128);
+	        t += String.fromCharCode(r & 63 | 128);
+	      }
+	    }
+	    return t;
+	  },
+	  _utf8Decode: function _utf8Decode(e) {
+	    var t = '';
+	    var n = 0;
+	    var r = void 0,
+	        c2 = void 0,
+	        c3 = void 0;
+	
+	    r = c2 = 0;
+	    while (n < e.length) {
+	      r = e.charCodeAt(n);
+	      if (r < 128) {
+	        t += String.fromCharCode(r);
+	        n++;
+	      } else if (r > 191 && r < 224) {
+	        c2 = e.charCodeAt(n + 1);
+	        t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+	        n += 2;
+	      } else {
+	        c2 = e.charCodeAt(n + 1);
+	        c3 = e.charCodeAt(n + 2);
+	        t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+	        n += 3;
+	      }
+	    }
+	    return t;
+	  }
+	};
+	
+	module.exports = Base64;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __nested_webpack_require_58480__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;// Copyright (c) 2013 Pieroxy <pieroxy@pieroxy.net>
+	// This work is free. You can redistribute it and/or modify it
+	// under the terms of the WTFPL, Version 2
+	// For more information see LICENSE.txt or http://www.wtfpl.net/
+	//
+	// For more information, the home page:
+	// http://pieroxy.net/blog/pages/lz-string/testing.html
+	//
+	// LZ-based compression algorithm, version 1.4.4
+	var LZString = (function() {
+	
+	// private property
+	var f = String.fromCharCode;
+	var keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+	var keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
+	var baseReverseDic = {};
+	
+	function getBaseValue(alphabet, character) {
+	  if (!baseReverseDic[alphabet]) {
+	    baseReverseDic[alphabet] = {};
+	    for (var i=0 ; i<alphabet.length ; i++) {
+	      baseReverseDic[alphabet][alphabet.charAt(i)] = i;
+	    }
+	  }
+	  return baseReverseDic[alphabet][character];
+	}
+	
+	var LZString = {
+	  compressToBase64 : function (input) {
+	    if (input == null) return "";
+	    var res = LZString._compress(input, 6, function(a){return keyStrBase64.charAt(a);});
+	    switch (res.length % 4) { // To produce valid Base64
+	    default: // When could this happen ?
+	    case 0 : return res;
+	    case 1 : return res+"===";
+	    case 2 : return res+"==";
+	    case 3 : return res+"=";
+	    }
+	  },
+	
+	  decompressFromBase64 : function (input) {
+	    if (input == null) return "";
+	    if (input == "") return null;
+	    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrBase64, input.charAt(index)); });
+	  },
+	
+	  compressToUTF16 : function (input) {
+	    if (input == null) return "";
+	    return LZString._compress(input, 15, function(a){return f(a+32);}) + " ";
+	  },
+	
+	  decompressFromUTF16: function (compressed) {
+	    if (compressed == null) return "";
+	    if (compressed == "") return null;
+	    return LZString._decompress(compressed.length, 16384, function(index) { return compressed.charCodeAt(index) - 32; });
+	  },
+	
+	  //compress into uint8array (UCS-2 big endian format)
+	  compressToUint8Array: function (uncompressed) {
+	    var compressed = LZString.compress(uncompressed);
+	    var buf=new Uint8Array(compressed.length*2); // 2 bytes per character
+	
+	    for (var i=0, TotalLen=compressed.length; i<TotalLen; i++) {
+	      var current_value = compressed.charCodeAt(i);
+	      buf[i*2] = current_value >>> 8;
+	      buf[i*2+1] = current_value % 256;
+	    }
+	    return buf;
+	  },
+	
+	  //decompress from uint8array (UCS-2 big endian format)
+	  decompressFromUint8Array:function (compressed) {
+	    if (compressed===null || compressed===undefined){
+	        return LZString.decompress(compressed);
+	    } else {
+	        var buf=new Array(compressed.length/2); // 2 bytes per character
+	        for (var i=0, TotalLen=buf.length; i<TotalLen; i++) {
+	          buf[i]=compressed[i*2]*256+compressed[i*2+1];
+	        }
+	
+	        var result = [];
+	        buf.forEach(function (c) {
+	          result.push(f(c));
+	        });
+	        return LZString.decompress(result.join(''));
+	
+	    }
+	
+	  },
+	
+	
+	  //compress into a string that is already URI encoded
+	  compressToEncodedURIComponent: function (input) {
+	    if (input == null) return "";
+	    return LZString._compress(input, 6, function(a){return keyStrUriSafe.charAt(a);});
+	  },
+	
+	  //decompress from an output of compressToEncodedURIComponent
+	  decompressFromEncodedURIComponent:function (input) {
+	    if (input == null) return "";
+	    if (input == "") return null;
+	    input = input.replace(/ /g, "+");
+	    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrUriSafe, input.charAt(index)); });
+	  },
+	
+	  compress: function (uncompressed) {
+	    return LZString._compress(uncompressed, 16, function(a){return f(a);});
+	  },
+	  _compress: function (uncompressed, bitsPerChar, getCharFromInt) {
+	    if (uncompressed == null) return "";
+	    var i, value,
+	        context_dictionary= {},
+	        context_dictionaryToCreate= {},
+	        context_c="",
+	        context_wc="",
+	        context_w="",
+	        context_enlargeIn= 2, // Compensate for the first entry which should not count
+	        context_dictSize= 3,
+	        context_numBits= 2,
+	        context_data=[],
+	        context_data_val=0,
+	        context_data_position=0,
+	        ii;
+	
+	    for (ii = 0; ii < uncompressed.length; ii += 1) {
+	      context_c = uncompressed.charAt(ii);
+	      if (!Object.prototype.hasOwnProperty.call(context_dictionary,context_c)) {
+	        context_dictionary[context_c] = context_dictSize++;
+	        context_dictionaryToCreate[context_c] = true;
+	      }
+	
+	      context_wc = context_w + context_c;
+	      if (Object.prototype.hasOwnProperty.call(context_dictionary,context_wc)) {
+	        context_w = context_wc;
+	      } else {
+	        if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+	          if (context_w.charCodeAt(0)<256) {
+	            for (i=0 ; i<context_numBits ; i++) {
+	              context_data_val = (context_data_val << 1);
+	              if (context_data_position == bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	            }
+	            value = context_w.charCodeAt(0);
+	            for (i=0 ; i<8 ; i++) {
+	              context_data_val = (context_data_val << 1) | (value&1);
+	              if (context_data_position == bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	              value = value >> 1;
+	            }
+	          } else {
+	            value = 1;
+	            for (i=0 ; i<context_numBits ; i++) {
+	              context_data_val = (context_data_val << 1) | value;
+	              if (context_data_position ==bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	              value = 0;
+	            }
+	            value = context_w.charCodeAt(0);
+	            for (i=0 ; i<16 ; i++) {
+	              context_data_val = (context_data_val << 1) | (value&1);
+	              if (context_data_position == bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	              value = value >> 1;
+	            }
+	          }
+	          context_enlargeIn--;
+	          if (context_enlargeIn == 0) {
+	            context_enlargeIn = Math.pow(2, context_numBits);
+	            context_numBits++;
+	          }
+	          delete context_dictionaryToCreate[context_w];
+	        } else {
+	          value = context_dictionary[context_w];
+	          for (i=0 ; i<context_numBits ; i++) {
+	            context_data_val = (context_data_val << 1) | (value&1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = value >> 1;
+	          }
+	
+	
+	        }
+	        context_enlargeIn--;
+	        if (context_enlargeIn == 0) {
+	          context_enlargeIn = Math.pow(2, context_numBits);
+	          context_numBits++;
+	        }
+	        // Add wc to the dictionary.
+	        context_dictionary[context_wc] = context_dictSize++;
+	        context_w = String(context_c);
+	      }
+	    }
+	
+	    // Output the code for w.
+	    if (context_w !== "") {
+	      if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+	        if (context_w.charCodeAt(0)<256) {
+	          for (i=0 ; i<context_numBits ; i++) {
+	            context_data_val = (context_data_val << 1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	          }
+	          value = context_w.charCodeAt(0);
+	          for (i=0 ; i<8 ; i++) {
+	            context_data_val = (context_data_val << 1) | (value&1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = value >> 1;
+	          }
+	        } else {
+	          value = 1;
+	          for (i=0 ; i<context_numBits ; i++) {
+	            context_data_val = (context_data_val << 1) | value;
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = 0;
+	          }
+	          value = context_w.charCodeAt(0);
+	          for (i=0 ; i<16 ; i++) {
+	            context_data_val = (context_data_val << 1) | (value&1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = value >> 1;
+	          }
+	        }
+	        context_enlargeIn--;
+	        if (context_enlargeIn == 0) {
+	          context_enlargeIn = Math.pow(2, context_numBits);
+	          context_numBits++;
+	        }
+	        delete context_dictionaryToCreate[context_w];
+	      } else {
+	        value = context_dictionary[context_w];
+	        for (i=0 ; i<context_numBits ; i++) {
+	          context_data_val = (context_data_val << 1) | (value&1);
+	          if (context_data_position == bitsPerChar-1) {
+	            context_data_position = 0;
+	            context_data.push(getCharFromInt(context_data_val));
+	            context_data_val = 0;
+	          } else {
+	            context_data_position++;
+	          }
+	          value = value >> 1;
+	        }
+	
+	
+	      }
+	      context_enlargeIn--;
+	      if (context_enlargeIn == 0) {
+	        context_enlargeIn = Math.pow(2, context_numBits);
+	        context_numBits++;
+	      }
+	    }
+	
+	    // Mark the end of the stream
+	    value = 2;
+	    for (i=0 ; i<context_numBits ; i++) {
+	      context_data_val = (context_data_val << 1) | (value&1);
+	      if (context_data_position == bitsPerChar-1) {
+	        context_data_position = 0;
+	        context_data.push(getCharFromInt(context_data_val));
+	        context_data_val = 0;
+	      } else {
+	        context_data_position++;
+	      }
+	      value = value >> 1;
+	    }
+	
+	    // Flush the last char
+	    while (true) {
+	      context_data_val = (context_data_val << 1);
+	      if (context_data_position == bitsPerChar-1) {
+	        context_data.push(getCharFromInt(context_data_val));
+	        break;
+	      }
+	      else context_data_position++;
+	    }
+	    return context_data.join('');
+	  },
+	
+	  decompress: function (compressed) {
+	    if (compressed == null) return "";
+	    if (compressed == "") return null;
+	    return LZString._decompress(compressed.length, 32768, function(index) { return compressed.charCodeAt(index); });
+	  },
+	
+	  _decompress: function (length, resetValue, getNextValue) {
+	    var dictionary = [],
+	        next,
+	        enlargeIn = 4,
+	        dictSize = 4,
+	        numBits = 3,
+	        entry = "",
+	        result = [],
+	        i,
+	        w,
+	        bits, resb, maxpower, power,
+	        c,
+	        data = {val:getNextValue(0), position:resetValue, index:1};
+	
+	    for (i = 0; i < 3; i += 1) {
+	      dictionary[i] = i;
+	    }
+	
+	    bits = 0;
+	    maxpower = Math.pow(2,2);
+	    power=1;
+	    while (power!=maxpower) {
+	      resb = data.val & data.position;
+	      data.position >>= 1;
+	      if (data.position == 0) {
+	        data.position = resetValue;
+	        data.val = getNextValue(data.index++);
+	      }
+	      bits |= (resb>0 ? 1 : 0) * power;
+	      power <<= 1;
+	    }
+	
+	    switch (next = bits) {
+	      case 0:
+	          bits = 0;
+	          maxpower = Math.pow(2,8);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	        c = f(bits);
+	        break;
+	      case 1:
+	          bits = 0;
+	          maxpower = Math.pow(2,16);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	        c = f(bits);
+	        break;
+	      case 2:
+	        return "";
+	    }
+	    dictionary[3] = c;
+	    w = c;
+	    result.push(c);
+	    while (true) {
+	      if (data.index > length) {
+	        return "";
+	      }
+	
+	      bits = 0;
+	      maxpower = Math.pow(2,numBits);
+	      power=1;
+	      while (power!=maxpower) {
+	        resb = data.val & data.position;
+	        data.position >>= 1;
+	        if (data.position == 0) {
+	          data.position = resetValue;
+	          data.val = getNextValue(data.index++);
+	        }
+	        bits |= (resb>0 ? 1 : 0) * power;
+	        power <<= 1;
+	      }
+	
+	      switch (c = bits) {
+	        case 0:
+	          bits = 0;
+	          maxpower = Math.pow(2,8);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	
+	          dictionary[dictSize++] = f(bits);
+	          c = dictSize-1;
+	          enlargeIn--;
+	          break;
+	        case 1:
+	          bits = 0;
+	          maxpower = Math.pow(2,16);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	          dictionary[dictSize++] = f(bits);
+	          c = dictSize-1;
+	          enlargeIn--;
+	          break;
+	        case 2:
+	          return result.join('');
+	      }
+	
+	      if (enlargeIn == 0) {
+	        enlargeIn = Math.pow(2, numBits);
+	        numBits++;
+	      }
+	
+	      if (dictionary[c]) {
+	        entry = dictionary[c];
+	      } else {
+	        if (c === dictSize) {
+	          entry = w + w.charAt(0);
+	        } else {
+	          return null;
+	        }
+	      }
+	      result.push(entry);
+	
+	      // Add w+entry[0] to the dictionary.
+	      dictionary[dictSize++] = w + entry.charAt(0);
+	      enlargeIn--;
+	
+	      w = entry;
+	
+	      if (enlargeIn == 0) {
+	        enlargeIn = Math.pow(2, numBits);
+	        numBits++;
+	      }
+	
+	    }
+	  }
+	};
+	  return LZString;
+	})();
+	
+	if (true) {
+	  !(__WEBPACK_AMD_DEFINE_RESULT__ = function () { return LZString; }.call(exports, __nested_webpack_require_58480__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __nested_webpack_require_75099__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_75099__(5), __nested_webpack_require_75099__(12), __nested_webpack_require_75099__(13), __nested_webpack_require_75099__(14), __nested_webpack_require_75099__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var BlockCipher = C_lib.BlockCipher;
+		    var C_algo = C.algo;
+	
+		    // Lookup tables
+		    var SBOX = [];
+		    var INV_SBOX = [];
+		    var SUB_MIX_0 = [];
+		    var SUB_MIX_1 = [];
+		    var SUB_MIX_2 = [];
+		    var SUB_MIX_3 = [];
+		    var INV_SUB_MIX_0 = [];
+		    var INV_SUB_MIX_1 = [];
+		    var INV_SUB_MIX_2 = [];
+		    var INV_SUB_MIX_3 = [];
+	
+		    // Compute lookup tables
+		    (function () {
+		        // Compute double table
+		        var d = [];
+		        for (var i = 0; i < 256; i++) {
+		            if (i < 128) {
+		                d[i] = i << 1;
+		            } else {
+		                d[i] = (i << 1) ^ 0x11b;
+		            }
+		        }
+	
+		        // Walk GF(2^8)
+		        var x = 0;
+		        var xi = 0;
+		        for (var i = 0; i < 256; i++) {
+		            // Compute sbox
+		            var sx = xi ^ (xi << 1) ^ (xi << 2) ^ (xi << 3) ^ (xi << 4);
+		            sx = (sx >>> 8) ^ (sx & 0xff) ^ 0x63;
+		            SBOX[x] = sx;
+		            INV_SBOX[sx] = x;
+	
+		            // Compute multiplication
+		            var x2 = d[x];
+		            var x4 = d[x2];
+		            var x8 = d[x4];
+	
+		            // Compute sub bytes, mix columns tables
+		            var t = (d[sx] * 0x101) ^ (sx * 0x1010100);
+		            SUB_MIX_0[x] = (t << 24) | (t >>> 8);
+		            SUB_MIX_1[x] = (t << 16) | (t >>> 16);
+		            SUB_MIX_2[x] = (t << 8)  | (t >>> 24);
+		            SUB_MIX_3[x] = t;
+	
+		            // Compute inv sub bytes, inv mix columns tables
+		            var t = (x8 * 0x1010101) ^ (x4 * 0x10001) ^ (x2 * 0x101) ^ (x * 0x1010100);
+		            INV_SUB_MIX_0[sx] = (t << 24) | (t >>> 8);
+		            INV_SUB_MIX_1[sx] = (t << 16) | (t >>> 16);
+		            INV_SUB_MIX_2[sx] = (t << 8)  | (t >>> 24);
+		            INV_SUB_MIX_3[sx] = t;
+	
+		            // Compute next counter
+		            if (!x) {
+		                x = xi = 1;
+		            } else {
+		                x = x2 ^ d[d[d[x8 ^ x2]]];
+		                xi ^= d[d[xi]];
+		            }
+		        }
+		    }());
+	
+		    // Precomputed Rcon lookup
+		    var RCON = [0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36];
+	
+		    /**
+		     * AES block cipher algorithm.
+		     */
+		    var AES = C_algo.AES = BlockCipher.extend({
+		        _doReset: function () {
+		            // Skip reset of nRounds has been set before and key did not change
+		            if (this._nRounds && this._keyPriorReset === this._key) {
+		                return;
+		            }
+	
+		            // Shortcuts
+		            var key = this._keyPriorReset = this._key;
+		            var keyWords = key.words;
+		            var keySize = key.sigBytes / 4;
+	
+		            // Compute number of rounds
+		            var nRounds = this._nRounds = keySize + 6;
+	
+		            // Compute number of key schedule rows
+		            var ksRows = (nRounds + 1) * 4;
+	
+		            // Compute key schedule
+		            var keySchedule = this._keySchedule = [];
+		            for (var ksRow = 0; ksRow < ksRows; ksRow++) {
+		                if (ksRow < keySize) {
+		                    keySchedule[ksRow] = keyWords[ksRow];
+		                } else {
+		                    var t = keySchedule[ksRow - 1];
+	
+		                    if (!(ksRow % keySize)) {
+		                        // Rot word
+		                        t = (t << 8) | (t >>> 24);
+	
+		                        // Sub word
+		                        t = (SBOX[t >>> 24] << 24) | (SBOX[(t >>> 16) & 0xff] << 16) | (SBOX[(t >>> 8) & 0xff] << 8) | SBOX[t & 0xff];
+	
+		                        // Mix Rcon
+		                        t ^= RCON[(ksRow / keySize) | 0] << 24;
+		                    } else if (keySize > 6 && ksRow % keySize == 4) {
+		                        // Sub word
+		                        t = (SBOX[t >>> 24] << 24) | (SBOX[(t >>> 16) & 0xff] << 16) | (SBOX[(t >>> 8) & 0xff] << 8) | SBOX[t & 0xff];
+		                    }
+	
+		                    keySchedule[ksRow] = keySchedule[ksRow - keySize] ^ t;
+		                }
+		            }
+	
+		            // Compute inv key schedule
+		            var invKeySchedule = this._invKeySchedule = [];
+		            for (var invKsRow = 0; invKsRow < ksRows; invKsRow++) {
+		                var ksRow = ksRows - invKsRow;
+	
+		                if (invKsRow % 4) {
+		                    var t = keySchedule[ksRow];
+		                } else {
+		                    var t = keySchedule[ksRow - 4];
+		                }
+	
+		                if (invKsRow < 4 || ksRow <= 4) {
+		                    invKeySchedule[invKsRow] = t;
+		                } else {
+		                    invKeySchedule[invKsRow] = INV_SUB_MIX_0[SBOX[t >>> 24]] ^ INV_SUB_MIX_1[SBOX[(t >>> 16) & 0xff]] ^
+		                                               INV_SUB_MIX_2[SBOX[(t >>> 8) & 0xff]] ^ INV_SUB_MIX_3[SBOX[t & 0xff]];
+		                }
+		            }
+		        },
+	
+		        encryptBlock: function (M, offset) {
+		            this._doCryptBlock(M, offset, this._keySchedule, SUB_MIX_0, SUB_MIX_1, SUB_MIX_2, SUB_MIX_3, SBOX);
+		        },
+	
+		        decryptBlock: function (M, offset) {
+		            // Swap 2nd and 4th rows
+		            var t = M[offset + 1];
+		            M[offset + 1] = M[offset + 3];
+		            M[offset + 3] = t;
+	
+		            this._doCryptBlock(M, offset, this._invKeySchedule, INV_SUB_MIX_0, INV_SUB_MIX_1, INV_SUB_MIX_2, INV_SUB_MIX_3, INV_SBOX);
+	
+		            // Inv swap 2nd and 4th rows
+		            var t = M[offset + 1];
+		            M[offset + 1] = M[offset + 3];
+		            M[offset + 3] = t;
+		        },
+	
+		        _doCryptBlock: function (M, offset, keySchedule, SUB_MIX_0, SUB_MIX_1, SUB_MIX_2, SUB_MIX_3, SBOX) {
+		            // Shortcut
+		            var nRounds = this._nRounds;
+	
+		            // Get input, add round key
+		            var s0 = M[offset]     ^ keySchedule[0];
+		            var s1 = M[offset + 1] ^ keySchedule[1];
+		            var s2 = M[offset + 2] ^ keySchedule[2];
+		            var s3 = M[offset + 3] ^ keySchedule[3];
+	
+		            // Key schedule row counter
+		            var ksRow = 4;
+	
+		            // Rounds
+		            for (var round = 1; round < nRounds; round++) {
+		                // Shift rows, sub bytes, mix columns, add round key
+		                var t0 = SUB_MIX_0[s0 >>> 24] ^ SUB_MIX_1[(s1 >>> 16) & 0xff] ^ SUB_MIX_2[(s2 >>> 8) & 0xff] ^ SUB_MIX_3[s3 & 0xff] ^ keySchedule[ksRow++];
+		                var t1 = SUB_MIX_0[s1 >>> 24] ^ SUB_MIX_1[(s2 >>> 16) & 0xff] ^ SUB_MIX_2[(s3 >>> 8) & 0xff] ^ SUB_MIX_3[s0 & 0xff] ^ keySchedule[ksRow++];
+		                var t2 = SUB_MIX_0[s2 >>> 24] ^ SUB_MIX_1[(s3 >>> 16) & 0xff] ^ SUB_MIX_2[(s0 >>> 8) & 0xff] ^ SUB_MIX_3[s1 & 0xff] ^ keySchedule[ksRow++];
+		                var t3 = SUB_MIX_0[s3 >>> 24] ^ SUB_MIX_1[(s0 >>> 16) & 0xff] ^ SUB_MIX_2[(s1 >>> 8) & 0xff] ^ SUB_MIX_3[s2 & 0xff] ^ keySchedule[ksRow++];
+	
+		                // Update state
+		                s0 = t0;
+		                s1 = t1;
+		                s2 = t2;
+		                s3 = t3;
+		            }
+	
+		            // Shift rows, sub bytes, add round key
+		            var t0 = ((SBOX[s0 >>> 24] << 24) | (SBOX[(s1 >>> 16) & 0xff] << 16) | (SBOX[(s2 >>> 8) & 0xff] << 8) | SBOX[s3 & 0xff]) ^ keySchedule[ksRow++];
+		            var t1 = ((SBOX[s1 >>> 24] << 24) | (SBOX[(s2 >>> 16) & 0xff] << 16) | (SBOX[(s3 >>> 8) & 0xff] << 8) | SBOX[s0 & 0xff]) ^ keySchedule[ksRow++];
+		            var t2 = ((SBOX[s2 >>> 24] << 24) | (SBOX[(s3 >>> 16) & 0xff] << 16) | (SBOX[(s0 >>> 8) & 0xff] << 8) | SBOX[s1 & 0xff]) ^ keySchedule[ksRow++];
+		            var t3 = ((SBOX[s3 >>> 24] << 24) | (SBOX[(s0 >>> 16) & 0xff] << 16) | (SBOX[(s1 >>> 8) & 0xff] << 8) | SBOX[s2 & 0xff]) ^ keySchedule[ksRow++];
+	
+		            // Set output
+		            M[offset]     = t0;
+		            M[offset + 1] = t1;
+		            M[offset + 2] = t2;
+		            M[offset + 3] = t3;
+		        },
+	
+		        keySize: 256/32
+		    });
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.AES.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.AES.decrypt(ciphertext, key, cfg);
+		     */
+		    C.AES = BlockCipher._createHelper(AES);
+		}());
+	
+	
+		return CryptoJS.AES;
+	
+	}));
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __nested_webpack_require_84031__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_84031__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var C_enc = C.enc;
+	
+		    /**
+		     * Base64 encoding strategy.
+		     */
+		    var Base64 = C_enc.Base64 = {
+		        /**
+		         * Converts a word array to a Base64 string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The Base64 string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var base64String = CryptoJS.enc.Base64.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            // Shortcuts
+		            var words = wordArray.words;
+		            var sigBytes = wordArray.sigBytes;
+		            var map = this._map;
+	
+		            // Clamp excess bits
+		            wordArray.clamp();
+	
+		            // Convert
+		            var base64Chars = [];
+		            for (var i = 0; i < sigBytes; i += 3) {
+		                var byte1 = (words[i >>> 2]       >>> (24 - (i % 4) * 8))       & 0xff;
+		                var byte2 = (words[(i + 1) >>> 2] >>> (24 - ((i + 1) % 4) * 8)) & 0xff;
+		                var byte3 = (words[(i + 2) >>> 2] >>> (24 - ((i + 2) % 4) * 8)) & 0xff;
+	
+		                var triplet = (byte1 << 16) | (byte2 << 8) | byte3;
+	
+		                for (var j = 0; (j < 4) && (i + j * 0.75 < sigBytes); j++) {
+		                    base64Chars.push(map.charAt((triplet >>> (6 * (3 - j))) & 0x3f));
+		                }
+		            }
+	
+		            // Add padding
+		            var paddingChar = map.charAt(64);
+		            if (paddingChar) {
+		                while (base64Chars.length % 4) {
+		                    base64Chars.push(paddingChar);
+		                }
+		            }
+	
+		            return base64Chars.join('');
+		        },
+	
+		        /**
+		         * Converts a Base64 string to a word array.
+		         *
+		         * @param {string} base64Str The Base64 string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Base64.parse(base64String);
+		         */
+		        parse: function (base64Str) {
+		            // Shortcuts
+		            var base64StrLength = base64Str.length;
+		            var map = this._map;
+		            var reverseMap = this._reverseMap;
+	
+		            if (!reverseMap) {
+		                    reverseMap = this._reverseMap = [];
+		                    for (var j = 0; j < map.length; j++) {
+		                        reverseMap[map.charCodeAt(j)] = j;
+		                    }
+		            }
+	
+		            // Ignore padding
+		            var paddingChar = map.charAt(64);
+		            if (paddingChar) {
+		                var paddingIndex = base64Str.indexOf(paddingChar);
+		                if (paddingIndex !== -1) {
+		                    base64StrLength = paddingIndex;
+		                }
+		            }
+	
+		            // Convert
+		            return parseLoop(base64Str, base64StrLength, reverseMap);
+	
+		        },
+	
+		        _map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+		    };
+	
+		    function parseLoop(base64Str, base64StrLength, reverseMap) {
+		      var words = [];
+		      var nBytes = 0;
+		      for (var i = 0; i < base64StrLength; i++) {
+		          if (i % 4) {
+		              var bits1 = reverseMap[base64Str.charCodeAt(i - 1)] << ((i % 4) * 2);
+		              var bits2 = reverseMap[base64Str.charCodeAt(i)] >>> (6 - (i % 4) * 2);
+		              words[nBytes >>> 2] |= (bits1 | bits2) << (24 - (nBytes % 4) * 8);
+		              nBytes++;
+		          }
+		      }
+		      return WordArray.create(words, nBytes);
+		    }
+		}());
+	
+	
+		return CryptoJS.enc.Base64;
+	
+	}));
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __nested_webpack_require_88259__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_88259__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function (Math) {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var Hasher = C_lib.Hasher;
+		    var C_algo = C.algo;
+	
+		    // Constants table
+		    var T = [];
+	
+		    // Compute constants
+		    (function () {
+		        for (var i = 0; i < 64; i++) {
+		            T[i] = (Math.abs(Math.sin(i + 1)) * 0x100000000) | 0;
+		        }
+		    }());
+	
+		    /**
+		     * MD5 hash algorithm.
+		     */
+		    var MD5 = C_algo.MD5 = Hasher.extend({
+		        _doReset: function () {
+		            this._hash = new WordArray.init([
+		                0x67452301, 0xefcdab89,
+		                0x98badcfe, 0x10325476
+		            ]);
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            // Swap endian
+		            for (var i = 0; i < 16; i++) {
+		                // Shortcuts
+		                var offset_i = offset + i;
+		                var M_offset_i = M[offset_i];
+	
+		                M[offset_i] = (
+		                    (((M_offset_i << 8)  | (M_offset_i >>> 24)) & 0x00ff00ff) |
+		                    (((M_offset_i << 24) | (M_offset_i >>> 8))  & 0xff00ff00)
+		                );
+		            }
+	
+		            // Shortcuts
+		            var H = this._hash.words;
+	
+		            var M_offset_0  = M[offset + 0];
+		            var M_offset_1  = M[offset + 1];
+		            var M_offset_2  = M[offset + 2];
+		            var M_offset_3  = M[offset + 3];
+		            var M_offset_4  = M[offset + 4];
+		            var M_offset_5  = M[offset + 5];
+		            var M_offset_6  = M[offset + 6];
+		            var M_offset_7  = M[offset + 7];
+		            var M_offset_8  = M[offset + 8];
+		            var M_offset_9  = M[offset + 9];
+		            var M_offset_10 = M[offset + 10];
+		            var M_offset_11 = M[offset + 11];
+		            var M_offset_12 = M[offset + 12];
+		            var M_offset_13 = M[offset + 13];
+		            var M_offset_14 = M[offset + 14];
+		            var M_offset_15 = M[offset + 15];
+	
+		            // Working varialbes
+		            var a = H[0];
+		            var b = H[1];
+		            var c = H[2];
+		            var d = H[3];
+	
+		            // Computation
+		            a = FF(a, b, c, d, M_offset_0,  7,  T[0]);
+		            d = FF(d, a, b, c, M_offset_1,  12, T[1]);
+		            c = FF(c, d, a, b, M_offset_2,  17, T[2]);
+		            b = FF(b, c, d, a, M_offset_3,  22, T[3]);
+		            a = FF(a, b, c, d, M_offset_4,  7,  T[4]);
+		            d = FF(d, a, b, c, M_offset_5,  12, T[5]);
+		            c = FF(c, d, a, b, M_offset_6,  17, T[6]);
+		            b = FF(b, c, d, a, M_offset_7,  22, T[7]);
+		            a = FF(a, b, c, d, M_offset_8,  7,  T[8]);
+		            d = FF(d, a, b, c, M_offset_9,  12, T[9]);
+		            c = FF(c, d, a, b, M_offset_10, 17, T[10]);
+		            b = FF(b, c, d, a, M_offset_11, 22, T[11]);
+		            a = FF(a, b, c, d, M_offset_12, 7,  T[12]);
+		            d = FF(d, a, b, c, M_offset_13, 12, T[13]);
+		            c = FF(c, d, a, b, M_offset_14, 17, T[14]);
+		            b = FF(b, c, d, a, M_offset_15, 22, T[15]);
+	
+		            a = GG(a, b, c, d, M_offset_1,  5,  T[16]);
+		            d = GG(d, a, b, c, M_offset_6,  9,  T[17]);
+		            c = GG(c, d, a, b, M_offset_11, 14, T[18]);
+		            b = GG(b, c, d, a, M_offset_0,  20, T[19]);
+		            a = GG(a, b, c, d, M_offset_5,  5,  T[20]);
+		            d = GG(d, a, b, c, M_offset_10, 9,  T[21]);
+		            c = GG(c, d, a, b, M_offset_15, 14, T[22]);
+		            b = GG(b, c, d, a, M_offset_4,  20, T[23]);
+		            a = GG(a, b, c, d, M_offset_9,  5,  T[24]);
+		            d = GG(d, a, b, c, M_offset_14, 9,  T[25]);
+		            c = GG(c, d, a, b, M_offset_3,  14, T[26]);
+		            b = GG(b, c, d, a, M_offset_8,  20, T[27]);
+		            a = GG(a, b, c, d, M_offset_13, 5,  T[28]);
+		            d = GG(d, a, b, c, M_offset_2,  9,  T[29]);
+		            c = GG(c, d, a, b, M_offset_7,  14, T[30]);
+		            b = GG(b, c, d, a, M_offset_12, 20, T[31]);
+	
+		            a = HH(a, b, c, d, M_offset_5,  4,  T[32]);
+		            d = HH(d, a, b, c, M_offset_8,  11, T[33]);
+		            c = HH(c, d, a, b, M_offset_11, 16, T[34]);
+		            b = HH(b, c, d, a, M_offset_14, 23, T[35]);
+		            a = HH(a, b, c, d, M_offset_1,  4,  T[36]);
+		            d = HH(d, a, b, c, M_offset_4,  11, T[37]);
+		            c = HH(c, d, a, b, M_offset_7,  16, T[38]);
+		            b = HH(b, c, d, a, M_offset_10, 23, T[39]);
+		            a = HH(a, b, c, d, M_offset_13, 4,  T[40]);
+		            d = HH(d, a, b, c, M_offset_0,  11, T[41]);
+		            c = HH(c, d, a, b, M_offset_3,  16, T[42]);
+		            b = HH(b, c, d, a, M_offset_6,  23, T[43]);
+		            a = HH(a, b, c, d, M_offset_9,  4,  T[44]);
+		            d = HH(d, a, b, c, M_offset_12, 11, T[45]);
+		            c = HH(c, d, a, b, M_offset_15, 16, T[46]);
+		            b = HH(b, c, d, a, M_offset_2,  23, T[47]);
+	
+		            a = II(a, b, c, d, M_offset_0,  6,  T[48]);
+		            d = II(d, a, b, c, M_offset_7,  10, T[49]);
+		            c = II(c, d, a, b, M_offset_14, 15, T[50]);
+		            b = II(b, c, d, a, M_offset_5,  21, T[51]);
+		            a = II(a, b, c, d, M_offset_12, 6,  T[52]);
+		            d = II(d, a, b, c, M_offset_3,  10, T[53]);
+		            c = II(c, d, a, b, M_offset_10, 15, T[54]);
+		            b = II(b, c, d, a, M_offset_1,  21, T[55]);
+		            a = II(a, b, c, d, M_offset_8,  6,  T[56]);
+		            d = II(d, a, b, c, M_offset_15, 10, T[57]);
+		            c = II(c, d, a, b, M_offset_6,  15, T[58]);
+		            b = II(b, c, d, a, M_offset_13, 21, T[59]);
+		            a = II(a, b, c, d, M_offset_4,  6,  T[60]);
+		            d = II(d, a, b, c, M_offset_11, 10, T[61]);
+		            c = II(c, d, a, b, M_offset_2,  15, T[62]);
+		            b = II(b, c, d, a, M_offset_9,  21, T[63]);
+	
+		            // Intermediate hash value
+		            H[0] = (H[0] + a) | 0;
+		            H[1] = (H[1] + b) | 0;
+		            H[2] = (H[2] + c) | 0;
+		            H[3] = (H[3] + d) | 0;
+		        },
+	
+		        _doFinalize: function () {
+		            // Shortcuts
+		            var data = this._data;
+		            var dataWords = data.words;
+	
+		            var nBitsTotal = this._nDataBytes * 8;
+		            var nBitsLeft = data.sigBytes * 8;
+	
+		            // Add padding
+		            dataWords[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32);
+	
+		            var nBitsTotalH = Math.floor(nBitsTotal / 0x100000000);
+		            var nBitsTotalL = nBitsTotal;
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 15] = (
+		                (((nBitsTotalH << 8)  | (nBitsTotalH >>> 24)) & 0x00ff00ff) |
+		                (((nBitsTotalH << 24) | (nBitsTotalH >>> 8))  & 0xff00ff00)
+		            );
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
+		                (((nBitsTotalL << 8)  | (nBitsTotalL >>> 24)) & 0x00ff00ff) |
+		                (((nBitsTotalL << 24) | (nBitsTotalL >>> 8))  & 0xff00ff00)
+		            );
+	
+		            data.sigBytes = (dataWords.length + 1) * 4;
+	
+		            // Hash final blocks
+		            this._process();
+	
+		            // Shortcuts
+		            var hash = this._hash;
+		            var H = hash.words;
+	
+		            // Swap endian
+		            for (var i = 0; i < 4; i++) {
+		                // Shortcut
+		                var H_i = H[i];
+	
+		                H[i] = (((H_i << 8)  | (H_i >>> 24)) & 0x00ff00ff) |
+		                       (((H_i << 24) | (H_i >>> 8))  & 0xff00ff00);
+		            }
+	
+		            // Return final computed hash
+		            return hash;
+		        },
+	
+		        clone: function () {
+		            var clone = Hasher.clone.call(this);
+		            clone._hash = this._hash.clone();
+	
+		            return clone;
+		        }
+		    });
+	
+		    function FF(a, b, c, d, x, s, t) {
+		        var n = a + ((b & c) | (~b & d)) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    function GG(a, b, c, d, x, s, t) {
+		        var n = a + ((b & d) | (c & ~d)) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    function HH(a, b, c, d, x, s, t) {
+		        var n = a + (b ^ c ^ d) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    function II(a, b, c, d, x, s, t) {
+		        var n = a + (c ^ (b | ~d)) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    /**
+		     * Shortcut function to the hasher's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     *
+		     * @return {WordArray} The hash.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hash = CryptoJS.MD5('message');
+		     *     var hash = CryptoJS.MD5(wordArray);
+		     */
+		    C.MD5 = Hasher._createHelper(MD5);
+	
+		    /**
+		     * Shortcut function to the HMAC's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     * @param {WordArray|string} key The secret key.
+		     *
+		     * @return {WordArray} The HMAC.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hmac = CryptoJS.HmacMD5(message, key);
+		     */
+		    C.HmacMD5 = Hasher._createHmacHelper(MD5);
+		}(Math));
+	
+	
+		return CryptoJS.MD5;
+	
+	}));
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __nested_webpack_require_98003__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_98003__(5), __nested_webpack_require_98003__(6), __nested_webpack_require_98003__(7));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var WordArray = C_lib.WordArray;
+		    var C_algo = C.algo;
+		    var MD5 = C_algo.MD5;
+	
+		    /**
+		     * This key derivation function is meant to conform with EVP_BytesToKey.
+		     * www.openssl.org/docs/crypto/EVP_BytesToKey.html
+		     */
+		    var EvpKDF = C_algo.EvpKDF = Base.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {number} keySize The key size in words to generate. Default: 4 (128 bits)
+		         * @property {Hasher} hasher The hash algorithm to use. Default: MD5
+		         * @property {number} iterations The number of iterations to perform. Default: 1
+		         */
+		        cfg: Base.extend({
+		            keySize: 128/32,
+		            hasher: MD5,
+		            iterations: 1
+		        }),
+	
+		        /**
+		         * Initializes a newly created key derivation function.
+		         *
+		         * @param {Object} cfg (Optional) The configuration options to use for the derivation.
+		         *
+		         * @example
+		         *
+		         *     var kdf = CryptoJS.algo.EvpKDF.create();
+		         *     var kdf = CryptoJS.algo.EvpKDF.create({ keySize: 8 });
+		         *     var kdf = CryptoJS.algo.EvpKDF.create({ keySize: 8, iterations: 1000 });
+		         */
+		        init: function (cfg) {
+		            this.cfg = this.cfg.extend(cfg);
+		        },
+	
+		        /**
+		         * Derives a key from a password.
+		         *
+		         * @param {WordArray|string} password The password.
+		         * @param {WordArray|string} salt A salt.
+		         *
+		         * @return {WordArray} The derived key.
+		         *
+		         * @example
+		         *
+		         *     var key = kdf.compute(password, salt);
+		         */
+		        compute: function (password, salt) {
+		            // Shortcut
+		            var cfg = this.cfg;
+	
+		            // Init hasher
+		            var hasher = cfg.hasher.create();
+	
+		            // Initial values
+		            var derivedKey = WordArray.create();
+	
+		            // Shortcuts
+		            var derivedKeyWords = derivedKey.words;
+		            var keySize = cfg.keySize;
+		            var iterations = cfg.iterations;
+	
+		            // Generate key
+		            while (derivedKeyWords.length < keySize) {
+		                if (block) {
+		                    hasher.update(block);
+		                }
+		                var block = hasher.update(password).finalize(salt);
+		                hasher.reset();
+	
+		                // Iterations
+		                for (var i = 1; i < iterations; i++) {
+		                    block = hasher.finalize(block);
+		                    hasher.reset();
+		                }
+	
+		                derivedKey.concat(block);
+		            }
+		            derivedKey.sigBytes = keySize * 4;
+	
+		            return derivedKey;
+		        }
+		    });
+	
+		    /**
+		     * Derives a key from a password.
+		     *
+		     * @param {WordArray|string} password The password.
+		     * @param {WordArray|string} salt A salt.
+		     * @param {Object} cfg (Optional) The configuration options to use for this computation.
+		     *
+		     * @return {WordArray} The derived key.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var key = CryptoJS.EvpKDF(password, salt);
+		     *     var key = CryptoJS.EvpKDF(password, salt, { keySize: 8 });
+		     *     var key = CryptoJS.EvpKDF(password, salt, { keySize: 8, iterations: 1000 });
+		     */
+		    C.EvpKDF = function (password, salt, cfg) {
+		        return EvpKDF.create(cfg).compute(password, salt);
+		    };
+		}());
+	
+	
+		return CryptoJS.EvpKDF;
+	
+	}));
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __nested_webpack_require_102175__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_102175__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		/**
+		 * Cipher core components.
+		 */
+		CryptoJS.lib.Cipher || (function (undefined) {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var WordArray = C_lib.WordArray;
+		    var BufferedBlockAlgorithm = C_lib.BufferedBlockAlgorithm;
+		    var C_enc = C.enc;
+		    var Utf8 = C_enc.Utf8;
+		    var Base64 = C_enc.Base64;
+		    var C_algo = C.algo;
+		    var EvpKDF = C_algo.EvpKDF;
+	
+		    /**
+		     * Abstract base cipher template.
+		     *
+		     * @property {number} keySize This cipher's key size. Default: 4 (128 bits)
+		     * @property {number} ivSize This cipher's IV size. Default: 4 (128 bits)
+		     * @property {number} _ENC_XFORM_MODE A constant representing encryption mode.
+		     * @property {number} _DEC_XFORM_MODE A constant representing decryption mode.
+		     */
+		    var Cipher = C_lib.Cipher = BufferedBlockAlgorithm.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {WordArray} iv The IV to use for this operation.
+		         */
+		        cfg: Base.extend(),
+	
+		        /**
+		         * Creates this cipher in encryption mode.
+		         *
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {Cipher} A cipher instance.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var cipher = CryptoJS.algo.AES.createEncryptor(keyWordArray, { iv: ivWordArray });
+		         */
+		        createEncryptor: function (key, cfg) {
+		            return this.create(this._ENC_XFORM_MODE, key, cfg);
+		        },
+	
+		        /**
+		         * Creates this cipher in decryption mode.
+		         *
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {Cipher} A cipher instance.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var cipher = CryptoJS.algo.AES.createDecryptor(keyWordArray, { iv: ivWordArray });
+		         */
+		        createDecryptor: function (key, cfg) {
+		            return this.create(this._DEC_XFORM_MODE, key, cfg);
+		        },
+	
+		        /**
+		         * Initializes a newly created cipher.
+		         *
+		         * @param {number} xformMode Either the encryption or decryption transormation mode constant.
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @example
+		         *
+		         *     var cipher = CryptoJS.algo.AES.create(CryptoJS.algo.AES._ENC_XFORM_MODE, keyWordArray, { iv: ivWordArray });
+		         */
+		        init: function (xformMode, key, cfg) {
+		            // Apply config defaults
+		            this.cfg = this.cfg.extend(cfg);
+	
+		            // Store transform mode and key
+		            this._xformMode = xformMode;
+		            this._key = key;
+	
+		            // Set initial values
+		            this.reset();
+		        },
+	
+		        /**
+		         * Resets this cipher to its initial state.
+		         *
+		         * @example
+		         *
+		         *     cipher.reset();
+		         */
+		        reset: function () {
+		            // Reset data buffer
+		            BufferedBlockAlgorithm.reset.call(this);
+	
+		            // Perform concrete-cipher logic
+		            this._doReset();
+		        },
+	
+		        /**
+		         * Adds data to be encrypted or decrypted.
+		         *
+		         * @param {WordArray|string} dataUpdate The data to encrypt or decrypt.
+		         *
+		         * @return {WordArray} The data after processing.
+		         *
+		         * @example
+		         *
+		         *     var encrypted = cipher.process('data');
+		         *     var encrypted = cipher.process(wordArray);
+		         */
+		        process: function (dataUpdate) {
+		            // Append
+		            this._append(dataUpdate);
+	
+		            // Process available blocks
+		            return this._process();
+		        },
+	
+		        /**
+		         * Finalizes the encryption or decryption process.
+		         * Note that the finalize operation is effectively a destructive, read-once operation.
+		         *
+		         * @param {WordArray|string} dataUpdate The final data to encrypt or decrypt.
+		         *
+		         * @return {WordArray} The data after final processing.
+		         *
+		         * @example
+		         *
+		         *     var encrypted = cipher.finalize();
+		         *     var encrypted = cipher.finalize('data');
+		         *     var encrypted = cipher.finalize(wordArray);
+		         */
+		        finalize: function (dataUpdate) {
+		            // Final data update
+		            if (dataUpdate) {
+		                this._append(dataUpdate);
+		            }
+	
+		            // Perform concrete-cipher logic
+		            var finalProcessedData = this._doFinalize();
+	
+		            return finalProcessedData;
+		        },
+	
+		        keySize: 128/32,
+	
+		        ivSize: 128/32,
+	
+		        _ENC_XFORM_MODE: 1,
+	
+		        _DEC_XFORM_MODE: 2,
+	
+		        /**
+		         * Creates shortcut functions to a cipher's object interface.
+		         *
+		         * @param {Cipher} cipher The cipher to create a helper for.
+		         *
+		         * @return {Object} An object with encrypt and decrypt shortcut functions.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var AES = CryptoJS.lib.Cipher._createHelper(CryptoJS.algo.AES);
+		         */
+		        _createHelper: (function () {
+		            function selectCipherStrategy(key) {
+		                if (typeof key == 'string') {
+		                    return PasswordBasedCipher;
+		                } else {
+		                    return SerializableCipher;
+		                }
+		            }
+	
+		            return function (cipher) {
+		                return {
+		                    encrypt: function (message, key, cfg) {
+		                        return selectCipherStrategy(key).encrypt(cipher, message, key, cfg);
+		                    },
+	
+		                    decrypt: function (ciphertext, key, cfg) {
+		                        return selectCipherStrategy(key).decrypt(cipher, ciphertext, key, cfg);
+		                    }
+		                };
+		            };
+		        }())
+		    });
+	
+		    /**
+		     * Abstract base stream cipher template.
+		     *
+		     * @property {number} blockSize The number of 32-bit words this cipher operates on. Default: 1 (32 bits)
+		     */
+		    var StreamCipher = C_lib.StreamCipher = Cipher.extend({
+		        _doFinalize: function () {
+		            // Process partial blocks
+		            var finalProcessedBlocks = this._process(!!'flush');
+	
+		            return finalProcessedBlocks;
+		        },
+	
+		        blockSize: 1
+		    });
+	
+		    /**
+		     * Mode namespace.
+		     */
+		    var C_mode = C.mode = {};
+	
+		    /**
+		     * Abstract base block cipher mode template.
+		     */
+		    var BlockCipherMode = C_lib.BlockCipherMode = Base.extend({
+		        /**
+		         * Creates this mode for encryption.
+		         *
+		         * @param {Cipher} cipher A block cipher instance.
+		         * @param {Array} iv The IV words.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var mode = CryptoJS.mode.CBC.createEncryptor(cipher, iv.words);
+		         */
+		        createEncryptor: function (cipher, iv) {
+		            return this.Encryptor.create(cipher, iv);
+		        },
+	
+		        /**
+		         * Creates this mode for decryption.
+		         *
+		         * @param {Cipher} cipher A block cipher instance.
+		         * @param {Array} iv The IV words.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var mode = CryptoJS.mode.CBC.createDecryptor(cipher, iv.words);
+		         */
+		        createDecryptor: function (cipher, iv) {
+		            return this.Decryptor.create(cipher, iv);
+		        },
+	
+		        /**
+		         * Initializes a newly created mode.
+		         *
+		         * @param {Cipher} cipher A block cipher instance.
+		         * @param {Array} iv The IV words.
+		         *
+		         * @example
+		         *
+		         *     var mode = CryptoJS.mode.CBC.Encryptor.create(cipher, iv.words);
+		         */
+		        init: function (cipher, iv) {
+		            this._cipher = cipher;
+		            this._iv = iv;
+		        }
+		    });
+	
+		    /**
+		     * Cipher Block Chaining mode.
+		     */
+		    var CBC = C_mode.CBC = (function () {
+		        /**
+		         * Abstract base CBC mode.
+		         */
+		        var CBC = BlockCipherMode.extend();
+	
+		        /**
+		         * CBC encryptor.
+		         */
+		        CBC.Encryptor = CBC.extend({
+		            /**
+		             * Processes the data block at offset.
+		             *
+		             * @param {Array} words The data words to operate on.
+		             * @param {number} offset The offset where the block starts.
+		             *
+		             * @example
+		             *
+		             *     mode.processBlock(data.words, offset);
+		             */
+		            processBlock: function (words, offset) {
+		                // Shortcuts
+		                var cipher = this._cipher;
+		                var blockSize = cipher.blockSize;
+	
+		                // XOR and encrypt
+		                xorBlock.call(this, words, offset, blockSize);
+		                cipher.encryptBlock(words, offset);
+	
+		                // Remember this block to use with next block
+		                this._prevBlock = words.slice(offset, offset + blockSize);
+		            }
+		        });
+	
+		        /**
+		         * CBC decryptor.
+		         */
+		        CBC.Decryptor = CBC.extend({
+		            /**
+		             * Processes the data block at offset.
+		             *
+		             * @param {Array} words The data words to operate on.
+		             * @param {number} offset The offset where the block starts.
+		             *
+		             * @example
+		             *
+		             *     mode.processBlock(data.words, offset);
+		             */
+		            processBlock: function (words, offset) {
+		                // Shortcuts
+		                var cipher = this._cipher;
+		                var blockSize = cipher.blockSize;
+	
+		                // Remember this block to use with next block
+		                var thisBlock = words.slice(offset, offset + blockSize);
+	
+		                // Decrypt and XOR
+		                cipher.decryptBlock(words, offset);
+		                xorBlock.call(this, words, offset, blockSize);
+	
+		                // This block becomes the previous block
+		                this._prevBlock = thisBlock;
+		            }
+		        });
+	
+		        function xorBlock(words, offset, blockSize) {
+		            // Shortcut
+		            var iv = this._iv;
+	
+		            // Choose mixing block
+		            if (iv) {
+		                var block = iv;
+	
+		                // Remove IV for subsequent blocks
+		                this._iv = undefined;
+		            } else {
+		                var block = this._prevBlock;
+		            }
+	
+		            // XOR blocks
+		            for (var i = 0; i < blockSize; i++) {
+		                words[offset + i] ^= block[i];
+		            }
+		        }
+	
+		        return CBC;
+		    }());
+	
+		    /**
+		     * Padding namespace.
+		     */
+		    var C_pad = C.pad = {};
+	
+		    /**
+		     * PKCS #5/7 padding strategy.
+		     */
+		    var Pkcs7 = C_pad.Pkcs7 = {
+		        /**
+		         * Pads data using the algorithm defined in PKCS #5/7.
+		         *
+		         * @param {WordArray} data The data to pad.
+		         * @param {number} blockSize The multiple that the data should be padded to.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     CryptoJS.pad.Pkcs7.pad(wordArray, 4);
+		         */
+		        pad: function (data, blockSize) {
+		            // Shortcut
+		            var blockSizeBytes = blockSize * 4;
+	
+		            // Count padding bytes
+		            var nPaddingBytes = blockSizeBytes - data.sigBytes % blockSizeBytes;
+	
+		            // Create padding word
+		            var paddingWord = (nPaddingBytes << 24) | (nPaddingBytes << 16) | (nPaddingBytes << 8) | nPaddingBytes;
+	
+		            // Create padding
+		            var paddingWords = [];
+		            for (var i = 0; i < nPaddingBytes; i += 4) {
+		                paddingWords.push(paddingWord);
+		            }
+		            var padding = WordArray.create(paddingWords, nPaddingBytes);
+	
+		            // Add padding
+		            data.concat(padding);
+		        },
+	
+		        /**
+		         * Unpads data that had been padded using the algorithm defined in PKCS #5/7.
+		         *
+		         * @param {WordArray} data The data to unpad.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     CryptoJS.pad.Pkcs7.unpad(wordArray);
+		         */
+		        unpad: function (data) {
+		            // Get number of padding bytes from last byte
+		            var nPaddingBytes = data.words[(data.sigBytes - 1) >>> 2] & 0xff;
+	
+		            // Remove padding
+		            data.sigBytes -= nPaddingBytes;
+		        }
+		    };
+	
+		    /**
+		     * Abstract base block cipher template.
+		     *
+		     * @property {number} blockSize The number of 32-bit words this cipher operates on. Default: 4 (128 bits)
+		     */
+		    var BlockCipher = C_lib.BlockCipher = Cipher.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {Mode} mode The block mode to use. Default: CBC
+		         * @property {Padding} padding The padding strategy to use. Default: Pkcs7
+		         */
+		        cfg: Cipher.cfg.extend({
+		            mode: CBC,
+		            padding: Pkcs7
+		        }),
+	
+		        reset: function () {
+		            // Reset cipher
+		            Cipher.reset.call(this);
+	
+		            // Shortcuts
+		            var cfg = this.cfg;
+		            var iv = cfg.iv;
+		            var mode = cfg.mode;
+	
+		            // Reset block mode
+		            if (this._xformMode == this._ENC_XFORM_MODE) {
+		                var modeCreator = mode.createEncryptor;
+		            } else /* if (this._xformMode == this._DEC_XFORM_MODE) */ {
+		                var modeCreator = mode.createDecryptor;
+	
+		                // Keep at least one block in the buffer for unpadding
+		                this._minBufferSize = 1;
+		            }
+		            this._mode = modeCreator.call(mode, this, iv && iv.words);
+		        },
+	
+		        _doProcessBlock: function (words, offset) {
+		            this._mode.processBlock(words, offset);
+		        },
+	
+		        _doFinalize: function () {
+		            // Shortcut
+		            var padding = this.cfg.padding;
+	
+		            // Finalize
+		            if (this._xformMode == this._ENC_XFORM_MODE) {
+		                // Pad data
+		                padding.pad(this._data, this.blockSize);
+	
+		                // Process final blocks
+		                var finalProcessedBlocks = this._process(!!'flush');
+		            } else /* if (this._xformMode == this._DEC_XFORM_MODE) */ {
+		                // Process final blocks
+		                var finalProcessedBlocks = this._process(!!'flush');
+	
+		                // Unpad data
+		                padding.unpad(finalProcessedBlocks);
+		            }
+	
+		            return finalProcessedBlocks;
+		        },
+	
+		        blockSize: 128/32
+		    });
+	
+		    /**
+		     * A collection of cipher parameters.
+		     *
+		     * @property {WordArray} ciphertext The raw ciphertext.
+		     * @property {WordArray} key The key to this ciphertext.
+		     * @property {WordArray} iv The IV used in the ciphering operation.
+		     * @property {WordArray} salt The salt used with a key derivation function.
+		     * @property {Cipher} algorithm The cipher algorithm.
+		     * @property {Mode} mode The block mode used in the ciphering operation.
+		     * @property {Padding} padding The padding scheme used in the ciphering operation.
+		     * @property {number} blockSize The block size of the cipher.
+		     * @property {Format} formatter The default formatting strategy to convert this cipher params object to a string.
+		     */
+		    var CipherParams = C_lib.CipherParams = Base.extend({
+		        /**
+		         * Initializes a newly created cipher params object.
+		         *
+		         * @param {Object} cipherParams An object with any of the possible cipher parameters.
+		         *
+		         * @example
+		         *
+		         *     var cipherParams = CryptoJS.lib.CipherParams.create({
+		         *         ciphertext: ciphertextWordArray,
+		         *         key: keyWordArray,
+		         *         iv: ivWordArray,
+		         *         salt: saltWordArray,
+		         *         algorithm: CryptoJS.algo.AES,
+		         *         mode: CryptoJS.mode.CBC,
+		         *         padding: CryptoJS.pad.PKCS7,
+		         *         blockSize: 4,
+		         *         formatter: CryptoJS.format.OpenSSL
+		         *     });
+		         */
+		        init: function (cipherParams) {
+		            this.mixIn(cipherParams);
+		        },
+	
+		        /**
+		         * Converts this cipher params object to a string.
+		         *
+		         * @param {Format} formatter (Optional) The formatting strategy to use.
+		         *
+		         * @return {string} The stringified cipher params.
+		         *
+		         * @throws Error If neither the formatter nor the default formatter is set.
+		         *
+		         * @example
+		         *
+		         *     var string = cipherParams + '';
+		         *     var string = cipherParams.toString();
+		         *     var string = cipherParams.toString(CryptoJS.format.OpenSSL);
+		         */
+		        toString: function (formatter) {
+		            return (formatter || this.formatter).stringify(this);
+		        }
+		    });
+	
+		    /**
+		     * Format namespace.
+		     */
+		    var C_format = C.format = {};
+	
+		    /**
+		     * OpenSSL formatting strategy.
+		     */
+		    var OpenSSLFormatter = C_format.OpenSSL = {
+		        /**
+		         * Converts a cipher params object to an OpenSSL-compatible string.
+		         *
+		         * @param {CipherParams} cipherParams The cipher params object.
+		         *
+		         * @return {string} The OpenSSL-compatible string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var openSSLString = CryptoJS.format.OpenSSL.stringify(cipherParams);
+		         */
+		        stringify: function (cipherParams) {
+		            // Shortcuts
+		            var ciphertext = cipherParams.ciphertext;
+		            var salt = cipherParams.salt;
+	
+		            // Format
+		            if (salt) {
+		                var wordArray = WordArray.create([0x53616c74, 0x65645f5f]).concat(salt).concat(ciphertext);
+		            } else {
+		                var wordArray = ciphertext;
+		            }
+	
+		            return wordArray.toString(Base64);
+		        },
+	
+		        /**
+		         * Converts an OpenSSL-compatible string to a cipher params object.
+		         *
+		         * @param {string} openSSLStr The OpenSSL-compatible string.
+		         *
+		         * @return {CipherParams} The cipher params object.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var cipherParams = CryptoJS.format.OpenSSL.parse(openSSLString);
+		         */
+		        parse: function (openSSLStr) {
+		            // Parse base64
+		            var ciphertext = Base64.parse(openSSLStr);
+	
+		            // Shortcut
+		            var ciphertextWords = ciphertext.words;
+	
+		            // Test for salt
+		            if (ciphertextWords[0] == 0x53616c74 && ciphertextWords[1] == 0x65645f5f) {
+		                // Extract salt
+		                var salt = WordArray.create(ciphertextWords.slice(2, 4));
+	
+		                // Remove salt from ciphertext
+		                ciphertextWords.splice(0, 4);
+		                ciphertext.sigBytes -= 16;
+		            }
+	
+		            return CipherParams.create({ ciphertext: ciphertext, salt: salt });
+		        }
+		    };
+	
+		    /**
+		     * A cipher wrapper that returns ciphertext as a serializable cipher params object.
+		     */
+		    var SerializableCipher = C_lib.SerializableCipher = Base.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {Formatter} format The formatting strategy to convert cipher param objects to and from a string. Default: OpenSSL
+		         */
+		        cfg: Base.extend({
+		            format: OpenSSLFormatter
+		        }),
+	
+		        /**
+		         * Encrypts a message.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {WordArray|string} message The message to encrypt.
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {CipherParams} A cipher params object.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher.encrypt(CryptoJS.algo.AES, message, key);
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher.encrypt(CryptoJS.algo.AES, message, key, { iv: iv });
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher.encrypt(CryptoJS.algo.AES, message, key, { iv: iv, format: CryptoJS.format.OpenSSL });
+		         */
+		        encrypt: function (cipher, message, key, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Encrypt
+		            var encryptor = cipher.createEncryptor(key, cfg);
+		            var ciphertext = encryptor.finalize(message);
+	
+		            // Shortcut
+		            var cipherCfg = encryptor.cfg;
+	
+		            // Create and return serializable cipher params
+		            return CipherParams.create({
+		                ciphertext: ciphertext,
+		                key: key,
+		                iv: cipherCfg.iv,
+		                algorithm: cipher,
+		                mode: cipherCfg.mode,
+		                padding: cipherCfg.padding,
+		                blockSize: cipher.blockSize,
+		                formatter: cfg.format
+		            });
+		        },
+	
+		        /**
+		         * Decrypts serialized ciphertext.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {CipherParams|string} ciphertext The ciphertext to decrypt.
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {WordArray} The plaintext.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var plaintext = CryptoJS.lib.SerializableCipher.decrypt(CryptoJS.algo.AES, formattedCiphertext, key, { iv: iv, format: CryptoJS.format.OpenSSL });
+		         *     var plaintext = CryptoJS.lib.SerializableCipher.decrypt(CryptoJS.algo.AES, ciphertextParams, key, { iv: iv, format: CryptoJS.format.OpenSSL });
+		         */
+		        decrypt: function (cipher, ciphertext, key, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Convert string to CipherParams
+		            ciphertext = this._parse(ciphertext, cfg.format);
+	
+		            // Decrypt
+		            var plaintext = cipher.createDecryptor(key, cfg).finalize(ciphertext.ciphertext);
+	
+		            return plaintext;
+		        },
+	
+		        /**
+		         * Converts serialized ciphertext to CipherParams,
+		         * else assumed CipherParams already and returns ciphertext unchanged.
+		         *
+		         * @param {CipherParams|string} ciphertext The ciphertext.
+		         * @param {Formatter} format The formatting strategy to use to parse serialized ciphertext.
+		         *
+		         * @return {CipherParams} The unserialized ciphertext.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher._parse(ciphertextStringOrParams, format);
+		         */
+		        _parse: function (ciphertext, format) {
+		            if (typeof ciphertext == 'string') {
+		                return format.parse(ciphertext, this);
+		            } else {
+		                return ciphertext;
+		            }
+		        }
+		    });
+	
+		    /**
+		     * Key derivation function namespace.
+		     */
+		    var C_kdf = C.kdf = {};
+	
+		    /**
+		     * OpenSSL key derivation function.
+		     */
+		    var OpenSSLKdf = C_kdf.OpenSSL = {
+		        /**
+		         * Derives a key and IV from a password.
+		         *
+		         * @param {string} password The password to derive from.
+		         * @param {number} keySize The size in words of the key to generate.
+		         * @param {number} ivSize The size in words of the IV to generate.
+		         * @param {WordArray|string} salt (Optional) A 64-bit salt to use. If omitted, a salt will be generated randomly.
+		         *
+		         * @return {CipherParams} A cipher params object with the key, IV, and salt.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var derivedParams = CryptoJS.kdf.OpenSSL.execute('Password', 256/32, 128/32);
+		         *     var derivedParams = CryptoJS.kdf.OpenSSL.execute('Password', 256/32, 128/32, 'saltsalt');
+		         */
+		        execute: function (password, keySize, ivSize, salt) {
+		            // Generate random salt
+		            if (!salt) {
+		                salt = WordArray.random(64/8);
+		            }
+	
+		            // Derive key and IV
+		            var key = EvpKDF.create({ keySize: keySize + ivSize }).compute(password, salt);
+	
+		            // Separate key and IV
+		            var iv = WordArray.create(key.words.slice(keySize), ivSize * 4);
+		            key.sigBytes = keySize * 4;
+	
+		            // Return params
+		            return CipherParams.create({ key: key, iv: iv, salt: salt });
+		        }
+		    };
+	
+		    /**
+		     * A serializable cipher wrapper that derives the key from a password,
+		     * and returns ciphertext as a serializable cipher params object.
+		     */
+		    var PasswordBasedCipher = C_lib.PasswordBasedCipher = SerializableCipher.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {KDF} kdf The key derivation function to use to generate a key and IV from a password. Default: OpenSSL
+		         */
+		        cfg: SerializableCipher.cfg.extend({
+		            kdf: OpenSSLKdf
+		        }),
+	
+		        /**
+		         * Encrypts a message using a password.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {WordArray|string} message The message to encrypt.
+		         * @param {string} password The password.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {CipherParams} A cipher params object.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var ciphertextParams = CryptoJS.lib.PasswordBasedCipher.encrypt(CryptoJS.algo.AES, message, 'password');
+		         *     var ciphertextParams = CryptoJS.lib.PasswordBasedCipher.encrypt(CryptoJS.algo.AES, message, 'password', { format: CryptoJS.format.OpenSSL });
+		         */
+		        encrypt: function (cipher, message, password, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Derive key and other params
+		            var derivedParams = cfg.kdf.execute(password, cipher.keySize, cipher.ivSize);
+	
+		            // Add IV to config
+		            cfg.iv = derivedParams.iv;
+	
+		            // Encrypt
+		            var ciphertext = SerializableCipher.encrypt.call(this, cipher, message, derivedParams.key, cfg);
+	
+		            // Mix in derived params
+		            ciphertext.mixIn(derivedParams);
+	
+		            return ciphertext;
+		        },
+	
+		        /**
+		         * Decrypts serialized ciphertext using a password.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {CipherParams|string} ciphertext The ciphertext to decrypt.
+		         * @param {string} password The password.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {WordArray} The plaintext.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var plaintext = CryptoJS.lib.PasswordBasedCipher.decrypt(CryptoJS.algo.AES, formattedCiphertext, 'password', { format: CryptoJS.format.OpenSSL });
+		         *     var plaintext = CryptoJS.lib.PasswordBasedCipher.decrypt(CryptoJS.algo.AES, ciphertextParams, 'password', { format: CryptoJS.format.OpenSSL });
+		         */
+		        decrypt: function (cipher, ciphertext, password, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Convert string to CipherParams
+		            ciphertext = this._parse(ciphertext, cfg.format);
+	
+		            // Derive key and other params
+		            var derivedParams = cfg.kdf.execute(password, cipher.keySize, cipher.ivSize, ciphertext.salt);
+	
+		            // Add IV to config
+		            cfg.iv = derivedParams.iv;
+	
+		            // Decrypt
+		            var plaintext = SerializableCipher.decrypt.call(this, cipher, ciphertext, derivedParams.key, cfg);
+	
+		            return plaintext;
+		        }
+		    });
+		}());
+	
+	
+	}));
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __nested_webpack_require_132385__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_132385__(5), __nested_webpack_require_132385__(12), __nested_webpack_require_132385__(13), __nested_webpack_require_132385__(14), __nested_webpack_require_132385__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var BlockCipher = C_lib.BlockCipher;
+		    var C_algo = C.algo;
+	
+		    // Permuted Choice 1 constants
+		    var PC1 = [
+		        57, 49, 41, 33, 25, 17, 9,  1,
+		        58, 50, 42, 34, 26, 18, 10, 2,
+		        59, 51, 43, 35, 27, 19, 11, 3,
+		        60, 52, 44, 36, 63, 55, 47, 39,
+		        31, 23, 15, 7,  62, 54, 46, 38,
+		        30, 22, 14, 6,  61, 53, 45, 37,
+		        29, 21, 13, 5,  28, 20, 12, 4
+		    ];
+	
+		    // Permuted Choice 2 constants
+		    var PC2 = [
+		        14, 17, 11, 24, 1,  5,
+		        3,  28, 15, 6,  21, 10,
+		        23, 19, 12, 4,  26, 8,
+		        16, 7,  27, 20, 13, 2,
+		        41, 52, 31, 37, 47, 55,
+		        30, 40, 51, 45, 33, 48,
+		        44, 49, 39, 56, 34, 53,
+		        46, 42, 50, 36, 29, 32
+		    ];
+	
+		    // Cumulative bit shift constants
+		    var BIT_SHIFTS = [1,  2,  4,  6,  8,  10, 12, 14, 15, 17, 19, 21, 23, 25, 27, 28];
+	
+		    // SBOXes and round permutation constants
+		    var SBOX_P = [
+		        {
+		            0x0: 0x808200,
+		            0x10000000: 0x8000,
+		            0x20000000: 0x808002,
+		            0x30000000: 0x2,
+		            0x40000000: 0x200,
+		            0x50000000: 0x808202,
+		            0x60000000: 0x800202,
+		            0x70000000: 0x800000,
+		            0x80000000: 0x202,
+		            0x90000000: 0x800200,
+		            0xa0000000: 0x8200,
+		            0xb0000000: 0x808000,
+		            0xc0000000: 0x8002,
+		            0xd0000000: 0x800002,
+		            0xe0000000: 0x0,
+		            0xf0000000: 0x8202,
+		            0x8000000: 0x0,
+		            0x18000000: 0x808202,
+		            0x28000000: 0x8202,
+		            0x38000000: 0x8000,
+		            0x48000000: 0x808200,
+		            0x58000000: 0x200,
+		            0x68000000: 0x808002,
+		            0x78000000: 0x2,
+		            0x88000000: 0x800200,
+		            0x98000000: 0x8200,
+		            0xa8000000: 0x808000,
+		            0xb8000000: 0x800202,
+		            0xc8000000: 0x800002,
+		            0xd8000000: 0x8002,
+		            0xe8000000: 0x202,
+		            0xf8000000: 0x800000,
+		            0x1: 0x8000,
+		            0x10000001: 0x2,
+		            0x20000001: 0x808200,
+		            0x30000001: 0x800000,
+		            0x40000001: 0x808002,
+		            0x50000001: 0x8200,
+		            0x60000001: 0x200,
+		            0x70000001: 0x800202,
+		            0x80000001: 0x808202,
+		            0x90000001: 0x808000,
+		            0xa0000001: 0x800002,
+		            0xb0000001: 0x8202,
+		            0xc0000001: 0x202,
+		            0xd0000001: 0x800200,
+		            0xe0000001: 0x8002,
+		            0xf0000001: 0x0,
+		            0x8000001: 0x808202,
+		            0x18000001: 0x808000,
+		            0x28000001: 0x800000,
+		            0x38000001: 0x200,
+		            0x48000001: 0x8000,
+		            0x58000001: 0x800002,
+		            0x68000001: 0x2,
+		            0x78000001: 0x8202,
+		            0x88000001: 0x8002,
+		            0x98000001: 0x800202,
+		            0xa8000001: 0x202,
+		            0xb8000001: 0x808200,
+		            0xc8000001: 0x800200,
+		            0xd8000001: 0x0,
+		            0xe8000001: 0x8200,
+		            0xf8000001: 0x808002
+		        },
+		        {
+		            0x0: 0x40084010,
+		            0x1000000: 0x4000,
+		            0x2000000: 0x80000,
+		            0x3000000: 0x40080010,
+		            0x4000000: 0x40000010,
+		            0x5000000: 0x40084000,
+		            0x6000000: 0x40004000,
+		            0x7000000: 0x10,
+		            0x8000000: 0x84000,
+		            0x9000000: 0x40004010,
+		            0xa000000: 0x40000000,
+		            0xb000000: 0x84010,
+		            0xc000000: 0x80010,
+		            0xd000000: 0x0,
+		            0xe000000: 0x4010,
+		            0xf000000: 0x40080000,
+		            0x800000: 0x40004000,
+		            0x1800000: 0x84010,
+		            0x2800000: 0x10,
+		            0x3800000: 0x40004010,
+		            0x4800000: 0x40084010,
+		            0x5800000: 0x40000000,
+		            0x6800000: 0x80000,
+		            0x7800000: 0x40080010,
+		            0x8800000: 0x80010,
+		            0x9800000: 0x0,
+		            0xa800000: 0x4000,
+		            0xb800000: 0x40080000,
+		            0xc800000: 0x40000010,
+		            0xd800000: 0x84000,
+		            0xe800000: 0x40084000,
+		            0xf800000: 0x4010,
+		            0x10000000: 0x0,
+		            0x11000000: 0x40080010,
+		            0x12000000: 0x40004010,
+		            0x13000000: 0x40084000,
+		            0x14000000: 0x40080000,
+		            0x15000000: 0x10,
+		            0x16000000: 0x84010,
+		            0x17000000: 0x4000,
+		            0x18000000: 0x4010,
+		            0x19000000: 0x80000,
+		            0x1a000000: 0x80010,
+		            0x1b000000: 0x40000010,
+		            0x1c000000: 0x84000,
+		            0x1d000000: 0x40004000,
+		            0x1e000000: 0x40000000,
+		            0x1f000000: 0x40084010,
+		            0x10800000: 0x84010,
+		            0x11800000: 0x80000,
+		            0x12800000: 0x40080000,
+		            0x13800000: 0x4000,
+		            0x14800000: 0x40004000,
+		            0x15800000: 0x40084010,
+		            0x16800000: 0x10,
+		            0x17800000: 0x40000000,
+		            0x18800000: 0x40084000,
+		            0x19800000: 0x40000010,
+		            0x1a800000: 0x40004010,
+		            0x1b800000: 0x80010,
+		            0x1c800000: 0x0,
+		            0x1d800000: 0x4010,
+		            0x1e800000: 0x40080010,
+		            0x1f800000: 0x84000
+		        },
+		        {
+		            0x0: 0x104,
+		            0x100000: 0x0,
+		            0x200000: 0x4000100,
+		            0x300000: 0x10104,
+		            0x400000: 0x10004,
+		            0x500000: 0x4000004,
+		            0x600000: 0x4010104,
+		            0x700000: 0x4010000,
+		            0x800000: 0x4000000,
+		            0x900000: 0x4010100,
+		            0xa00000: 0x10100,
+		            0xb00000: 0x4010004,
+		            0xc00000: 0x4000104,
+		            0xd00000: 0x10000,
+		            0xe00000: 0x4,
+		            0xf00000: 0x100,
+		            0x80000: 0x4010100,
+		            0x180000: 0x4010004,
+		            0x280000: 0x0,
+		            0x380000: 0x4000100,
+		            0x480000: 0x4000004,
+		            0x580000: 0x10000,
+		            0x680000: 0x10004,
+		            0x780000: 0x104,
+		            0x880000: 0x4,
+		            0x980000: 0x100,
+		            0xa80000: 0x4010000,
+		            0xb80000: 0x10104,
+		            0xc80000: 0x10100,
+		            0xd80000: 0x4000104,
+		            0xe80000: 0x4010104,
+		            0xf80000: 0x4000000,
+		            0x1000000: 0x4010100,
+		            0x1100000: 0x10004,
+		            0x1200000: 0x10000,
+		            0x1300000: 0x4000100,
+		            0x1400000: 0x100,
+		            0x1500000: 0x4010104,
+		            0x1600000: 0x4000004,
+		            0x1700000: 0x0,
+		            0x1800000: 0x4000104,
+		            0x1900000: 0x4000000,
+		            0x1a00000: 0x4,
+		            0x1b00000: 0x10100,
+		            0x1c00000: 0x4010000,
+		            0x1d00000: 0x104,
+		            0x1e00000: 0x10104,
+		            0x1f00000: 0x4010004,
+		            0x1080000: 0x4000000,
+		            0x1180000: 0x104,
+		            0x1280000: 0x4010100,
+		            0x1380000: 0x0,
+		            0x1480000: 0x10004,
+		            0x1580000: 0x4000100,
+		            0x1680000: 0x100,
+		            0x1780000: 0x4010004,
+		            0x1880000: 0x10000,
+		            0x1980000: 0x4010104,
+		            0x1a80000: 0x10104,
+		            0x1b80000: 0x4000004,
+		            0x1c80000: 0x4000104,
+		            0x1d80000: 0x4010000,
+		            0x1e80000: 0x4,
+		            0x1f80000: 0x10100
+		        },
+		        {
+		            0x0: 0x80401000,
+		            0x10000: 0x80001040,
+		            0x20000: 0x401040,
+		            0x30000: 0x80400000,
+		            0x40000: 0x0,
+		            0x50000: 0x401000,
+		            0x60000: 0x80000040,
+		            0x70000: 0x400040,
+		            0x80000: 0x80000000,
+		            0x90000: 0x400000,
+		            0xa0000: 0x40,
+		            0xb0000: 0x80001000,
+		            0xc0000: 0x80400040,
+		            0xd0000: 0x1040,
+		            0xe0000: 0x1000,
+		            0xf0000: 0x80401040,
+		            0x8000: 0x80001040,
+		            0x18000: 0x40,
+		            0x28000: 0x80400040,
+		            0x38000: 0x80001000,
+		            0x48000: 0x401000,
+		            0x58000: 0x80401040,
+		            0x68000: 0x0,
+		            0x78000: 0x80400000,
+		            0x88000: 0x1000,
+		            0x98000: 0x80401000,
+		            0xa8000: 0x400000,
+		            0xb8000: 0x1040,
+		            0xc8000: 0x80000000,
+		            0xd8000: 0x400040,
+		            0xe8000: 0x401040,
+		            0xf8000: 0x80000040,
+		            0x100000: 0x400040,
+		            0x110000: 0x401000,
+		            0x120000: 0x80000040,
+		            0x130000: 0x0,
+		            0x140000: 0x1040,
+		            0x150000: 0x80400040,
+		            0x160000: 0x80401000,
+		            0x170000: 0x80001040,
+		            0x180000: 0x80401040,
+		            0x190000: 0x80000000,
+		            0x1a0000: 0x80400000,
+		            0x1b0000: 0x401040,
+		            0x1c0000: 0x80001000,
+		            0x1d0000: 0x400000,
+		            0x1e0000: 0x40,
+		            0x1f0000: 0x1000,
+		            0x108000: 0x80400000,
+		            0x118000: 0x80401040,
+		            0x128000: 0x0,
+		            0x138000: 0x401000,
+		            0x148000: 0x400040,
+		            0x158000: 0x80000000,
+		            0x168000: 0x80001040,
+		            0x178000: 0x40,
+		            0x188000: 0x80000040,
+		            0x198000: 0x1000,
+		            0x1a8000: 0x80001000,
+		            0x1b8000: 0x80400040,
+		            0x1c8000: 0x1040,
+		            0x1d8000: 0x80401000,
+		            0x1e8000: 0x400000,
+		            0x1f8000: 0x401040
+		        },
+		        {
+		            0x0: 0x80,
+		            0x1000: 0x1040000,
+		            0x2000: 0x40000,
+		            0x3000: 0x20000000,
+		            0x4000: 0x20040080,
+		            0x5000: 0x1000080,
+		            0x6000: 0x21000080,
+		            0x7000: 0x40080,
+		            0x8000: 0x1000000,
+		            0x9000: 0x20040000,
+		            0xa000: 0x20000080,
+		            0xb000: 0x21040080,
+		            0xc000: 0x21040000,
+		            0xd000: 0x0,
+		            0xe000: 0x1040080,
+		            0xf000: 0x21000000,
+		            0x800: 0x1040080,
+		            0x1800: 0x21000080,
+		            0x2800: 0x80,
+		            0x3800: 0x1040000,
+		            0x4800: 0x40000,
+		            0x5800: 0x20040080,
+		            0x6800: 0x21040000,
+		            0x7800: 0x20000000,
+		            0x8800: 0x20040000,
+		            0x9800: 0x0,
+		            0xa800: 0x21040080,
+		            0xb800: 0x1000080,
+		            0xc800: 0x20000080,
+		            0xd800: 0x21000000,
+		            0xe800: 0x1000000,
+		            0xf800: 0x40080,
+		            0x10000: 0x40000,
+		            0x11000: 0x80,
+		            0x12000: 0x20000000,
+		            0x13000: 0x21000080,
+		            0x14000: 0x1000080,
+		            0x15000: 0x21040000,
+		            0x16000: 0x20040080,
+		            0x17000: 0x1000000,
+		            0x18000: 0x21040080,
+		            0x19000: 0x21000000,
+		            0x1a000: 0x1040000,
+		            0x1b000: 0x20040000,
+		            0x1c000: 0x40080,
+		            0x1d000: 0x20000080,
+		            0x1e000: 0x0,
+		            0x1f000: 0x1040080,
+		            0x10800: 0x21000080,
+		            0x11800: 0x1000000,
+		            0x12800: 0x1040000,
+		            0x13800: 0x20040080,
+		            0x14800: 0x20000000,
+		            0x15800: 0x1040080,
+		            0x16800: 0x80,
+		            0x17800: 0x21040000,
+		            0x18800: 0x40080,
+		            0x19800: 0x21040080,
+		            0x1a800: 0x0,
+		            0x1b800: 0x21000000,
+		            0x1c800: 0x1000080,
+		            0x1d800: 0x40000,
+		            0x1e800: 0x20040000,
+		            0x1f800: 0x20000080
+		        },
+		        {
+		            0x0: 0x10000008,
+		            0x100: 0x2000,
+		            0x200: 0x10200000,
+		            0x300: 0x10202008,
+		            0x400: 0x10002000,
+		            0x500: 0x200000,
+		            0x600: 0x200008,
+		            0x700: 0x10000000,
+		            0x800: 0x0,
+		            0x900: 0x10002008,
+		            0xa00: 0x202000,
+		            0xb00: 0x8,
+		            0xc00: 0x10200008,
+		            0xd00: 0x202008,
+		            0xe00: 0x2008,
+		            0xf00: 0x10202000,
+		            0x80: 0x10200000,
+		            0x180: 0x10202008,
+		            0x280: 0x8,
+		            0x380: 0x200000,
+		            0x480: 0x202008,
+		            0x580: 0x10000008,
+		            0x680: 0x10002000,
+		            0x780: 0x2008,
+		            0x880: 0x200008,
+		            0x980: 0x2000,
+		            0xa80: 0x10002008,
+		            0xb80: 0x10200008,
+		            0xc80: 0x0,
+		            0xd80: 0x10202000,
+		            0xe80: 0x202000,
+		            0xf80: 0x10000000,
+		            0x1000: 0x10002000,
+		            0x1100: 0x10200008,
+		            0x1200: 0x10202008,
+		            0x1300: 0x2008,
+		            0x1400: 0x200000,
+		            0x1500: 0x10000000,
+		            0x1600: 0x10000008,
+		            0x1700: 0x202000,
+		            0x1800: 0x202008,
+		            0x1900: 0x0,
+		            0x1a00: 0x8,
+		            0x1b00: 0x10200000,
+		            0x1c00: 0x2000,
+		            0x1d00: 0x10002008,
+		            0x1e00: 0x10202000,
+		            0x1f00: 0x200008,
+		            0x1080: 0x8,
+		            0x1180: 0x202000,
+		            0x1280: 0x200000,
+		            0x1380: 0x10000008,
+		            0x1480: 0x10002000,
+		            0x1580: 0x2008,
+		            0x1680: 0x10202008,
+		            0x1780: 0x10200000,
+		            0x1880: 0x10202000,
+		            0x1980: 0x10200008,
+		            0x1a80: 0x2000,
+		            0x1b80: 0x202008,
+		            0x1c80: 0x200008,
+		            0x1d80: 0x0,
+		            0x1e80: 0x10000000,
+		            0x1f80: 0x10002008
+		        },
+		        {
+		            0x0: 0x100000,
+		            0x10: 0x2000401,
+		            0x20: 0x400,
+		            0x30: 0x100401,
+		            0x40: 0x2100401,
+		            0x50: 0x0,
+		            0x60: 0x1,
+		            0x70: 0x2100001,
+		            0x80: 0x2000400,
+		            0x90: 0x100001,
+		            0xa0: 0x2000001,
+		            0xb0: 0x2100400,
+		            0xc0: 0x2100000,
+		            0xd0: 0x401,
+		            0xe0: 0x100400,
+		            0xf0: 0x2000000,
+		            0x8: 0x2100001,
+		            0x18: 0x0,
+		            0x28: 0x2000401,
+		            0x38: 0x2100400,
+		            0x48: 0x100000,
+		            0x58: 0x2000001,
+		            0x68: 0x2000000,
+		            0x78: 0x401,
+		            0x88: 0x100401,
+		            0x98: 0x2000400,
+		            0xa8: 0x2100000,
+		            0xb8: 0x100001,
+		            0xc8: 0x400,
+		            0xd8: 0x2100401,
+		            0xe8: 0x1,
+		            0xf8: 0x100400,
+		            0x100: 0x2000000,
+		            0x110: 0x100000,
+		            0x120: 0x2000401,
+		            0x130: 0x2100001,
+		            0x140: 0x100001,
+		            0x150: 0x2000400,
+		            0x160: 0x2100400,
+		            0x170: 0x100401,
+		            0x180: 0x401,
+		            0x190: 0x2100401,
+		            0x1a0: 0x100400,
+		            0x1b0: 0x1,
+		            0x1c0: 0x0,
+		            0x1d0: 0x2100000,
+		            0x1e0: 0x2000001,
+		            0x1f0: 0x400,
+		            0x108: 0x100400,
+		            0x118: 0x2000401,
+		            0x128: 0x2100001,
+		            0x138: 0x1,
+		            0x148: 0x2000000,
+		            0x158: 0x100000,
+		            0x168: 0x401,
+		            0x178: 0x2100400,
+		            0x188: 0x2000001,
+		            0x198: 0x2100000,
+		            0x1a8: 0x0,
+		            0x1b8: 0x2100401,
+		            0x1c8: 0x100401,
+		            0x1d8: 0x400,
+		            0x1e8: 0x2000400,
+		            0x1f8: 0x100001
+		        },
+		        {
+		            0x0: 0x8000820,
+		            0x1: 0x20000,
+		            0x2: 0x8000000,
+		            0x3: 0x20,
+		            0x4: 0x20020,
+		            0x5: 0x8020820,
+		            0x6: 0x8020800,
+		            0x7: 0x800,
+		            0x8: 0x8020000,
+		            0x9: 0x8000800,
+		            0xa: 0x20800,
+		            0xb: 0x8020020,
+		            0xc: 0x820,
+		            0xd: 0x0,
+		            0xe: 0x8000020,
+		            0xf: 0x20820,
+		            0x80000000: 0x800,
+		            0x80000001: 0x8020820,
+		            0x80000002: 0x8000820,
+		            0x80000003: 0x8000000,
+		            0x80000004: 0x8020000,
+		            0x80000005: 0x20800,
+		            0x80000006: 0x20820,
+		            0x80000007: 0x20,
+		            0x80000008: 0x8000020,
+		            0x80000009: 0x820,
+		            0x8000000a: 0x20020,
+		            0x8000000b: 0x8020800,
+		            0x8000000c: 0x0,
+		            0x8000000d: 0x8020020,
+		            0x8000000e: 0x8000800,
+		            0x8000000f: 0x20000,
+		            0x10: 0x20820,
+		            0x11: 0x8020800,
+		            0x12: 0x20,
+		            0x13: 0x800,
+		            0x14: 0x8000800,
+		            0x15: 0x8000020,
+		            0x16: 0x8020020,
+		            0x17: 0x20000,
+		            0x18: 0x0,
+		            0x19: 0x20020,
+		            0x1a: 0x8020000,
+		            0x1b: 0x8000820,
+		            0x1c: 0x8020820,
+		            0x1d: 0x20800,
+		            0x1e: 0x820,
+		            0x1f: 0x8000000,
+		            0x80000010: 0x20000,
+		            0x80000011: 0x800,
+		            0x80000012: 0x8020020,
+		            0x80000013: 0x20820,
+		            0x80000014: 0x20,
+		            0x80000015: 0x8020000,
+		            0x80000016: 0x8000000,
+		            0x80000017: 0x8000820,
+		            0x80000018: 0x8020820,
+		            0x80000019: 0x8000020,
+		            0x8000001a: 0x8000800,
+		            0x8000001b: 0x0,
+		            0x8000001c: 0x20800,
+		            0x8000001d: 0x820,
+		            0x8000001e: 0x20020,
+		            0x8000001f: 0x8020800
+		        }
+		    ];
+	
+		    // Masks that select the SBOX input
+		    var SBOX_MASK = [
+		        0xf8000001, 0x1f800000, 0x01f80000, 0x001f8000,
+		        0x0001f800, 0x00001f80, 0x000001f8, 0x8000001f
+		    ];
+	
+		    /**
+		     * DES block cipher algorithm.
+		     */
+		    var DES = C_algo.DES = BlockCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var key = this._key;
+		            var keyWords = key.words;
+	
+		            // Select 56 bits according to PC1
+		            var keyBits = [];
+		            for (var i = 0; i < 56; i++) {
+		                var keyBitPos = PC1[i] - 1;
+		                keyBits[i] = (keyWords[keyBitPos >>> 5] >>> (31 - keyBitPos % 32)) & 1;
+		            }
+	
+		            // Assemble 16 subkeys
+		            var subKeys = this._subKeys = [];
+		            for (var nSubKey = 0; nSubKey < 16; nSubKey++) {
+		                // Create subkey
+		                var subKey = subKeys[nSubKey] = [];
+	
+		                // Shortcut
+		                var bitShift = BIT_SHIFTS[nSubKey];
+	
+		                // Select 48 bits according to PC2
+		                for (var i = 0; i < 24; i++) {
+		                    // Select from the left 28 key bits
+		                    subKey[(i / 6) | 0] |= keyBits[((PC2[i] - 1) + bitShift) % 28] << (31 - i % 6);
+	
+		                    // Select from the right 28 key bits
+		                    subKey[4 + ((i / 6) | 0)] |= keyBits[28 + (((PC2[i + 24] - 1) + bitShift) % 28)] << (31 - i % 6);
+		                }
+	
+		                // Since each subkey is applied to an expanded 32-bit input,
+		                // the subkey can be broken into 8 values scaled to 32-bits,
+		                // which allows the key to be used without expansion
+		                subKey[0] = (subKey[0] << 1) | (subKey[0] >>> 31);
+		                for (var i = 1; i < 7; i++) {
+		                    subKey[i] = subKey[i] >>> ((i - 1) * 4 + 3);
+		                }
+		                subKey[7] = (subKey[7] << 5) | (subKey[7] >>> 27);
+		            }
+	
+		            // Compute inverse subkeys
+		            var invSubKeys = this._invSubKeys = [];
+		            for (var i = 0; i < 16; i++) {
+		                invSubKeys[i] = subKeys[15 - i];
+		            }
+		        },
+	
+		        encryptBlock: function (M, offset) {
+		            this._doCryptBlock(M, offset, this._subKeys);
+		        },
+	
+		        decryptBlock: function (M, offset) {
+		            this._doCryptBlock(M, offset, this._invSubKeys);
+		        },
+	
+		        _doCryptBlock: function (M, offset, subKeys) {
+		            // Get input
+		            this._lBlock = M[offset];
+		            this._rBlock = M[offset + 1];
+	
+		            // Initial permutation
+		            exchangeLR.call(this, 4,  0x0f0f0f0f);
+		            exchangeLR.call(this, 16, 0x0000ffff);
+		            exchangeRL.call(this, 2,  0x33333333);
+		            exchangeRL.call(this, 8,  0x00ff00ff);
+		            exchangeLR.call(this, 1,  0x55555555);
+	
+		            // Rounds
+		            for (var round = 0; round < 16; round++) {
+		                // Shortcuts
+		                var subKey = subKeys[round];
+		                var lBlock = this._lBlock;
+		                var rBlock = this._rBlock;
+	
+		                // Feistel function
+		                var f = 0;
+		                for (var i = 0; i < 8; i++) {
+		                    f |= SBOX_P[i][((rBlock ^ subKey[i]) & SBOX_MASK[i]) >>> 0];
+		                }
+		                this._lBlock = rBlock;
+		                this._rBlock = lBlock ^ f;
+		            }
+	
+		            // Undo swap from last round
+		            var t = this._lBlock;
+		            this._lBlock = this._rBlock;
+		            this._rBlock = t;
+	
+		            // Final permutation
+		            exchangeLR.call(this, 1,  0x55555555);
+		            exchangeRL.call(this, 8,  0x00ff00ff);
+		            exchangeRL.call(this, 2,  0x33333333);
+		            exchangeLR.call(this, 16, 0x0000ffff);
+		            exchangeLR.call(this, 4,  0x0f0f0f0f);
+	
+		            // Set output
+		            M[offset] = this._lBlock;
+		            M[offset + 1] = this._rBlock;
+		        },
+	
+		        keySize: 64/32,
+	
+		        ivSize: 64/32,
+	
+		        blockSize: 64/32
+		    });
+	
+		    // Swap bits across the left and right words
+		    function exchangeLR(offset, mask) {
+		        var t = ((this._lBlock >>> offset) ^ this._rBlock) & mask;
+		        this._rBlock ^= t;
+		        this._lBlock ^= t << offset;
+		    }
+	
+		    function exchangeRL(offset, mask) {
+		        var t = ((this._rBlock >>> offset) ^ this._lBlock) & mask;
+		        this._lBlock ^= t;
+		        this._rBlock ^= t << offset;
+		    }
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.DES.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.DES.decrypt(ciphertext, key, cfg);
+		     */
+		    C.DES = BlockCipher._createHelper(DES);
+	
+		    /**
+		     * Triple-DES block cipher algorithm.
+		     */
+		    var TripleDES = C_algo.TripleDES = BlockCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var key = this._key;
+		            var keyWords = key.words;
+	
+		            // Create DES instances
+		            this._des1 = DES.createEncryptor(WordArray.create(keyWords.slice(0, 2)));
+		            this._des2 = DES.createEncryptor(WordArray.create(keyWords.slice(2, 4)));
+		            this._des3 = DES.createEncryptor(WordArray.create(keyWords.slice(4, 6)));
+		        },
+	
+		        encryptBlock: function (M, offset) {
+		            this._des1.encryptBlock(M, offset);
+		            this._des2.decryptBlock(M, offset);
+		            this._des3.encryptBlock(M, offset);
+		        },
+	
+		        decryptBlock: function (M, offset) {
+		            this._des3.decryptBlock(M, offset);
+		            this._des2.encryptBlock(M, offset);
+		            this._des1.decryptBlock(M, offset);
+		        },
+	
+		        keySize: 192/32,
+	
+		        ivSize: 64/32,
+	
+		        blockSize: 64/32
+		    });
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.TripleDES.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.TripleDES.decrypt(ciphertext, key, cfg);
+		     */
+		    C.TripleDES = BlockCipher._createHelper(TripleDES);
+		}());
+	
+	
+		return CryptoJS.TripleDES;
+	
+	}));
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __nested_webpack_require_157538__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_157538__(5), __nested_webpack_require_157538__(12), __nested_webpack_require_157538__(13), __nested_webpack_require_157538__(14), __nested_webpack_require_157538__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var StreamCipher = C_lib.StreamCipher;
+		    var C_algo = C.algo;
+	
+		    // Reusable objects
+		    var S  = [];
+		    var C_ = [];
+		    var G  = [];
+	
+		    /**
+		     * Rabbit stream cipher algorithm
+		     */
+		    var Rabbit = C_algo.Rabbit = StreamCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var K = this._key.words;
+		            var iv = this.cfg.iv;
+	
+		            // Swap endian
+		            for (var i = 0; i < 4; i++) {
+		                K[i] = (((K[i] << 8)  | (K[i] >>> 24)) & 0x00ff00ff) |
+		                       (((K[i] << 24) | (K[i] >>> 8))  & 0xff00ff00);
+		            }
+	
+		            // Generate initial state values
+		            var X = this._X = [
+		                K[0], (K[3] << 16) | (K[2] >>> 16),
+		                K[1], (K[0] << 16) | (K[3] >>> 16),
+		                K[2], (K[1] << 16) | (K[0] >>> 16),
+		                K[3], (K[2] << 16) | (K[1] >>> 16)
+		            ];
+	
+		            // Generate initial counter values
+		            var C = this._C = [
+		                (K[2] << 16) | (K[2] >>> 16), (K[0] & 0xffff0000) | (K[1] & 0x0000ffff),
+		                (K[3] << 16) | (K[3] >>> 16), (K[1] & 0xffff0000) | (K[2] & 0x0000ffff),
+		                (K[0] << 16) | (K[0] >>> 16), (K[2] & 0xffff0000) | (K[3] & 0x0000ffff),
+		                (K[1] << 16) | (K[1] >>> 16), (K[3] & 0xffff0000) | (K[0] & 0x0000ffff)
+		            ];
+	
+		            // Carry bit
+		            this._b = 0;
+	
+		            // Iterate the system four times
+		            for (var i = 0; i < 4; i++) {
+		                nextState.call(this);
+		            }
+	
+		            // Modify the counters
+		            for (var i = 0; i < 8; i++) {
+		                C[i] ^= X[(i + 4) & 7];
+		            }
+	
+		            // IV setup
+		            if (iv) {
+		                // Shortcuts
+		                var IV = iv.words;
+		                var IV_0 = IV[0];
+		                var IV_1 = IV[1];
+	
+		                // Generate four subvectors
+		                var i0 = (((IV_0 << 8) | (IV_0 >>> 24)) & 0x00ff00ff) | (((IV_0 << 24) | (IV_0 >>> 8)) & 0xff00ff00);
+		                var i2 = (((IV_1 << 8) | (IV_1 >>> 24)) & 0x00ff00ff) | (((IV_1 << 24) | (IV_1 >>> 8)) & 0xff00ff00);
+		                var i1 = (i0 >>> 16) | (i2 & 0xffff0000);
+		                var i3 = (i2 << 16)  | (i0 & 0x0000ffff);
+	
+		                // Modify counter values
+		                C[0] ^= i0;
+		                C[1] ^= i1;
+		                C[2] ^= i2;
+		                C[3] ^= i3;
+		                C[4] ^= i0;
+		                C[5] ^= i1;
+		                C[6] ^= i2;
+		                C[7] ^= i3;
+	
+		                // Iterate the system four times
+		                for (var i = 0; i < 4; i++) {
+		                    nextState.call(this);
+		                }
+		            }
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            // Shortcut
+		            var X = this._X;
+	
+		            // Iterate the system
+		            nextState.call(this);
+	
+		            // Generate four keystream words
+		            S[0] = X[0] ^ (X[5] >>> 16) ^ (X[3] << 16);
+		            S[1] = X[2] ^ (X[7] >>> 16) ^ (X[5] << 16);
+		            S[2] = X[4] ^ (X[1] >>> 16) ^ (X[7] << 16);
+		            S[3] = X[6] ^ (X[3] >>> 16) ^ (X[1] << 16);
+	
+		            for (var i = 0; i < 4; i++) {
+		                // Swap endian
+		                S[i] = (((S[i] << 8)  | (S[i] >>> 24)) & 0x00ff00ff) |
+		                       (((S[i] << 24) | (S[i] >>> 8))  & 0xff00ff00);
+	
+		                // Encrypt
+		                M[offset + i] ^= S[i];
+		            }
+		        },
+	
+		        blockSize: 128/32,
+	
+		        ivSize: 64/32
+		    });
+	
+		    function nextState() {
+		        // Shortcuts
+		        var X = this._X;
+		        var C = this._C;
+	
+		        // Save old counter values
+		        for (var i = 0; i < 8; i++) {
+		            C_[i] = C[i];
+		        }
+	
+		        // Calculate new counter values
+		        C[0] = (C[0] + 0x4d34d34d + this._b) | 0;
+		        C[1] = (C[1] + 0xd34d34d3 + ((C[0] >>> 0) < (C_[0] >>> 0) ? 1 : 0)) | 0;
+		        C[2] = (C[2] + 0x34d34d34 + ((C[1] >>> 0) < (C_[1] >>> 0) ? 1 : 0)) | 0;
+		        C[3] = (C[3] + 0x4d34d34d + ((C[2] >>> 0) < (C_[2] >>> 0) ? 1 : 0)) | 0;
+		        C[4] = (C[4] + 0xd34d34d3 + ((C[3] >>> 0) < (C_[3] >>> 0) ? 1 : 0)) | 0;
+		        C[5] = (C[5] + 0x34d34d34 + ((C[4] >>> 0) < (C_[4] >>> 0) ? 1 : 0)) | 0;
+		        C[6] = (C[6] + 0x4d34d34d + ((C[5] >>> 0) < (C_[5] >>> 0) ? 1 : 0)) | 0;
+		        C[7] = (C[7] + 0xd34d34d3 + ((C[6] >>> 0) < (C_[6] >>> 0) ? 1 : 0)) | 0;
+		        this._b = (C[7] >>> 0) < (C_[7] >>> 0) ? 1 : 0;
+	
+		        // Calculate the g-values
+		        for (var i = 0; i < 8; i++) {
+		            var gx = X[i] + C[i];
+	
+		            // Construct high and low argument for squaring
+		            var ga = gx & 0xffff;
+		            var gb = gx >>> 16;
+	
+		            // Calculate high and low result of squaring
+		            var gh = ((((ga * ga) >>> 17) + ga * gb) >>> 15) + gb * gb;
+		            var gl = (((gx & 0xffff0000) * gx) | 0) + (((gx & 0x0000ffff) * gx) | 0);
+	
+		            // High XOR low
+		            G[i] = gh ^ gl;
+		        }
+	
+		        // Calculate new state values
+		        X[0] = (G[0] + ((G[7] << 16) | (G[7] >>> 16)) + ((G[6] << 16) | (G[6] >>> 16))) | 0;
+		        X[1] = (G[1] + ((G[0] << 8)  | (G[0] >>> 24)) + G[7]) | 0;
+		        X[2] = (G[2] + ((G[1] << 16) | (G[1] >>> 16)) + ((G[0] << 16) | (G[0] >>> 16))) | 0;
+		        X[3] = (G[3] + ((G[2] << 8)  | (G[2] >>> 24)) + G[1]) | 0;
+		        X[4] = (G[4] + ((G[3] << 16) | (G[3] >>> 16)) + ((G[2] << 16) | (G[2] >>> 16))) | 0;
+		        X[5] = (G[5] + ((G[4] << 8)  | (G[4] >>> 24)) + G[3]) | 0;
+		        X[6] = (G[6] + ((G[5] << 16) | (G[5] >>> 16)) + ((G[4] << 16) | (G[4] >>> 16))) | 0;
+		        X[7] = (G[7] + ((G[6] << 8)  | (G[6] >>> 24)) + G[5]) | 0;
+		    }
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.Rabbit.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.Rabbit.decrypt(ciphertext, key, cfg);
+		     */
+		    C.Rabbit = StreamCipher._createHelper(Rabbit);
+		}());
+	
+	
+		return CryptoJS.Rabbit;
+	
+	}));
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __nested_webpack_require_164476__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__nested_webpack_require_164476__(5), __nested_webpack_require_164476__(12), __nested_webpack_require_164476__(13), __nested_webpack_require_164476__(14), __nested_webpack_require_164476__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var StreamCipher = C_lib.StreamCipher;
+		    var C_algo = C.algo;
+	
+		    /**
+		     * RC4 stream cipher algorithm.
+		     */
+		    var RC4 = C_algo.RC4 = StreamCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var key = this._key;
+		            var keyWords = key.words;
+		            var keySigBytes = key.sigBytes;
+	
+		            // Init sbox
+		            var S = this._S = [];
+		            for (var i = 0; i < 256; i++) {
+		                S[i] = i;
+		            }
+	
+		            // Key setup
+		            for (var i = 0, j = 0; i < 256; i++) {
+		                var keyByteIndex = i % keySigBytes;
+		                var keyByte = (keyWords[keyByteIndex >>> 2] >>> (24 - (keyByteIndex % 4) * 8)) & 0xff;
+	
+		                j = (j + S[i] + keyByte) % 256;
+	
+		                // Swap
+		                var t = S[i];
+		                S[i] = S[j];
+		                S[j] = t;
+		            }
+	
+		            // Counters
+		            this._i = this._j = 0;
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            M[offset] ^= generateKeystreamWord.call(this);
+		        },
+	
+		        keySize: 256/32,
+	
+		        ivSize: 0
+		    });
+	
+		    function generateKeystreamWord() {
+		        // Shortcuts
+		        var S = this._S;
+		        var i = this._i;
+		        var j = this._j;
+	
+		        // Generate keystream word
+		        var keystreamWord = 0;
+		        for (var n = 0; n < 4; n++) {
+		            i = (i + 1) % 256;
+		            j = (j + S[i]) % 256;
+	
+		            // Swap
+		            var t = S[i];
+		            S[i] = S[j];
+		            S[j] = t;
+	
+		            keystreamWord |= S[(S[i] + S[j]) % 256] << (24 - n * 8);
+		        }
+	
+		        // Update counters
+		        this._i = i;
+		        this._j = j;
+	
+		        return keystreamWord;
+		    }
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.RC4.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.RC4.decrypt(ciphertext, key, cfg);
+		     */
+		    C.RC4 = StreamCipher._createHelper(RC4);
+	
+		    /**
+		     * Modified RC4 stream cipher algorithm.
+		     */
+		    var RC4Drop = C_algo.RC4Drop = RC4.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {number} drop The number of keystream words to drop. Default 192
+		         */
+		        cfg: RC4.cfg.extend({
+		            drop: 192
+		        }),
+	
+		        _doReset: function () {
+		            RC4._doReset.call(this);
+	
+		            // Drop
+		            for (var i = this.cfg.drop; i > 0; i--) {
+		                generateKeystreamWord.call(this);
+		            }
+		        }
+		    });
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.RC4Drop.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.RC4Drop.decrypt(ciphertext, key, cfg);
+		     */
+		    C.RC4Drop = StreamCipher._createHelper(RC4Drop);
+		}());
+	
+	
+		return CryptoJS.RC4;
+	
+	}));
+
+/***/ }
+/******/ ])
+});
+;
+//# sourceMappingURL=secure-ls.js.map
+
+/***/ }),
+
 /***/ "./node_modules/sweetalert2/src/sweetalert2.scss":
 /*!*******************************************************!*\
   !*** ./node_modules/sweetalert2/src/sweetalert2.scss ***!
@@ -37742,6 +44205,66 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_jquery_dataTables_min_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loading-overlay/dist/vue-loading.css":
+/*!***************************************************************!*\
+  !*** ./node_modules/vue-loading-overlay/dist/vue-loading.css ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_vue_loading_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./vue-loading.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loading-overlay/dist/vue-loading.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_vue_loading_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_vue_loading_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackendMaster.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -44038,6 +50561,47 @@ var index = {
 
 /***/ }),
 
+/***/ "./resources/js/components/BackendMaster.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/BackendMaster.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BackendMaster_vue_vue_type_template_id_0026febb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BackendMaster.vue?vue&type=template&id=0026febb& */ "./resources/js/components/BackendMaster.vue?vue&type=template&id=0026febb&");
+/* harmony import */ var _BackendMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackendMaster.vue?vue&type=script&lang=js& */ "./resources/js/components/BackendMaster.vue?vue&type=script&lang=js&");
+/* harmony import */ var _BackendMaster_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BackendMaster.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _BackendMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _BackendMaster_vue_vue_type_template_id_0026febb___WEBPACK_IMPORTED_MODULE_0__.render,
+  _BackendMaster_vue_vue_type_template_id_0026febb___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/BackendMaster.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/adminMaster.vue":
 /*!*******************************************************!*\
   !*** ./resources/js/components/admin/adminMaster.vue ***!
@@ -44049,7 +50613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _adminMaster_vue_vue_type_template_id_20219ed4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./adminMaster.vue?vue&type=template&id=20219ed4&scoped=true& */ "./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&scoped=true&");
+/* harmony import */ var _adminMaster_vue_vue_type_template_id_20219ed4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./adminMaster.vue?vue&type=template&id=20219ed4& */ "./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&");
 /* harmony import */ var _adminMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./adminMaster.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/adminMaster.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -44061,11 +50625,11 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _adminMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _adminMaster_vue_vue_type_template_id_20219ed4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _adminMaster_vue_vue_type_template_id_20219ed4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _adminMaster_vue_vue_type_template_id_20219ed4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _adminMaster_vue_vue_type_template_id_20219ed4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "20219ed4",
+  null,
   null
   
 )
@@ -44157,6 +50721,22 @@ component.options.__file = "resources/js/components/admin/dashboard.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/BackendMaster.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/BackendMaster.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackendMaster.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/adminMaster.vue?vue&type=script&lang=js&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/admin/adminMaster.vue?vue&type=script&lang=js& ***!
@@ -44205,6 +50785,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_8_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackendMaster.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-8[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/categories.vue?vue&type=style&index=0&lang=css&":
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/admin/categories.vue?vue&type=style&index=0&lang=css& ***!
@@ -44218,19 +50811,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&scoped=true&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&scoped=true& ***!
-  \**************************************************************************************************/
+/***/ "./resources/js/components/BackendMaster.vue?vue&type=template&id=0026febb&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/BackendMaster.vue?vue&type=template&id=0026febb& ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_adminMaster_vue_vue_type_template_id_20219ed4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_adminMaster_vue_vue_type_template_id_20219ed4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_template_id_0026febb___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_template_id_0026febb___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_adminMaster_vue_vue_type_template_id_20219ed4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./adminMaster.vue?vue&type=template&id=20219ed4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendMaster_vue_vue_type_template_id_0026febb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackendMaster.vue?vue&type=template&id=0026febb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=template&id=0026febb&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_adminMaster_vue_vue_type_template_id_20219ed4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_adminMaster_vue_vue_type_template_id_20219ed4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_adminMaster_vue_vue_type_template_id_20219ed4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./adminMaster.vue?vue&type=template&id=20219ed4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&");
 
 
 /***/ }),
@@ -44269,10 +50879,2722 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=template&id=0026febb&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BackendMaster.vue?vue&type=template&id=0026febb& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("loading", {
+        attrs: { active: _vm.isLoading, "is-full-page": _vm.fullPage },
+        on: {
+          "update:active": function($event) {
+            _vm.isLoading = $event
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          class:
+            _vm.menu == true
+              ? "nk-sidebar nk-sidebar-fixed is-light nk-sidebar-active"
+              : "nk-sidebar nk-sidebar-fixed is-light",
+          attrs: { "data-content": "sidebarMenu" }
+        },
+        [
+          _c("div", { staticClass: "nk-sidebar-element nk-sidebar-head" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "nk-menu-trigger mr-n2 ",
+                on: {
+                  click: function($event) {
+                    _vm.menu = false
+                  }
+                }
+              },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nk-nav-toggle nk-quick-nav-icon d-xl-none",
+                    attrs: { to: "", "data-target": "sidebarMenu" }
+                  },
+                  [_c("em", { staticClass: "icon ni ni-arrow-left" })]
+                ),
+                _vm._v(" "),
+                _vm._m(1)
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "nk-sidebar-element" }, [
+            _c("div", { staticClass: "nk-sidebar-content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "nk-sidebar-menu",
+                  attrs: { "data-simplebar": "init" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "simplebar-wrapper",
+                      staticStyle: { margin: "-16px 0px -40px" }
+                    },
+                    [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "simplebar-mask" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "simplebar-offset",
+                            staticStyle: { right: "0px", bottom: "0px" }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "simplebar-content-wrapper",
+                                staticStyle: {
+                                  height: "100%",
+                                  overflow: "hidden scroll"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "simplebar-content",
+                                    staticStyle: { padding: "16px 0px 40px" }
+                                  },
+                                  [
+                                    _c("ul", { staticClass: "nk-menu" }, [
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "nk-menu-item active current-page"
+                                        },
+                                        [
+                                          _c(
+                                            "router-link",
+                                            {
+                                              staticClass: "nk-menu-link",
+                                              attrs: {
+                                                to: { name: "dashboard" },
+                                                "data-original-title": "",
+                                                title: ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "span",
+                                                { staticClass: "nk-menu-icon" },
+                                                [
+                                                  _c("em", {
+                                                    staticClass:
+                                                      "icon ni ni-tile-thumb-fill"
+                                                  })
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "span",
+                                                { staticClass: "nk-menu-text" },
+                                                [_vm._v("Dashboard")]
+                                              )
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(3),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        { staticClass: "nk-menu-item has-sub" },
+                                        [
+                                          _vm._m(4),
+                                          _vm._v(" "),
+                                          _c(
+                                            "ul",
+                                            { staticClass: "nk-menu-sub" },
+                                            [
+                                              _c(
+                                                "li",
+                                                { staticClass: "nk-menu-item" },
+                                                [
+                                                  _c(
+                                                    "router-link",
+                                                    {
+                                                      staticClass:
+                                                        "nk-menu-link",
+                                                      attrs: {
+                                                        to: {
+                                                          name: "categories"
+                                                        },
+                                                        "data-original-title":
+                                                          "",
+                                                        title: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "nk-menu-text"
+                                                        },
+                                                        [_vm._v("Categories")]
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(5)
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(6),
+                                      _vm._v(" "),
+                                      _vm._m(7),
+                                      _vm._v(" "),
+                                      _vm._m(8),
+                                      _vm._v(" "),
+                                      _vm._m(9),
+                                      _vm._v(" "),
+                                      _vm._m(10),
+                                      _vm._v(" "),
+                                      _vm._m(11),
+                                      _vm._v(" "),
+                                      _vm._m(12),
+                                      _vm._v(" "),
+                                      _vm._m(13),
+                                      _vm._v(" "),
+                                      _vm._m(14),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          class:
+                                            _vm.submenu == true
+                                              ? "active nk-menu-item has-sub"
+                                              : "nk-menu-item has-sub",
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.submenu("tables")
+                                            }
+                                          }
+                                        },
+                                        [_vm._m(15), _vm._v(" "), _vm._m(16)]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          class:
+                                            _vm.submenu == true
+                                              ? "active nk-menu-item has-sub"
+                                              : "nk-menu-item has-sub ",
+                                          on: {
+                                            click: function($event) {
+                                              _vm.submenu = !_vm.submenu
+                                            }
+                                          }
+                                        },
+                                        [_vm._m(17), _vm._v(" "), _vm._m(18)]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(19),
+                                      _vm._v(" "),
+                                      _vm._m(20),
+                                      _vm._v(" "),
+                                      _vm._m(21),
+                                      _vm._v(" "),
+                                      _vm._m(22)
+                                    ])
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "simplebar-placeholder",
+                        staticStyle: { width: "auto", height: "1313px" }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(23),
+                  _vm._v(" "),
+                  _vm._m(24)
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "nk-wrap" }, [
+        _c("div", { staticClass: "nk-header nk-header-fixed is-light" }, [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c("div", { staticClass: "nk-header-wrap" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "nk-menu-trigger d-xl-none ml-n1",
+                  on: {
+                    click: function($event) {
+                      return _vm.menuTrue()
+                    }
+                  }
+                },
+                [_vm._m(25)]
+              ),
+              _vm._v(" "),
+              _vm._m(26),
+              _vm._v(" "),
+              _vm._m(27),
+              _vm._v(" "),
+              _c("div", { staticClass: "nk-header-tools" }, [
+                _c("ul", { staticClass: "nk-quick-nav" }, [
+                  _vm._m(28),
+                  _vm._v(" "),
+                  _vm._m(29),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "dropdown user-dropdown" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "dropdown-toggle mr-n1",
+                          attrs: { to: "#", "data-toggle": "dropdown" }
+                        },
+                        [
+                          _c("div", { staticClass: "user-toggle" }, [
+                            _c("div", { staticClass: "user-avatar sm" }, [
+                              _c("em", { staticClass: "icon ni ni-user-alt" })
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "user-info d-none d-xl-block" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "user-status user-status-unverified"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                                Unverified\n                                            "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "user-name dropdown-indicator"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                                Abu Bin Ishityak\n                                            "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "dropdown-menu dropdown-menu-md dropdown-menu-right"
+                        },
+                        [
+                          _vm._m(30),
+                          _vm._v(" "),
+                          _vm._m(31),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "dropdown-inner" }, [
+                            _c("ul", { staticClass: "link-list" }, [
+                              _c("li", [
+                                _c("a", { on: { click: _vm.logout } }, [
+                                  _c("em", {
+                                    staticClass: "icon ni ni-signout"
+                                  }),
+                                  _c("span", [
+                                    _vm._v(
+                                      "Sign\n                                                        out"
+                                    )
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "nk-content" }, [_c("router-view")], 1)
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "nk-sidebar-brand" }, [
+      _c(
+        "a",
+        {
+          staticClass: "logo-link nk-sidebar-logo",
+          attrs: { href: "html/index.html" }
+        },
+        [
+          _c("img", {
+            staticClass: "logo-light logo-img",
+            attrs: {
+              src: "/assets/backend/images/logo.png",
+              srcset: "/assets/backend/images/logo2x.png" + " 2x",
+              alt: "logo"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "logo-dark logo-img",
+            attrs: {
+              src: "/assets/backend/images/logo-dark.png",
+              srcset: "/assets/backend/images/logo-dark2x.png" + " 2x",
+              alt: "logo-dark"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "logo-small logo-img logo-img-small",
+            attrs: {
+              src: "/assets/backend/images/logo-small.png",
+              srcset: "/assets/backend/images/logo-small2x.png" + " 2x",
+              alt: "logo-small"
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass: "nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex",
+        attrs: { to: "", "data-target": "sidebarMenu" }
+      },
+      [_c("em", { staticClass: "icon ni ni-menu" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "simplebar-height-auto-observer-wrapper" },
+      [_c("div", { staticClass: "simplebar-height-auto-observer" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link",
+          attrs: {
+            href: "html/index-analytics.html",
+            "data-original-title": "",
+            title: ""
+          }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-growth-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Analytics")])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "nk-menu-link nk-menu-toggle",
+        attrs: { href: "#", "data-original-title": "", title: "" }
+      },
+      [
+        _c("span", { staticClass: "nk-menu-icon" }, [
+          _c("em", { staticClass: "icon ni ni-tile-thumb-fill" })
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Blogs")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link",
+          attrs: {
+            href: "html/project-list.html",
+            "data-original-title": "",
+            title: ""
+          }
+        },
+        [_c("span", { staticClass: "nk-menu-text" }, [_vm._v("Posts")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-users-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("User Manage")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/user-list-default.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "User List -\n                                                                Default"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/user-list-regular.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "User List -\n                                                                Regular"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/user-list-compact.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "User List -\n                                                                Compact"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/user-details-regular.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "User\n                                                                Details -\n                                                                Regular"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/user-profile-regular.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "User\n                                                                Profile -\n                                                                Regular"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/user-card.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "User\n                                                                Contact -\n                                                                Card"
+                )
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "nk-menu-badge badge-warning" }, [
+                _vm._v("New")
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-cc-alt2-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Orders")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/orders-default.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Order List\n                                                                -\n                                                                Default"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/orders-regular.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Order List\n                                                                -\n                                                                Regular"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/orders-sales.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Order List\n                                                                -\n                                                                Sales"
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-grid-alt-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Applications")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/apps-messages.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [_c("span", { staticClass: "nk-menu-text" }, [_vm._v("Messages")])]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/apps-inbox.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Inbox /\n                                                                Mail"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/apps-file-manager.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "File\n                                                                Manager"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/apps-chats.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Chats /\n                                                                Messenger"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/apps-calendar.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Calendar")]),
+              _c("span", { staticClass: "nk-menu-badge badge-warning" }, [
+                _vm._v("New")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/apps-kanban.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Kanban\n                                                                Board"
+                )
+              ]),
+              _c("span", { staticClass: "nk-menu-badge badge-warning" }, [
+                _vm._v("New")
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-heading" }, [
+      _c("h6", { staticClass: "overline-title text-primary-alt" }, [
+        _vm._v(
+          "\n                                                    Misc Pages\n                                                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-light-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Auth Pages")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/auths/auth-login.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Login /\n                                                                Signin"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/auths/auth-register.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Register /\n                                                                Signup"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/auths/auth-reset.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Forgot\n                                                                Password"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/auths/auth-success.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Success /\n                                                                Confirm"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link nk-menu-toggle",
+              attrs: { href: "#", "data-original-title": "", title: "" }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Classic\n                                                                Version -\n                                                                v2"
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("ul", { staticClass: "nk-menu-sub" }, [
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-login-v2.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Login\n                                                                        /\n                                                                        Signin"
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-register-v2.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Register\n                                                                        /\n                                                                        Signup"
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-reset-v2.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Forgot\n                                                                        Password"
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-success-v2.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Success\n                                                                        /\n                                                                        Confirm"
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link nk-menu-toggle",
+              attrs: { href: "#", "data-original-title": "", title: "" }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "No Slider\n                                                                Version -\n                                                                v3"
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("ul", { staticClass: "nk-menu-sub" }, [
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-login-v3.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Login\n                                                                        /\n                                                                        Signin"
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-register-v3.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Register\n                                                                        /\n                                                                        Signup"
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-reset-v3.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Forgot\n                                                                        Password"
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nk-menu-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nk-menu-link",
+                  attrs: {
+                    href: "html/pages/auths/auth-success-v3.html",
+                    target: "_blank",
+                    "data-original-title": "",
+                    title: ""
+                  }
+                },
+                [
+                  _c("span", { staticClass: "nk-menu-text" }, [
+                    _vm._v(
+                      "Success\n                                                                        /\n                                                                        Confirm"
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-files-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Error Pages")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/errors/404-classic.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "404\n                                                                Classic"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/errors/504-classic.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "504\n                                                                Classic"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/errors/404-s1.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "404\n                                                                Modern"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/errors/504-s1.html",
+                target: "_blank",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "504\n                                                                Modern"
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-files-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Other Pages")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/_blank.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Blank /\n                                                                Startup"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/faqs.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Faqs /\n                                                                Help"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/terms-policy.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Terms /\n                                                                Policy"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/regular-v1.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Regular\n                                                                Page -\n                                                                v1"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/pages/regular-v2.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Regular\n                                                                Page -\n                                                                v2"
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-heading" }, [
+      _c("h6", { staticClass: "overline-title text-primary-alt" }, [
+        _vm._v(
+          "\n                                                    Components\n                                                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-dot-box-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Crafted Icons")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/components/misc/svg-icons.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "SVG Icon -\n                                                                Exclusive"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/components/misc/nioicon.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Nioicon -\n                                                                HandCrafted"
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "nk-menu-link nk-menu-toggle",
+        attrs: { href: "#", "data-original-title": "", title: "" }
+      },
+      [
+        _c("span", { staticClass: "nk-menu-icon" }, [
+          _c("em", { staticClass: "icon ni ni-table-view-fill" })
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Tables")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "nk-menu-sub" }, [
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/tables/table-basic.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Basic\n                                                                Tables"
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/tables/table-special.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Special\n                                                                Tables"
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/tables/table-datatable.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [_c("span", { staticClass: "nk-menu-text" }, [_vm._v("DataTables")])]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "nk-menu-link nk-menu-toggle",
+        attrs: { href: "#", "data-original-title": "", title: "" }
+      },
+      [
+        _c("span", { staticClass: "nk-menu-icon" }, [
+          _c("em", { staticClass: "icon ni ni-view-group-fill" })
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Forms")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "nk-menu-sub" }, [
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/forms/form-elements.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Form\n                                                                Elements"
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/forms/form-layouts.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Form\n                                                                Layouts"
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/forms/form-validation.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Form\n                                                                Validation"
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link",
+            attrs: {
+              href: "html/components/forms/form-wizard.html",
+              "data-original-title": "",
+              title: ""
+            }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Wizard\n                                                                Basic"
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nk-menu-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nk-menu-link nk-menu-toggle",
+            attrs: { href: "#", "data-original-title": "", title: "" }
+          },
+          [
+            _c("span", { staticClass: "nk-menu-text" }, [
+              _vm._v(
+                "Rich\n                                                                Editor"
+              )
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("ul", { staticClass: "nk-menu-sub" }, [
+          _c("li", { staticClass: "nk-menu-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "nk-menu-link",
+                attrs: {
+                  href: "html/components/forms/form-summernote.html",
+                  "data-original-title": "",
+                  title: ""
+                }
+              },
+              [
+                _c("span", { staticClass: "nk-menu-text" }, [
+                  _vm._v("Summernote")
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "nk-menu-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "nk-menu-link",
+                attrs: {
+                  href: "html/components/forms/form-quill.html",
+                  "data-original-title": "",
+                  title: ""
+                }
+              },
+              [_c("span", { staticClass: "nk-menu-text" }, [_vm._v("Quill")])]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "nk-menu-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "nk-menu-link",
+                attrs: {
+                  href: "html/components/forms/form-tinymce.html",
+                  "data-original-title": "",
+                  title: ""
+                }
+              },
+              [_c("span", { staticClass: "nk-menu-text" }, [_vm._v("Tinymce")])]
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item has-sub" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link nk-menu-toggle",
+          attrs: { href: "#", "data-original-title": "", title: "" }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-pie-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Charts")])
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "nk-menu-sub" }, [
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/components/charts/chartjs.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Chart\n                                                                JS"
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nk-menu-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nk-menu-link",
+              attrs: {
+                href: "html/components/charts/knob.html",
+                "data-original-title": "",
+                title: ""
+              }
+            },
+            [
+              _c("span", { staticClass: "nk-menu-text" }, [
+                _vm._v(
+                  "Knob\n                                                                JS"
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link",
+          attrs: {
+            href: "html/components/misc/toastr.html",
+            "data-original-title": "",
+            title: ""
+          }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-alert-circle-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Toastr")])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link",
+          attrs: {
+            href: "html/components/misc/sweet-alert.html",
+            "data-original-title": "",
+            title: ""
+          }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-caution-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [_vm._v("Sweet Alert")])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nk-menu-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nk-menu-link",
+          attrs: {
+            href: "html/email-templates.html",
+            "data-original-title": "",
+            title: ""
+          }
+        },
+        [
+          _c("span", { staticClass: "nk-menu-icon" }, [
+            _c("em", { staticClass: "icon ni ni-tag-alt-fill" })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "nk-menu-text" }, [
+            _vm._v(
+              "Email\n                                                        Template"
+            )
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "simplebar-track simplebar-horizontal",
+        staticStyle: { visibility: "hidden" }
+      },
+      [
+        _c("div", {
+          staticClass: "simplebar-scrollbar simplebar-visible",
+          staticStyle: { width: "0px", display: "none" }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "simplebar-track simplebar-vertical",
+        staticStyle: { visibility: "visible" }
+      },
+      [
+        _c("div", {
+          staticClass: "simplebar-scrollbar simplebar-visible",
+          staticStyle: {
+            height: "139px",
+            transform: "translate3d(0px, 0px, 0px)",
+            display: "block"
+          }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "nk-nav-toggle nk-quick-nav-icon",
+        attrs: { href: "#", "data-target": "sidebarMenu" }
+      },
+      [_c("em", { staticClass: "icon ni ni-menu" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "nk-header-brand d-xl-none" }, [
+      _c(
+        "a",
+        { staticClass: "logo-link", attrs: { href: "html/index.html" } },
+        [
+          _c("img", {
+            staticClass: "logo-light logo-img",
+            attrs: {
+              src: "/assets/backend/images/logo.png",
+              srcset: "/assets/backend/images/logo2x.png" + " 2x",
+              alt: "logo"
+            }
+          }),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "logo-dark logo-img",
+            attrs: {
+              src: "/assets/backend/images/logo-dark.png",
+              srcset: "/assets/backend/images/logo-dark2x.png" + " 2x",
+              alt: "logo-dark"
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "nk-header-search ml-3 ml-xl-0" }, [
+      _c("em", { staticClass: "icon ni ni-search" }),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control border-transparent form-focus-none",
+        attrs: { type: "text", placeholder: "Search anything" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "dropdown chats-dropdown hide-mb-xs" }, [
+      _c(
+        "a",
+        {
+          staticClass: "dropdown-toggle nk-quick-nav-icon",
+          attrs: { href: "#", "data-toggle": "dropdown" }
+        },
+        [
+          _c("div", { staticClass: "icon-status icon-status-na" }, [
+            _c("em", { staticClass: "icon ni ni-comments" })
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dropdown-menu dropdown-menu-xl dropdown-menu-right" },
+        [
+          _c("div", { staticClass: "dropdown-head" }, [
+            _c("span", { staticClass: "sub-title nk-dropdown-title" }, [
+              _vm._v("Recent Chats")
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Setting")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "dropdown-body" }, [
+            _c("ul", { staticClass: "chat-list" }, [
+              _c("li", { staticClass: "chat-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "chat-link",
+                    attrs: { href: "html/apps-chats.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "chat-media user-avatar" }, [
+                      _c("span", [_vm._v("IH")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "status dot dot-lg dot-gray" })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "chat-info" }, [
+                      _c("div", { staticClass: "chat-from" }, [
+                        _c("div", { staticClass: "name" }, [
+                          _vm._v(
+                            "\n                                                                Iliash\n                                                                Hossain\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "time" }, [_vm._v("Now")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "chat-context" }, [
+                        _c("div", { staticClass: "text" }, [
+                          _vm._v(
+                            "\n                                                                You: Please\n                                                                confrim if\n                                                                you got my\n                                                                last\n                                                                messages.\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "status delivered" }, [
+                          _c("em", {
+                            staticClass: "icon ni ni-check-circle-fill"
+                          })
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "chat-item is-unread" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "chat-link",
+                    attrs: { href: "html/apps-chats.html" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "chat-media user-avatar bg-pink" },
+                      [
+                        _c("span", [_vm._v("AB")]),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "status dot dot-lg dot-success"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "chat-info" }, [
+                      _c("div", { staticClass: "chat-from" }, [
+                        _c("div", { staticClass: "name" }, [
+                          _vm._v(
+                            "\n                                                                Abu Bin\n                                                                Ishtiyak\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "time" }, [
+                          _vm._v(
+                            "4:49\n                                                                AM"
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "chat-context" }, [
+                        _c("div", { staticClass: "text" }, [
+                          _vm._v(
+                            "\n                                                                Hi, I am\n                                                                Ishtiyak,\n                                                                can you help\n                                                                me with this\n                                                                problem ?\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "status unread" }, [
+                          _c("em", { staticClass: "icon ni ni-bullet-fill" })
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "chat-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "chat-link",
+                    attrs: { href: "html/apps-chats.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "chat-media user-avatar" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/assets/backend/images/avatar/b-sm.jpg",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "chat-info" }, [
+                      _c("div", { staticClass: "chat-from" }, [
+                        _c("div", { staticClass: "name" }, [
+                          _vm._v(
+                            "\n                                                                George\n                                                                Philips\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "time" }, [_vm._v("6 Apr")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "chat-context" }, [
+                        _c("div", { staticClass: "text" }, [
+                          _vm._v(
+                            "\n                                                                Have you\n                                                                seens the\n                                                                claim from\n                                                                Rose?\n                                                            "
+                          )
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "chat-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "chat-link",
+                    attrs: { href: "html/apps-chats.html" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "chat-media user-avatar user-avatar-multiple"
+                      },
+                      [
+                        _c("div", { staticClass: "user-avatar" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/assets/backend/images/avatar/c-sm.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "user-avatar" }, [
+                          _c("span", [_vm._v("AB")])
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "chat-info" }, [
+                      _c("div", { staticClass: "chat-from" }, [
+                        _c("div", { staticClass: "name" }, [
+                          _vm._v(
+                            "\n                                                                Softnio\n                                                                Group\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "time" }, [
+                          _vm._v(
+                            "27\n                                                                Mar"
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "chat-context" }, [
+                        _c("div", { staticClass: "text" }, [
+                          _vm._v(
+                            "\n                                                                You: I just\n                                                                bought a new\n                                                                computer but\n                                                                i am having\n                                                                some problem\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "status sent" }, [
+                          _c("em", { staticClass: "icon ni ni-check-circle" })
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "chat-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "chat-link",
+                    attrs: { href: "html/apps-chats.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "chat-media user-avatar" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/assets/backend/images/avatar/a-sm.jpg",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("span", {
+                        staticClass: "status dot dot-lg dot-success"
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "chat-info" }, [
+                      _c("div", { staticClass: "chat-from" }, [
+                        _c("div", { staticClass: "name" }, [
+                          _vm._v(
+                            "\n                                                                Larry Hughes\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "time" }, [_vm._v("3 Apr")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "chat-context" }, [
+                        _c("div", { staticClass: "text" }, [
+                          _vm._v(
+                            "\n                                                                Hi Frank!\n                                                                How is you\n                                                                doing?\n                                                            "
+                          )
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "chat-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "chat-link",
+                    attrs: { href: "html/apps-chats.html" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "chat-media user-avatar bg-purple" },
+                      [_c("span", [_vm._v("TW")])]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "chat-info" }, [
+                      _c("div", { staticClass: "chat-from" }, [
+                        _c("div", { staticClass: "name" }, [
+                          _vm._v(
+                            "\n                                                                Tammy Wilson\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "time" }, [
+                          _vm._v(
+                            "27\n                                                                Mar"
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "chat-context" }, [
+                        _c("div", { staticClass: "text" }, [
+                          _vm._v(
+                            "\n                                                                You: I just\n                                                                bought a new\n                                                                computer but\n                                                                i am having\n                                                                some problem\n                                                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "status sent" }, [
+                          _c("em", { staticClass: "icon ni ni-check-circle" })
+                        ])
+                      ])
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "dropdown-foot center" }, [
+            _c("a", { attrs: { href: "html/apps-chats.html" } }, [
+              _vm._v("View All")
+            ])
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "dropdown notification-dropdown" }, [
+      _c(
+        "a",
+        {
+          staticClass: "dropdown-toggle nk-quick-nav-icon",
+          attrs: { href: "#", "data-toggle": "dropdown" }
+        },
+        [
+          _c("div", { staticClass: "icon-status icon-status-info" }, [
+            _c("em", { staticClass: "icon ni ni-bell" })
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dropdown-menu dropdown-menu-xl dropdown-menu-right" },
+        [
+          _c("div", { staticClass: "dropdown-head" }, [
+            _c("span", { staticClass: "sub-title nk-dropdown-title" }, [
+              _vm._v("Notifications")
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Mark All as Read")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "dropdown-body" }, [
+            _c("div", { staticClass: "nk-notification" }, [
+              _c(
+                "div",
+                { staticClass: "nk-notification-item dropdown-inner" },
+                [
+                  _c("div", { staticClass: "nk-notification-icon" }, [
+                    _c("em", {
+                      staticClass:
+                        "icon icon-circle bg-warning-dim ni ni-curve-down-right"
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "nk-notification-content" }, [
+                    _c("div", { staticClass: "nk-notification-text" }, [
+                      _vm._v(
+                        "\n                                                        You have requested\n                                                        to\n                                                        "
+                      ),
+                      _c("span", [_vm._v("Widthdrawl")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nk-notification-time" }, [
+                      _vm._v(
+                        "\n                                                        2 hrs ago\n                                                    "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nk-notification-item dropdown-inner" },
+                [
+                  _c("div", { staticClass: "nk-notification-icon" }, [
+                    _c("em", {
+                      staticClass:
+                        "icon icon-circle bg-success-dim ni ni-curve-down-left"
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "nk-notification-content" }, [
+                    _c("div", { staticClass: "nk-notification-text" }, [
+                      _vm._v(
+                        "\n                                                        Your\n                                                        "
+                      ),
+                      _c("span", [
+                        _vm._v(
+                          "Deposit\n                                                            Order"
+                        )
+                      ]),
+                      _vm._v(
+                        "\n                                                        is placed\n                                                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nk-notification-time" }, [
+                      _vm._v(
+                        "\n                                                        2 hrs ago\n                                                    "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nk-notification-item dropdown-inner" },
+                [
+                  _c("div", { staticClass: "nk-notification-icon" }, [
+                    _c("em", {
+                      staticClass:
+                        "icon icon-circle bg-warning-dim ni ni-curve-down-right"
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "nk-notification-content" }, [
+                    _c("div", { staticClass: "nk-notification-text" }, [
+                      _vm._v(
+                        "\n                                                        You have requested\n                                                        to\n                                                        "
+                      ),
+                      _c("span", [_vm._v("Widthdrawl")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nk-notification-time" }, [
+                      _vm._v(
+                        "\n                                                        2 hrs ago\n                                                    "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nk-notification-item dropdown-inner" },
+                [
+                  _c("div", { staticClass: "nk-notification-icon" }, [
+                    _c("em", {
+                      staticClass:
+                        "icon icon-circle bg-success-dim ni ni-curve-down-left"
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "nk-notification-content" }, [
+                    _c("div", { staticClass: "nk-notification-text" }, [
+                      _vm._v(
+                        "\n                                                        Your\n                                                        "
+                      ),
+                      _c("span", [
+                        _vm._v(
+                          "Deposit\n                                                            Order"
+                        )
+                      ]),
+                      _vm._v(
+                        "\n                                                        is placed\n                                                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nk-notification-time" }, [
+                      _vm._v(
+                        "\n                                                        2 hrs ago\n                                                    "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nk-notification-item dropdown-inner" },
+                [
+                  _c("div", { staticClass: "nk-notification-icon" }, [
+                    _c("em", {
+                      staticClass:
+                        "icon icon-circle bg-warning-dim ni ni-curve-down-right"
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "nk-notification-content" }, [
+                    _c("div", { staticClass: "nk-notification-text" }, [
+                      _vm._v(
+                        "\n                                                        You have requested\n                                                        to\n                                                        "
+                      ),
+                      _c("span", [_vm._v("Widthdrawl")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nk-notification-time" }, [
+                      _vm._v(
+                        "\n                                                        2 hrs ago\n                                                    "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nk-notification-item dropdown-inner" },
+                [
+                  _c("div", { staticClass: "nk-notification-icon" }, [
+                    _c("em", {
+                      staticClass:
+                        "icon icon-circle bg-success-dim ni ni-curve-down-left"
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "nk-notification-content" }, [
+                    _c("div", { staticClass: "nk-notification-text" }, [
+                      _vm._v(
+                        "\n                                                        Your\n                                                        "
+                      ),
+                      _c("span", [
+                        _vm._v(
+                          "Deposit\n                                                            Order"
+                        )
+                      ]),
+                      _vm._v(
+                        "\n                                                        is placed\n                                                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "nk-notification-time" }, [
+                      _vm._v(
+                        "\n                                                        2 hrs ago\n                                                    "
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "dropdown-foot center" }, [
+            _c("a", { attrs: { href: "#" } }, [_vm._v("View All")])
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "dropdown-inner user-card-wrap bg-lighter d-none d-md-block"
+      },
+      [
+        _c("div", { staticClass: "user-card" }, [
+          _c("div", { staticClass: "user-avatar" }, [
+            _c("span", [_vm._v("AB")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "user-info" }, [
+            _c("span", { staticClass: "lead-text" }, [
+              _vm._v("Abu Bin Ishtiyak")
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "sub-text" }, [
+              _vm._v("info@softnio.com")
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dropdown-inner" }, [
+      _c("ul", { staticClass: "link-list" }, [
+        _c("li", [
+          _c("a", { attrs: { href: "html/user-profile-regular.html" } }, [
+            _c("em", { staticClass: "icon ni ni-user-alt" }),
+            _c("span", [
+              _vm._v(
+                "View\n                                                        Profile"
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "html/user-profile-setting.html" } }, [
+            _c("em", { staticClass: "icon ni ni-setting-alt" }),
+            _c("span", [
+              _vm._v(
+                "Account\n                                                        Setting"
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "html/user-profile-activity.html" } }, [
+            _c("em", { staticClass: "icon ni ni-activity-alt" }),
+            _c("span", [
+              _vm._v(
+                "Login\n                                                        Activity"
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "dark-switch", attrs: { href: "#" } }, [
+            _c("em", { staticClass: "icon ni ni-moon" }),
+            _c("span", [_vm._v("Dark Mode")])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/adminMaster.vue?vue&type=template&id=20219ed4& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -44810,6 +54132,16 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-loading-overlay/dist/vue-loading.min.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/vue-loading-overlay/dist/vue-loading.min.js ***!
+  \******************************************************************/
+/***/ (function(module) {
+
+!function(t,e){ true?module.exports=e():0}("undefined"!=typeof self?self:this,(function(){return function(t){var e={};function i(n){if(e[n])return e[n].exports;var r=e[n]={i:n,l:!1,exports:{}};return t[n].call(r.exports,r,r.exports,i),r.l=!0,r.exports}return i.m=t,i.c=e,i.d=function(t,e,n){i.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},i.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)i.d(n,r,function(e){return t[e]}.bind(null,r));return n},i.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(e,"a",e),e},i.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},i.p="",i(i.s=1)}([function(t,e,i){},function(t,e,i){"use strict";i.r(e);var n="undefined"!=typeof window?window.HTMLElement:Object,r={mounted:function(){this.enforceFocus&&document.addEventListener("focusin",this.focusIn)},methods:{focusIn:function(t){if(this.isActive&&t.target!==this.$el&&!this.$el.contains(t.target)){var e=this.container?this.container:this.isFullPage?null:this.$el.parentElement;(this.isFullPage||e&&e.contains(t.target))&&(t.preventDefault(),this.$el.focus())}}},beforeDestroy:function(){document.removeEventListener("focusin",this.focusIn)}};function a(t,e,i,n,r,a,o,s){var l,u="function"==typeof t?t.options:t;if(e&&(u.render=e,u.staticRenderFns=i,u._compiled=!0),n&&(u.functional=!0),a&&(u._scopeId="data-v-"+a),o?(l=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),r&&r.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(o)},u._ssrRegister=l):r&&(l=s?function(){r.call(this,(u.functional?this.parent:this).$root.$options.shadowRoot)}:r),l)if(u.functional){u._injectStyles=l;var c=u.render;u.render=function(t,e){return l.call(e),c(t,e)}}else{var d=u.beforeCreate;u.beforeCreate=d?[].concat(d,l):[l]}return{exports:t,options:u}}var o=a({name:"spinner",props:{color:{type:String,default:"#000"},height:{type:Number,default:64},width:{type:Number,default:64}}},(function(){var t=this.$createElement,e=this._self._c||t;return e("svg",{attrs:{viewBox:"0 0 38 38",xmlns:"http://www.w3.org/2000/svg",width:this.width,height:this.height,stroke:this.color}},[e("g",{attrs:{fill:"none","fill-rule":"evenodd"}},[e("g",{attrs:{transform:"translate(1 1)","stroke-width":"2"}},[e("circle",{attrs:{"stroke-opacity":".25",cx:"18",cy:"18",r:"18"}}),e("path",{attrs:{d:"M36 18c0-9.94-8.06-18-18-18"}},[e("animateTransform",{attrs:{attributeName:"transform",type:"rotate",from:"0 18 18",to:"360 18 18",dur:"0.8s",repeatCount:"indefinite"}})],1)])])])}),[],!1,null,null,null).exports,s=a({name:"dots",props:{color:{type:String,default:"#000"},height:{type:Number,default:240},width:{type:Number,default:60}}},(function(){var t=this.$createElement,e=this._self._c||t;return e("svg",{attrs:{viewBox:"0 0 120 30",xmlns:"http://www.w3.org/2000/svg",fill:this.color,width:this.width,height:this.height}},[e("circle",{attrs:{cx:"15",cy:"15",r:"15"}},[e("animate",{attrs:{attributeName:"r",from:"15",to:"15",begin:"0s",dur:"0.8s",values:"15;9;15",calcMode:"linear",repeatCount:"indefinite"}}),e("animate",{attrs:{attributeName:"fill-opacity",from:"1",to:"1",begin:"0s",dur:"0.8s",values:"1;.5;1",calcMode:"linear",repeatCount:"indefinite"}})]),e("circle",{attrs:{cx:"60",cy:"15",r:"9","fill-opacity":"0.3"}},[e("animate",{attrs:{attributeName:"r",from:"9",to:"9",begin:"0s",dur:"0.8s",values:"9;15;9",calcMode:"linear",repeatCount:"indefinite"}}),e("animate",{attrs:{attributeName:"fill-opacity",from:"0.5",to:"0.5",begin:"0s",dur:"0.8s",values:".5;1;.5",calcMode:"linear",repeatCount:"indefinite"}})]),e("circle",{attrs:{cx:"105",cy:"15",r:"15"}},[e("animate",{attrs:{attributeName:"r",from:"15",to:"15",begin:"0s",dur:"0.8s",values:"15;9;15",calcMode:"linear",repeatCount:"indefinite"}}),e("animate",{attrs:{attributeName:"fill-opacity",from:"1",to:"1",begin:"0s",dur:"0.8s",values:"1;.5;1",calcMode:"linear",repeatCount:"indefinite"}})])])}),[],!1,null,null,null).exports,l=a({name:"bars",props:{color:{type:String,default:"#000"},height:{type:Number,default:40},width:{type:Number,default:40}}},(function(){var t=this.$createElement,e=this._self._c||t;return e("svg",{attrs:{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 30 30",height:this.height,width:this.width,fill:this.color}},[e("rect",{attrs:{x:"0",y:"13",width:"4",height:"5"}},[e("animate",{attrs:{attributeName:"height",attributeType:"XML",values:"5;21;5",begin:"0s",dur:"0.6s",repeatCount:"indefinite"}}),e("animate",{attrs:{attributeName:"y",attributeType:"XML",values:"13; 5; 13",begin:"0s",dur:"0.6s",repeatCount:"indefinite"}})]),e("rect",{attrs:{x:"10",y:"13",width:"4",height:"5"}},[e("animate",{attrs:{attributeName:"height",attributeType:"XML",values:"5;21;5",begin:"0.15s",dur:"0.6s",repeatCount:"indefinite"}}),e("animate",{attrs:{attributeName:"y",attributeType:"XML",values:"13; 5; 13",begin:"0.15s",dur:"0.6s",repeatCount:"indefinite"}})]),e("rect",{attrs:{x:"20",y:"13",width:"4",height:"5"}},[e("animate",{attrs:{attributeName:"height",attributeType:"XML",values:"5;21;5",begin:"0.3s",dur:"0.6s",repeatCount:"indefinite"}}),e("animate",{attrs:{attributeName:"y",attributeType:"XML",values:"13; 5; 13",begin:"0.3s",dur:"0.6s",repeatCount:"indefinite"}})])])}),[],!1,null,null,null).exports,u=a({name:"vue-loading",mixins:[r],props:{active:Boolean,programmatic:Boolean,container:[Object,Function,n],isFullPage:{type:Boolean,default:!0},enforceFocus:{type:Boolean,default:!0},lockScroll:{type:Boolean,default:!1},transition:{type:String,default:"fade"},canCancel:Boolean,onCancel:{type:Function,default:function(){}},color:String,backgroundColor:String,blur:{type:String,default:"2px"},opacity:Number,width:Number,height:Number,zIndex:Number,loader:{type:String,default:"spinner"}},data:function(){return{isActive:this.active}},components:{Spinner:o,Dots:s,Bars:l},beforeMount:function(){this.programmatic&&(this.container?(this.isFullPage=!1,this.container.appendChild(this.$el)):document.body.appendChild(this.$el))},mounted:function(){this.programmatic&&(this.isActive=!0),document.addEventListener("keyup",this.keyPress)},methods:{cancel:function(){this.canCancel&&this.isActive&&(this.hide(),this.onCancel.apply(null,arguments))},hide:function(){var t=this;this.$emit("hide"),this.$emit("update:active",!1),this.programmatic&&(this.isActive=!1,setTimeout((function(){var e;t.$destroy(),void 0!==(e=t.$el).remove?e.remove():e.parentNode.removeChild(e)}),150))},disableScroll:function(){this.isFullPage&&this.lockScroll&&document.body.classList.add("vld-shown")},enableScroll:function(){this.isFullPage&&this.lockScroll&&document.body.classList.remove("vld-shown")},keyPress:function(t){27===t.keyCode&&this.cancel()}},watch:{active:function(t){this.isActive=t},isActive:function(t){t?this.disableScroll():this.enableScroll()}},computed:{bgStyle:function(){return{background:this.backgroundColor,opacity:this.opacity,backdropFilter:"blur(".concat(this.blur,")")}}},beforeDestroy:function(){document.removeEventListener("keyup",this.keyPress)}},(function(){var t=this,e=t.$createElement,i=t._self._c||e;return i("transition",{attrs:{name:t.transition}},[i("div",{directives:[{name:"show",rawName:"v-show",value:t.isActive,expression:"isActive"}],staticClass:"vld-overlay is-active",class:{"is-full-page":t.isFullPage},style:{zIndex:t.zIndex},attrs:{tabindex:"0","aria-busy":t.isActive,"aria-label":"Loading"}},[i("div",{staticClass:"vld-background",style:t.bgStyle,on:{click:function(e){return e.preventDefault(),t.cancel(e)}}}),i("div",{staticClass:"vld-icon"},[t._t("before"),t._t("default",[i(t.loader,{tag:"component",attrs:{color:t.color,width:t.width,height:t.height}})]),t._t("after")],2)])])}),[],!1,null,null,null).exports,c=function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};return{show:function(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:e,r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:i,a={programmatic:!0},o=Object.assign({},e,n,a),s=new(t.extend(u))({el:document.createElement("div"),propsData:o}),l=Object.assign({},i,r);return Object.keys(l).map((function(t){s.$slots[t]=l[t]})),s}}};i(0);u.install=function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},n=c(t,e,i);t.$loading=n,t.prototype.$loading=n};e.default=u}]).default}));
 
 /***/ }),
 
@@ -62619,6 +71951,23 @@ Vue.compile = compileToFunctions;
 
 /***/ }),
 
+/***/ "./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var r=function(r){return function(r){return!!r&&"object"==typeof r}(r)&&!function(r){var t=Object.prototype.toString.call(r);return"[object RegExp]"===t||"[object Date]"===t||function(r){return r.$$typeof===e}(r)}(r)},e="function"==typeof Symbol&&Symbol.for?Symbol.for("react.element"):60103;function t(r,e){return!1!==e.clone&&e.isMergeableObject(r)?u(Array.isArray(r)?[]:{},r,e):r}function n(r,e,n){return r.concat(e).map(function(r){return t(r,n)})}function o(r){return Object.keys(r).concat(function(r){return Object.getOwnPropertySymbols?Object.getOwnPropertySymbols(r).filter(function(e){return r.propertyIsEnumerable(e)}):[]}(r))}function c(r,e){try{return e in r}catch(r){return!1}}function u(e,i,a){(a=a||{}).arrayMerge=a.arrayMerge||n,a.isMergeableObject=a.isMergeableObject||r,a.cloneUnlessOtherwiseSpecified=t;var f=Array.isArray(i);return f===Array.isArray(e)?f?a.arrayMerge(e,i,a):function(r,e,n){var i={};return n.isMergeableObject(r)&&o(r).forEach(function(e){i[e]=t(r[e],n)}),o(e).forEach(function(o){(function(r,e){return c(r,e)&&!(Object.hasOwnProperty.call(r,e)&&Object.propertyIsEnumerable.call(r,e))})(r,o)||(i[o]=c(r,o)&&n.isMergeableObject(e[o])?function(r,e){if(!e.customMerge)return u;var t=e.customMerge(r);return"function"==typeof t?t:u}(o,n)(r[o],e[o],n):t(e[o],n))}),i}(e,i,a):t(i,a)}u.all=function(r,e){if(!Array.isArray(r))throw new Error("first argument should be an array");return r.reduce(function(r,t){return u(r,t,e)},{})};var i=u;function a(r){var e=(r=r||{}).storage||window&&window.localStorage,t=r.key||"vuex";function n(r,e){var t=e.getItem(r);try{return void 0!==t?JSON.parse(t):void 0}catch(r){}}function o(){return!0}function c(r,e,t){return t.setItem(r,JSON.stringify(e))}function u(r,e){return Array.isArray(e)?e.reduce(function(e,t){return function(r,e,t,n){return!/^(__proto__|constructor|prototype)$/.test(e)&&((e=e.split?e.split("."):e.slice(0)).slice(0,-1).reduce(function(r,e){return r[e]=r[e]||{}},r)[e.pop()]=t),r}(e,t,(n=r,void 0===(n=((o=t).split?o.split("."):o).reduce(function(r,e){return r&&r[e]},n))?void 0:n));var n,o},{}):r}function a(r){return function(e){return r.subscribe(e)}}(r.assertStorage||function(){e.setItem("@@",1),e.removeItem("@@")})(e);var f,s=function(){return(r.getState||n)(t,e)};return r.fetchBeforeUse&&(f=s()),function(n){r.fetchBeforeUse||(f=s()),"object"==typeof f&&null!==f&&(n.replaceState(r.overwrite?f:i(n.state,f,{arrayMerge:r.arrayMerger||function(r,e){return e},clone:!1})),(r.rehydrated||function(){})(n)),(r.subscriber||a)(n)(function(n,i){(r.filter||o)(n)&&(r.setState||c)(t,(r.reducer||u)(i,r.paths),e)})}}/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (a);
+//# sourceMappingURL=vuex-persistedstate.es.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/vuex/dist/vuex.esm.js":
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
@@ -63911,9 +73260,6 @@ var index = {
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -63939,37 +73285,6 @@ var index = {
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/ensure chunk */
-/******/ 	(() => {
-/******/ 		__webpack_require__.f = {};
-/******/ 		// This file contains only the entry chunk.
-/******/ 		// The chunk loading function for additional chunks
-/******/ 		__webpack_require__.e = (chunkId) => {
-/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
-/******/ 				__webpack_require__.f[key](chunkId, promises);
-/******/ 				return promises;
-/******/ 			}, []));
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/get javascript chunk filename */
-/******/ 	(() => {
-/******/ 		// This function allow to reference async chunks
-/******/ 		__webpack_require__.u = (chunkId) => {
-/******/ 			// return url for filenames based on template
-/******/ 			return "js/chunks/" + chunkId + ".js";
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/get mini-css chunk filename */
-/******/ 	(() => {
-/******/ 		// This function allow to reference all chunks
-/******/ 		__webpack_require__.miniCssF = (chunkId) => {
-/******/ 			// return url for filenames based on template
-/******/ 			return undefined;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -63987,52 +73302,6 @@ var index = {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/load script */
-/******/ 	(() => {
-/******/ 		var inProgress = {};
-/******/ 		// data-webpack is not used as build has no uniqueName
-/******/ 		// loadScript function to load a script via script tag
-/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
-/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
-/******/ 			var script, needAttach;
-/******/ 			if(key !== undefined) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				for(var i = 0; i < scripts.length; i++) {
-/******/ 					var s = scripts[i];
-/******/ 					if(s.getAttribute("src") == url) { script = s; break; }
-/******/ 				}
-/******/ 			}
-/******/ 			if(!script) {
-/******/ 				needAttach = true;
-/******/ 				script = document.createElement('script');
-/******/ 		
-/******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 		
-/******/ 				script.src = url;
-/******/ 			}
-/******/ 			inProgress[url] = [done];
-/******/ 			var onScriptComplete = (prev, event) => {
-/******/ 				// avoid mem leaks in IE.
-/******/ 				script.onerror = script.onload = null;
-/******/ 				clearTimeout(timeout);
-/******/ 				var doneFns = inProgress[url];
-/******/ 				delete inProgress[url];
-/******/ 				script.parentNode && script.parentNode.removeChild(script);
-/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
-/******/ 				if(prev) return prev(event);
-/******/ 			}
-/******/ 			;
-/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
-/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
-/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
-/******/ 			needAttach && document.head.appendChild(script);
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -64042,99 +73311,6 @@ var index = {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		__webpack_require__.p = "/";
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/backend": 0
-/******/ 		};
-/******/ 		
-/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
-/******/ 				// JSONP chunk loading for javascript
-/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
-/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
-/******/ 		
-/******/ 					// a Promise means "currently loading".
-/******/ 					if(installedChunkData) {
-/******/ 						promises.push(installedChunkData[2]);
-/******/ 					} else {
-/******/ 						if(true) { // all chunks have JS
-/******/ 							// setup Promise in chunk cache
-/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
-/******/ 							promises.push(installedChunkData[2] = promise);
-/******/ 		
-/******/ 							// start chunk loading
-/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
-/******/ 							// create error before stack unwound to get useful stacktrace later
-/******/ 							var error = new Error();
-/******/ 							var loadingEnded = (event) => {
-/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
-/******/ 									installedChunkData = installedChunks[chunkId];
-/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
-/******/ 									if(installedChunkData) {
-/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 										var realSrc = event && event.target && event.target.src;
-/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 										error.name = 'ChunkLoadError';
-/******/ 										error.type = errorType;
-/******/ 										error.request = realSrc;
-/******/ 										installedChunkData[1](error);
-/******/ 									}
-/******/ 								}
-/******/ 							};
-/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
-/******/ 					}
-/******/ 				}
-/******/ 		};
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			for(moduleId in moreModules) {
-/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 				}
-/******/ 			}
-/******/ 			if(runtime) var result = runtime(__webpack_require__);
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 			}
-/******/ 		
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
 /******/ 	
 /************************************************************************/

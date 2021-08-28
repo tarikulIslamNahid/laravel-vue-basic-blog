@@ -167,7 +167,10 @@
             // fatch all category
 
             CategoryGet() {
-                axios.get('/api/auth/site_categories_for_see')
+let url='/api/auth/site_categories_for_see';
+let bearer='bearer'+ this.$store.getters.getUser.access_token;
+                // axios.get('/api/auth/site_categories_for_see?token='+StoreToken+'')
+                axios.get(url,{headers: {'Authorization':bearer}})
                     .then((result) => {
                         this.categories = result.data.categories
                         $('.datatable-init').DataTable();
@@ -195,7 +198,9 @@
             },
             CategoryCreate() {
                 this.$Progress.start()
-                this.form.post('/api/auth/site_categories_for_create')
+                let url='/api/auth/site_categories_for_create';
+let bearer='bearer '+ this.$store.getters.getUser.access_token;
+                this.form.post( url,{headers: {'Authorization':bearer}})
                     .then((result) => {
                         this.$Progress.finish()
                         this.CategoryGet();
