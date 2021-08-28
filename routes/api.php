@@ -20,4 +20,5 @@ Route::group([
 
     Route::get('site_categories_for_see', 'Admin\CategoriesController@index');
     Route::post('site_categories_for_create', 'Admin\CategoriesController@store');
+    Route::delete('site_categories_for_delete/{id}', 'Admin\CategoriesController@destroy');
 });

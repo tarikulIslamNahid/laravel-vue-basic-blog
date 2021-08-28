@@ -76,7 +76,7 @@ class CategoriesController extends Controller
                 $categories = new categories;
                 $categories->name = $request->name;
                 $categories->slug = Str::slug($request->name);
-                $categories->photo = '/' . $image_url;
+                $categories->photo = $image_url;
                 $categories->save();
                 return response()->json(['success' => "Category Created Successfully !"]);
             }
@@ -125,8 +125,22 @@ class CategoriesController extends Controller
      * @param  \App\categories  $categories
      * @return \Illuminate\Http\Response
      */
-    public function destroy(categories $categories)
+    public function destroy($id)
     {
-        //
+        $categories = categories::Find($id);
+
+        if ($categories) {
+
+            $catimg = $categories->photo;
+            $imgpath = public_path($catimg);
+            if ($catimg && file_exists($imgpath)) {
+                unlink($categories->photo);
+            }
+
+            $categories->delete();
+            return response()->json(['success' => 'Category Deleted Successfully !']);
+        } else {
+            return response()->json('failed', 404);
+        }
     }
 }

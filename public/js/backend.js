@@ -3236,7 +3236,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$Progress.start();
       var url = '/api/auth/site_categories_for_create';
-      var bearer = 'bearer ' + this.$store.getters.getUser.access_token;
+      var bearer = 'bearer' + this.$store.getters.getUser.access_token;
       this.form.post(url, {
         headers: {
           'Authorization': bearer
@@ -3288,6 +3288,31 @@ __webpack_require__.r(__webpack_exports__);
           }
         }
       })["catch"](function (result) {});
+    },
+    deleteCat: function deleteCat(id) {
+      var _this4 = this;
+
+      this.$Progress.start();
+      var url = '/api/auth/site_categories_for_delete/' + id;
+      var bearer = 'bearer' + this.$store.getters.getUser.access_token;
+      axios["delete"](url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (res) {
+        _this4.$Progress.finish();
+
+        _this4.categories = _this4.categories.filter(function (res) {
+          return res.id != id;
+        }); // this.CategoryGet();
+
+        Toast.fire({
+          icon: 'success',
+          title: res.data.success
+        });
+      })["catch"](function (err) {
+        console.error(err);
+      });
     }
   },
   mounted: function mounted() {
@@ -53683,7 +53708,7 @@ var render = function() {
                       _c("td", { staticClass: "nk-tb-col tb-col-mb" }, [
                         _c("img", {
                           attrs: {
-                            src: category.photo,
+                            src: "/" + category.photo,
                             width: "50px",
                             height: "50px",
                             alt: ""
@@ -53701,7 +53726,58 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(2, true),
                       _vm._v(" "),
-                      _vm._m(3, true)
+                      _c("td", { staticClass: "nk-tb-col nk-tb-col-tools" }, [
+                        _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
+                          _c("li", [
+                            _c("div", { staticClass: "drodown" }, [
+                              _vm._m(3, true),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "dropdown-menu dropdown-menu-right"
+                                },
+                                [
+                                  _c(
+                                    "ul",
+                                    { staticClass: "link-list-opt no-bdr" },
+                                    [
+                                      _vm._m(4, true),
+                                      _vm._v(" "),
+                                      _vm._m(5, true),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.deleteCat(category.id)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "router-link",
+                                            { attrs: { to: "" } },
+                                            [
+                                              _c("em", {
+                                                staticClass: "icon ni ni-trash"
+                                              }),
+                                              _c("span", [_vm._v("Delete")])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ])
+                        ])
+                      ])
                     ])
                   }),
                   0
@@ -53725,7 +53801,7 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(4),
+              _vm._m(6),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c(
@@ -53811,7 +53887,7 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _vm._m(5)
+                    _vm._m(7)
                   ]
                 )
               ])
@@ -53899,49 +53975,38 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "nk-tb-col nk-tb-col-tools" }, [
-      _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
-        _c("li", [
-          _c("div", { staticClass: "drodown" }, [
-            _c(
-              "a",
-              {
-                staticClass: "dropdown-toggle btn btn-icon btn-trigger",
-                attrs: { href: "#", "data-toggle": "dropdown" }
-              },
-              [_c("em", { staticClass: "icon ni ni-more-h" })]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
-              _c("ul", { staticClass: "link-list-opt no-bdr" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("em", { staticClass: "icon ni ni-eye" }),
-                    _c("span", [
-                      _vm._v(
-                        "View\n                                                                    Details"
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("em", { staticClass: "icon ni ni-repeat" }),
-                    _c("span", [_vm._v("Edit")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("em", { staticClass: "icon ni ni-trash" }),
-                    _c("span", [_vm._v("Delete")])
-                  ])
-                ])
-              ])
-            ])
-          ])
+    return _c(
+      "a",
+      {
+        staticClass: "dropdown-toggle btn btn-icon btn-trigger",
+        attrs: { href: "#", "data-toggle": "dropdown" }
+      },
+      [_c("em", { staticClass: "icon ni ni-more-h" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("em", { staticClass: "icon ni ni-eye" }),
+        _c("span", [
+          _vm._v(
+            "View\n                                                                    Details"
+          )
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("em", { staticClass: "icon ni ni-repeat" }),
+        _c("span", [_vm._v("Edit")])
       ])
     ])
   },

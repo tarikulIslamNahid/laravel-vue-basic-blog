@@ -48,7 +48,7 @@
 
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
-                                        <img :src="category.photo" width="50px" height="50px" alt="">
+                                        <img :src="'/'+category.photo" width="50px" height="50px" alt="">
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
                                         <span>{{category.name}}</span>
@@ -77,8 +77,8 @@
                                                             <li><a href="#"><em
                                                                         class="icon ni ni-repeat"></em><span>Edit</span></a>
                                                             </li>
-                                                            <li><a href="#"><em
-                                                                        class="icon ni ni-trash"></em><span>Delete</span></a>
+                                                            <li @click="deleteCat(category.id)"><router-link to="" ><em
+                                                                        class="icon ni ni-trash"></em><span>Delete</span></router-link>
                                                             </li>
 
                                                         </ul>
@@ -199,7 +199,7 @@ let bearer='bearer'+ this.$store.getters.getUser.access_token;
             CategoryCreate() {
                 this.$Progress.start()
                 let url='/api/auth/site_categories_for_create';
-let bearer='bearer '+ this.$store.getters.getUser.access_token;
+let bearer='bearer'+ this.$store.getters.getUser.access_token;
                 this.form.post( url,{headers: {'Authorization':bearer}})
                     .then((result) => {
                         this.$Progress.finish()
@@ -246,6 +246,26 @@ let bearer='bearer '+ this.$store.getters.getUser.access_token;
 
                     })
 
+            },
+            deleteCat(id){
+                  this.$Progress.start()
+                let url='/api/auth/site_categories_for_delete/'+id;
+let bearer='bearer'+ this.$store.getters.getUser.access_token;
+axios.delete(url,{headers: {'Authorization':bearer}})
+.then(res => {
+    this.$Progress.finish()
+       this.categories=this.categories.filter(res=>{
+         return res.id != id
+     })
+    // this.CategoryGet();
+         Toast.fire({
+        icon: 'success',
+        title: res.data.success,
+    })
+})
+.catch(err => {
+    console.error(err);
+})
             }
         },
         mounted() {
@@ -256,6 +276,7 @@ let bearer='bearer '+ this.$store.getters.getUser.access_token;
 
 
     }
+
 
 </script>
 <style>
