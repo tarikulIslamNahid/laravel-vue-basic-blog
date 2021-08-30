@@ -102,9 +102,10 @@ class CategoriesController extends Controller
      * @param  \App\categories  $categories
      * @return \Illuminate\Http\Response
      */
-    public function edit(categories $categories)
+    public function edit($id)
     {
-        //
+        $categories = categories::find($id);
+        return response()->json(['category' => $categories]);
     }
 
     /**
@@ -114,9 +115,41 @@ class CategoriesController extends Controller
      * @param  \App\categories  $categories
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, categories $categories)
+    public function update(Request $request)
     {
-        //
+        $categories = categories::find($request->id);
+        $categories->name = $request->name;
+        $categories->slug = Str::slug($request->name);
+
+        $dbImg = $categories->photo;
+
+        if ($request->photo != $dbImg) {
+            $position = strpos($request->photo, ';');
+            $sub = substr($request->photo, 0, $position);
+            $ext = explode('/', $sub)[1];
+            $name = time() . '.' . $ext;
+            $img = Image::make($request->photo)->resize(250, 250);
+
+            $upload_path = 'images/categories/';
+            $image_url = $upload_path . $name;
+            $success =  $img->save($image_url);
+
+
+            if ($success) {
+                $imgpath = public_path($dbImg);
+                if ($dbImg && file_exists($imgpath)) {
+                    unlink($categories->photo);
+                }
+                $categories->photo = $image_url;
+
+                $categories->update();
+            }
+        } else {
+            $categories->photo = $request->photo;
+            $categories->update();
+        }
+        // $categories->save();
+        return response()->json(['success' => "Category Updated Successfully !"]);
     }
 
     /**
