@@ -24,6 +24,15 @@
 
                         </div>
                     </div>
+                    <div class="row">
+
+                          <div class='col-3 nk-block-head-content offset-9  pr-4'>
+  <input type="text" class="form-control"  v-model='search' id="searchItems"
+                                                    placeholder="Search Blog category">
+                          </div>
+
+                    </div>
+
                     <div class="card-inner">
                         <table class="nk-tb-list nk-tb-ulist" data-auto-responsive="false">
                             <thead>
@@ -41,7 +50,7 @@
                             </thead>
                             <tbody>
 
-                                <tr class="nk-tb-item" v-for='(category,index) in categories' :key='index'>
+                                <tr class="nk-tb-item" v-for='(category,index) in filteredList' :key='index'>
 
                                     <td class="nk-tb-col">
                                         <span>{{index+1}}</span>
@@ -206,7 +215,9 @@
         data() {
             return {
                 token:'',
-                categories: {},
+                categories: [],
+search:'',
+
                 form: new Form({
                     name: '',
                     photo: '',
@@ -381,11 +392,18 @@ axios.delete(url,{headers: {'Authorization':bearer}})
                 }
             }
         },
-           created() {
+
+
+          computed: {
+    filteredList() {
+      return this.categories.filter(cat => {
+        return cat.name.toLowerCase().match(this.search.toLowerCase())
+      })
+    }
+  },
+             created() {
+                 this.token=this.$store.getters.getUser.access_token
             this.Loggedin();
-            this.token=this.$store.getters.getUser.access_token
-        },
-        mounted() {
             this.CategoryGet();
         },
     }

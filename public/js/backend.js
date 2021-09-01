@@ -3231,11 +3231,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       token: '',
-      categories: {},
+      categories: [],
+      search: '',
       form: new Form({
         name: '',
         photo: ''
@@ -3454,11 +3464,18 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  created: function created() {
-    this.Loggedin();
-    this.token = this.$store.getters.getUser.access_token;
+  computed: {
+    filteredList: function filteredList() {
+      var _this7 = this;
+
+      return this.categories.filter(function (cat) {
+        return cat.name.toLowerCase().match(_this7.search.toLowerCase());
+      });
+    }
   },
-  mounted: function mounted() {
+  created: function created() {
+    this.token = this.$store.getters.getUser.access_token;
+    this.Loggedin();
     this.CategoryGet();
   }
 });
@@ -38239,6 +38256,40 @@ var render = function() {
         _c("div", { staticClass: "card card-preview" }, [
           _vm._m(0),
           _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              { staticClass: "col-3 nk-block-head-content offset-9  pr-4" },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.search,
+                      expression: "search"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    id: "searchItems",
+                    placeholder: "Search Blog category"
+                  },
+                  domProps: { value: _vm.search },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.search = $event.target.value
+                    }
+                  }
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
           _c("div", { staticClass: "card-inner" }, [
             _c(
               "table",
@@ -38251,7 +38302,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.categories, function(category, index) {
+                  _vm._l(_vm.filteredList, function(category, index) {
                     return _c("tr", { key: index, staticClass: "nk-tb-item" }, [
                       _c("td", { staticClass: "nk-tb-col" }, [
                         _c("span", [_vm._v(_vm._s(index + 1))])
