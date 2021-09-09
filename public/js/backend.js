@@ -3709,7 +3709,7 @@ __webpack_require__.r(__webpack_exports__);
       form: new Form({
         name: ''
       }),
-      catUpform: new Form({
+      RoleUpform: new Form({
         id: '',
         name: ''
       })
@@ -3735,82 +3735,42 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    //             editCat(id){
-    //                         $('#editmodel').modal('show');
-    //     let url='/api/auth/site_categories_for_edit/'+id;
-    // let bearer='bearer'+ this.token;
-    //                 axios.get(url,{headers: {'Authorization':bearer}})
-    //                     .then((result) => {
-    //                          console.log(result.data.role)
-    //                         this.catUpform.id = result.data.role.id
-    //                         this.catUpform.name = result.data.role.name
-    //                         this.catUpform.photo = result.data.role.photo
-    //                     })
-    //             },
-    //             CategoryUpdate(){
-    //       this.$Progress.start()
-    //                 let url='/api/auth/site_categories_for_update';
-    // let bearer='bearer'+ this.token;
-    //    this.catUpform.post( url,{headers: {'Authorization':bearer}})
-    //                     .then((result) => {
-    //                         this.$Progress.finish()
-    //                         this.RoleGet();
-    //                         $('#editmodel').modal('hide')
-    //                         $(".modal-backdrop.fade.show").remove()
-    //                         this.catUpform.name = null;
-    //                         this.catUpform.photo = null;
-    //                         if (result.data.error) {
-    //                             this.$Progress.finish()
-    //                             Toast.fire({
-    //                                 icon: 'error',
-    //                                 title: result.data.error
-    //                             })
-    //                         }
-    //                         if (result.data.success) {
-    //                             this.$Progress.finish()
-    //                             Toast.fire({
-    //                                 icon: 'success',
-    //                                 title: result.data.success
-    //                             })
-    //                         }
-    //                         if (result.data.error) {
-    //                             this.$Progress.finish()
-    //                             if (result.data.error.photo) {
-    //                                 Toast.fire({
-    //                                     icon: 'error',
-    //                                     title: result.data.error.photo
-    //                                 })
-    //                             }
-    //                             if (result.data.error.name) {
-    //                                 Toast.fire({
-    //                                     icon: 'error',
-    //                                     title: result.data.error.name
-    //                                 })
-    //                             }
-    //                         }
-    //                     })
-    //             },
-    RoleCreate: function RoleCreate() {
+    updateRole: function updateRole(id) {
       var _this2 = this;
 
-      this.$Progress.start();
-      var url = '/api/auth/site_role_for_create';
+      $('#editmodel').modal('show');
+      var url = '/api/auth/site_role_for_edit/' + id;
       var bearer = 'bearer' + this.token;
-      this.form.post(url, {
+      axios.get(url, {
         headers: {
           'Authorization': bearer
         }
       }).then(function (result) {
-        _this2.$Progress.finish();
+        _this2.RoleUpform.id = result.data.role.id;
+        _this2.RoleUpform.name = result.data.role.name;
+      });
+    },
+    StoreRole: function StoreRole() {
+      var _this3 = this;
 
-        _this2.RoleGet();
+      this.$Progress.start();
+      var url = '/api/auth/site_role_for_update';
+      var bearer = 'bearer' + this.token;
+      this.RoleUpform.post(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
+        _this3.$Progress.finish();
 
-        $('#modalTabs').modal('hide');
+        _this3.RoleGet();
+
+        $('#editmodel').modal('hide');
         $(".modal-backdrop.fade.show").remove();
-        _this2.form.name = null;
+        _this3.RoleUpform.name = null;
 
         if (result.data.error) {
-          _this2.$Progress.finish();
+          _this3.$Progress.finish();
 
           Toast.fire({
             icon: 'error',
@@ -3819,7 +3779,7 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         if (result.data.success) {
-          _this2.$Progress.finish();
+          _this3.$Progress.finish();
 
           Toast.fire({
             icon: 'success',
@@ -3828,7 +3788,7 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         if (result.data.error) {
-          _this2.$Progress.finish();
+          _this3.$Progress.finish();
 
           if (result.data.error.name) {
             Toast.fire({
@@ -3839,22 +3799,77 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    //             deleteCat(id){
-    //                   this.$Progress.start()
-    //                 let url='/api/auth/site_categories_for_delete/'+id;
-    // let bearer='bearer'+ this.$store.getters.getUser.access_token;
-    // axios.delete(url,{headers: {'Authorization':bearer}})
-    // .then(res => {
-    //     this.$Progress.finish()
-    //        this.roles=this.roles.filter(res=>{
-    //          return res.id != id
-    //      })
-    //          Toast.fire({
-    //         icon: 'success',
-    //         title: res.data.success,
-    //     })
-    // })
-    //             },
+    RoleCreate: function RoleCreate() {
+      var _this4 = this;
+
+      this.$Progress.start();
+      var url = '/api/auth/site_role_for_create';
+      var bearer = 'bearer' + this.token;
+      this.form.post(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
+        _this4.$Progress.finish();
+
+        _this4.RoleGet();
+
+        $('#modalTabs').modal('hide');
+        $(".modal-backdrop.fade.show").remove();
+        _this4.form.name = null;
+
+        if (result.data.error) {
+          _this4.$Progress.finish();
+
+          Toast.fire({
+            icon: 'error',
+            title: result.data.error
+          });
+        }
+
+        if (result.data.success) {
+          _this4.$Progress.finish();
+
+          Toast.fire({
+            icon: 'success',
+            title: result.data.success
+          });
+        }
+
+        if (result.data.error) {
+          _this4.$Progress.finish();
+
+          if (result.data.error.name) {
+            Toast.fire({
+              icon: 'error',
+              title: result.data.error.name
+            });
+          }
+        }
+      });
+    },
+    RoleDelete: function RoleDelete(id) {
+      var _this5 = this;
+
+      this.$Progress.start();
+      var url = '/api/auth/site_role_for_delete/' + id;
+      var bearer = 'bearer' + this.$store.getters.getUser.access_token;
+      axios["delete"](url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (res) {
+        _this5.$Progress.finish();
+
+        _this5.roles = _this5.roles.filter(function (res) {
+          return res.id != id;
+        });
+        Toast.fire({
+          icon: 'success',
+          title: res.data.success
+        });
+      });
+    },
     Loggedin: function Loggedin() {
       if (this.$store.getters.getUser != null) {
         if (User.loggedIn(this.$store.getters.getUser.access_token)) {
@@ -3868,10 +3883,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     filteredList: function filteredList() {
-      var _this3 = this;
+      var _this6 = this;
 
       return this.roles.filter(function (role) {
-        return role.name.toLowerCase().match(_this3.search.toLowerCase());
+        return role.name.toLowerCase().match(_this6.search.toLowerCase());
       });
     }
   },
@@ -39554,7 +39569,78 @@ var render = function() {
                         _c("span", [_vm._v(_vm._s(role.name))])
                       ]),
                       _vm._v(" "),
-                      _vm._m(2, true)
+                      _c("td", { staticClass: "nk-tb-col nk-tb-col-tools" }, [
+                        _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
+                          _c("li", [
+                            _c("div", { staticClass: "drodown" }, [
+                              _vm._m(2, true),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "dropdown-menu dropdown-menu-right"
+                                },
+                                [
+                                  _c(
+                                    "ul",
+                                    { staticClass: "link-list-opt no-bdr" },
+                                    [
+                                      _c(
+                                        "li",
+                                        {
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.updateRole(role.id)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "router-link",
+                                            { attrs: { to: "" } },
+                                            [
+                                              _c("em", {
+                                                staticClass: "icon ni ni-repeat"
+                                              }),
+                                              _c("span", [_vm._v("Edit")])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.RoleDelete(role.id)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "router-link",
+                                            { attrs: { to: "" } },
+                                            [
+                                              _c("em", {
+                                                staticClass: "icon ni ni-trash"
+                                              }),
+                                              _c("span", [_vm._v("Delete")])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ])
+                        ])
+                      ])
                     ])
                   }),
                   0
@@ -39659,11 +39745,10 @@ var render = function() {
                   "form",
                   {
                     staticClass: "form-validate is-alter",
-                    attrs: { enctype: "multipart/form-data" },
                     on: {
                       submit: function($event) {
                         $event.preventDefault()
-                        return _vm.CategoryUpdate.apply(null, arguments)
+                        return _vm.StoreRole.apply(null, arguments)
                       }
                     }
                   },
@@ -39684,23 +39769,23 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.catUpform.name,
-                              expression: "catUpform.name"
+                              value: _vm.RoleUpform.name,
+                              expression: "RoleUpform.name"
                             }
                           ],
                           staticClass: "form-control",
                           class: {
-                            "is-invalid": _vm.catUpform.errors.has("name")
+                            "is-invalid": _vm.RoleUpform.errors.has("name")
                           },
                           attrs: { type: "text", name: "name" },
-                          domProps: { value: _vm.catUpform.name },
+                          domProps: { value: _vm.RoleUpform.name },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
                               _vm.$set(
-                                _vm.catUpform,
+                                _vm.RoleUpform,
                                 "name",
                                 $event.target.value
                               )
@@ -39778,26 +39863,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "nk-tb-col nk-tb-col-tools" }, [
-      _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
-        _c("li", [
-          _c("div", { staticClass: "drodown" }, [
-            _c(
-              "a",
-              {
-                staticClass: "dropdown-toggle btn btn-icon btn-trigger",
-                attrs: { href: "#", "data-toggle": "dropdown" }
-              },
-              [_c("em", { staticClass: "icon ni ni-more-h" })]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
-              _c("ul", { staticClass: "link-list-opt no-bdr" })
-            ])
-          ])
-        ])
-      ])
-    ])
+    return _c(
+      "a",
+      {
+        staticClass: "dropdown-toggle btn btn-icon btn-trigger",
+        attrs: { href: "#", "data-toggle": "dropdown" }
+      },
+      [_c("em", { staticClass: "icon ni ni-more-h" })]
+    )
   },
   function() {
     var _vm = this

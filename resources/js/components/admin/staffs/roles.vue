@@ -46,7 +46,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 <tr class="nk-tb-item" v-for='(role,index) in filteredList' :key='index'>
 
                                     <td class="nk-tb-col">
@@ -69,12 +68,13 @@
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <ul class="link-list-opt no-bdr">
 
-                                                            <!-- <li  @click="editCat(role.id)"><router-link to=""><em
+                                                            <li  @click="updateRole(role.id)"><router-link to=""><em
                                                                         class="icon ni ni-repeat"></em><span>Edit</span></router-link>
                                                             </li>
-                                                            <li @click="deleteCat(role.id)"><router-link to="" ><em
+
+                                                            <li @click="RoleDelete(role.id)"><router-link to="" ><em
                                                                         class="icon ni ni-trash"></em><span>Delete</span></router-link>
-                                                            </li> -->
+                                                            </li>
 
                                                         </ul>
                                                     </div>
@@ -83,6 +83,7 @@
                                         </ul>
                                     </td>
                                 </tr><!-- .nk-tb-item  -->
+
                             </tbody>
                         </table>
                     </div>
@@ -139,14 +140,13 @@
                         </a>
                     </div>
                     <div class="modal-body">
-                        <form @submit.prevent='CategoryUpdate' enctype="multipart/form-data"
-                            class="form-validate is-alter">
+                        <!-- <form  class="form-validate is-alter"> -->
+                        <form @submit.prevent='StoreRole' class="form-validate is-alter">
                             <div class="form-group">
                                 <label class="form-label" for="full-name">Role Name</label>
                                 <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="name" v-model="catUpform.name"
-                                        :class="{ 'is-invalid': catUpform.errors.has('name') }">
-
+                                    <input type="text" class="form-control" name="name" v-model="RoleUpform.name"
+                                        :class="{ 'is-invalid': RoleUpform.errors.has('name') }">
                                 </div>
                             </div>
 
@@ -173,7 +173,7 @@ search:'',
                 form: new Form({
                     name: '',
                 }),
-                 catUpform: new Form({
+                 RoleUpform: new Form({
                     id: '',
                     name: '',
                 })
@@ -196,63 +196,55 @@ let bearer='bearer'+ this.token;
                     })
             },
 
-//             editCat(id){
-//                         $('#editmodel').modal('show');
-//     let url='/api/auth/site_categories_for_edit/'+id;
-// let bearer='bearer'+ this.token;
-//                 axios.get(url,{headers: {'Authorization':bearer}})
-//                     .then((result) => {
-//                          console.log(result.data.role)
-//                         this.catUpform.id = result.data.role.id
-//                         this.catUpform.name = result.data.role.name
-//                         this.catUpform.photo = result.data.role.photo
+            updateRole(id){
+                        $('#editmodel').modal('show');
+    let url='/api/auth/site_role_for_edit/'+id;
+let bearer='bearer'+ this.token;
+                axios.get(url,{headers: {'Authorization':bearer}})
+                    .then((result) => {
+                        this.RoleUpform.id = result.data.role.id
+                        this.RoleUpform.name = result.data.role.name
 
-//                     })
+                    })
 
-//             },
-//             CategoryUpdate(){
-//       this.$Progress.start()
-//                 let url='/api/auth/site_categories_for_update';
-// let bearer='bearer'+ this.token;
-//    this.catUpform.post( url,{headers: {'Authorization':bearer}})
-//                     .then((result) => {
-//                         this.$Progress.finish()
-//                         this.RoleGet();
-//                         $('#editmodel').modal('hide')
-//                         $(".modal-backdrop.fade.show").remove()
-//                         this.catUpform.name = null;
-//                         this.catUpform.photo = null;
-//                         if (result.data.error) {
-//                             this.$Progress.finish()
-//                             Toast.fire({
-//                                 icon: 'error',
-//                                 title: result.data.error
-//                             })
-//                         }
-//                         if (result.data.success) {
-//                             this.$Progress.finish()
-//                             Toast.fire({
-//                                 icon: 'success',
-//                                 title: result.data.success
-//                             })
-//                         }
-//                         if (result.data.error) {
-//                             this.$Progress.finish()
-//                             if (result.data.error.photo) {
-//                                 Toast.fire({
-//                                     icon: 'error',
-//                                     title: result.data.error.photo
-//                                 })
-//                             }
-//                             if (result.data.error.name) {
-//                                 Toast.fire({
-//                                     icon: 'error',
-//                                     title: result.data.error.name
-//                                 })
-//                             }
-//                         }
-//                     })
-//             },
+            },
+            StoreRole(){
+      this.$Progress.start()
+                let url='/api/auth/site_role_for_update';
+let bearer='bearer'+ this.token;
+   this.RoleUpform.post( url,{headers: {'Authorization':bearer}})
+                    .then((result) => {
+                        this.$Progress.finish()
+                        this.RoleGet();
+                        $('#editmodel').modal('hide')
+                        $(".modal-backdrop.fade.show").remove()
+                        this.RoleUpform.name = null;
+                        if (result.data.error) {
+                            this.$Progress.finish()
+                            Toast.fire({
+                                icon: 'error',
+                                title: result.data.error
+                            })
+                        }
+                        if (result.data.success) {
+                            this.$Progress.finish()
+                            Toast.fire({
+                                icon: 'success',
+                                title: result.data.success
+                            })
+                        }
+                        if (result.data.error) {
+                            this.$Progress.finish()
+
+                            if (result.data.error.name) {
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: result.data.error.name
+                                })
+                            }
+                        }
+                    })
+            },
 
             RoleCreate() {
                 this.$Progress.start()
@@ -291,22 +283,22 @@ let bearer='bearer'+ this.token;
                         }
                     })
             },
-//             deleteCat(id){
-//                   this.$Progress.start()
-//                 let url='/api/auth/site_categories_for_delete/'+id;
-// let bearer='bearer'+ this.$store.getters.getUser.access_token;
-// axios.delete(url,{headers: {'Authorization':bearer}})
-// .then(res => {
-//     this.$Progress.finish()
-//        this.roles=this.roles.filter(res=>{
-//          return res.id != id
-//      })
-//          Toast.fire({
-//         icon: 'success',
-//         title: res.data.success,
-//     })
-// })
-//             },
+            RoleDelete(id){
+                  this.$Progress.start()
+                let url='/api/auth/site_role_for_delete/'+id;
+let bearer='bearer'+ this.$store.getters.getUser.access_token;
+axios.delete(url,{headers: {'Authorization':bearer}})
+.then(res => {
+    this.$Progress.finish()
+       this.roles=this.roles.filter(res=>{
+         return res.id != id
+     })
+         Toast.fire({
+        icon: 'success',
+        title: res.data.success,
+    })
+})
+            },
                     Loggedin() {
                 if (this.$store.getters.getUser != null) {
                     if (User.loggedIn(this.$store.getters.getUser.access_token)) {

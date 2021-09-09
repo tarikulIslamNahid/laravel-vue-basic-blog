@@ -28,4 +28,7 @@ Route::group([
     // for role
     Route::get('site_role_for_see', 'RolesController@index');
     Route::post('site_role_for_create', 'RolesController@store');
+    Route::delete('site_role_for_delete/{id}', 'RolesController@destroy');
+    Route::get('site_role_for_edit/{id}', 'RolesController@edit');
+    Route::post('site_role_for_update', 'RolesController@update');
 });

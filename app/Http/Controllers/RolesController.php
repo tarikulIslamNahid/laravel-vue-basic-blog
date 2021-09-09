@@ -80,9 +80,10 @@ class RolesController extends Controller
      * @param  \App\roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function edit(roles $roles)
+    public function edit($id)
     {
-        //
+        $roles = roles::find($id);
+        return response()->json(['role' => $roles]);
     }
 
     /**
@@ -92,10 +93,16 @@ class RolesController extends Controller
      * @param  \App\roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, roles $roles)
+    public function update(Request $request)
     {
-        //
+        $roles = roles::find($request->id);
+        $roles->name = $request->name;
+        $roles->update();
+
+        // $categories->save();
+        return response()->json(['success' => "Role Updated Successfully !"]);
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -103,8 +110,16 @@ class RolesController extends Controller
      * @param  \App\roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(roles $roles)
+    public function destroy($id)
     {
-        //
+        $roles = roles::Find($id);
+
+        if ($roles) {
+
+            $roles->delete();
+            return response()->json(['success' => 'Role Deleted Successfully !']);
+        } else {
+            return response()->json('failed', 404);
+        }
     }
 }
