@@ -29,7 +29,6 @@ class CategoriesController extends Controller
 
         return response()->json([
             'categories' => $categories,
-            'success' => 'Category Created Successfully !'
         ]);
     }
 

@@ -83,6 +83,29 @@
                                                     </ul>
                                                     <!-- .nk-menu-sub -->
                                                 </li>
+                                                            <!-- .nk-menu-heading -->
+                                                <li class="nk-menu-item has-sub">
+                                                    <a href="#" class="nk-menu-link nk-menu-toggle"
+                                                        data-original-title="" title="">
+                                                        <span class="nk-menu-icon"><em
+                                                                class="icon ni ni-tile-thumb-fill"></em></span>
+                                                        <span class="nk-menu-text">Staffs Panel</span>
+                                                    </a>
+                                                    <ul class="nk-menu-sub">
+                                                        <li class="nk-menu-item">
+                                                            <router-link :to="{ name: 'roles'}"
+                                                                class="nk-menu-link" data-original-title="" title="">
+                                                                <span class="nk-menu-text">Manage Roles</span>
+                                                            </router-link>
+                                                        </li>
+                                                        <li class="nk-menu-item">
+                                                            <a href="html/project-list.html" class="nk-menu-link"
+                                                                data-original-title="" title=""><span
+                                                                    class="nk-menu-text">Posts</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- .nk-menu-sub -->
+                                                </li>
                                                 <!-- .nk-menu-item -->
                                                 <li class="nk-menu-item has-sub">
                                                     <a href="#" class="nk-menu-link nk-menu-toggle"

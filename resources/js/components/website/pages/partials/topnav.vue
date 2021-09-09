@@ -268,6 +268,7 @@
                                             <img src="assets/frontend/website/img/icon/temp.png" alt="">
                                         </div>
                                         <h3 class="temp_count">13</h3>
+
                                         <p>San Francisco</p>
                                     </div>
                                 </div>

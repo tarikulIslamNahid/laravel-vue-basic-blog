@@ -18,9 +18,14 @@ Route::group([
     Route::post('register', 'AuthController@register');
     Route::post('me', 'AuthController@me');
 
+    // for categories
     Route::get('site_categories_for_see', 'Admin\CategoriesController@index');
     Route::post('site_categories_for_create', 'Admin\CategoriesController@store');
     Route::post('site_categories_for_update', 'Admin\CategoriesController@update');
     Route::delete('site_categories_for_delete/{id}', 'Admin\CategoriesController@destroy');
     Route::get('site_categories_for_edit/{id}', 'Admin\CategoriesController@edit');
+
+    // for role
+    Route::get('site_role_for_see', 'RolesController@index');
+    Route::post('site_role_for_create', 'RolesController@store');
 });
