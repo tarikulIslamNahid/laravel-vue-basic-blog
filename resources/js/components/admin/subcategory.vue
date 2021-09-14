@@ -57,6 +57,10 @@
                                     </td>
 
                                     <td class="nk-tb-col tb-col-mb">
+                                        <span>{{SubCategory.cat_name}}</span>
+
+                                    </td>
+                                    <td class="nk-tb-col tb-col-mb">
                                         <span>{{SubCategory.name}}</span>
 
                                     </td>
@@ -77,12 +81,12 @@
 
                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View
                                                                         Details</span></a></li>
-                                                            <li  @click="editCat(SubCategory.id)"><router-link to=""><em
+                                                            <!-- <li  @click="editCat(SubCategory.id)"><router-link to=""><em
                                                                         class="icon ni ni-repeat"></em><span>Edit</span></router-link>
                                                             </li>
                                                             <li @click="deleteCat(SubCategory.id)"><router-link to="" ><em
                                                                         class="icon ni ni-trash"></em><span>Delete</span></router-link>
-                                                            </li>
+                                                            </li> -->
 
                                                         </ul>
                                                     </div>
@@ -105,43 +109,36 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Create Category</h5>
+                        <h5 class="modal-title">Create Sub Category</h5>
                         <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                             <em class="icon ni ni-cross"></em>
                         </a>
                     </div>
                     <div class="modal-body">
-                        <form @submit.prevent='CategoryCreate' enctype="multipart/form-data"
+                        <form @submit.prevent='subCategoryCreate' enctype="multipart/form-data"
                             class="form-validate is-alter">
                             <div class="form-group">
-                                <label class="form-label" for="full-name">Category Name</label>
+                                <label class="form-label" for="full-name">Category</label>
                                 <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="name" v-model="form.name"
+                                 <select v-model='form.category_id' class="form-control"  name="category_id"  :class="{ 'is-invalid': form.errors.has('category_id') }">
+                                     <option selected value="0">Please select Category</option>
+                                     <option v-for='cat in categories' :value="cat.id">{{cat.name}}</option>
+                                 </select>
+                                </div>
+                            </div>
+
+                              <div class="form-group">
+                                <label class="form-label" for="full-name">Sub Category</label>
+                                <div class="form-control-wrap">
+
+   <input type="text" class="form-control" name="name" v-model="form.name"
                                         :class="{ 'is-invalid': form.errors.has('name') }">
 
                                 </div>
                             </div>
-                            <div class="form-control-wrap">
-                                <div class="custom-file">
-                                    <label class="" for="customFile">Choose file</label>
-                                    <div class="form-row">
-                                        <div class="col">
-
-                                            <input type="file" @change='onFileSelect' class="form-control"
-                                                :class="{ 'is-invalid': form.errors.has('photo') }" id="customFile">
-                                        </div>
-                                        <div class="col">
-                                            <img :src="form.photo" width="40px" v-if='form.photo != "" ' height="40px"
-                                                alt="">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="form-group mt-3">
-                                <a href="#" class="btn btn-success eg-toastr-success">Success</a>
-                                <button type="submit" class="btn btn-right btn-primary">Create Category</button>
+                                <button type="submit" class="btn btn-right btn-primary">Create Sub Category</button>
                             </div>
                         </form>
                     </div>
@@ -215,7 +212,7 @@ search:'',
 
                 form: new Form({
                     name: '',
-                    category_id: '',
+                    category_id: '0',
                 }),
                  catUpform: new Form({
                     id: '',
@@ -241,8 +238,10 @@ let bearer='bearer'+ this.token;
                     })
             },
 
+
             // get all sub categories
                  SubCategoryGet() {
+
 let url='/api/auth/site_subcategories_for_see';
 let bearer='bearer'+ this.token;
                 axios.get(url,{headers: {'Authorization':bearer}})
@@ -314,49 +313,43 @@ let bearer='bearer'+ this.token;
 //                         }
 //                     })
 //             },
-//             CategoryCreate() {
-//                 this.$Progress.start()
-//                 let url='/api/auth/site_categories_for_create';
-// let bearer='bearer'+ this.token;
-//                 this.form.post( url,{headers: {'Authorization':bearer}})
-//                     .then((result) => {
-//                         this.$Progress.finish()
-//                         this.CategoryGet();
-//                         $('#modalTabs').modal('hide')
-//                         $(".modal-backdrop.fade.show").remove()
-//                         this.form.name = null;
-//                         this.form.photo = null;
-//                         if (result.data.error) {
-//                             this.$Progress.finish()
-//                             Toast.fire({
-//                                 icon: 'error',
-//                                 title: result.data.error
-//                             })
-//                         }
-//                         if (result.data.success) {
-//                             this.$Progress.finish()
-//                             Toast.fire({
-//                                 icon: 'success',
-//                                 title: result.data.success
-//                             })
-//                         }
-//                         if (result.data.error) {
-//                             this.$Progress.finish()
-//                             if (result.data.error.photo) {
-//                                 Toast.fire({
-//                                     icon: 'error',
-//                                     title: result.data.error.photo
-//                                 })
-//                             }
-//                             if (result.data.error.name) {
-//                                 Toast.fire({
-//                                     icon: 'error',
-//                                     title: result.data.error.name
-//                                 })
-//                             }
-//                         }
-//                     })
-//             },
+            subCategoryCreate() {
+                if(this.form.category_id!=0){
+        this.$Progress.start()
+                let url='/api/auth/site_subcategories_for_create';
+let bearer='bearer'+ this.token;
+                this.form.post( url,{headers: {'Authorization':bearer}})
+                    .then((result) => {
+                        this.$Progress.finish()
+                        this.SubCategoryGet();
+                        $('#modalTabs').modal('hide')
+                        $(".modal-backdrop.fade.show").remove()
+                        this.form.category_id = null;
+                        this.form.name = null;
+                        if (result.data.error) {
+                            this.$Progress.finish()
+                            Toast.fire({
+                                icon: 'error',
+                                title: result.data.error
+                            })
+                        }
+                        if (result.data.success) {
+                            this.$Progress.finish()
+                            Toast.fire({
+                                icon: 'success',
+                                title: result.data.success
+                            })
+                        }
+
+                    })
+                }else{
+                       Toast.fire({
+                                icon: 'error',
+                                title: 'Please Select Category'
+                            })
+                }
+
+            },
 //             deleteCat(id){
 //                   this.$Progress.start()
 //                 let url='/api/auth/site_categories_for_delete/'+id;

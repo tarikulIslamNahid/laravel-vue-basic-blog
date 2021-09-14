@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\subCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class SubCategoryController extends Controller
 {
@@ -15,8 +18,11 @@ class SubCategoryController extends Controller
     public function index()
     {
 
-        $subcategories = subCategory::all();
-
+        $subcategories = DB::table('sub_categories')
+            ->join('categories', 'sub_categories.category_id', 'categories.id')
+            ->select('categories.name as cat_name', 'sub_categories.*')
+            ->orderBy('sub_categories.id', 'DESC')
+            ->get();
         return response()->json([
             'subcategories' => $subcategories,
         ]);
@@ -40,7 +46,29 @@ class SubCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        try {
+            // $validateData = $request->validate();
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|unique:sub_categories|max:255',
+                'category_id' => 'required',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json(['error' => $validator->errors(), 422]);
+            } else {
+
+                $subCategory = new subCategory;
+                $subCategory->name = $request->name;
+                $subCategory->category_id = $request->category_id;
+                $subCategory->slug = Str::slug($request->name);
+                $subCategory->save();
+                return response()->json(['success' => "Sub Category Created Successfully !"]);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error' => "Oops, Something Went Wrong"]);
+        }
     }
 
     /**
