@@ -20,6 +20,10 @@ class User extends Authenticatable implements JWTSubject
         'name', 'email', 'password',
     ];
 
+    public function role()
+    {
+        return $this->belongsTo('App\roles', 'role_id');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -39,7 +43,7 @@ class User extends Authenticatable implements JWTSubject
     ];
 
 
-        /**
+    /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
      * @return mixed

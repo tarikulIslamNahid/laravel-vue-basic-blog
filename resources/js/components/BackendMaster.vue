@@ -75,6 +75,12 @@
                                                                 <span class="nk-menu-text">Categories</span>
                                                             </router-link>
                                                         </li>
+                                                          <li class="nk-menu-item">
+                                                            <router-link :to="{ name: 'subcategory'}"
+                                                                class="nk-menu-link" data-original-title="" title="">
+                                                                <span class="nk-menu-text">Sub-Categpry</span>
+                                                            </router-link>
+                                                        </li>
                                                         <li class="nk-menu-item">
                                                             <a href="html/project-list.html" class="nk-menu-link"
                                                                 data-original-title="" title=""><span

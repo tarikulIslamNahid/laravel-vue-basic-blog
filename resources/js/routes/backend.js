@@ -1,5 +1,6 @@
  let dashboard = require('../components/admin/dashboard.vue').default;
 let categories = require('../components/admin/categories.vue').default;
+let subcategory = require('../components/admin/subcategory.vue').default;
 // staff managment
 let roles = require('../components/admin/staffs/roles.vue').default;
 let BackendMaster = require('../components/BackendMaster').default;
@@ -41,6 +42,11 @@ beforeEnter: (to, from, next) => {
                 path: '/admin/categories',
                 component:categories,
                 name: 'categories',
+            },
+            {
+                path: '/admin/sub-category',
+                component:subcategory,
+                name: 'subcategory',
             },
             {
                 path: '/admin/roles',

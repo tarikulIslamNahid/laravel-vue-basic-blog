@@ -98,8 +98,6 @@ class RolesController extends Controller
         $roles = roles::find($request->id);
         $roles->name = $request->name;
         $roles->update();
-
-        // $categories->save();
         return response()->json(['success' => "Role Updated Successfully !"]);
     }
 
