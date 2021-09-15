@@ -4283,22 +4283,28 @@ __webpack_require__.r(__webpack_exports__);
         });
       }
     },
-    //             deleteCat(id){
-    //                   this.$Progress.start()
-    //                 let url='/api/auth/site_categories_for_delete/'+id;
-    // let bearer='bearer'+ this.$store.getters.getUser.access_token;
-    // axios.delete(url,{headers: {'Authorization':bearer}})
-    // .then(res => {
-    //     this.$Progress.finish()
-    //        this.categories=this.categories.filter(res=>{
-    //          return res.id != id
-    //      })
-    //          Toast.fire({
-    //         icon: 'success',
-    //         title: res.data.success,
-    //     })
-    // })
-    //             },
+    deleteSubCat: function deleteSubCat(id) {
+      var _this4 = this;
+
+      this.$Progress.start();
+      var url = '/api/auth/site_Subcategories_for_delete/' + id;
+      var bearer = 'bearer' + this.$store.getters.getUser.access_token;
+      axios["delete"](url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (res) {
+        _this4.$Progress.finish();
+
+        _this4.subcategories = _this4.subcategories.filter(function (res) {
+          return res.id != id;
+        });
+        Toast.fire({
+          icon: 'success',
+          title: res.data.success
+        });
+      });
+    },
     Loggedin: function Loggedin() {
       if (this.$store.getters.getUser != null) {
         if (User.loggedIn(this.$store.getters.getUser.access_token)) {
@@ -4312,10 +4318,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     filteredList: function filteredList() {
-      var _this4 = this;
+      var _this5 = this;
 
       return this.subcategories.filter(function (subcat) {
-        return subcat.name.toLowerCase().match(_this4.search.toLowerCase());
+        return subcat.name.toLowerCase().match(_this5.search.toLowerCase());
       });
     }
   },
@@ -40734,7 +40740,58 @@ var render = function() {
                         _c("span", [_vm._v(_vm._s(SubCategory.slug))])
                       ]),
                       _vm._v(" "),
-                      _vm._m(2, true)
+                      _c("td", { staticClass: "nk-tb-col nk-tb-col-tools" }, [
+                        _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
+                          _c("li", [
+                            _c("div", { staticClass: "drodown" }, [
+                              _vm._m(2, true),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "dropdown-menu dropdown-menu-right"
+                                },
+                                [
+                                  _c(
+                                    "ul",
+                                    { staticClass: "link-list-opt no-bdr" },
+                                    [
+                                      _vm._m(3, true),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.deleteSubCat(
+                                                SubCategory.id
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "router-link",
+                                            { attrs: { to: "" } },
+                                            [
+                                              _c("em", {
+                                                staticClass: "icon ni ni-trash"
+                                              }),
+                                              _c("span", [_vm._v("Delete")])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ])
+                        ])
+                      ])
                     ])
                   }),
                   0
@@ -40758,7 +40815,7 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(3),
+              _vm._m(4),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c(
@@ -40860,7 +40917,7 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _vm._m(4)
+                    _vm._m(5)
                   ]
                 )
               ])
@@ -40936,34 +40993,26 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "nk-tb-col nk-tb-col-tools" }, [
-      _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
-        _c("li", [
-          _c("div", { staticClass: "drodown" }, [
-            _c(
-              "a",
-              {
-                staticClass: "dropdown-toggle btn btn-icon btn-trigger",
-                attrs: { href: "#", "data-toggle": "dropdown" }
-              },
-              [_c("em", { staticClass: "icon ni ni-more-h" })]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
-              _c("ul", { staticClass: "link-list-opt no-bdr" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("em", { staticClass: "icon ni ni-eye" }),
-                    _c("span", [
-                      _vm._v(
-                        "View\n                                                                        Details"
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
+    return _c(
+      "a",
+      {
+        staticClass: "dropdown-toggle btn btn-icon btn-trigger",
+        attrs: { href: "#", "data-toggle": "dropdown" }
+      },
+      [_c("em", { staticClass: "icon ni ni-more-h" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("em", { staticClass: "icon ni ni-eye" }),
+        _c("span", [
+          _vm._v(
+            "View\n                                                                        Details"
+          )
         ])
       ])
     ])

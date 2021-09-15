@@ -83,10 +83,10 @@
                                                                         Details</span></a></li>
                                                             <!-- <li  @click="editCat(SubCategory.id)"><router-link to=""><em
                                                                         class="icon ni ni-repeat"></em><span>Edit</span></router-link>
-                                                            </li>
-                                                            <li @click="deleteCat(SubCategory.id)"><router-link to="" ><em
+                                                            </li>-->
+                                                            <li @click="deleteSubCat(SubCategory.id)"><router-link to="" ><em
                                                                         class="icon ni ni-trash"></em><span>Delete</span></router-link>
-                                                            </li> -->
+                                                            </li>
 
                                                         </ul>
                                                     </div>
@@ -354,22 +354,22 @@ let bearer='bearer'+ this.token;
                 }
 
             },
-//             deleteCat(id){
-//                   this.$Progress.start()
-//                 let url='/api/auth/site_categories_for_delete/'+id;
-// let bearer='bearer'+ this.$store.getters.getUser.access_token;
-// axios.delete(url,{headers: {'Authorization':bearer}})
-// .then(res => {
-//     this.$Progress.finish()
-//        this.categories=this.categories.filter(res=>{
-//          return res.id != id
-//      })
-//          Toast.fire({
-//         icon: 'success',
-//         title: res.data.success,
-//     })
-// })
-//             },
+            deleteSubCat(id){
+                  this.$Progress.start()
+                let url='/api/auth/site_Subcategories_for_delete/'+id;
+let bearer='bearer'+ this.$store.getters.getUser.access_token;
+axios.delete(url,{headers: {'Authorization':bearer}})
+.then(res => {
+    this.$Progress.finish()
+       this.subcategories=this.subcategories.filter(res=>{
+         return res.id != id
+     })
+         Toast.fire({
+        icon: 'success',
+        title: res.data.success,
+    })
+})
+            },
                     Loggedin() {
                 if (this.$store.getters.getUser != null) {
                     if (User.loggedIn(this.$store.getters.getUser.access_token)) {

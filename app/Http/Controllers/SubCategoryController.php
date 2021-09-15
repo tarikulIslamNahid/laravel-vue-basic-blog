@@ -107,8 +107,16 @@ class SubCategoryController extends Controller
      * @param  \App\subCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(subCategory $subCategory)
+    public function destroy($id)
     {
-        //
+        $subCategory = subCategory::Find($id);
+
+        if ($subCategory) {
+
+            $subCategory->delete();
+            return response()->json(['success' => 'Sub Category Deleted Successfully !']);
+        } else {
+            return response()->json('failed', 404);
+        }
     }
 }
