@@ -20,6 +20,11 @@ import VueAxios from "vue-axios";
 
 Vue.use(VueAxios, axios);
 
+// dropwodn multiselect with search
+import Multiselect from 'vue-multiselect';
+// register globally
+Vue.component('multiselect', Multiselect);
+
 //Vue Progressbar
 import VueProgressBar from "vue-progressbar";
 

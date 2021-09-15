@@ -14,8 +14,6 @@ import storeData from "../store/index";
 const store = new Vuex.Store(storeData);
 
 export const routes = [
-
-
     {
         path: '/admin',
         name:'BackendMaster',

@@ -17,12 +17,8 @@ class SubCategoryController extends Controller
      */
     public function index()
     {
+        $subcategories = subCategory::with("category")->get();
 
-        $subcategories = DB::table('sub_categories')
-            ->join('categories', 'sub_categories.category_id', 'categories.id')
-            ->select('categories.name as cat_name', 'sub_categories.*')
-            ->orderBy('sub_categories.id', 'DESC')
-            ->get();
         return response()->json([
             'subcategories' => $subcategories,
         ]);
@@ -61,7 +57,7 @@ class SubCategoryController extends Controller
 
                 $subCategory = new subCategory;
                 $subCategory->name = $request->name;
-                $subCategory->category_id = $request->category_id;
+                $subCategory->category_id = $request->category_id['id'];
                 $subCategory->slug = Str::slug($request->name);
                 $subCategory->save();
                 return response()->json(['success' => "Sub Category Created Successfully !"]);

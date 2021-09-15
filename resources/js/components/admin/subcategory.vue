@@ -57,7 +57,7 @@
                                     </td>
 
                                     <td class="nk-tb-col tb-col-mb">
-                                        <span>{{SubCategory.cat_name}}</span>
+                                        <span>{{SubCategory.category.name}}</span>
 
                                     </td>
                                     <td class="nk-tb-col tb-col-mb">
@@ -120,10 +120,14 @@
                             <div class="form-group">
                                 <label class="form-label" for="full-name">Category</label>
                                 <div class="form-control-wrap">
-                                 <select v-model='form.category_id' class="form-control"  name="category_id"  :class="{ 'is-invalid': form.errors.has('category_id') }">
+
+  <multiselect v-model="form.category_id"  track-by="name" label="name" placeholder="Please Select a Category" :options="categories" :searchable="true"  >
+    <template  slot-scope="{ option }">  <option :value="option.id">{{ option.name }}</option> </template>
+  </multiselect>
+                                 <!-- <select v-model='form.category_id' class="form-control"  name="category_id"  :class="{ 'is-invalid': form.errors.has('category_id') }">
                                      <option selected value="0">Please select Category</option>
                                      <option v-for='cat in categories' :value="cat.id">{{cat.name}}</option>
-                                 </select>
+                                 </select> -->
                                 </div>
                             </div>
 
@@ -396,6 +400,8 @@ let bearer='bearer'+ this.token;
 
 
 </script>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
 <style>
     ul.nk-tb-actions.gx-1:hover .dropdown-menu.dropdown-menu-right {
         display: block !important;
