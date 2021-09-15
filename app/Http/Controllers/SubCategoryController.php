@@ -84,9 +84,10 @@ class SubCategoryController extends Controller
      * @param  \App\subCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(subCategory $subCategory)
+    public function edit($id)
     {
-        //
+        $subCategory = subCategory::find($id);
+        return response()->json(['subCategory' => $subCategory]);
     }
 
     /**
@@ -96,9 +97,14 @@ class SubCategoryController extends Controller
      * @param  \App\subCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, subCategory $subCategory)
+    public function update(Request $request)
     {
-        //
+        $subCategory = subCategory::find($request->id);
+        $subCategory->name = $request->name;
+        $subCategory->category_id = $request->category_id;
+        $subCategory->slug = Str::slug($request->name);
+        $subCategory->update();
+        return response()->json(['success' => "Sub Category Updated Successfully !"]);
     }
 
     /**

@@ -4123,6 +4123,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4134,7 +4138,7 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         category_id: '0'
       }),
-      catUpform: new Form({
+      SubcatUpform: new Form({
         id: '',
         name: '',
         category_id: ''
@@ -4182,63 +4186,64 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    //             editCat(id){
-    //                         $('#editmodel').modal('show');
-    //     let url='/api/auth/site_categories_for_edit/'+id;
-    // let bearer='bearer'+ this.token;
-    //                 axios.get(url,{headers: {'Authorization':bearer}})
-    //                     .then((result) => {
-    //                          console.log(result.data.SubCategory)
-    //                         this.catUpform.id = result.data.SubCategory.id
-    //                         this.catUpform.name = result.data.SubCategory.name
-    //                         this.catUpform.photo = result.data.SubCategory.photo
-    //                     })
-    //             },
-    //             CategoryUpdate(){
-    //       this.$Progress.start()
-    //                 let url='/api/auth/site_categories_for_update';
-    // let bearer='bearer'+ this.token;
-    //    this.catUpform.post( url,{headers: {'Authorization':bearer}})
-    //                     .then((result) => {
-    //                         this.$Progress.finish()
-    //                         this.CategoryGet();
-    //                         $('#editmodel').modal('hide')
-    //                         $(".modal-backdrop.fade.show").remove()
-    //                         this.catUpform.name = null;
-    //                         this.catUpform.photo = null;
-    //                         if (result.data.error) {
-    //                             this.$Progress.finish()
-    //                             Toast.fire({
-    //                                 icon: 'error',
-    //                                 title: result.data.error
-    //                             })
-    //                         }
-    //                         if (result.data.success) {
-    //                             this.$Progress.finish()
-    //                             Toast.fire({
-    //                                 icon: 'success',
-    //                                 title: result.data.success
-    //                             })
-    //                         }
-    //                         if (result.data.error) {
-    //                             this.$Progress.finish()
-    //                             if (result.data.error.photo) {
-    //                                 Toast.fire({
-    //                                     icon: 'error',
-    //                                     title: result.data.error.photo
-    //                                 })
-    //                             }
-    //                             if (result.data.error.name) {
-    //                                 Toast.fire({
-    //                                     icon: 'error',
-    //                                     title: result.data.error.name
-    //                                 })
-    //                             }
-    //                         }
-    //                     })
-    //             },
-    subCategoryCreate: function subCategoryCreate() {
+    editSubCat: function editSubCat(id) {
       var _this3 = this;
+
+      $('#editmodel').modal('show');
+      var url = '/api/auth/site_subcategories_for_edit/' + id;
+      var bearer = 'bearer' + this.token;
+      axios.get(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
+        _this3.SubcatUpform.category_id = result.data.subCategory.category_id;
+        _this3.SubcatUpform.name = result.data.subCategory.name;
+        _this3.SubcatUpform.id = result.data.subCategory.id;
+      });
+    },
+    SubCategoryUpdate: function SubCategoryUpdate() {
+      var _this4 = this;
+
+      this.$Progress.start();
+      var url = '/api/auth/site_subcategories_for_update';
+      var bearer = 'bearer' + this.token;
+      this.SubcatUpform.post(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
+        _this4.$Progress.finish();
+
+        _this4.SubCategoryGet();
+
+        $('#editmodel').modal('hide');
+        $(".modal-backdrop.fade.show").remove();
+        _this4.SubcatUpform.name = null;
+        _this4.SubcatUpform.category_id = null;
+        _this4.SubcatUpform.id = null;
+
+        if (result.data.error) {
+          _this4.$Progress.finish();
+
+          Toast.fire({
+            icon: 'error',
+            title: result.data.error
+          });
+        }
+
+        if (result.data.success) {
+          _this4.$Progress.finish();
+
+          Toast.fire({
+            icon: 'success',
+            title: result.data.success
+          });
+        }
+      });
+    },
+    subCategoryCreate: function subCategoryCreate() {
+      var _this5 = this;
 
       if (this.form.category_id != 0) {
         this.$Progress.start();
@@ -4249,17 +4254,17 @@ __webpack_require__.r(__webpack_exports__);
             'Authorization': bearer
           }
         }).then(function (result) {
-          _this3.$Progress.finish();
+          _this5.$Progress.finish();
 
-          _this3.SubCategoryGet();
+          _this5.SubCategoryGet();
 
           $('#modalTabs').modal('hide');
           $(".modal-backdrop.fade.show").remove();
-          _this3.form.category_id = null;
-          _this3.form.name = null;
+          _this5.form.category_id = null;
+          _this5.form.name = null;
 
           if (result.data.error) {
-            _this3.$Progress.finish();
+            _this5.$Progress.finish();
 
             Toast.fire({
               icon: 'error',
@@ -4268,7 +4273,7 @@ __webpack_require__.r(__webpack_exports__);
           }
 
           if (result.data.success) {
-            _this3.$Progress.finish();
+            _this5.$Progress.finish();
 
             Toast.fire({
               icon: 'success',
@@ -4284,7 +4289,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     deleteSubCat: function deleteSubCat(id) {
-      var _this4 = this;
+      var _this6 = this;
 
       this.$Progress.start();
       var url = '/api/auth/site_Subcategories_for_delete/' + id;
@@ -4294,9 +4299,9 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': bearer
         }
       }).then(function (res) {
-        _this4.$Progress.finish();
+        _this6.$Progress.finish();
 
-        _this4.subcategories = _this4.subcategories.filter(function (res) {
+        _this6.subcategories = _this6.subcategories.filter(function (res) {
           return res.id != id;
         });
         Toast.fire({
@@ -4318,10 +4323,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     filteredList: function filteredList() {
-      var _this5 = this;
+      var _this7 = this;
 
       return this.subcategories.filter(function (subcat) {
-        return subcat.name.toLowerCase().match(_this5.search.toLowerCase());
+        return subcat.name.toLowerCase().match(_this7.search.toLowerCase());
       });
     }
   },
@@ -40764,6 +40769,32 @@ var render = function() {
                                         {
                                           on: {
                                             click: function($event) {
+                                              return _vm.editSubCat(
+                                                SubCategory.id
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "router-link",
+                                            { attrs: { to: "" } },
+                                            [
+                                              _c("em", {
+                                                staticClass: "icon ni ni-repeat"
+                                              }),
+                                              _c("span", [_vm._v("Edit")])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          on: {
+                                            click: function($event) {
                                               return _vm.deleteSubCat(
                                                 SubCategory.id
                                               )
@@ -40925,6 +40956,154 @@ var render = function() {
           ]
         )
       ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade ",
+        attrs: { tabindex: "-1", id: "editmodel" }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(6),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body" }, [
+                _c(
+                  "form",
+                  {
+                    staticClass: "form-validate is-alter",
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.SubCategoryUpdate.apply(null, arguments)
+                      }
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-label",
+                          attrs: { for: "full-name" }
+                        },
+                        [_vm._v("Category")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-control-wrap" }, [
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.SubcatUpform.category_id,
+                                expression: "SubcatUpform.category_id"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.SubcatUpform.errors.has(
+                                "category_id"
+                              )
+                            },
+                            attrs: { name: "category_id" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.SubcatUpform,
+                                  "category_id",
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              { attrs: { selected: "", value: "0" } },
+                              [_vm._v("Please select Category")]
+                            ),
+                            _vm._v(" "),
+                            _vm._l(_vm.categories, function(cat) {
+                              return _c(
+                                "option",
+                                { domProps: { value: cat.id } },
+                                [_vm._v(_vm._s(cat.name))]
+                              )
+                            })
+                          ],
+                          2
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-label",
+                          attrs: { for: "full-name" }
+                        },
+                        [_vm._v("Sub Category")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-control-wrap" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.SubcatUpform.name,
+                              expression: "SubcatUpform.name"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.SubcatUpform.errors.has("name")
+                          },
+                          attrs: { type: "text", name: "name" },
+                          domProps: { value: _vm.SubcatUpform.name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.SubcatUpform,
+                                "name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(7)
+                  ]
+                )
+              ])
+            ])
+          ]
+        )
+      ]
     )
   ])
 }
@@ -41011,7 +41190,7 @@ var staticRenderFns = [
         _c("em", { staticClass: "icon ni ni-eye" }),
         _c("span", [
           _vm._v(
-            "View\n                                                                        Details"
+            "View\n                                                                    Details"
           )
         ])
       ])
@@ -41043,6 +41222,35 @@ var staticRenderFns = [
         "button",
         { staticClass: "btn btn-right btn-primary", attrs: { type: "submit" } },
         [_vm._v("Create Sub Category")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [_vm._v("Update Category")]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "close",
+          attrs: { href: "#", "data-dismiss": "modal", "aria-label": "Close" }
+        },
+        [_c("em", { staticClass: "icon ni ni-cross" })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group mt-3" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-right btn-primary", attrs: { type: "submit" } },
+        [_vm._v("Update Sub Category")]
       )
     ])
   }

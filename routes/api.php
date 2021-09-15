@@ -29,9 +29,9 @@ Route::group([
     // for Sub categories
     Route::get('site_subcategories_for_see', 'SubCategoryController@index');
     Route::post('site_subcategories_for_create', 'SubCategoryController@store');
-    // Route::post('site_categories_for_update', 'Admin\CategoriesController@update');
+    Route::post('site_subcategories_for_update', 'SubCategoryController@update');
     Route::delete('site_Subcategories_for_delete/{id}', 'SubCategoryController@destroy');
-    // Route::get('site_categories_for_edit/{id}', 'Admin\CategoriesController@edit');
+    Route::get('site_subcategories_for_edit/{id}', 'SubCategoryController@edit');
 
     // for role
     Route::get('site_role_for_see', 'RolesController@index');

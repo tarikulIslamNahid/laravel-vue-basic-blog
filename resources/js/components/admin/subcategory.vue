@@ -26,10 +26,10 @@
                     </div>
                     <div class="row">
 
-                          <div class='col-3 nk-block-head-content offset-9  pr-4'>
-  <input type="text" class="form-control"  v-model='search' id="searchItems"
-                                                    placeholder="Search Blog Sub Category">
-                          </div>
+                        <div class='col-3 nk-block-head-content offset-9  pr-4'>
+                            <input type="text" class="form-control" v-model='search' id="searchItems"
+                                placeholder="Search Blog Sub Category">
+                        </div>
 
                     </div>
 
@@ -81,11 +81,15 @@
 
                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View
                                                                         Details</span></a></li>
-                                                            <!-- <li  @click="editCat(SubCategory.id)"><router-link to=""><em
-                                                                        class="icon ni ni-repeat"></em><span>Edit</span></router-link>
-                                                            </li>-->
-                                                            <li @click="deleteSubCat(SubCategory.id)"><router-link to="" ><em
-                                                                        class="icon ni ni-trash"></em><span>Delete</span></router-link>
+                                                            <li @click="editSubCat(SubCategory.id)">
+                                                                <router-link to=""><em
+                                                                        class="icon ni ni-repeat"></em><span>Edit</span>
+                                                                </router-link>
+                                                            </li>
+                                                            <li @click="deleteSubCat(SubCategory.id)">
+                                                                <router-link to=""><em
+                                                                        class="icon ni ni-trash"></em><span>Delete</span>
+                                                                </router-link>
                                                             </li>
 
                                                         </ul>
@@ -121,21 +125,24 @@
                                 <label class="form-label" for="full-name">Category</label>
                                 <div class="form-control-wrap">
 
-  <multiselect v-model="form.category_id"  track-by="name" label="name" placeholder="Please Select a Category" :options="categories" :searchable="true"  >
-    <template  slot-scope="{ option }">  <option :value="option.id">{{ option.name }}</option> </template>
-  </multiselect>
-                                 <!-- <select v-model='form.category_id' class="form-control"  name="category_id"  :class="{ 'is-invalid': form.errors.has('category_id') }">
+                                    <multiselect v-model="form.category_id" track-by="name" label="name"
+                                        placeholder="Please Select a Category" :options="categories" :searchable="true">
+                                        <template slot-scope="{ option }">
+                                            <option :value="option.id">{{ option.name }}</option>
+                                        </template>
+                                    </multiselect>
+                                    <!-- <select v-model='form.category_id' class="form-control"  name="category_id"  :class="{ 'is-invalid': form.errors.has('category_id') }">
                                      <option selected value="0">Please select Category</option>
                                      <option v-for='cat in categories' :value="cat.id">{{cat.name}}</option>
                                  </select> -->
                                 </div>
                             </div>
 
-                              <div class="form-group">
+                            <div class="form-group">
                                 <label class="form-label" for="full-name">Sub Category</label>
                                 <div class="form-control-wrap">
 
-   <input type="text" class="form-control" name="name" v-model="form.name"
+                                    <input type="text" class="form-control" name="name" v-model="form.name"
                                         :class="{ 'is-invalid': form.errors.has('name') }">
 
                                 </div>
@@ -152,10 +159,10 @@
         </div>
 
 
-<!-- SubCategory edit model  -->
+        <!-- SubCategory edit model  -->
 
         <!-- Modal Form -->
-        <!-- <div class="modal fade " tabindex="-1" id="editmodel">
+        <div class="modal fade " tabindex="-1" id="editmodel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -165,43 +172,40 @@
                         </a>
                     </div>
                     <div class="modal-body">
-                        <form @submit.prevent='CategoryUpdate' enctype="multipart/form-data"
+                        <form @submit.prevent='SubCategoryUpdate'
                             class="form-validate is-alter">
-                            <div class="form-group">
-                                <label class="form-label" for="full-name">Category Name</label>
-                                <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="name" v-model="catUpform.name"
-                                        :class="{ 'is-invalid': catUpform.errors.has('name') }">
 
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">Category</label>
+                                <div class="form-control-wrap">
+
+                                    <select v-model='SubcatUpform.category_id' class="form-control" name="category_id"
+                                        :class="{ 'is-invalid': SubcatUpform.errors.has('category_id') }">
+                                        <option selected value="0">Please select Category</option>
+                                        <option v-for='cat in categories' :value="cat.id">{{cat.name}}</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="form-control-wrap">
-                                <div class="custom-file">
-                                    <label class="" for="customFile">Choose file</label>
-                                    <div class="form-row">
-                                        <div class="col">
 
-                                            <input type="file" @change='onFileSelect' class="form-control"
-                                                :class="{ 'is-invalid': catUpform.errors.has('photo') }" id="customFile">
-                                        </div>
-                                        <div class="col">
-                                            <img :src="catUpform.by+catUpform.photo" width="40px" v-if='catUpform.photo != "" ' height="40px"
-                                                alt="">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">Sub Category</label>
+                                <div class="form-control-wrap">
 
-                                        </div>
-                                    </div>
+                                    <input type="text" class="form-control" name="name" v-model="SubcatUpform.name"
+                                        :class="{ 'is-invalid': SubcatUpform.errors.has('name') }">
+
                                 </div>
                             </div>
 
                             <div class="form-group mt-3">
-                                <button type="submit" class="btn btn-right btn-primary">Update Category</button>
+                                <button type="submit" class="btn btn-right btn-primary">Update Sub Category</button>
                             </div>
                         </form>
                     </div>
 
                 </div>
             </div>
-        </div> -->
+        </div>
 
     </div>
 </template>
@@ -209,16 +213,16 @@
     export default {
         data() {
             return {
-                token:'',
+                token: '',
                 categories: [],
                 subcategories: [],
-search:'',
+                search: '',
 
                 form: new Form({
                     name: '',
                     category_id: '0',
                 }),
-                 catUpform: new Form({
+                SubcatUpform: new Form({
                     id: '',
                     name: '',
                     category_id: '',
@@ -226,178 +230,183 @@ search:'',
             }
         },
         methods: {
-// get all categories
+            // get all categories
             CategoryGet() {
-let url='/api/auth/site_categories_for_see';
-let bearer='bearer'+ this.token;
-                axios.get(url,{headers: {'Authorization':bearer}})
+                let url = '/api/auth/site_categories_for_see';
+                let bearer = 'bearer' + this.token;
+                axios.get(url, {
+                        headers: {
+                            'Authorization': bearer
+                        }
+                    })
                     .then((result) => {
                         this.categories = result.data.categories
 
-                    }) .catch((result) => {
-                         if(result.message=='Request failed with status code 401'){
-                        this.$store.commit('SET_USER', null);
-                window.location.href = "/"
-                         }
+                    }).catch((result) => {
+                        if (result.message == 'Request failed with status code 401') {
+                            this.$store.commit('SET_USER', null);
+                            window.location.href = "/"
+                        }
                     })
             },
 
 
             // get all sub categories
-                 SubCategoryGet() {
+            SubCategoryGet() {
 
-let url='/api/auth/site_subcategories_for_see';
-let bearer='bearer'+ this.token;
-                axios.get(url,{headers: {'Authorization':bearer}})
+                let url = '/api/auth/site_subcategories_for_see';
+                let bearer = 'bearer' + this.token;
+                axios.get(url, {
+                        headers: {
+                            'Authorization': bearer
+                        }
+                    })
                     .then((result) => {
                         this.subcategories = result.data.subcategories
 
-                    }) .catch((result) => {
-                         if(result.message=='Request failed with status code 401'){
-                        this.$store.commit('SET_USER', null);
-                window.location.href = "/"
-                         }
+                    }).catch((result) => {
+                        if (result.message == 'Request failed with status code 401') {
+                            this.$store.commit('SET_USER', null);
+                            window.location.href = "/"
+                        }
                     })
             },
 
-//             editCat(id){
-//                         $('#editmodel').modal('show');
-//     let url='/api/auth/site_categories_for_edit/'+id;
-// let bearer='bearer'+ this.token;
-//                 axios.get(url,{headers: {'Authorization':bearer}})
-//                     .then((result) => {
-//                          console.log(result.data.SubCategory)
-//                         this.catUpform.id = result.data.SubCategory.id
-//                         this.catUpform.name = result.data.SubCategory.name
-//                         this.catUpform.photo = result.data.SubCategory.photo
-
-//                     })
-
-//             },
-//             CategoryUpdate(){
-//       this.$Progress.start()
-//                 let url='/api/auth/site_categories_for_update';
-// let bearer='bearer'+ this.token;
-//    this.catUpform.post( url,{headers: {'Authorization':bearer}})
-//                     .then((result) => {
-//                         this.$Progress.finish()
-//                         this.CategoryGet();
-//                         $('#editmodel').modal('hide')
-//                         $(".modal-backdrop.fade.show").remove()
-//                         this.catUpform.name = null;
-//                         this.catUpform.photo = null;
-//                         if (result.data.error) {
-//                             this.$Progress.finish()
-//                             Toast.fire({
-//                                 icon: 'error',
-//                                 title: result.data.error
-//                             })
-//                         }
-//                         if (result.data.success) {
-//                             this.$Progress.finish()
-//                             Toast.fire({
-//                                 icon: 'success',
-//                                 title: result.data.success
-//                             })
-//                         }
-//                         if (result.data.error) {
-//                             this.$Progress.finish()
-//                             if (result.data.error.photo) {
-//                                 Toast.fire({
-//                                     icon: 'error',
-//                                     title: result.data.error.photo
-//                                 })
-//                             }
-//                             if (result.data.error.name) {
-//                                 Toast.fire({
-//                                     icon: 'error',
-//                                     title: result.data.error.name
-//                                 })
-//                             }
-//                         }
-//                     })
-//             },
-            subCategoryCreate() {
-                if(this.form.category_id!=0){
-        this.$Progress.start()
-                let url='/api/auth/site_subcategories_for_create';
-let bearer='bearer'+ this.token;
-                this.form.post( url,{headers: {'Authorization':bearer}})
+            editSubCat(id) {
+                $('#editmodel').modal('show');
+                let url = '/api/auth/site_subcategories_for_edit/' + id;
+                let bearer = 'bearer' + this.token;
+                axios.get(url, {
+                        headers: {
+                            'Authorization': bearer
+                        }
+                    })
                     .then((result) => {
-                        this.$Progress.finish()
-                        this.SubCategoryGet();
-                        $('#modalTabs').modal('hide')
-                        $(".modal-backdrop.fade.show").remove()
-                        this.form.category_id = null;
-                        this.form.name = null;
-                        if (result.data.error) {
-                            this.$Progress.finish()
-                            Toast.fire({
-                                icon: 'error',
-                                title: result.data.error
-                            })
-                        }
-                        if (result.data.success) {
-                            this.$Progress.finish()
-                            Toast.fire({
-                                icon: 'success',
-                                title: result.data.success
-                            })
-                        }
+                        this.SubcatUpform.category_id = result.data.subCategory.category_id
+                        this.SubcatUpform.name = result.data.subCategory.name
+                        this.SubcatUpform.id = result.data.subCategory.id
 
                     })
-                }else{
-                       Toast.fire({
-                                icon: 'error',
-                                title: 'Please Select Category'
-                            })
+
+            },
+                        SubCategoryUpdate(){
+                  this.$Progress.start()
+                            let url='/api/auth/site_subcategories_for_update';
+            let bearer='bearer'+ this.token;
+               this.SubcatUpform.post( url,{headers: {'Authorization':bearer}})
+                                .then((result) => {
+                                    this.$Progress.finish()
+                                    this.SubCategoryGet();
+                                    $('#editmodel').modal('hide')
+                                    $(".modal-backdrop.fade.show").remove()
+                                    this.SubcatUpform.name = null;
+                                    this.SubcatUpform.category_id = null;
+                                    this.SubcatUpform.id = null;
+                                    if (result.data.error) {
+                                        this.$Progress.finish()
+                                        Toast.fire({
+                                            icon: 'error',
+                                            title: result.data.error
+                                        })
+                                    }
+                                    if (result.data.success) {
+                                        this.$Progress.finish()
+                                        Toast.fire({
+                                            icon: 'success',
+                                            title: result.data.success
+                                        })
+                                    }
+
+                                })
+                        },
+            subCategoryCreate() {
+                if (this.form.category_id != 0) {
+                    this.$Progress.start()
+                    let url = '/api/auth/site_subcategories_for_create';
+                    let bearer = 'bearer' + this.token;
+                    this.form.post(url, {
+                            headers: {
+                                'Authorization': bearer
+                            }
+                        })
+                        .then((result) => {
+                            this.$Progress.finish()
+                            this.SubCategoryGet();
+                            $('#modalTabs').modal('hide')
+                            $(".modal-backdrop.fade.show").remove()
+                            this.form.category_id = null;
+                            this.form.name = null;
+                            if (result.data.error) {
+                                this.$Progress.finish()
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: result.data.error
+                                })
+                            }
+                            if (result.data.success) {
+                                this.$Progress.finish()
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: result.data.success
+                                })
+                            }
+
+                        })
+                } else {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Please Select Category'
+                    })
                 }
 
             },
-            deleteSubCat(id){
-                  this.$Progress.start()
-                let url='/api/auth/site_Subcategories_for_delete/'+id;
-let bearer='bearer'+ this.$store.getters.getUser.access_token;
-axios.delete(url,{headers: {'Authorization':bearer}})
-.then(res => {
-    this.$Progress.finish()
-       this.subcategories=this.subcategories.filter(res=>{
-         return res.id != id
-     })
-         Toast.fire({
-        icon: 'success',
-        title: res.data.success,
-    })
-})
+            deleteSubCat(id) {
+                this.$Progress.start()
+                let url = '/api/auth/site_Subcategories_for_delete/' + id;
+                let bearer = 'bearer' + this.$store.getters.getUser.access_token;
+                axios.delete(url, {
+                        headers: {
+                            'Authorization': bearer
+                        }
+                    })
+                    .then(res => {
+                        this.$Progress.finish()
+                        this.subcategories = this.subcategories.filter(res => {
+                            return res.id != id
+                        })
+                        Toast.fire({
+                            icon: 'success',
+                            title: res.data.success,
+                        })
+                    })
             },
-                    Loggedin() {
+            Loggedin() {
                 if (this.$store.getters.getUser != null) {
                     if (User.loggedIn(this.$store.getters.getUser.access_token)) {
                         this.loggedInAdmin = true;
                         this.loggedIn = true;
                     } else {
-                  window.location.href = "/"
+                        window.location.href = "/"
                     }
                 }
             }
         },
 
 
-          computed: {
-    filteredList() {
-      return this.subcategories.filter(subcat => {
-        return subcat.name.toLowerCase().match(this.search.toLowerCase())
-      })
-    }
-  },
-             created() {
-                 this.token=this.$store.getters.getUser.access_token
+        computed: {
+            filteredList() {
+                return this.subcategories.filter(subcat => {
+                    return subcat.name.toLowerCase().match(this.search.toLowerCase())
+                })
+            }
+        },
+        created() {
+            this.token = this.$store.getters.getUser.access_token
             this.Loggedin();
             this.CategoryGet();
             this.SubCategoryGet();
         },
     }
-
 
 </script>
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
