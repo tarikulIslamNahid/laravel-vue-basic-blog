@@ -3,6 +3,7 @@ let categories = require('../components/admin/categories.vue').default;
 let subcategory = require('../components/admin/subcategory.vue').default;
 let blogs = require('../components/admin/blog/blogs.vue').default;
 let blogcreate = require('../components/admin/blog/blogcreate.vue').default;
+let blogedit = require('../components/admin/blog/edit.vue').default;
 // staff managment
 let roles = require('../components/admin/staffs/roles.vue').default;
 let BackendMaster = require('../components/BackendMaster').default;
@@ -67,6 +68,11 @@ beforeEnter: (to, from, next) => {
                 path: '/admin/blog/create',
                 component:blogcreate,
                 name: 'blogcreate',
+            },
+            {
+                path: '/admin/blog/edit/:id',
+                component:blogedit,
+                name: 'blogedit',
             },
         ]
 

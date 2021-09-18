@@ -110,8 +110,8 @@
 
                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View
                                                                         Details</span></a></li>
-                                                            <li @click="editCat(post.id)">
-                                                                <router-link to=""><em
+                                                            <li>
+                                      <router-link :to="{name:'blogedit', params:{id:post.slug}}"><em
                                                                         class="icon ni ni-repeat"></em><span>Edit</span>
                                                                 </router-link>
                                                             </li>
