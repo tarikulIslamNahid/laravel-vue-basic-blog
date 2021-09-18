@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="shortcut icon" href="{{ asset('/assets/backend/images/favicon.png') }}">
     <!-- Page Title  -->
-    <title>Default Dashboard | DashLite Admin Template</title>
+    <title>Admin Blog</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('/assets/backend/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('/assets/backend/css/theme.css') }}">
-
-
 </head>
 
 <body class="nk-body bg-lighter npc-default has-sidebar no-touch nk-nio-theme">

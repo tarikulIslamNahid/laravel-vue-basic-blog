@@ -3984,23 +3984,6 @@ var User = /*#__PURE__*/function () {
     value: function loggedIn(StoreToken) {
       return this.hasToken(StoreToken);
     }
-  }, {
-    key: "name",
-    value: function name() {
-      if (this.loggedIn()) {
-        return localStorage.getItem('user');
-      }
-    }
-  }, {
-    key: "id",
-    value: function id() {
-      if (this.loggedIn()) {
-        var payload = _Token__WEBPACK_IMPORTED_MODULE_0__.default.payload(localStorage.getItem('token'));
-        return payload.sub;
-      }
-
-      return false;
-    }
   }]);
 
   return User;

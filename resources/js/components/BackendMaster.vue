@@ -82,9 +82,14 @@
                                                             </router-link>
                                                         </li>
                                                         <li class="nk-menu-item">
-                                                            <a href="html/project-list.html" class="nk-menu-link"
+                                                            <router-link :to="{ name: 'blogs'}" class="nk-menu-link"
                                                                 data-original-title="" title=""><span
-                                                                    class="nk-menu-text">Posts</span></a>
+                                                                    class="nk-menu-text">Blog Posts</span></router-link>
+                                                        </li>
+                                                          <li class="nk-menu-item">
+                                                            <router-link :to="{ name: 'blogcreate'}" class="nk-menu-link"
+                                                                data-original-title="" title=""><span
+                                                                    class="nk-menu-text">Blog Create</span></router-link>
                                                         </li>
                                                     </ul>
                                                     <!-- .nk-menu-sub -->
@@ -1112,7 +1117,6 @@
         created() {
             this.doLoading();
             this.USER = this.$store.getters.getUser;
-
             this.Loggedin();
         },
 

@@ -27,20 +27,6 @@ loggedIn(StoreToken){
     return this.hasToken(StoreToken);
 }
 
-name(){
-    if(this.loggedIn()){
-        return localStorage.getItem('user');
-    }
-}
-
-id(){
-    if(this.loggedIn()){
-        const payload =Token.payload(localStorage.getItem('token'));
-        return payload.sub
-    }
-    return false;
-}
-
 
 
 

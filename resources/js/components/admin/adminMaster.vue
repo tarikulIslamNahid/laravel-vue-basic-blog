@@ -32,6 +32,8 @@
 
         },
    created() {
+
+
     this.USER= this.$store.getters.getUser;
     this.Loggedin();
   },

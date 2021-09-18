@@ -39,4 +39,9 @@ Route::group([
     Route::delete('site_role_for_delete/{id}', 'RolesController@destroy');
     Route::get('site_role_for_edit/{id}', 'RolesController@edit');
     Route::post('site_role_for_update', 'RolesController@update');
+
+    // for blog posts
+
+    Route::get('site_depsubcategories_for_see/{id}', 'BlogsController@depsubcategories');
+    Route::post('site_post_for_create', 'BlogsController@store');
 });

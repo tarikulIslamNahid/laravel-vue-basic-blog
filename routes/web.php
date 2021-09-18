@@ -13,23 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Admin Routes Here
-Route::group(['namespace'=>'Admin'], function (){
-    Route::get('/admin/{anypath}', 'AdminController@index')->where('path','*');
+Route::group(['namespace' => 'Admin'], function () {
+    Route::get('/admin/{anypath}', 'AdminController@index')->where('anypath', '[\/\w\.-]*');
     Route::get('/admin', 'AdminController@index');
-
-
-
 });
 
 
-Route::group(['namespace'=>'Frontend'], function (){
+Route::group(['namespace' => 'Frontend'], function () {
 
-    Route::get('/{anypath}', 'WebsiteController@index')->where('path','*');
+    Route::get('/{anypath}', 'WebsiteController@index')->where('path', '*');
     Route::get('/', 'WebsiteController@index');
-
 });
-
-
-
-
-

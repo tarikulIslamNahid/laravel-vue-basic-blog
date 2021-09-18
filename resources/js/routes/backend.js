@@ -1,6 +1,8 @@
  let dashboard = require('../components/admin/dashboard.vue').default;
 let categories = require('../components/admin/categories.vue').default;
 let subcategory = require('../components/admin/subcategory.vue').default;
+let blogs = require('../components/admin/blog/blogs.vue').default;
+let blogcreate = require('../components/admin/blog/blogcreate.vue').default;
 // staff managment
 let roles = require('../components/admin/staffs/roles.vue').default;
 let BackendMaster = require('../components/BackendMaster').default;
@@ -19,7 +21,9 @@ export const routes = [
         name:'BackendMaster',
          component:BackendMaster,
          meta: { requiresAuth: true },
+
 beforeEnter: (to, from, next) => {
+
     if( User.loggedIn(store.getters.getUser.access_token)){
         if(store.getters.getUser.user.user_type==1){
             next();
@@ -32,9 +36,12 @@ beforeEnter: (to, from, next) => {
 },
          children: [
             {
+
                 path: '/admin/dashboard',
                 component:dashboard,
                 name: 'dashboard',
+
+
             },
             {
                 path: '/admin/categories',
@@ -50,6 +57,16 @@ beforeEnter: (to, from, next) => {
                 path: '/admin/roles',
                 component:roles,
                 name: 'roles',
+            },
+            {
+                path: '/admin/blogs',
+                component:blogs,
+                name: 'blogs',
+            },
+            {
+                path: '/admin/blog/create',
+                component:blogcreate,
+                name: 'blogcreate',
             },
         ]
 
