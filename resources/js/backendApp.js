@@ -78,7 +78,9 @@ Vue.component(
     "admin_master",
     require("./components/admin/adminMaster.vue").default
 );
+import moment from 'moment';
 
+Vue.prototype.moment = moment;
 // Vue.component('website_master', require('./components/website/master.vue').default);
 // Vue.component('seller_master', require('./components/seller/sellerMaster.vue').default);
 // Vue.component('user_master', require('./components/user/userMaster.vue').default);

@@ -44,4 +44,7 @@ Route::group([
 
     Route::get('site_depsubcategories_for_see/{id}', 'BlogsController@depsubcategories');
     Route::post('site_post_for_create', 'BlogsController@store');
+    Route::get('site_posts_for_see', 'BlogsController@index');
+    Route::get('site_posts_status_for_see/{id}', 'BlogsController@status');
+    Route::get('site_posts_approved_for_see/{id}', 'BlogsController@approvedstatus');
 });

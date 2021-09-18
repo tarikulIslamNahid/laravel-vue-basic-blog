@@ -19,7 +19,11 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        //
+        $posts = blogs::with("category", 'subcategory')->get();
+
+        return response()->json([
+            'posts' => $posts,
+        ]);
     }
 
     /**
@@ -105,6 +109,33 @@ class BlogsController extends Controller
     public function show(blogs $blogs)
     {
         //
+    }
+
+    public function status($id)
+    {
+        $posts = blogs::find($id);
+        if ($posts->status == 1) {
+            $posts->status = 0;
+            $success = 'Post Deactived Successfully';
+        } elseif ($posts->status == 0) {
+            $posts->status = 1;
+            $success = 'Post Activeted Successfully';
+        }
+        $posts->update();
+        return response()->json(['success' => $success]);
+    }
+    public function approvedstatus($id)
+    {
+        $posts = blogs::find($id);
+        if ($posts->approved == 1) {
+            $posts->approved = 0;
+            $success = 'Post Un-Approved Successfully';
+        } elseif ($posts->approved == 0) {
+            $posts->approved = 1;
+            $success = 'Post Approved Successfully';
+        }
+        $posts->update();
+        return response()->json(['success' => $success]);
     }
 
     /**
