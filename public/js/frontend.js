@@ -3984,6 +3984,21 @@ var User = /*#__PURE__*/function () {
     value: function loggedIn(StoreToken) {
       return this.hasToken(StoreToken);
     }
+  }, {
+    key: "isTokenExpired",
+    value: function isTokenExpired(token) {
+      var expiry = JSON.parse(atob(token.split('.')[1])).exp;
+      return Math.floor(new Date().getTime() / 1000) >= expiry;
+    }
+  }, {
+    key: "checkToken",
+    value: function checkToken(exp) {
+      if (Date.now() <= exp * 1000) {
+        console.log(true, 'token is not expired');
+      } else {
+        console.log(false, 'token is expired');
+      }
+    }
   }]);
 
   return User;

@@ -2946,6 +2946,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2988,15 +2989,17 @@ __webpack_require__.r(__webpack_exports__);
       }, 2000);
     },
     Loggedin: function Loggedin() {
-      if (this.USER != null) {
-        if (User.loggedIn(this.USER.access_token)) {
-          this.loggedInAdmin = true;
+      if (this.$store.getters.getUser != null) {
+        if (User.loggedIn(this.$store.getters.getUser.access_token)) {
+          if (User.isTokenExpired(this.$store.getters.getUser.access_token) == true) {
+            this.$store.commit('SET_USER', null);
+            window.location.href = "/";
+          }
+
+          this.loggedIn = true;
         } else {
-          this.loggedInAdmin = false;
           window.location.href = "/";
         }
-      } else {
-        window.location.href = "/";
       }
     }
   }
@@ -3578,21 +3581,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     VueEditor: vue2_editor__WEBPACK_IMPORTED_MODULE_0__.VueEditor
   },
-  props: {
-    labelPlaceholder: {
-      type: String,
-      "default": 'No file choosen'
-    }
-  },
   data: function data() {
     return {
       token: '',
+      user: [],
       search: '',
       posts: []
     };
@@ -3600,6 +3597,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     // change post status
     statusChange: function statusChange(post) {
+      var _this = this;
+
       var url = '/api/auth/site_posts_status_for_see/' + post.id;
       var bearer = 'bearer' + this.token;
       axios.get(url, {
@@ -3607,6 +3606,8 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': bearer
         }
       }).then(function (result) {
+        _this.PostsGet();
+
         Toast.fire({
           icon: 'success',
           title: result.data.success
@@ -3615,6 +3616,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     // change post Approved status
     ApprovedChange: function ApprovedChange(post) {
+      var _this2 = this;
+
       var url = '/api/auth/site_posts_approved_for_see/' + post.id;
       var bearer = 'bearer' + this.token;
       axios.get(url, {
@@ -3622,6 +3625,8 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': bearer
         }
       }).then(function (result) {
+        _this2.PostsGet();
+
         Toast.fire({
           icon: 'success',
           title: result.data.success
@@ -3629,8 +3634,8 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     // fatch categories data
-    CategoryGet: function CategoryGet() {
-      var _this = this;
+    PostsGet: function PostsGet() {
+      var _this3 = this;
 
       var url = '/api/auth/site_posts_for_see';
       var bearer = 'bearer' + this.token;
@@ -3639,18 +3644,46 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': bearer
         }
       }).then(function (result) {
-        _this.posts = result.data.posts;
+        _this3.posts = result.data.posts;
+        _this3.user = result.data.user;
       })["catch"](function (result) {
         if (result.message == 'Request failed with status code 401') {
-          _this.$store.commit('SET_USER', null);
+          _this3.$store.commit('SET_USER', null);
 
           window.location.href = "/";
         }
       });
     },
+    deletePost: function deletePost(id) {
+      var _this4 = this;
+
+      this.$Progress.start();
+      var url = '/api/auth/site_post_for_delete/' + id;
+      var bearer = 'bearer' + this.$store.getters.getUser.access_token;
+      axios["delete"](url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (res) {
+        _this4.$Progress.finish();
+
+        _this4.posts = _this4.posts.filter(function (res) {
+          return res.id != id;
+        });
+        Toast.fire({
+          icon: 'success',
+          title: res.data.success
+        });
+      });
+    },
     Loggedin: function Loggedin() {
       if (this.$store.getters.getUser != null) {
-        if (User.loggedIn(this.$store.getters.getUser.access_token)) {
+        if (User.loggedIn(this.token)) {
+          if (User.isTokenExpired(this.token) == true) {
+            this.$store.commit('SET_USER', null);
+            window.location.href = "/";
+          }
+
           this.loggedIn = true;
         } else {
           window.location.href = "/";
@@ -3660,17 +3693,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     filteredList: function filteredList() {
-      var _this2 = this;
+      var _this5 = this;
 
       return this.posts.filter(function (post) {
-        return post.title.toLowerCase().match(_this2.search.toLowerCase());
+        return post.title.toLowerCase().match(_this5.search.toLowerCase());
       });
     }
   },
   created: function created() {
     this.token = this.$store.getters.getUser.access_token;
     this.Loggedin();
-    this.CategoryGet();
+    this.PostsGet();
   }
 });
 
@@ -5139,6 +5172,21 @@ var User = /*#__PURE__*/function () {
     key: "loggedIn",
     value: function loggedIn(StoreToken) {
       return this.hasToken(StoreToken);
+    }
+  }, {
+    key: "isTokenExpired",
+    value: function isTokenExpired(token) {
+      var expiry = JSON.parse(atob(token.split('.')[1])).exp;
+      return Math.floor(new Date().getTime() / 1000) >= expiry;
+    }
+  }, {
+    key: "checkToken",
+    value: function checkToken(exp) {
+      if (Date.now() <= exp * 1000) {
+        console.log(true, 'token is not expired');
+      } else {
+        console.log(false, 'token is expired');
+      }
     }
   }]);
 
@@ -11831,7 +11879,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nul.nk-tb-actions.gx-1:hover .dropdown-menu.dropdown-menu-right {\n    display: block !important;\n}\n.c-field__error {\n    font-size: 12px;\n    color: #d71149;\n}\n.c-file-input {\n    position: relative;\n    display: block;\n    height: 36px;\n    border: 1px dashed #ddd;\n    background-color: #fff;\n}\n\n/* line 24, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input:invalid,\n.c-field--error .c-file-input {\n    background-color: #ffe6e9;\n    border-color: #ff566a;\n}\n\n/* line 28, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input:invalid:focus,\n.c-field--error .c-file-input:focus {\n    background-color: #ffe6e9;\n    border-color: #ff566a;\n}\n\n/* line 34, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__label {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    padding-left: 36px;\n    padding-right: 36px;\n    line-height: 36px;\n    color: #999;\n    font-size: 12px;\n    overflow: hidden;\n    word-wrap: break-word;\n    z-index: 1;\n}\n\n/* line 50, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__field {\n    position: absolute !important;\n    height: 1px !important;\n    width: 1px !important;\n    padding: 0 !important;\n    overflow: hidden !important;\n    clip: rect(0, 0, 0, 0) !important;\n    z-index: -1;\n}\n\n/* line 59, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__field:focus {\n    outline: none;\n}\n\n/* line 64, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__indicator {\n    position: absolute;\n    left: 0;\n    top: 0;\n    height: 100%;\n    width: 36px;\n    z-index: 2;\n}\n\n/* line 73, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__indicator__icon {\n    color: #bbb;\n    position: absolute;\n    top: 50%;\n    transform: translate(0, -50%);\n    left: 4px;\n    font-size: 20px;\n}\n\n/* line 81, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.has-file .c-file-input__indicator__icon {\n    color: #d71149;\n}\n\n/* line 86, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__remove {\n    display: none;\n    position: absolute;\n    top: 0;\n    right: 0;\n    height: 100%;\n    width: 36px;\n    z-index: 2;\n}\n.has-file>.c-file-input__remove {\n    display: block;\n}\n\n/* line 100, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */\n.c-file-input__remove__icon {\n    position: absolute;\n    top: 50%;\n    transform: translate(0, -50%);\n    left: 4px;\n    font-size: 20px;\n    color: #ff566a;\n}\n\n/* tags  */\n.tag-input {\n    width: 100%;\n    border: 1px solid #eee;\n    font-size: 0.9em;\n    height: 50px;\n    box-sizing: border-box;\n}\n.tag-input__tag {\n    height: 30px;\n    float: left;\n    margin-right: 10px;\n    background-color: #eee;\n    margin-top: 10px;\n    line-height: 30px;\n    padding: 0 5px;\n    border-radius: 5px;\n}\n.tag-input__tag>span {\n    cursor: pointer;\n    opacity: 0.75;\n}\n.tag-input__text {\n    border: none;\n    outline: none;\n    font-size: 0.9em;\n    line-height: 47px;\n    border-bottom: 2px solid rgb(131 94 218);\n    background: none;\n    padding: 0px 10px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nul.nk-tb-actions.gx-1:hover .dropdown-menu.dropdown-menu-right {\n    display: block !important;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -76275,7 +76323,36 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "nk-block nk-block-lg" }, [
         _c("div", { staticClass: "card card-preview" }, [
-          _vm._m(0),
+          _c(
+            "div",
+            {
+              staticClass:
+                "nk-block-head-content d-flex justify-content-between"
+            },
+            [
+              _c("h4", { staticClass: "nk-block-title my-4 ml-5" }, [
+                _vm._v("Blog List")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn my-4 mr-4 btn-primary",
+                      attrs: { to: { name: "blogcreate" } }
+                    },
+                    [
+                      _c("em", { staticClass: "icon ni ni-plus-circle" }),
+                      _c("span", [_vm._v("Create")])
+                    ]
+                  )
+                ],
+                1
+              )
+            ]
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
             _c(
@@ -76295,7 +76372,7 @@ var render = function() {
                   attrs: {
                     type: "text",
                     id: "searchItems",
-                    placeholder: "Search Blog category"
+                    placeholder: "Search Blog By Name"
                   },
                   domProps: { value: _vm.search },
                   on: {
@@ -76319,7 +76396,7 @@ var render = function() {
                 attrs: { "data-auto-responsive": "false" }
               },
               [
-                _vm._m(1),
+                _vm._m(0),
                 _vm._v(" "),
                 _c(
                   "tbody",
@@ -76445,7 +76522,7 @@ var render = function() {
                         _c("ul", { staticClass: "nk-tb-actions gx-1" }, [
                           _c("li", [
                             _c("div", { staticClass: "drodown" }, [
-                              _vm._m(2, true),
+                              _vm._m(1, true),
                               _vm._v(" "),
                               _c(
                                 "div",
@@ -76458,7 +76535,7 @@ var render = function() {
                                     "ul",
                                     { staticClass: "link-list-opt no-bdr" },
                                     [
-                                      _vm._m(3, true),
+                                      _vm._m(2, true),
                                       _vm._v(" "),
                                       _c(
                                         "li",
@@ -76489,7 +76566,7 @@ var render = function() {
                                         {
                                           on: {
                                             click: function($event) {
-                                              return _vm.deleteCat(post.id)
+                                              return _vm.deletePost(post.id)
                                             }
                                           }
                                         },
@@ -76528,38 +76605,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "nk-block-head-content d-flex justify-content-between" },
-      [
-        _c("h4", { staticClass: "nk-block-title my-4 ml-5" }, [
-          _vm._v("Blog List")
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "button",
-            {
-              staticClass: "btn my-4 mr-4 btn-primary",
-              attrs: {
-                type: "button",
-                "data-toggle": "modal",
-                "data-target": "#modalTabs"
-              }
-            },
-            [
-              _c("em", { staticClass: "icon ni ni-plus-circle" }),
-              _c("span", [_vm._v("Create")])
-            ]
-          )
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

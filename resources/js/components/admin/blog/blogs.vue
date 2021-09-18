@@ -16,9 +16,8 @@
                     <div class="nk-block-head-content d-flex justify-content-between">
                         <h4 class="nk-block-title my-4 ml-5">Blog List</h4>
                         <div>
-                            <button type="button" class="btn my-4 mr-4 btn-primary" data-toggle="modal"
-                                data-target="#modalTabs"><em class="icon ni ni-plus-circle"></em><span>Create</span>
-                            </button>
+                            <router-link :to="{ name: 'blogcreate'}" class="btn my-4 mr-4 btn-primary" ><em class="icon ni ni-plus-circle"></em><span>Create</span>
+                            </router-link>
 
                         </div>
                     </div>
@@ -26,7 +25,7 @@
 
                         <div class='col-3 nk-block-head-content offset-9  pr-4'>
                             <input type="text" class="form-control" v-model='search' id="searchItems"
-                                placeholder="Search Blog category">
+                                placeholder="Search Blog By Name">
                         </div>
 
                     </div>
@@ -116,7 +115,7 @@
                                                                         class="icon ni ni-repeat"></em><span>Edit</span>
                                                                 </router-link>
                                                             </li>
-                                                            <li @click="deleteCat(post.id)">
+                                                            <li @click="deletePost(post.id)">
                                                                 <router-link to=""><em
                                                                         class="icon ni ni-trash"></em><span>Delete</span>
                                                                 </router-link>
@@ -148,15 +147,10 @@
         components: {
             VueEditor
         },
-        props: {
-            labelPlaceholder: {
-                type: String,
-                default: 'No file choosen',
-            },
-        },
         data() {
             return {
                 token: '',
+                user:[],
                 search: '',
                 posts: [],
 
@@ -174,6 +168,8 @@
                         }
                     })
                     .then((result) => {
+            this.PostsGet();
+
                           Toast.fire({
                                 icon: 'success',
                                 title: result.data.success
@@ -193,6 +189,7 @@
                         }
                     })
                     .then((result) => {
+            this.PostsGet();
                           Toast.fire({
                                 icon: 'success',
                                 title: result.data.success
@@ -202,7 +199,7 @@
             },
 
             // fatch categories data
-            CategoryGet() {
+            PostsGet() {
                 let url = '/api/auth/site_posts_for_see';
                 let bearer = 'bearer' + this.token;
                 axios.get(url, {
@@ -212,6 +209,7 @@
                     })
                     .then((result) => {
                         this.posts = result.data.posts
+                        this.user = result.data.user
 
                     }).catch((result) => {
                         if (result.message == 'Request failed with status code 401') {
@@ -221,10 +219,32 @@
                     })
             },
 
+deletePost(id){
+this.$Progress.start()
+let url='/api/auth/site_post_for_delete/'+id;
+let bearer='bearer'+ this.$store.getters.getUser.access_token;
+axios.delete(url,{headers: {'Authorization':bearer}})
+.then(res => {
+    this.$Progress.finish()
+       this.posts=this.posts.filter(res=>{
+         return res.id != id
+     })
+         Toast.fire({
+        icon: 'success',
+        title: res.data.success,
+    })
+})
+},
+
             Loggedin() {
 
                 if (this.$store.getters.getUser != null) {
-                    if (User.loggedIn(this.$store.getters.getUser.access_token)) {
+                    if (User.loggedIn(this.token)) {
+                     if (User.isTokenExpired(this.token) == true) {
+                            this.$store.commit('SET_USER', null);
+                            window.location.href = "/"
+
+                        }
                         this.loggedIn = true;
                     } else {
                         window.location.href = "/"
@@ -244,12 +264,9 @@
             }
         },
         created() {
-
-
-
             this.token = this.$store.getters.getUser.access_token
             this.Loggedin();
-            this.CategoryGet();
+            this.PostsGet();
         },
     }
 
@@ -257,157 +274,6 @@
 <style>
     ul.nk-tb-actions.gx-1:hover .dropdown-menu.dropdown-menu-right {
         display: block !important;
-    }
-
-    .c-field__error {
-        font-size: 12px;
-        color: #d71149;
-    }
-
-    .c-file-input {
-        position: relative;
-        display: block;
-        height: 36px;
-        border: 1px dashed #ddd;
-        background-color: #fff;
-    }
-
-    /* line 24, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input:invalid,
-    .c-field--error .c-file-input {
-        background-color: #ffe6e9;
-        border-color: #ff566a;
-    }
-
-    /* line 28, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input:invalid:focus,
-    .c-field--error .c-file-input:focus {
-        background-color: #ffe6e9;
-        border-color: #ff566a;
-    }
-
-    /* line 34, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding-left: 36px;
-        padding-right: 36px;
-        line-height: 36px;
-        color: #999;
-        font-size: 12px;
-        overflow: hidden;
-        word-wrap: break-word;
-        z-index: 1;
-    }
-
-    /* line 50, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__field {
-        position: absolute !important;
-        height: 1px !important;
-        width: 1px !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-        clip: rect(0, 0, 0, 0) !important;
-        z-index: -1;
-    }
-
-    /* line 59, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__field:focus {
-        outline: none;
-    }
-
-    /* line 64, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__indicator {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 36px;
-        z-index: 2;
-    }
-
-    /* line 73, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__indicator__icon {
-        color: #bbb;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-        -o-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        left: 4px;
-        font-size: 20px;
-    }
-
-    /* line 81, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .has-file .c-file-input__indicator__icon {
-        color: #d71149;
-    }
-
-    /* line 86, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__remove {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 36px;
-        z-index: 2;
-    }
-
-    .has-file>.c-file-input__remove {
-        display: block;
-    }
-
-    /* line 100, app/assets/stylesheets/mweb/6-components/_components.file-input.scss */
-    .c-file-input__remove__icon {
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-        -o-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        left: 4px;
-        font-size: 20px;
-        color: #ff566a;
-    }
-
-    /* tags  */
-    .tag-input {
-        width: 100%;
-        border: 1px solid #eee;
-        font-size: 0.9em;
-        height: 50px;
-        box-sizing: border-box;
-    }
-
-    .tag-input__tag {
-        height: 30px;
-        float: left;
-        margin-right: 10px;
-        background-color: #eee;
-        margin-top: 10px;
-        line-height: 30px;
-        padding: 0 5px;
-        border-radius: 5px;
-    }
-
-    .tag-input__tag>span {
-        cursor: pointer;
-        opacity: 0.75;
-    }
-
-    .tag-input__text {
-        border: none;
-        outline: none;
-        font-size: 0.9em;
-        line-height: 47px;
-        border-bottom: 2px solid rgb(131 94 218);
-        background: none;
-        padding: 0px 10px;
     }
 
 </style>

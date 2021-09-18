@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <loading :active.sync="isLoading" :is-full-page="fullPage"></loading>
 
         <div :class="
@@ -75,7 +75,7 @@
                                                                 <span class="nk-menu-text">Categories</span>
                                                             </router-link>
                                                         </li>
-                                                          <li class="nk-menu-item">
+                                                        <li class="nk-menu-item">
                                                             <router-link :to="{ name: 'subcategory'}"
                                                                 class="nk-menu-link" data-original-title="" title="">
                                                                 <span class="nk-menu-text">Sub-Categpry</span>
@@ -86,15 +86,16 @@
                                                                 data-original-title="" title=""><span
                                                                     class="nk-menu-text">Blog Posts</span></router-link>
                                                         </li>
-                                                          <li class="nk-menu-item">
-                                                            <router-link :to="{ name: 'blogcreate'}" class="nk-menu-link"
-                                                                data-original-title="" title=""><span
-                                                                    class="nk-menu-text">Blog Create</span></router-link>
+                                                        <li class="nk-menu-item">
+                                                            <router-link :to="{ name: 'blogcreate'}"
+                                                                class="nk-menu-link" data-original-title="" title="">
+                                                                <span class="nk-menu-text">Blog Create</span>
+                                                            </router-link>
                                                         </li>
                                                     </ul>
                                                     <!-- .nk-menu-sub -->
                                                 </li>
-                                                            <!-- .nk-menu-heading -->
+                                                <!-- .nk-menu-heading -->
                                                 <li class="nk-menu-item has-sub">
                                                     <a href="#" class="nk-menu-link nk-menu-toggle"
                                                         data-original-title="" title="">
@@ -104,8 +105,8 @@
                                                     </a>
                                                     <ul class="nk-menu-sub">
                                                         <li class="nk-menu-item">
-                                                            <router-link :to="{ name: 'roles'}"
-                                                                class="nk-menu-link" data-original-title="" title="">
+                                                            <router-link :to="{ name: 'roles'}" class="nk-menu-link"
+                                                                data-original-title="" title="">
                                                                 <span class="nk-menu-text">Manage Roles</span>
                                                             </router-link>
                                                         </li>
@@ -1142,21 +1143,20 @@
                 }, 2000);
             },
             Loggedin() {
-                if (this.USER != null) {
-                    if (User.loggedIn(this.USER.access_token)) {
-                        this.loggedInAdmin = true;
 
+                if (this.$store.getters.getUser != null) {
+                    if (User.loggedIn(this.$store.getters.getUser.access_token)) {
+                        if (User.isTokenExpired(this.$store.getters.getUser.access_token) == true) {
+                            this.$store.commit('SET_USER', null);
+                            window.location.href = "/"
 
+                        }
+                        this.loggedIn = true;
                     } else {
-                        this.loggedInAdmin = false;
-                    window.location.href = "/";
-
+                        window.location.href = "/"
                     }
-                } else {
-                    window.location.href = "/";
-
                 }
-            }
+            },
         },
 
     };

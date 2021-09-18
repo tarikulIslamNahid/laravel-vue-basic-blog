@@ -20,9 +20,10 @@ class BlogsController extends Controller
     public function index()
     {
         $posts = blogs::with("category", 'subcategory')->get();
-
+        $user = Auth::user();
         return response()->json([
             'posts' => $posts,
+            'user' => $user,
         ]);
     }
 
@@ -47,7 +48,6 @@ class BlogsController extends Controller
 
 
         try {
-            // $validateData = $request->validate();
             $validator = Validator::make($request->all(), [
                 'title' => 'required|unique:blogs|max:255',
                 'category_id' => 'required',
@@ -63,6 +63,7 @@ class BlogsController extends Controller
             if ($validator->fails()) {
                 return response()->json(['error' => $validator->errors(), 422]);
             } else {
+                // @dd($request->all());
                 $blogs = new blogs;
                 $position = strpos($request->photo, ';');
                 $sub = substr($request->photo, 0, $position);
@@ -173,8 +174,22 @@ class BlogsController extends Controller
      * @param  \App\blogs  $blogs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(blogs $blogs)
+    public function destroy($id)
     {
-        //
+        $blog = blogs::Find($id);
+
+        if ($blog) {
+
+            $Blogimg = substr($blog->photo, 1);
+            $imgpath = public_path($Blogimg);
+            if ($Blogimg && file_exists($imgpath)) {
+                unlink($Blogimg);
+            }
+
+            $blog->delete();
+            return response()->json(['success' => 'Category Deleted Successfully !']);
+        } else {
+            return response()->json('failed', 404);
+        }
     }
 }
