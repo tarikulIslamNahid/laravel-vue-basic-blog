@@ -14,24 +14,23 @@ class CreateBlogsTable extends Migration
     public function up()
     {
         Schema::create('blogs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->integer('user_id');
             $table->integer('category_id');
             $table->integer('subcategory_id');
-            $table->integer('featured')->default(0); // 1= yes & 0= no"
+            $table->integer('featured')->comment("default(0); // 1= yes & 0= no");
             $table->string('title');
             $table->string('slug');
             $table->string('photo');
             $table->string('tags');
             $table->longText('disc');
             $table->string('added_by');
-            $table->string('approved')->default(0); // 0 => unapproved 1 => approved By Admin
-            $table->integer('status')->default(0); // 1 = active & 0 = deactive
+            $table->string('approved')->comment("default(0) 0 => unapproved 1 => approved By Admin");
+            $table->integer('status')->comment("default(1); // 1= active & 2= deactive");
             $table->string('meta_title')->nullable();
             $table->string('meta_desc')->nullable();
             $table->string('meta_img')->nullable();
             $table->string('meta_keyword')->nullable();
-            $table->timestamps();
         });
     }
 

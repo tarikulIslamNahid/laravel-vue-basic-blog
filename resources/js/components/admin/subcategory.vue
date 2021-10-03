@@ -241,6 +241,7 @@
                     })
                     .then((result) => {
                         this.categories = result.data.categories
+                        console.log(result.data.categories)
 
                     }).catch((result) => {
                         if (result.message == 'Request failed with status code 401') {

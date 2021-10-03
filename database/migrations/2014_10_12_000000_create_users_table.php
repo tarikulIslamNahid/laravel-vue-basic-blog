@@ -16,21 +16,21 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('user_type')->default(3);  // 1 -> super Admin , 2 -> staffs , 3 -> users
-            $table->string('name');
-            $table->string('username', 100)->unique();
+            $table->string('name', 225);
+            $table->string('username', 225)->unique();
             $table->string('email', 100)->unique();
             $table->string('email_verify')->default(0);
+            $table->string('token')->nullable();
             $table->string('password');
             $table->string('phone', 20)->nullable()->unique();
-            $table->string('address')->nullable();
-            $table->string('city')->nullable();
+            $table->text('address')->nullable();
+            $table->string('city', 255)->nullable();
             $table->string('country')->nullable();
             $table->string('zip')->nullable();
-            $table->string('avatar')->nullable();
-            $table->string('social')->nullable();
-            $table->string('provider')->nullable();
-            $table->string('provider_id')->nullable();
-            $table->boolean('status')->default(1);
+            $table->text('avatar')->nullable();
+            $table->text('social')->nullable(); // all social link and title added by json formate
+            $table->boolean('status')->default(1); // 1 => active , 0 => unactive
+            $table->boolean('ban')->default(0); // 0 => unban, 1 => banned"
             $table->boolean('added_by')->default(0);
             $table->rememberToken();
             $table->timestamps();

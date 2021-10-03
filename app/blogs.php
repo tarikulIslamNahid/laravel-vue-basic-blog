@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class blogs extends Model
 {
     protected $fillable = [
-        'title', 'slug', 'category_id', 'subcategory_id', 'photo', 'tags', 'disc', 'added_by', 'approved', 'status', 'meta_title', 'meta_desc', 'meta_img', 'meta_keyword'
+        'title', 'slug', 'user_id', 'category_id', 'subcategory_id', 'photo', 'tags', 'disc', 'featured', 'added_by', 'approved', 'status', 'meta_title', 'meta_desc', 'meta_img', 'meta_keyword'
     ];
     public function category()
     {

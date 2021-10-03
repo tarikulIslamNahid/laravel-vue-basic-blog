@@ -110,6 +110,8 @@ const Toast = Swal.mixin({
 
 window.Toast = Toast;
 
+
+
 //Pagination
 Vue.component("pagination", require("laravel-vue-pagination"));
 

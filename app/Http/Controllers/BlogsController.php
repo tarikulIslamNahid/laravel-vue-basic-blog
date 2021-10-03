@@ -45,7 +45,7 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
-
+        // return response()->json(Auth::user()->id);
 
         try {
             $validator = Validator::make($request->all(), [
@@ -76,6 +76,7 @@ class BlogsController extends Controller
                 $img->save($image_url);
 
                 $blogs->title = $request->title;
+                $blogs->user_id = Auth::user()->id;
                 $blogs->slug = Str::slug($request->title);
                 $blogs->category_id = $request->category_id;
                 $blogs->subcategory_id = $request->subcategory_id;
@@ -90,6 +91,7 @@ class BlogsController extends Controller
                 $blogs->added_by = Auth::user()->name;
                 if (Auth::user()->user_type = 1) {
                     $blogs->approved = 1;
+                    $blogs->status = 1;
                 } else {
                     $blogs->approved = 0;
                 }
@@ -107,10 +109,6 @@ class BlogsController extends Controller
      * @param  \App\blogs  $blogs
      * @return \Illuminate\Http\Response
      */
-    public function show(blogs $blogs)
-    {
-        //
-    }
 
     public function status($id)
     {

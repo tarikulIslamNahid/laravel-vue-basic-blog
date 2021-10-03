@@ -3024,6 +3024,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "adminMaster",
   data: function data() {
@@ -3033,22 +3034,41 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    logout: function logout() {
+      this.$store.commit('SET_USER', null);
+      Toast.fire({
+        icon: 'success',
+        title: 'Logout successfully'
+      });
+      window.location.href = "/";
+    },
+    autologout: function autologout(expTime) {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.logout();
+      }, expTime);
+    },
     Loggedin: function Loggedin() {
-      if (this.USER != null) {
-        if (User.loggedIn(this.USER.access_token)) {
-          this.loggedInAdmin = true;
+      if (this.$store.getters.getUser != null) {
+        if (User.loggedIn(this.$store.getters.getUser.access_token)) {
+          if (User.isTokenExpired(this.$store.getters.getUser.access_token) == true) {
+            this.$store.commit('SET_USER', null);
+            window.location.href = "/";
+          }
+
+          this.loggedIn = true;
         } else {
-          this.loggedInAdmin = false;
           window.location.href = "/";
         }
-      } else {
-        window.location.href = "/";
       }
     }
   },
   created: function created() {
-    this.USER = this.$store.getters.getUser;
+    this.USER = this.$store.getters.getUser; // console.log(this.USER.expires_in)
+
     this.Loggedin();
+    this.autologout(this.USER.expires_in * 1000);
   }
 });
 
@@ -4403,6 +4423,7 @@ __webpack_require__.r(__webpack_exports__);
           _this2.form.photo = event.target.result;
           _this2.catUpform.by = '';
           _this2.catUpform.photo = event.target.result;
+          console.log(event.target.result);
         };
 
         reader.readAsDataURL(file);
@@ -4583,6 +4604,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.token = this.$store.getters.getUser.access_token;
+    console.log(this.$store.getters.getUser.access_token);
     this.Loggedin();
     this.CategoryGet();
   }
@@ -5237,6 +5259,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }).then(function (result) {
         _this.categories = result.data.categories;
+        console.log(result.data.categories);
       })["catch"](function (result) {
         if (result.message == 'Request failed with status code 401') {
           _this.$store.commit('SET_USER', null);
@@ -5673,7 +5696,9 @@ var blogs = __webpack_require__(/*! ../components/admin/blog/blogs.vue */ "./res
 
 var blogcreate = __webpack_require__(/*! ../components/admin/blog/blogcreate.vue */ "./resources/js/components/admin/blog/blogcreate.vue").default;
 
-var blogedit = __webpack_require__(/*! ../components/admin/blog/edit.vue */ "./resources/js/components/admin/blog/edit.vue").default; // staff managment
+var blogedit = __webpack_require__(/*! ../components/admin/blog/edit.vue */ "./resources/js/components/admin/blog/edit.vue").default;
+
+var user = __webpack_require__(/*! ../components/admin/user/index.vue */ "./resources/js/components/admin/user/index.vue").default; // staff managment
 
 
 var roles = __webpack_require__(/*! ../components/admin/staffs/roles.vue */ "./resources/js/components/admin/staffs/roles.vue").default;
@@ -5727,6 +5752,10 @@ var routes = [{
     path: '/admin/blog/create',
     component: blogcreate,
     name: 'blogcreate'
+  }, {
+    path: '/admin/users',
+    component: user,
+    name: 'user'
   }, {
     path: '/admin/blog/edit/:id',
     component: blogedit,
@@ -72864,6 +72893,40 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/admin/subcategory.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/user/index.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/admin/user/index.vue ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/admin/user/index.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),

@@ -1,0 +1,19 @@
+@API_URL=http://127.0.0.1:8001
+@TOKEN=bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMjczNzQxMSwiZXhwIjoxNjMyNzQxMDExLCJuYmYiOjE2MzI3Mzc0MTEsImp0aSI6ImJYUnd6dXIyY0FEb2ZjZ2kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.1V2ZKWqt7C60e_DjLIkbs4H8VsKn_jHuGobihsFSFjU
+
+### [ Sub Category get ]
+
+GET {{API_URL}}/api/auth/site_subcategories_for_see HTTP/1.1
+
+### [ Sub Category Store ]
+POST {{API_URL}}/api/auth/site_subcategories_for_create HTTP/1.1
+Content-Type: application/json
+Authorization: {{TOKEN}}
+
+
+{
+ "name" : "AllOnRestApi",
+ "category_id":{
+   "id":"14"
+  }
+}

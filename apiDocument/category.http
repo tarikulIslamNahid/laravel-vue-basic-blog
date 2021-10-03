@@ -1,0 +1,17 @@
+GET /api/auth/site_categories_for_see HTTP/1.1
+Host: 127.0.0.1:8001
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMjY2Nzk0NCwiZXhwIjoxNjMyNjcxNTQ0LCJuYmYiOjE2MzI2Njc5NDQsImp0aSI6IndacnVYWXY2WUJJRm5pdkYiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.frGATWamv-p24KycxKK_pe9r5nM_87aLfuHYYkoGpgE
+
+
+### [ Create Contact ]
+POST /api/auth/site_categories_for_create HTTP/1.1
+Host: 127.0.0.1:8001
+Accept: application/json
+content-type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMjY2Nzk0NCwiZXhwIjoxNjMyNjcxNTQ0LCJuYmYiOjE2MzI2Njc5NDQsImp0aSI6IndacnVYWXY2WUJJRm5pdkYiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.frGATWamv-p24KycxKK_pe9r5nM_87aLfuHYYkoGpgE
+
+{
+"name":"this is again",
+"photo":"base64 Image URL"
+
+}

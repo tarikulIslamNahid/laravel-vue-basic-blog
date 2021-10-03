@@ -260,7 +260,7 @@ let bearer='bearer'+ this.token;
                         this.form.photo = event.target.result
                         this.catUpform.by = ''
                         this.catUpform.photo = event.target.result
-
+                        console.log(event.target.result)
                     };
                     reader.readAsDataURL(file);
                 }
@@ -403,6 +403,7 @@ axios.delete(url,{headers: {'Authorization':bearer}})
   },
              created() {
                  this.token=this.$store.getters.getUser.access_token
+                 console.log(this.$store.getters.getUser.access_token)
             this.Loggedin();
             this.CategoryGet();
         },
