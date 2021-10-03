@@ -51,4 +51,15 @@ Route::group([
     Route::delete('site_post_for_delete/{id}', 'BlogsController@destroy');
     Route::get('site_post_edit_for_see/{id}', 'BlogsController@edit');
     Route::post('site_post_for_edit', 'BlogsController@update');
+
+
+
+    // for Subscribers
+    Route::get('site_subscribers_for_see', 'SubscribersController@index');
+    // Route::post('site_categories_for_create', 'Admin\CategoriesController@store');
+    // Route::post('site_categories_for_update', 'Admin\CategoriesController@update');
+    // Route::delete('site_categories_for_delete/{id}', 'Admin\CategoriesController@destroy');
+    // Route::get('site_categories_for_edit/{id}', 'Admin\CategoriesController@edit');
+
+
 });

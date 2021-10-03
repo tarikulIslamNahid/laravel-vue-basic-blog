@@ -1,4 +1,5 @@
 @API_URL=http://127.0.0.1:8001
 @TOKEN=bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzI1NTg1NywiZXhwIjoxNjMzMjU5NDU3LCJuYmYiOjE2MzMyNTU4NTcsImp0aSI6IkZhQ2lvZXZkbmI2R1ZZakwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.tWY9OWOyb3iQ-yzEP22_4yEaX-fnbJibp4iQ5G6SMpI
 
-GET {{API_URL}}/api/auth/site_posts_for_see HTTP/1.1
+### [ get all subscribers ]
+GET {{API_URL}}/api/auth/site_subscribers_for_see HTTP/1.1

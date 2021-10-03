@@ -14,7 +14,12 @@ class SubscribersController extends Controller
      */
     public function index()
     {
-        //
+        $subscribers = subscribers::get();
+
+        return response()->json([
+            'subscribers' => $subscribers,
+            // 'subscribers' => json_encode($subscribers),
+        ]);
     }
 
     /**
