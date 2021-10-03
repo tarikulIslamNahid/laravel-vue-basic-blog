@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\subscribers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class SubscribersController extends Controller
 {
@@ -40,7 +41,25 @@ class SubscribersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        try {
+            // $validateData = $request->validate();
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|unique:subscribers|max:255',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json(['error' => $validator->errors(), 422]);
+            } else {
+
+                $subscribers = new subscribers;
+                $subscribers->email = $request->email;
+                $subscribers->save();
+                return response()->json(['success' => "Subscribe Successfully !", 200]);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error' => "Oops, Something Went Wrong"]);
+        }
     }
 
     /**
