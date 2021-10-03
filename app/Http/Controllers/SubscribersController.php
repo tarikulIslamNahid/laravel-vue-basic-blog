@@ -103,8 +103,16 @@ class SubscribersController extends Controller
      * @param  \App\subscribers  $subscribers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(subscribers $subscribers)
+    public function destroy($id)
     {
-        //
+        $subscribers = subscribers::Find($id);
+
+        if ($subscribers) {
+
+            $subscribers->delete();
+            return response()->json(['success' => 'UnSubscribed Successfully !', 200]);
+        } else {
+            return response()->json('failed', 404);
+        }
     }
 }

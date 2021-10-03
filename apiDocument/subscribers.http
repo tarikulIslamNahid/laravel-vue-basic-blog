@@ -19,3 +19,7 @@ Authorization: {{TOKEN}}
 @id=2
 GET {{API_URL}}/api/auth/site_subscribers_for_edit/{{id}} HTTP/1.1
 
+
+### [ Delete subscribers by id ]
+@id=2
+DELETE  {{API_URL}}/api/auth/site_subscribers_for_delete/{{id}} HTTP/1.1
