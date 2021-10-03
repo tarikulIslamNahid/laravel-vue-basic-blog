@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Auth;
 
 class BlogsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => ['index']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -132,6 +137,19 @@ class BlogsController extends Controller
         } elseif ($posts->approved == 0) {
             $posts->approved = 1;
             $success = 'Post Approved Successfully';
+        }
+        $posts->update();
+        return response()->json(['success' => $success]);
+    }
+    public function featuredstatus($id)
+    {
+        $posts = blogs::find($id);
+        if ($posts->featured == 1) {
+            $posts->featured = 0;
+            $success = 'Remove Featured Successfully';
+        } elseif ($posts->featured == 0) {
+            $posts->featured = 1;
+            $success = 'Featured Successfully';
         }
         $posts->update();
         return response()->json(['success' => $success]);

@@ -3601,6 +3601,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3653,9 +3661,28 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
+    // change post Featured status
+    featuredChange: function featuredChange(post) {
+      var _this3 = this;
+
+      var url = '/api/auth/site_posts_featured_for_see/' + post.id;
+      var bearer = 'bearer' + this.token;
+      axios.get(url, {
+        headers: {
+          'Authorization': bearer
+        }
+      }).then(function (result) {
+        _this3.PostsGet();
+
+        Toast.fire({
+          icon: 'success',
+          title: result.data.success
+        });
+      });
+    },
     // fatch categories data
     PostsGet: function PostsGet() {
-      var _this3 = this;
+      var _this4 = this;
 
       var url = '/api/auth/site_posts_for_see';
       var bearer = 'bearer' + this.token;
@@ -3664,18 +3691,18 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': bearer
         }
       }).then(function (result) {
-        _this3.posts = result.data.posts;
-        _this3.user = result.data.user;
+        _this4.posts = result.data.posts;
+        _this4.user = result.data.user;
       })["catch"](function (result) {
         if (result.message == 'Request failed with status code 401') {
-          _this3.$store.commit('SET_USER', null);
+          _this4.$store.commit('SET_USER', null);
 
           window.location.href = "/";
         }
       });
     },
     deletePost: function deletePost(id) {
-      var _this4 = this;
+      var _this5 = this;
 
       this.$Progress.start();
       var url = '/api/auth/site_post_for_delete/' + id;
@@ -3685,9 +3712,9 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': bearer
         }
       }).then(function (res) {
-        _this4.$Progress.finish();
+        _this5.$Progress.finish();
 
-        _this4.posts = _this4.posts.filter(function (res) {
+        _this5.posts = _this5.posts.filter(function (res) {
           return res.id != id;
         });
         Toast.fire({
@@ -3713,10 +3740,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     filteredList: function filteredList() {
-      var _this5 = this;
+      var _this6 = this;
 
       return this.posts.filter(function (post) {
-        return post.title.toLowerCase().match(_this5.search.toLowerCase());
+        return post.title.toLowerCase().match(_this6.search.toLowerCase());
       });
     }
   },
@@ -77067,7 +77094,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("td", { staticClass: "nk-tb-col tb-col-md" }, [
-                        _c("li", [
+                        _c("li", { staticStyle: { "list-style": "none" } }, [
                           _c("span", { staticClass: "font-weight-bold" }, [
                             _vm._v("Published : ")
                           ]),
@@ -77077,7 +77104,7 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _c("li", [
+                        _c("li", { staticStyle: { "list-style": "none" } }, [
                           _c("span", { staticClass: "font-weight-bold" }, [
                             _vm._v("Updated : ")
                           ]),
@@ -77111,6 +77138,34 @@ var render = function() {
                             _c("label", {
                               staticClass: "custom-control-label",
                               attrs: { for: post.slug }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "nk-tb-col tb-col-md" }, [
+                        _c(
+                          "div",
+                          { staticClass: "custom-control custom-switch" },
+                          [
+                            _c("input", {
+                              staticClass: "custom-control-input",
+                              attrs: {
+                                type: "checkbox",
+                                name: "status",
+                                id: "featured" + post.slug
+                              },
+                              domProps: { checked: post.featured == 1 },
+                              on: {
+                                change: function($event) {
+                                  return _vm.featuredChange(post)
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", {
+                              staticClass: "custom-control-label",
+                              attrs: { for: "featured" + post.slug }
                             })
                           ]
                         )
@@ -77247,22 +77302,32 @@ var staticRenderFns = [
           [_c("span", { staticClass: "sub-text" }, [_vm._v("Post")])]
         ),
         _vm._v(" "),
-        _c("th", { staticClass: "nk-tb-col tb-col-md" }, [
-          _c("span", { staticClass: "sub-text" }, [
-            _vm._v("Category / Subcategory")
-          ])
-        ]),
+        _c(
+          "th",
+          { staticClass: "nk-tb-col tb-col-md", attrs: { width: "150px" } },
+          [
+            _c("span", { staticClass: "sub-text" }, [
+              _vm._v("Category / Subcategory")
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c("th", { staticClass: "nk-tb-col tb-col-md" }, [
           _c("span", { staticClass: "sub-text" }, [_vm._v("Author")])
         ]),
         _vm._v(" "),
-        _c("th", { staticClass: "nk-tb-col tb-col-md" }, [
-          _c("span", { staticClass: "sub-text" }, [_vm._v("Date")])
-        ]),
+        _c(
+          "th",
+          { staticClass: "nk-tb-col tb-col-md", attrs: { width: "170px" } },
+          [_c("span", { staticClass: "sub-text" }, [_vm._v("Date")])]
+        ),
         _vm._v(" "),
         _c("th", { staticClass: "nk-tb-col tb-col-lg" }, [
           _c("span", { staticClass: "sub-text" }, [_vm._v("Status")])
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "nk-tb-col tb-col-lg" }, [
+          _c("span", { staticClass: "sub-text" }, [_vm._v("Featured")])
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "nk-tb-col tb-col-lg" }, [

@@ -38,11 +38,12 @@
                                     <th class="nk-tb-col"><span class="sub-text">SL</span></th>
                                     <th width='200px' class="nk-tb-col tb-col-mb"><span class="sub-text">Post</span>
                                     </th>
-                                    <th class="nk-tb-col tb-col-md"><span class="sub-text">Category / Subcategory</span>
+                                    <th width='150px' class="nk-tb-col tb-col-md"><span class="sub-text">Category / Subcategory</span>
                                     </th>
                                     <th class="nk-tb-col tb-col-md"><span class="sub-text">Author</span></th>
-                                    <th class="nk-tb-col tb-col-md"><span class="sub-text">Date</span></th>
+                                    <th width='170px' class="nk-tb-col tb-col-md"><span class="sub-text">Date</span></th>
                                     <th class="nk-tb-col tb-col-lg"><span class="sub-text">Status</span></th>
+                                    <th class="nk-tb-col tb-col-lg"><span class="sub-text">Featured</span></th>
                                     <th class="nk-tb-col tb-col-lg"><span class="sub-text">Approved</span></th>
                                     <th class="nk-tb-col nk-tb-col-tools text-right">
                                         <span class="sub-text">Actions</span>
@@ -78,9 +79,9 @@
                                     </td>
 
                                     <td class="nk-tb-col tb-col-md">
-                                        <li> <span class='font-weight-bold'>Published : </span>
+                                        <li style="list-style:none" > <span class='font-weight-bold'>Published : </span>
                                             {{moment(post.created_at).fromNow()}}</li>
-                                        <li> <span class='font-weight-bold'>Updated : </span>
+                                        <li style="list-style:none" > <span class='font-weight-bold'>Updated : </span>
                                             {{moment(post.updated_at).fromNow()}}</li>
 
                                     </td>
@@ -91,6 +92,13 @@
                                             <label class="custom-control-label" :for="post.slug"></label>
                                         </div>
                                     </td>
+                                    <td class="nk-tb-col tb-col-md">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" name='status' :checked="post.featured==1" @change='featuredChange(post)'  class="custom-control-input"
+                                            :id="'featured'+post.slug">
+                                        <label class="custom-control-label" :for="'featured'+post.slug"></label>
+                                    </div>
+                                </td>
                                     <td class="nk-tb-col tb-col-md">
                                     <div class="custom-control custom-switch">
                                         <input type="checkbox" name='status' :checked="post.approved==1" @change='ApprovedChange(post)'  class="custom-control-input"
@@ -182,6 +190,26 @@
             ApprovedChange(post){
 
                       let url = '/api/auth/site_posts_approved_for_see/' + post.id;
+                let bearer = 'bearer' + this.token;
+                axios.get(url, {
+                        headers: {
+                            'Authorization': bearer
+                        }
+                    })
+                    .then((result) => {
+            this.PostsGet();
+                          Toast.fire({
+                                icon: 'success',
+                                title: result.data.success
+                            });
+                    })
+
+            },
+            // change post Featured status
+
+            featuredChange(post){
+
+                      let url = '/api/auth/site_posts_featured_for_see/' + post.id;
                 let bearer = 'bearer' + this.token;
                 axios.get(url, {
                         headers: {
