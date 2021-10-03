@@ -12,5 +12,10 @@ accept: application/json
 Authorization: {{TOKEN}}
 
 {
- "email" : "demo@gmail.com"
+ "email" : "demo1@gmail.com"
 }
+
+### [ get single subscribers by id ]
+@id=2
+GET {{API_URL}}/api/auth/site_subscribers_for_edit/{{id}} HTTP/1.1
+

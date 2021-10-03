@@ -57,10 +57,7 @@ Route::group([
     // for Subscribers
     Route::get('site_subscribers_for_see', 'SubscribersController@index');
     Route::post('site_subscribers_for_create', 'SubscribersController@store');
-    // Route::post('site_categories_for_create', 'Admin\CategoriesController@store');
     // Route::post('site_categories_for_update', 'Admin\CategoriesController@update');
     // Route::delete('site_categories_for_delete/{id}', 'Admin\CategoriesController@destroy');
-    // Route::get('site_categories_for_edit/{id}', 'Admin\CategoriesController@edit');
-
-
+    Route::get('site_subscribers_for_edit/{id}', 'SubscribersController@edit');
 });

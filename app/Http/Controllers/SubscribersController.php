@@ -79,9 +79,10 @@ class SubscribersController extends Controller
      * @param  \App\subscribers  $subscribers
      * @return \Illuminate\Http\Response
      */
-    public function edit(subscribers $subscribers)
+    public function edit($id)
     {
-        //
+        $subscribers = subscribers::find($id);
+        return response()->json(['subscribers' => $subscribers]);
     }
 
     /**
