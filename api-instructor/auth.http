@@ -1,0 +1,46 @@
+@API_URL=http://127.0.0.1:8001
+@TOKEN=bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzM3ODYwNywiZXhwIjoxNjMzMzgyMjA3LCJuYmYiOjE2MzMzNzg2MDcsImp0aSI6IlBaRW9OdWFlNzRNUHoyT2QiLCJzdWIiOjMsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Ksrz7wMza9MPyug8LqDEV41d1MC6HiZck9u9sWrEwxM
+
+
+### [ login ]
+POST {{API_URL}}/api/auth/login HTTP/1.1
+Content-Type: application/json
+accept: application/json
+
+{
+ "username" : "test1123",
+ "password" : "123456"
+}
+
+
+### [ Register ]
+POST {{API_URL}}/api/auth/register HTTP/1.1
+Content-Type: application/json
+accept: application/json
+
+{
+ "name" : "test1",
+ "email" : "test1@test.com",
+ "username" : "test1123",
+ "password" : "123456",
+ "password_confirmation" : "123456"
+}
+
+### [ Refresh Token ]
+POST {{API_URL}}/api/auth/refresh HTTP/1.1
+Content-Type: application/json
+accept: application/json
+Authorization: {{TOKEN}}
+
+
+### [ My Data ]
+POST {{API_URL}}/api/auth/me HTTP/1.1
+Content-Type: application/json
+accept: application/json
+Authorization: {{TOKEN}}
+
+### [ Logout ]
+POST {{API_URL}}/api/auth/logout HTTP/1.1
+Content-Type: application/json
+accept: application/json
+Authorization: {{TOKEN}}
