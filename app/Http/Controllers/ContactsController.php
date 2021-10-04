@@ -113,8 +113,16 @@ class ContactsController extends ApiBaseController
      * @param  \App\contacts  $contacts
      * @return \Illuminate\Http\Response
      */
-    public function destroy(contacts $contacts)
+    public function destroy($id)
     {
-        //
+        $contacts = contacts::Find($id);
+
+        if ($contacts) {
+
+            $contacts->delete();
+            return response()->json(['success' => 'Deleted Successfully !', 200]);
+        } else {
+            return response()->json('failed', 404);
+        }
     }
 }

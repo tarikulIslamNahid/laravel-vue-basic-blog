@@ -7,7 +7,7 @@ Content-Type: application/json
 accept: application/json
 Authorization: {{TOKEN}}
 
-### [ subscribers Store ]
+### [ Send Contacts Message ]
 POST {{API_URL}}/api/site_contacts_for_create HTTP/1.1
 Content-Type: application/json
 accept: application/json
@@ -18,3 +18,11 @@ Authorization: {{TOKEN}}
  "email" : "demo11@gmail.com",
  "msg" : "Hello do you help me !!!"
 }
+
+
+### [ Delete Contacts by id ]
+@del_id=2
+DELETE  {{API_URL}}/api/site_contacts_for_delete/{{del_id}} HTTP/1.1
+Content-Type: application/json
+accept: application/json
+Authorization: {{TOKEN}}
