@@ -1,33 +1,20 @@
 @API_URL=http://127.0.0.1:8001
 @TOKEN=bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzM3MTgxNiwiZXhwIjoxNjMzMzc1NDE2LCJuYmYiOjE2MzMzNzE4MTYsImp0aSI6IkwzbnNtaGt6MWQwc2R2UGQiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.UH_hWkBgHOzE4GdatFXJtvaeG9Qp9ubuwJ_wjsRa1o0
 
-### [ get all subscribers ]
-GET {{API_URL}}/api/site_subscribers_for_see HTTP/1.1
+### [ get all Contacts ]
+GET {{API_URL}}/api/site_contacts_for_see HTTP/1.1
 Content-Type: application/json
 accept: application/json
 Authorization: {{TOKEN}}
 
 ### [ subscribers Store ]
-POST {{API_URL}}/api/site_subscribers_for_create HTTP/1.1
+POST {{API_URL}}/api/site_contacts_for_create HTTP/1.1
 Content-Type: application/json
 accept: application/json
 Authorization: {{TOKEN}}
 
 {
- "email" : "demo11@gmail.com"
+ "name" : "demo11",
+ "email" : "demo11@gmail.com",
+ "msg" : "Hello do you help me !!!"
 }
-
-### [ get single subscribers by id ]
-@edit_id=1
-GET {{API_URL}}/api/site_subscribers_for_edit/{{edit_id}} HTTP/1.1
-Content-Type: application/json
-accept: application/json
-Authorization: {{TOKEN}}
-
-### [ Delete subscribers by id ]
-@del_id=3
-DELETE  {{API_URL}}/api/site_subscribers_for_delete/{{del_id}} HTTP/1.1
-Content-Type: application/json
-accept: application/json
-Authorization: {{TOKEN}}
-

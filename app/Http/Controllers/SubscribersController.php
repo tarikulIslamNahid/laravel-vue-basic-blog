@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use App\subscribers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\ApiBaseController;
 
-class SubscribersController extends Controller
+class SubscribersController extends ApiBaseController
 {
+    /**
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,22 +25,31 @@ class SubscribersController extends Controller
      */
     public function index()
     {
-        $subscribers = subscribers::get();
+        try {
+            $subscribers = subscribers::get();
+            return $this->success($subscribers, 'All Subscribers List', 200);
 
-        return response()->json([
-            'subscribers' => $subscribers,
-            // 'subscribers' => json_encode($subscribers),
-        ]);
+            // return response()->json([
+            //     'subscribers' => $subscribers,
+            //     // 'subscribers' => json_encode($subscribers),
+            // ]);
+        } catch (\Exception $ex) {
+            return $ex->getMessage();
+        }
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function edit($id)
     {
-        //
+        try {
+            $subscribers = subscribers::find($id);
+            return $this->success($subscribers, ' ', 200);
+
+            // return response()->json([
+            //     'subscribers' => $subscribers,
+            //     // 'subscribers' => json_encode($subscribers),
+            // ]);
+        } catch (\Exception $ex) {
+            return $ex->getMessage();
+        }
     }
 
     /**
@@ -55,48 +74,14 @@ class SubscribersController extends Controller
                 $subscribers = new subscribers;
                 $subscribers->email = $request->email;
                 $subscribers->save();
-                return response()->json(['success' => "Subscribe Successfully !", 200]);
+                // return response()->json(['success' => "Subscribe Successfully !", 200]);
             }
         } catch (\Exception $e) {
-            return response()->json(['error' => "Oops, Something Went Wrong"]);
+            // return response()->json(['error' => "Oops, Something Went Wrong"]);
+            return $e->getMessage();
         }
+        return $this->success($subscribers, 'Subscribe Successfully !', 200);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\subscribers  $subscribers
-     * @return \Illuminate\Http\Response
-     */
-    public function show(subscribers $subscribers)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\subscribers  $subscribers
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $subscribers = subscribers::find($id);
-        return response()->json(['subscribers' => $subscribers]);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\subscribers  $subscribers
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, subscribers $subscribers)
-    {
-        //
-    }
-
     /**
      * Remove the specified resource from storage.
      *

@@ -2,15 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Validator;
+
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
+use MarcinOrlowski\ResponseBuilder\ResponseBuilder;
+use Symfony\Component\HttpFoundation\Response;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Exceptions\TokenExpiredException;
+use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use Tymon\JWTAuth\Exceptions\TokenBlacklistedException;
 
-class AuthController extends Controller
+
+class AuthController extends ApiBaseController
 {
     /**
      * Create a new AuthController instance.
@@ -29,6 +40,14 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'username' => 'required|string|min:5|max:255',
+            'password' => 'required|string|min:6|max:128'
+        ]);
+
+        if ($validator->fails()) {
+            return $this->validationFailedResponse($validator->errors());
+        }
         $credentials = request(['username', 'password']);
 
         if (JWTAuth::attempt($credentials)) {
@@ -42,9 +61,10 @@ class AuthController extends Controller
         } else {
 
             return response()->json(['error' => 'Credentials do not match our database']);
+            // return $this->UnAuthorizedMessage("Invalid Username or Password");
         }
-
-        return $this->respondWithToken($token);
+        $user = auth('api')->user();
+        return $this->respondWithToken($token, $user);
     }
 
 
@@ -61,7 +81,7 @@ class AuthController extends Controller
     public function me()
     {
 
-        return response()->json(auth()->user());
+        return response()->json(auth('api')->user());
     }
 
     /**
@@ -71,7 +91,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        $logout = auth()->logout();
+        $logout = auth('api')->logout();
 
         return response()->json(['message' => 'Successfully logged out'], 200);
     }
@@ -83,7 +103,7 @@ class AuthController extends Controller
      */
     public function refresh()
     {
-        return $this->respondWithToken(auth()->refresh());
+        return $this->respondWithToken(auth('api')->refresh());
     }
 
     public function register(Request $request)
@@ -137,8 +157,8 @@ class AuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'success' => 'Login Successfully',
-            'expires_in' => auth()->factory()->getTTL() * 60,
-            'user' => Auth()->user(),
+            'expires_in' => auth('api')->factory()->getTTL() * 60,
+            'user' => Auth('api')->user(),
 
         ]);
     }

@@ -51,12 +51,20 @@ Route::group([
     Route::delete('site_post_for_delete/{id}', 'BlogsController@destroy');
     Route::get('site_post_edit_for_see/{id}', 'BlogsController@edit');
     Route::post('site_post_for_edit', 'BlogsController@update');
+});
 
-
-
+Route::group([
+    'middleware' => 'api'
+], function ($router) {
     // for Subscribers
     Route::get('site_subscribers_for_see', 'SubscribersController@index');
     Route::post('site_subscribers_for_create', 'SubscribersController@store');
     Route::delete('site_subscribers_for_delete/{id}', 'SubscribersController@destroy');
     Route::get('site_subscribers_for_edit/{id}', 'SubscribersController@edit');
+
+    // for contacts
+    Route::get('site_contacts_for_see', 'ContactsController@index');
+    Route::post('site_contacts_for_create', 'ContactsController@store');
+    // Route::delete('site_contacts_for_delete/{id}', 'ContactsController@destroy');
+    // Route::get('site_contacts_for_edit/{id}', 'ContactsController@edit');
 });

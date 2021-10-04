@@ -342,6 +342,7 @@
                 this.$Progress.start()
                 this.form.post('/api/auth/login')
                     .then((result) => {
+                        console.log(result);
                         this.$store.commit('SET_USER', result.data)
                         this.loggedIn = true;
                         this.$Progress.finish()
@@ -377,6 +378,7 @@
                         }
                     })
                     .catch((result) => {
+                        console.log(result)
                     })
 
             },
