@@ -1,0 +1,8 @@
+@API_URL=http://127.0.0.1:8001
+@TOKEN=bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzQwNzIyMCwiZXhwIjoxNjMzNDEwODIwLCJuYmYiOjE2MzM0MDcyMjAsImp0aSI6IkJ6Wk5mY01RQ05PTFhtME0iLCJzdWIiOjMsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.AHv6ZjTb9S_0nPj4e6ZwwJX8q3tKLR4We9xRr4wSCDA
+
+### [ get all Parent Comment ]
+GET {{API_URL}}/api/site_comments_for_see HTTP/1.1
+Content-Type: application/json
+accept: application/json
+Authorization: {{TOKEN}}

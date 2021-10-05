@@ -66,4 +66,9 @@ Route::group([
     Route::get('site_contacts_for_see', 'ContactsController@index');
     Route::post('site_contacts_for_create', 'ContactsController@store');
     Route::delete('site_contacts_for_delete/{id}', 'ContactsController@destroy');
+
+    // for comments
+    Route::get('site_comments_for_see', 'CommentsController@index');
+    // Route::post('site_comments_for_create', 'CommentsController@store');
+    // Route::delete('site_comments_for_delete/{id}', 'CommentsController@destroy');
 });

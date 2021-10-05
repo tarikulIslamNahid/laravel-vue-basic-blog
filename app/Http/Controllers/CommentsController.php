@@ -4,9 +4,19 @@ namespace App\Http\Controllers;
 
 use App\comments;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ApiBaseController;
 
-class CommentsController extends Controller
+class CommentsController extends ApiBaseController
 {
+    /**
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,17 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        try {
+            $comments = comments::where('parent_id', '=', '0')->get();
+            return $this->success($comments, 'All comments List', 200);
+
+            // return response()->json([
+            //     'comments' => $comments,
+            //     // 'comments' => json_encode($comments),
+            // ]);
+        } catch (\Exception $ex) {
+            return $ex->getMessage();
+        }
     }
 
     /**
